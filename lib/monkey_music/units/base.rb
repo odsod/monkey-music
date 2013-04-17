@@ -7,12 +7,13 @@ module MonkeyMusic
         @level = level
         @pos = [x, y]
       end
-      
+
       def act!
+        # To be overriden
       end
 
-      def at?(x, y)
-        @pos == [x, y]
+      def at?(pos)
+        @pos == pos
       end
 
       def distance_to(unit)
@@ -20,7 +21,15 @@ module MonkeyMusic
         (@x - x).abs + (@y - y).abs
       end
 
-      private
+      def direction_of(unit)
+        x, y = *pos
+        unit_x, unit_y = *unit.pos
+        if (x - unit_x).abs > (y - unit_y).abs
+          unit_x > x ? :east : :west
+        else
+          unit_y > y ? :south : :north
+        end
+      end
 
     end
   end
