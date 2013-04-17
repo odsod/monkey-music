@@ -6,20 +6,23 @@ module MonkeyMusic
     def initialize(arguments)
       @arguments = arguments
       @level_name = "";
+      @players = nil;
     end
     
     def start
-      parse_options
+      puts "\e[H\e[2J"
       puts "Welcome to Monkey Music!"
-      level = Level.new(@level_name).load
-      level.max_turns.times do |n|
-        level.monkeys.each
-      end
-      turns.times do |n|
-        @units.each { |unit| unit.prepare_turn }
-        @units.each { |unit| unit.perform_turn }
-        yield if block_given?
-        @time_bonus -= 1 if @time_bonus > 0
+      parse_options
+      level = Level.new(@level_name, @players)
+      level.load
+      puts level
+      puts @players
+      level.max_turns.times do
+        @players.query_move!
+        @players.move!
+        puts "\e[H\e[2J"
+        puts level
+        sleep(0.5)
       end
     end
 
@@ -31,8 +34,11 @@ module MonkeyMusic
         opts.on('-l', '--level LEVEL', "The level to play.") do |level_name|
           @level_name = level_name;
         end
+        opts.on('--player FILE', "The program for player 1.") do |file|
+          @players = Player.new(file)
+        end
         opts.on_tail('-h', '--help', "Show this message.") do 
-          puts puts
+          puts opts
           exit
         end
       end

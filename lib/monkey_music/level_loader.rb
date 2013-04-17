@@ -1,11 +1,15 @@
 module MonkeyMusic
+  #
+  # LevelLoader defines a DSL for building levels in a ruby file
+  #
   class LevelLoader
-    def initialize(level)
-      @level = MonkeyMusic::Level.new
+    def initialize(level, players)
+      @level = level
+      @players = players
     end
 
-    def rounds(rounds)
-      @level.rounds = rounds
+    def max_turns(max_turns)
+      @level.max_turns = max_turns
     end
 
     def size(width, height)
@@ -21,7 +25,16 @@ module MonkeyMusic
     end
 
     def monkey(x, y)
-      # If there is a remaining player, add monkey to level
+      if @players
+        @level.add(@players.monkey, x, y)
+      end
+    end
+
+    def song(x, y)
+      song = Units::Song.new
+      yield song if block_given?
+      @level.add(Units::Song.new, x, y)
+
     end
 
     private
