@@ -1,53 +1,31 @@
 module MonkeyMusic
   class LevelLoader
     def initialize(level)
-      @floor = MonkeyMusic::Floor.new
-      @level = level
-      @level.floor = @floor
+      @level = MonkeyMusic::Level.new
     end
-    
-    def description(desc)
-      @level.description = desc
+
+    def rounds(rounds)
+      @level.rounds = rounds
     end
-    
-    def tip(tip)
-      @level.tip = tip
-    end
-    
-    def clue(clue)
-      @level.clue = clue
-    end
-    
-    def time_bonus(bonus)
-      @level.time_bonus = bonus
-    end
-    
-    def ace_score(score)
-      @level.ace_score = score
-    end
-    
+
     def size(width, height)
-      @floor.width = width
-      @floor.height = height
+      @level.width = width
+      @level.height = height
     end
-    
-    def stairs(x, y)
-      @floor.place_stairs(x, y)
-    end
-    
-    def unit(unit, x, y, facing = :north)
+
+    def unit(unit, x, y)
       unit = unit_to_constant(unit).new unless unit.kind_of? Units::Base
-      @floor.add(unit, x, y, facing)
+      @level.add(unit, x, y)
       yield unit if block_given?
       unit
     end
-    
-    def warrior(*args, &block)
-      @level.setup_warrior unit(Units::Warrior.new, *args, &block)
+
+    def monkey(x, y)
+      # If there is a remaining player, add monkey to level
     end
-    
+
     private
-    
+
     def unit_to_constant(name)
       camel = name.to_s.split('_').map { |s| s.capitalize }.join
       eval("Units::#{camel}")
