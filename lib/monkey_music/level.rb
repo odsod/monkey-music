@@ -8,7 +8,7 @@ module MonkeyMusic
       @units = []
     end
     
-    def load_level
+    def load
       LevelLoader.new(self).instance_eval(File.read(load_path))
     end
 
