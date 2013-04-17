@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 require File.dirname(__FILE__) + '/../lib/monkey_music'
 
-runner = MonkeyMusic::Runner.new(ARGV, STDIN, STDOUT)
-runner.run
+game = MonkeyMusic::Game.new(ARGV)
+game.start
