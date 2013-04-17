@@ -1,5 +1,52 @@
-tmp/**/*
+### /home/poscar/.gitignore-boilerplates/Ruby.gitignore
+
 *.gem
-.project
-.buildpath
-Gemfile.lock
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+
+
+### /home/poscar/.gitignore-boilerplates/Global/vim.gitignore
+
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+
+### /home/poscar/.gitignore-boilerplates/Global/Linux.gitignore
+
+.*
+!.gitignore
+*~
+
+
+### /home/poscar/.gitignore-boilerplates/Global/OSX.gitignore
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
