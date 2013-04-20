@@ -12,13 +12,25 @@ module MonkeyMusic
       @user.name = name
     end
 
-    def favorite_songs(tracks)
+    def country(country)
+      # TODO: Convert to region using region gem
+      #@user.region =
+    end
+
+    def favorite_songs(songs)
+      @user.favorite_songs = songs.lines
     end
 
     def favorite_albums(albums)
+      @user.favorite_albums = albums.lines
     end
 
     def favorite_artists(artists)
+      @user.favorite_artists = artists.lines
+    end
+
+    def song(metadata)
+      @user.recommendations << metadata
     end
 
     private
