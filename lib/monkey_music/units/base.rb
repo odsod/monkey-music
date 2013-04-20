@@ -2,6 +2,7 @@ module MonkeyMusic
   module Units
     class Base
       attr_accessor :x, :y, :character
+      attr_reader :level
 
       def place!(level, x, y)
         @level = level

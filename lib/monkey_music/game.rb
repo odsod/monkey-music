@@ -19,9 +19,9 @@ module MonkeyMusic
       puts level
       puts @players.to_s
       level.max_turns.times do
+        puts "\e[H\e[2J"
         @players.each { |p| p.query_move! }
         @players.each { |p| p.move! }
-        puts "\e[H\e[2J"
         puts level
         sleep(0.5)
       end

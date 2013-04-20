@@ -30,6 +30,10 @@ module MonkeyMusic
     def load
       LevelLoader.new(self, @players).instance_eval(File.read(load_path))
     end
+
+    def serialize
+      "TODO"
+    end
     
     def to_s
       rows = []
