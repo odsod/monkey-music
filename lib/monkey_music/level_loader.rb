@@ -6,35 +6,44 @@ module MonkeyMusic
     def initialize(level, players)
       @level = level
       @players = players
+      @legend = {}
     end
 
     def max_turns(max_turns)
       @level.max_turns = max_turns
     end
 
-    def size(width, height)
+    def width(width)
       @level.width = width
+    end
+
+    def height(height)
       @level.height = height
     end
 
-    def unit(unit, x, y)
-      unit = unit_to_constant(unit).new unless unit.kind_of? Units::Base
-      @level.add(unit, x, y)
-      yield unit if block_given?
-      unit
+    def legend(legend)
+      @legend = legend
     end
 
-    def monkey(x, y)
-      if @players
-        @level.add(@players.monkey, x, y)
+    def layout(layout)
+      # Transform layout into x y indexed array
+      units = (layout.lines.map { |l| l.chomp.split(//) }).transpose
+      # Add units from layout to level
+      @level.height.times do |y|
+        @level.width.times do |x|
+          curr_character = units[x][y]
+          if unit = @legend[curr_character]
+            if unit == Units::Monkey
+              @players.monkey.character = curr_character
+              @level.add(@players.monkey, x, y)
+            else
+              new_unit = unit.new
+              new_unit.character = curr_character
+              @level.add new_unit, x, y
+            end
+          end
+        end
       end
-    end
-
-    def song(x, y)
-      song = Units::Song.new
-      yield song if block_given?
-      @level.add(Units::Song.new, x, y)
-
     end
 
     private

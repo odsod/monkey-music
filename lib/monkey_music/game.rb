@@ -15,15 +15,16 @@ module MonkeyMusic
       parse_options
       level = Level.new(@level_name, @players)
       level.load
+      puts "hej"
       puts level
-      puts @players
-      level.max_turns.times do
-        @players.query_move!
-        @players.move!
-        puts "\e[H\e[2J"
-        puts level
-        sleep(0.5)
-      end
+      #puts @players
+      #level.max_turns.times do
+        #@players.query_move!
+        #@players.move!
+        #puts "\e[H\e[2J"
+        #puts level
+        #sleep(0.5)
+      #end
     end
 
     private

@@ -1,11 +1,12 @@
 module MonkeyMusic
   module Units
     class Base
-      attr_accessor :x, :y
+      attr_accessor :x, :y, :character
 
       def place!(level, x, y)
         @level = level
         @x, @y = x, y
+        @character = "?"
       end
 
       def move!

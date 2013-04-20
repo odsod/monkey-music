@@ -28,10 +28,6 @@ module MonkeyMusic
         name
       end
 
-      def character
-        "M"
-      end
-      
     end
   end
 end

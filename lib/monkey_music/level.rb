@@ -64,7 +64,7 @@ module MonkeyMusic
     private
 
     def load_path
-      File.join(File.expand_path("../../"), "levels/#{@name}.rb")
+      File.join(File.expand_path("."), "levels/#{@name}.rb")
     end
   end
 end
