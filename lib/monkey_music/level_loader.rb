@@ -29,11 +29,12 @@ module MonkeyMusic
       # Transform layout into x y indexed array
       units = (layout.lines.map { |l| l.chomp.split(//) }).transpose
       # Add units from layout to level
+      available_players = Array.new(@players)
       @level.height.times do |y|
         @level.width.times do |x|
           curr_character = units[x][y]
           if unit = @legend[curr_character]
-            if unit == Units::Monkey && player = @players.pop
+            if unit == Units::Monkey && player = available_players.pop
               player.monkey.character = curr_character
               @level.add(player.monkey, x, y)
             else

@@ -13,17 +13,18 @@ module MonkeyMusic
       puts "\e[H\e[2J"
       puts "Welcome to Monkey Music!"
       parse_options
+      puts @players.to_s
       level = Level.new(@level_name, @players)
       level.load
       puts level
-      #puts @players
-      #level.max_turns.times do
-        #@players.query_move!
-        #@players.move!
-        #puts "\e[H\e[2J"
-        #puts level
-        #sleep(0.5)
-      #end
+      puts @players.to_s
+      level.max_turns.times do
+        @players.each { |p| p.query_move! }
+        @players.each { |p| p.move! }
+        puts "\e[H\e[2J"
+        puts level
+        sleep(0.5)
+      end
     end
 
     private
