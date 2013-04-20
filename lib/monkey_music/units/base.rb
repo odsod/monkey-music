@@ -6,7 +6,6 @@ module MonkeyMusic
       def place!(level, x, y)
         @level = level
         @x, @y = x, y
-        @character = "?"
       end
 
       def move!
@@ -14,7 +13,7 @@ module MonkeyMusic
       end
 
       def at?(x, y)
-        [@x, @y] == [x, y]
+        @x == x && @y == y
       end
 
       def distance_to(unit)
@@ -33,8 +32,8 @@ module MonkeyMusic
         end
       end
 
-      def character
-        return ' '
+      def to_s
+        @character
       end
 
       private

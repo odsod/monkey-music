@@ -33,9 +33,9 @@ module MonkeyMusic
         @level.width.times do |x|
           curr_character = units[x][y]
           if unit = @legend[curr_character]
-            if unit == Units::Monkey
-              @players.monkey.character = curr_character
-              @level.add(@players.monkey, x, y)
+            if unit == Units::Monkey && player = @players.pop
+              player.monkey.character = curr_character
+              @level.add(player.monkey, x, y)
             else
               new_unit = unit.new
               new_unit.character = curr_character

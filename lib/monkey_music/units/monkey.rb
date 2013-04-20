@@ -1,15 +1,13 @@
 module MonkeyMusic
   module Units
     class Monkey < Base
-      attr_writer :name
-      attr_reader :score
+      attr_accessor :name, :score
 
       def initialize
         @score = 0
       end
 
       def move!(direction)
-        #puts "Moving monkey #{direction}"
         target = translate(@x, @y, direction)
         unless @level.out_of_bounds?(*target)
           @x, @y = *target
@@ -22,10 +20,6 @@ module MonkeyMusic
         else
           "Monkey"
         end
-      end
-
-      def to_s
-        name
       end
 
     end

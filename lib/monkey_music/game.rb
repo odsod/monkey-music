@@ -6,7 +6,7 @@ module MonkeyMusic
     def initialize(arguments)
       @arguments = arguments
       @level_name = "";
-      @players = nil;
+      @players = [];
     end
     
     def start
@@ -15,7 +15,6 @@ module MonkeyMusic
       parse_options
       level = Level.new(@level_name, @players)
       level.load
-      puts "hej"
       puts level
       #puts @players
       #level.max_turns.times do
@@ -35,8 +34,11 @@ module MonkeyMusic
         opts.on('-l', '--level LEVEL', "The level to play.") do |level_name|
           @level_name = level_name;
         end
-        opts.on('--player FILE', "The program for player 1.") do |file|
-          @players = Player.new(file)
+        opts.on('--player FILE', "The path to a player program.") do |file|
+          @players << Player.new(file)
+        end
+        opts.on('--name NAME', "Set the name of the last entered player.") do |name|
+          @players[-1].monkey.name = name
         end
         opts.on_tail('-h', '--help', "Show this message.") do 
           puts opts

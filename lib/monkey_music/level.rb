@@ -23,23 +23,12 @@ module MonkeyMusic
       units.reject { |u| u.kind_of? Units::Monkey }
     end
     
-    def get(x, y)
-      units.detect do |unit|
-        unit.at?(x, y)
-      end
-    end
-
-    def get_character(x, y)
-      unit = get(x, y)
-      if unit
-        unit.character
-      else
-        ' '
-      end
-    end
-    
     def out_of_bounds?(x, y)
       x < 0 || y < 0 || x > @width-1 || y > @height-1
+    end
+
+    def load
+      LevelLoader.new(self, @players).instance_eval(File.read(load_path))
     end
     
     def to_s
@@ -57,11 +46,15 @@ module MonkeyMusic
       rows.join("\n") + "\n"
     end
 
-    def load
-      LevelLoader.new(self, @players).instance_eval(File.read(load_path))
+    private
+    
+    def get(x, y)
+      units.detect { |u| u.at?(x, y) }
     end
 
-    private
+    def get_character(x, y)
+      if u = get(x, y) then u.character else ' ' end
+    end
 
     def load_path
       File.join(File.expand_path("."), "levels/#{@name}.rb")
