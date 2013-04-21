@@ -5,6 +5,7 @@ module MonkeyMusic
   class LevelLoader
     def initialize(level)
       @level = level
+      @available_players = Array.new(level.players)
       @legend = {}
     end
 
@@ -32,20 +33,32 @@ module MonkeyMusic
       # Transform layout into x y indexed array
       units = (layout.lines.map { |l| l.chomp.split(//) }).transpose
       # Add units from layout to level
-      available_players = Array.new(@level.players)
       @level.height.times do |y|
         @level.width.times do |x|
           curr_character = units[x][y]
-          if unit_class = @legend[curr_character]
-            if unit_class == Monkey && player = available_players.pop
-              player.monkey.character = curr_character
-              @level.add(player.monkey, x, y)
-            else
-              new_unit = unit_class.new
-              new_unit.character = curr_character
-              @level.add new_unit, x, y
-            end
+          unit = parse_character(curr_character)
+          @level.add(unit, x, y) if unit
+        end
+      end
+    end
+
+    private
+
+    def parse_character(character)
+      if unit_class = @legend[character]
+        if unit_class == Monkey
+          if player = @available_players.pop
+            player.monkey.character = character
+            player.monkey
           end
+        elsif unit_class == Song
+          song = Song.new    
+          song.character = character
+          song
+        else
+          unit = unit_class.new
+          unit.character = character
+          unit
         end
       end
     end
