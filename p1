@@ -1,3 +1,50 @@
 #!/usr/bin/env ruby
 
-puts "N"
+# Read indata
+@monkey = gets.chomp
+@width = Integer(gets.chomp)
+@height = Integer(gets.chomp)
+# Read level
+@things = []
+@height.times do |y|
+  row = gets.chomp.split(',')
+  @width.times do |x|
+    thing = row[x]
+    if thing == @monkey
+      @x, @y = x, y
+    elsif thing != '_'
+      @things << [x, y]
+    end
+  end
+end
+
+def move_toward(x, y)
+  if @x < x
+    "E"
+  elsif @x > x
+    "W"
+  elsif @y < y
+    "S"
+  elsif @y > y
+    "N"
+  end
+end
+
+def closest_thing
+  curr_closest = @things.pop()
+  curr_smallest_distance = distance_to(*curr_closest)
+  @things.each do |thing|
+    curr_distance = distance_to(*thing)
+    if curr_distance < curr_smallest_distance
+      curr_closest = thing
+      curr_smallest_distance = curr_distance
+    end
+  end
+  curr_closest
+end
+
+def distance_to(x, y)
+  (@x - x).abs + (@y - y).abs
+end
+
+puts move_toward(*closest_thing())
