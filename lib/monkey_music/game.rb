@@ -11,7 +11,7 @@ module MonkeyMusic
     def start
       parse_options
       # Load user
-      user = User.new(@user_name)
+      #user = User.new(@user_name)
       user.load
       # Load level
       level = Level.new(@level_name, @players, @user)
@@ -63,6 +63,7 @@ module MonkeyMusic
       opt_parser.parse!(@arguments)
       if @generate_user && @account && @password && @app_key
         @user = UserGenerator.new(@generate_user, @account, @password, @app_key).generate!
+        exit
       elsif !@user_name || !@level_name
         puts opt_parser
         exit
