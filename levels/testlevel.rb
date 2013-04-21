@@ -3,9 +3,9 @@ height 10
 max_turns 100
 
 legend({ 
-  "1" => Units::Monkey,
-  "2" => Units::Monkey,
-  "s" => Units::Song,
+  "1" => Monkey,
+  "2" => Monkey,
+  "s" => Song,
 })
 
 layout <<LAYOUT

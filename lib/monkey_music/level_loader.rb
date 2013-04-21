@@ -3,9 +3,8 @@ module MonkeyMusic
   # LevelLoader defines a DSL for building levels in a ruby file
   #
   class LevelLoader
-    def initialize(level, players)
+    def initialize(level)
       @level = level
-      @players = players
       @legend = {}
     end
 
@@ -18,7 +17,7 @@ module MonkeyMusic
     end
 
     def monkey_carrying_capacity(capacity)
-      @players.each { |p| p.monkey.capacity = capacity }
+      @level.players.each { |p| p.monkey.capacity = capacity }
     end
 
     def height(height)
@@ -33,16 +32,16 @@ module MonkeyMusic
       # Transform layout into x y indexed array
       units = (layout.lines.map { |l| l.chomp.split(//) }).transpose
       # Add units from layout to level
-      available_players = Array.new(@players)
+      available_players = Array.new(@level.players)
       @level.height.times do |y|
         @level.width.times do |x|
           curr_character = units[x][y]
-          if unit = @legend[curr_character]
-            if unit.is_a? Monkey && player = available_players.pop
+          if unit_class = @legend[curr_character]
+            if unit_class == Monkey && player = available_players.pop
               player.monkey.character = curr_character
               @level.add(player.monkey, x, y)
             else
-              new_unit = unit.new
+              new_unit = unit_class.new
               new_unit.character = curr_character
               @level.add new_unit, x, y
             end

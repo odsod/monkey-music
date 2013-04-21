@@ -11,7 +11,7 @@ module MonkeyMusic
     def generate!
       session = Hallon::Session.initialize(@appkey)
       session.login!(@account, @password)
-      user = User.new
+      user = User.new(@name)
       user_loader = UserHallonLoader.new(user, @name)
       user_loader.load_track_toplist
       user_loader.load_album_toplist

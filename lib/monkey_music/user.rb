@@ -7,7 +7,8 @@ module MonkeyMusic
     attr_accessor :top_decade
     attr_accessor :recommendations
 
-    def initialize
+    def initialize(name)
+      @name = name
       @track_toplist = []
       @album_toplist = []
       @artist_toplist = []
@@ -18,7 +19,7 @@ module MonkeyMusic
       YAML::dump(self)
     end
 
-    def self.load_from_fileu(file)
+    def self.read_from_file(file)
       YAML::load(IO.read(file))
     end
     

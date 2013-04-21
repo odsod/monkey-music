@@ -1,13 +1,15 @@
 module MonkeyMusic
   class Level
     attr_accessor :width, :height, :max_turns
+    attr_reader :players
+    attr_reader :user
     
-    def initialize(name, players)
-      @name = name
+    def initialize(players, user)
+      @players = players
+      @user = user
       @width = 0
       @height = 0
       @units = []
-      @players = players
     end
     
     def add(unit, x, y)
@@ -35,14 +37,11 @@ module MonkeyMusic
       not out_of_bounds?(x, y)
     end
 
-    def load
-      LevelLoader.new(self, @players).instance_eval(File.read(load_path))
+    def load_from_file(file)
+      LevelLoader.new(self).instance_eval(File.read(file))
+      self
     end
 
-    def serialize
-      "TODO"
-    end
-    
     def to_s
       rows = []
       rows << " " + ("-" * @width)
