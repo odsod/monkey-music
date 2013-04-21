@@ -51,10 +51,10 @@ module MonkeyMusic
             player.monkey.character = character
             player.monkey
           end
-        elsif unit_class == Song
-          song = Song.new    
-          song.character = character
-          song
+        elsif unit_class == Track
+          track = @level.user.recommendations.sample
+          track.character = character
+          track
         else
           unit = unit_class.new
           unit.character = character

@@ -57,6 +57,10 @@ module MonkeyMusic
       rows.join("\n") + "\n"
     end
 
+    def serialize
+
+    end
+
     private
 
     def character_at(x, y)

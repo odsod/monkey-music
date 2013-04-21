@@ -5,7 +5,7 @@ max_turns 100
 legend({ 
   "1" => Monkey,
   "2" => Monkey,
-  "s" => Song,
+  "s" => Track,
 })
 
 layout <<LAYOUT

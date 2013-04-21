@@ -83,15 +83,14 @@ module MonkeyMusic
       album.load
       artist = track.artist
       artist.load
-      result = {
-        :uri => track.to_link.to_str,
-        :name => track.name,
-        :artist => artist.name,
-        :album => album.name,
-        :popularity => track.popularity,
-        :value => evaluate_track(track, album, artist)
-      }
-      result
+      user_track = Track.new
+      user_track.uri = track.to_link.to_str
+      user_track.name = track.name,
+      user_track.artist = artist.name,
+      user_track.album = album.name,
+      user_track.popularity = track.popularity,
+      user_track.value = evaluate_track(track, album, artist)
+      user_track
     end
 
     def evaluate_track(track, album, artist) 
