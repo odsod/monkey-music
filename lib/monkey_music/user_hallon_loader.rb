@@ -3,10 +3,9 @@ require 'hallon'
 module MonkeyMusic
   class UserHallonLoader
     
-    def initialize(user, hallon_user)
+    def initialize(user, username)
       @user = user
-      @hallon_user = hallon_user
-      @username = hallon_user.name
+      @username = username
     end
 
     def load_track_toplist

@@ -2,7 +2,7 @@ module MonkeyMusic
   #
   # LevelLoader defines a DSL for building users in a ruby file
   #
-  class UserLoader
+  class UserFileLoader
 
     def initialize(user)
       @user = user
