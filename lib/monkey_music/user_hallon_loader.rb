@@ -48,8 +48,18 @@ module MonkeyMusic
 
     private
 
-    def calc_top_decade
+    def calc_top_decade(albums)
+      decade_count = Array.new(10, 0)
+      albums.each do |album|
+        if album.release_year != 0
+          decade_count[decade_of(album)] += 1
+        end
+      end
+      decade_count.each_with_index.max[1]
+    end
 
+    def decade_of(album)
+      (album.release_year % 100) / 10
     end
 
     def parse_track(track)
@@ -59,7 +69,7 @@ module MonkeyMusic
         :popularity => track.popularity,
         :value => evaluate_track(track)
       }
-      #puts result
+      puts result
       result
     end
 
@@ -68,11 +78,11 @@ module MonkeyMusic
       album.load
       artist = track.artist
       artist.load
-      puts "#{track.name},#{album.name},#{artist.name},#{album.release_year}"
-      # Base value
+      #puts "#{track.name},#{album.name},#{artist.name},#{album.release_year}"
       value = 1
       value *= 1.5 if @user.album_toplist.include?(album.name)
       value *= 1.5 if @user.artist_toplist.include?(artist.name)
+      value *= 1.5 if @user.top_decade == decade_of(album)
       value *= (1 + (track.popularity / 100.0))
       value
     end

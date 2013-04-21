@@ -2,6 +2,7 @@ module MonkeyMusic
   class User
     attr_reader :name
     attr_accessor :track_toplist, :album_toplist, :artist_toplist
+    attr_accessor :top_decade
     attr_accessor :recommendations
 
     def initialize()
