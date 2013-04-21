@@ -1,9 +1,14 @@
 module MonkeyMusic
   class User
-    #attr_accessor :favorite_albums, :favorite_tracks, :favorite_artists, :region, :age
+    attr_reader :name
+    attr_accessor :track_toplist, :album_toplist, :artist_toplist
+    attr_accessor :recommendations
 
-    def initialize(name)
-      @name = name
+    def initialize()
+      @track_toplist = []
+      @album_toplist = []
+      @artist_toplist = []
+      @recommendations = []
     end
 
     def serialize
