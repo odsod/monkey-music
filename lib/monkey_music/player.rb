@@ -9,6 +9,7 @@ module MonkeyMusic
 
     def query_move!
       IO.popen(@file, "r+") do |io|
+        io.puts @monkey.serialize
         io.puts @monkey.level.serialize
         @next_move = parse_move(io.gets.chomp)
       end

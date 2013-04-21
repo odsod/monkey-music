@@ -13,7 +13,7 @@ module MonkeyMusic
       target = translate(@x, @y, direction)
       # Interact with unit
       if target_unit = @level.at(*target)
-        @monkey.interact_with!(target_unit)
+        interact_with!(target_unit)
       end
       # Perform move
       @x, @y = *target if @level.accessible?(*target)
@@ -27,8 +27,13 @@ module MonkeyMusic
     end
 
     def pick_up!(unit)
-      @level.remove(unit)
-      @carrying << unit
+      if @carrying.count < @capacity
+        @level.remove(unit)
+        @carrying << unit
+        if defined? unit.value
+          @score += unit.value
+        end
+      end
     end
 
     def deliver!

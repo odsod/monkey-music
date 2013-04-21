@@ -14,16 +14,15 @@ module MonkeyMusic
       @user = User.read_from_file(@user_file)
       # Load level
       @level = Level.new(@players, @user).load_from_file(@level_file)
-      puts @level.serialize
-      #puts @level.asciify
-      ## Run game
-      #level.max_turns.times do
-        #puts "\e[H\e[2J"
-        #@players.each { |p| p.query_move! }
-        #@players.each { |p| p.move! }
-        #puts level.asciify
-        #sleep(0.5)
-      #end
+      # Run game
+      @ui = ConsoleUI.new
+      @level.max_turns.times do
+        puts "\e[H\e[2J"
+        @players.each { |p| p.query_move! }
+        @players.each { |p| p.move! }
+        puts @level.asciify
+        @ui.update(@level, [])
+      end
     end
 
     private

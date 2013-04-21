@@ -18,15 +18,15 @@ module MonkeyMusic
     end
     
     def at(x, y)
-      units.detect { |u| u.at?(x, y) }
+      @units.detect { |u| u.at?(x, y) }
+    end
+
+    def empty?(x, y)
+      at(x, y).nil?
     end
 
     def remove(unit)
       @units.reject! { |u| u == unit }
-    end
-    
-    def units
-      @units
     end
     
     def out_of_bounds?(x, y)
@@ -34,7 +34,7 @@ module MonkeyMusic
     end
 
     def accessible?(x, y)
-      not out_of_bounds?(x, y)
+      not out_of_bounds?(x, y) && empty?(x, y)
     end
 
     def load_from_file(file)
@@ -44,7 +44,7 @@ module MonkeyMusic
 
     def asciify
       rows = []
-      rows << " " + ("-" * @width)
+      rows << " " + ("_" * @width)
       @height.times do |y|
         row = ["|"]
         @width.times do |x|
@@ -54,7 +54,7 @@ module MonkeyMusic
         row << "|"
         rows << row.join
       end
-      rows << " " + ("-" * @width)
+      rows << "|" + ("_" * @width) + "|"
       rows.join("\n")
     end
 
