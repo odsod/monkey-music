@@ -1,6 +1,7 @@
 width 20
 height 10
 max_turns 100
+carrying_capacity 100
 
 legend({ 
   "1" => Monkey,

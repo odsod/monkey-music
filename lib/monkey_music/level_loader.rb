@@ -17,7 +17,7 @@ module MonkeyMusic
       @level.width = width
     end
 
-    def monkey_carrying_capacity(capacity)
+    def carrying_capacity(capacity)
       @level.players.each { |p| p.monkey.capacity = capacity }
     end
 
