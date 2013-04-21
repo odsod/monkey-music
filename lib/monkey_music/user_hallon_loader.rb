@@ -10,7 +10,7 @@ module MonkeyMusic
     end
 
     def load_track_toplist
-      @track_toplist = load_toplist(:tracks)
+      @track_toplist = load_user_toplist(:tracks)
       @user.track_toplist = []
       @track_toplist.each do |track|
         @user.track_toplist << {
@@ -21,28 +21,45 @@ module MonkeyMusic
     end
 
     def load_track_toplist
-      @track_toplist = load_toplist(:tracks)
+      @track_toplist = load_user_toplist(:tracks)
       @user.track_toplist = parse_toplist(@track_toplist)
     end
 
     def load_album_toplist
-      @album_toplist = load_toplist(:albums)
+      @album_toplist = load_user_toplist(:albums)
       @user.album_toplist = parse_toplist(@album_toplist)
       @user.top_decade = calc_top_decade(@album_toplist)
     end
 
     def load_artist_toplist
-      @artist_toplist = load_toplist(:artists)
+      @artist_toplist = load_user_toplist(:artists)
       @user.artist_toplist = parse_toplist(@artist_toplist)
     end
 
     def load_recommendations_from_top_albums
-      @album_toplist.each do |album|
+      @album_toplist.first(5).each do |album|
         browse = album.browse
         browse.load
-        browse.tracks.each do |track|
+        browse.tracks.first(5).each do |track|
           @user.recommendations << parse_track(track)
         end
+      end
+    end
+
+    def load_recommendations_from_top_artists
+      @artist_toplist.first(5).each do |artist|
+        browse = artist.browse
+        browse.load
+        browse.top_hits.first(5).each do |track|
+          @user.recommendations << parse_track(track)
+        end
+      end
+    end
+
+    def load_recommendations_from_country_toplist(country)
+      toplist = load_toplist(:tracks, country)
+      toplist.each do |track|
+        @user.recommendations << parse_track(track)
       end
     end
 
@@ -63,22 +80,23 @@ module MonkeyMusic
     end
 
     def parse_track(track)
+      album = track.album
+      album.load
+      artist = track.artist
+      artist.load
       result = {
-        :name => track.name,
         :uri => track.to_link.to_str,
+        :name => track.name,
+        :artist => artist.name,
+        :album => album.name,
         :popularity => track.popularity,
-        :value => evaluate_track(track)
+        :value => evaluate_track(track, album, artist)
       }
       puts result
       result
     end
 
-    def evaluate_track(track) 
-      album = track.album
-      album.load
-      artist = track.artist
-      artist.load
-      #puts "#{track.name},#{album.name},#{artist.name},#{album.release_year}"
+    def evaluate_track(track, album, artist) 
       value = 1
       value *= 1.5 if @user.album_toplist.include?(album.name)
       value *= 1.5 if @user.artist_toplist.include?(artist.name)
@@ -87,8 +105,14 @@ module MonkeyMusic
       value
     end
 
-    def load_toplist(type)
+    def load_user_toplist(type)
       toplist = Hallon::Toplist.new(type, @username)
+      toplist.load
+      toplist.results
+    end
+
+    def load_toplist(type, region)
+      toplist = Hallon::Toplist.new(type, region)
       toplist.load
       toplist.results
     end
