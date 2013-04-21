@@ -15,16 +15,24 @@ module MonkeyMusic
       @units << unit
     end
     
+    def at(x, y)
+      units.detect { |u| u.at?(x, y) }
+    end
+
+    def remove(unit)
+      @units.reject! { |u| u == unit }
+    end
+    
     def units
       @units
     end
     
-    def other_units
-      units.reject { |u| u.kind_of? Units::Monkey }
-    end
-    
     def out_of_bounds?(x, y)
       x < 0 || y < 0 || x > @width-1 || y > @height-1
+    end
+
+    def accessible?(x, y)
+      not out_of_bounds?(x, y)
     end
 
     def load
@@ -41,7 +49,7 @@ module MonkeyMusic
       @height.times do |y|
         row = "|"
         @width.times do |x|
-          row << get_character(x, y)
+          row << character_at(x, y)
         end
         row << "|"
         rows << row
@@ -51,13 +59,9 @@ module MonkeyMusic
     end
 
     private
-    
-    def get(x, y)
-      units.detect { |u| u.at?(x, y) }
-    end
 
-    def get_character(x, y)
-      if u = get(x, y) then u.character else ' ' end
+    def character_at(x, y)
+      if u = at(x, y) then u.character else ' ' end
     end
 
     def load_path

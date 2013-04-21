@@ -5,19 +5,18 @@ module MonkeyMusic
 
     def initialize(arguments)
       @arguments = arguments
-      @level_name = "";
       @players = [];
     end
     
     def start
-      puts "\e[H\e[2J"
-      puts "Welcome to Monkey Music!"
       parse_options
-      puts @players.to_s
-      level = Level.new(@level_name, @players)
+      # Load user
+      user = User.new(@user_name)
+      user.load
+      # Load level
+      level = Level.new(@level_name, @players, @user)
       level.load
-      puts level
-      puts @players.to_s
+      # Run game
       level.max_turns.times do
         puts "\e[H\e[2J"
         @players.each { |p| p.query_move! }
@@ -28,10 +27,10 @@ module MonkeyMusic
     end
 
     private
-    
+
     def parse_options
       opt_parser = OptionParser.new do |opts|
-        opts.banner = "Usage: monkeymusic [options]"
+        opts.banner = "Usage: monkeymusic level [options]"
         opts.on('-l', '--level LEVEL', "The level to play.") do |level_name|
           @level_name = level_name;
         end
@@ -41,12 +40,19 @@ module MonkeyMusic
         opts.on('--name NAME', "Set the name of the last entered player.") do |name|
           @players[-1].monkey.name = name
         end
+        opts.on('--user USER', "The user to get recommendations from.") do |user|
+          @user_name = user
+        end
         opts.on_tail('-h', '--help', "Show this message.") do 
           puts opts
           exit
         end
       end
       opt_parser.parse!(@arguments)
+      if !@user_name || !@level_name
+        puts opts
+        exit
+      end
     end
 
   end

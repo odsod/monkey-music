@@ -2,7 +2,7 @@
 name "poscar"
 country "Sweden"
 
-favorite_songs([
+favorite_tracks([
 "Moonlight Sonata - Zero Cult Remix",
 "Alchemie Dub",
 "Caribbeyond",

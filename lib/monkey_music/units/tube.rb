@@ -1,4 +1,4 @@
 module MonkeyMusic
-  class Wall < Base
+  class Tube < Base
   end
 end

@@ -4,7 +4,7 @@ module MonkeyMusic
     
     def initialize(file)
       @file = File.join(Dir.pwd, file)
-      @monkey = Units::Monkey.new()
+      @monkey = Monkey.new()
     end
 
     def query_move!

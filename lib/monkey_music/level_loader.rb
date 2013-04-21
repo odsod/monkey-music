@@ -17,6 +17,10 @@ module MonkeyMusic
       @level.width = width
     end
 
+    def monkey_carrying_capacity(capacity)
+      @players.each { |p| p.monkey.capacity = capacity }
+    end
+
     def height(height)
       @level.height = height
     end
@@ -34,7 +38,7 @@ module MonkeyMusic
         @level.width.times do |x|
           curr_character = units[x][y]
           if unit = @legend[curr_character]
-            if unit == Units::Monkey && player = available_players.pop
+            if unit.is_a? Monkey && player = available_players.pop
               player.monkey.character = curr_character
               @level.add(player.monkey, x, y)
             else
@@ -47,11 +51,5 @@ module MonkeyMusic
       end
     end
 
-    private
-
-    def unit_to_constant(name)
-      camel = name.to_s.split('_').map { |s| s.capitalize }.join
-      eval("Units::#{camel}")
-    end
   end
 end

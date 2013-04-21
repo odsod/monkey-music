@@ -33,11 +33,5 @@ module MonkeyMusic
       @user.recommendations << metadata
     end
 
-    private
-
-    def unit_to_constant(name)
-      camel = name.to_s.split('_').map { |s| s.capitalize }.join
-      eval("Units::#{camel}")
-    end
   end
 end
