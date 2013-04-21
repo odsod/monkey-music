@@ -1,6 +1,6 @@
 module MonkeyMusic
   class Monkey < Base
-    attr_accessor :name, :score, :capacity
+    attr_accessor :name, :score, :capacity, :character
 
     def initialize
       @score = 0

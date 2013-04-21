@@ -42,33 +42,38 @@ module MonkeyMusic
       self
     end
 
-    def to_s
+    def asciify
       rows = []
       rows << " " + ("-" * @width)
       @height.times do |y|
-        row = "|"
+        row = ["|"]
         @width.times do |x|
-          row << character_at(x, y)
+          unit = at(x, y)
+          row << if unit then unit.asciify else ' ' end
         end
         row << "|"
-        rows << row
+        rows << row.join
       end
       rows << " " + ("-" * @width)
-      rows.join("\n") + "\n"
+      rows.join("\n")
     end
 
     def serialize
-
+      rows = []
+      @height.times do |y|
+        row = []
+        @width.times do |x|
+          unit = at(x, y)
+          row << if unit then unit.serialize else '_' end
+        end
+        rows << row.join(",")
+      end
+      rows.join("\n")
     end
 
-    private
-
-    def character_at(x, y)
-      if u = at(x, y) then u.character else ' ' end
+    def to_s
+      asciify
     end
 
-    def load_path
-      File.join(File.expand_path("."), "levels/#{@name}.rb")
-    end
   end
 end

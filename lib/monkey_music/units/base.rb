@@ -33,6 +33,14 @@ module MonkeyMusic
     end
 
     def to_s
+      asciify
+    end
+
+    def serialize
+      asciify
+    end
+
+    def asciify
       @character
     end
 
