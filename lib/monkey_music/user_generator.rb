@@ -20,7 +20,8 @@ module MonkeyMusic
       user_loader.load_recommendations_from_top_artists
       # Load some crappy(?) recommendations from Mexico
       user_loader.load_recommendations_from_country_toplist(:mx)
-      sleep 1
+      sleep 1 # Give libspotify a sec to cool off and release memory
+      user
     end
   end
 end

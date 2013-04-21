@@ -1,3 +1,5 @@
+require 'yaml'
+
 module MonkeyMusic
   class User
     attr_reader :name
@@ -13,11 +15,11 @@ module MonkeyMusic
     end
 
     def serialize
-      "TODO"
+      YAML::dump(self)
     end
 
-    def load
-      UserLoader.new(self).instance_eval(File.read(load_path))
+    def self.load_from_fileu(file)
+      YAML::load(IO.read(file))
     end
     
     private

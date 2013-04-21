@@ -63,6 +63,7 @@ module MonkeyMusic
       opt_parser.parse!(@arguments)
       if @generate_user && @account && @password && @app_key
         @user = UserGenerator.new(@generate_user, @account, @password, @app_key).generate!
+        puts @user.serialize
         exit
       elsif !@user_name || !@level_name
         puts opt_parser

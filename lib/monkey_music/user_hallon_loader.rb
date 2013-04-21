@@ -91,7 +91,6 @@ module MonkeyMusic
         :popularity => track.popularity,
         :value => evaluate_track(track, album, artist)
       }
-      puts result
       result
     end
 
