@@ -5,5 +5,9 @@ module MonkeyMusic
     def serialize
       @uri
     end
+
+    def to_s
+      @name
+    end
   end
 end

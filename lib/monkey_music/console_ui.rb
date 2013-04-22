@@ -2,20 +2,30 @@ module MonkeyMusic
   class ConsoleUI
 
     def initialize
-      @events = []
+    end
+
+    def msg(msg)
+      puts "\e[H\e[2J"
+      puts "\n"*5
+      puts " "*10 + msg
+      puts "\n"*5
     end
     
-    def update(level, new_events)
+    def update(level)
       # Clear screen
       puts "\e[H\e[2J"
       # Level
       puts level.asciify
       # Score
+      puts "="*10
       level.players.each do |player|
         puts "#{player.monkey.name}: #{player.monkey.score}"
       end
-      @events.shift(new_events.count)
-      @events.push(new_events)
+      puts "="*10
+      # Events
+      level.events.each do |event|
+        puts event
+      end
       sleep 0.5
     end
   end

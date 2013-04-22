@@ -17,11 +17,13 @@ module MonkeyMusic
       # Run game
       @ui = ConsoleUI.new
       @level.max_turns.times do
-        puts "\e[H\e[2J"
+        if @level.complete?
+          @ui.msg("Complete!")
+          break
+        end
         @players.each { |p| p.query_move! }
         @players.each { |p| p.move! }
-        puts @level.asciify
-        @ui.update(@level, [])
+        @ui.update(@level)
       end
     end
 

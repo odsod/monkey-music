@@ -28,6 +28,7 @@ module MonkeyMusic
 
     def move!
       @monkey.move! @next_move if @next_move
+      @next_move = nil
     end
 
     def to_s

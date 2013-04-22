@@ -1,6 +1,7 @@
 module MonkeyMusic
   class Level
     attr_accessor :width, :height, :max_turns
+    attr_accessor :events
     attr_reader :players
     attr_reader :user
     
@@ -10,6 +11,7 @@ module MonkeyMusic
       @width = 0
       @height = 0
       @units = []
+      @events = []
     end
     
     def add(unit, x, y)
@@ -23,6 +25,10 @@ module MonkeyMusic
 
     def empty?(x, y)
       at(x, y).nil?
+    end
+
+    def complete?
+      (@units.detect { |u| u.kind_of? Track }).nil?
     end
 
     def remove(unit)
