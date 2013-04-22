@@ -1,4 +1,5 @@
-= Monkey Music
+Monkey Music
+============
 
 This is the runtime for a programming contest, it's a work in progress.
 
