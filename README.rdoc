@@ -1,3 +1,0 @@
-= Monkey Music
-
-This is the runtime for a programming contest, loosely based on Ruby Warrior by Ryan Bates and the 2012 ICFP contest problem.
