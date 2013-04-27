@@ -1,4 +1,4 @@
-/* line 11, ../sass/styles.sass */
+/* line 12, ../sass/styles.sass */
 html, body {
   margin: 0;
   padding: 0;
@@ -8,80 +8,71 @@ html, body {
   overflow: hidden;
 }
 
-/* line 19, ../sass/styles.sass */
+/* line 20, ../sass/styles.sass */
 * {
   box-sizing: border-box;
 }
 
-/* line 22, ../sass/styles.sass */
+/* line 23, ../sass/styles.sass */
 body {
   background: #84bd00;
 }
 
-/* line 25, ../sass/styles.sass */
-#scoreboard {
-  height: 20%;
-}
-/* line 30, ../sass/styles.sass */
-#scoreboard .team {
-  height: 100%;
-  width: 50%;
-  float: left;
-}
-/* line 33, ../sass/styles.sass */
-#scoreboard .team:first-child .score {
-  float: left;
-  text-align: left;
-  padding-left: 20px;
-}
-/* line 39, ../sass/styles.sass */
-#scoreboard .team:last-child .score {
-  float: right;
-  text-align: right;
-  padding-right: 20px;
-}
-/* line 46, ../sass/styles.sass */
-#scoreboard .team ul {
-  width: 70%;
-  height: 100%;
-}
-/* line 49, ../sass/styles.sass */
-#scoreboard .team .score {
-  position: relative;
-  font-size: 140px;
-  text-shadow: 5px 5px rgba(0, 0, 0, 0.3);
-  padding-top: 20px;
-  text-align: left;
-  height: 100%;
-  width: 30%;
-}
-/* line 57, ../sass/styles.sass */
-#scoreboard .team .team-name {
+/* line 26, ../sass/styles.sass */
+table#scoreboard {
+  table-layout: fixed;
+  margin-top: 10px;
   position: absolute;
-  bottom: -30px;
-  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+/* line 32, ../sass/styles.sass */
+table#scoreboard td {
+  text-align: center;
+}
+/* line 34, ../sass/styles.sass */
+table#scoreboard tr.scores {
+  font-size: 80px;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+/* line 37, ../sass/styles.sass */
+table#scoreboard tr.teams {
+  font-size: 25px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* line 40, ../sass/styles.sass */
+table#scoreboard tr.teams td:nth-child(n) {
+  color: #0000e6;
+}
+/* line 42, ../sass/styles.sass */
+table#scoreboard tr.teams td:nth-child(2n) {
+  color: #ff1a1a;
+}
+/* line 44, ../sass/styles.sass */
+table#scoreboard tr.teams td:nth-child(3n) {
+  color: #00e6e6;
 }
 
-/* line 62, ../sass/styles.sass */
+/* line 47, ../sass/styles.sass */
 #arena {
   height: 80%;
 }
-/* line 64, ../sass/styles.sass */
+/* line 49, ../sass/styles.sass */
 #arena .unit {
   font-size: 1.8em;
   position: absolute;
   text-align: center;
 }
-/* line 68, ../sass/styles.sass */
+/* line 53, ../sass/styles.sass */
 #arena .monkey {
   color: #7c4e20;
   font-size: 4em;
 }
-/* line 71, ../sass/styles.sass */
+/* line 56, ../sass/styles.sass */
 #arena .monkey::after {
   content: "\1F435";
 }
-/* line 73, ../sass/styles.sass */
+/* line 58, ../sass/styles.sass */
 #arena .track {
   text-shadow: 0.15em 0.15em rgba(0, 0, 0, 0.3);
   color: black;
@@ -92,28 +83,28 @@ body {
   -o-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
-/* line 78, ../sass/styles.sass */
+/* line 63, ../sass/styles.sass */
 #arena .track::after {
   content: "\266A";
 }
-/* line 80, ../sass/styles.sass */
+/* line 65, ../sass/styles.sass */
 #arena .basket {
   color: black;
   font-size: 4em;
 }
-/* line 83, ../sass/styles.sass */
+/* line 68, ../sass/styles.sass */
 #arena .basket::after {
   content: "B";
 }
 
 @-moz-keyframes bounce {
-  /* line 87, ../sass/styles.sass */
+  /* line 72, ../sass/styles.sass */
   0%, 100% {
     -moz-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 89, ../sass/styles.sass */
+  /* line 74, ../sass/styles.sass */
   50% {
     -moz-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -121,13 +112,13 @@ body {
 }
 
 @-webkit-keyframes bounce {
-  /* line 87, ../sass/styles.sass */
+  /* line 72, ../sass/styles.sass */
   0%, 100% {
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 89, ../sass/styles.sass */
+  /* line 74, ../sass/styles.sass */
   50% {
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -135,13 +126,13 @@ body {
 }
 
 @-o-keyframes bounce {
-  /* line 87, ../sass/styles.sass */
+  /* line 72, ../sass/styles.sass */
   0%, 100% {
     -o-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 89, ../sass/styles.sass */
+  /* line 74, ../sass/styles.sass */
   50% {
     -o-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -149,13 +140,13 @@ body {
 }
 
 @-ms-keyframes bounce {
-  /* line 87, ../sass/styles.sass */
+  /* line 72, ../sass/styles.sass */
   0%, 100% {
     -ms-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 89, ../sass/styles.sass */
+  /* line 74, ../sass/styles.sass */
   50% {
     -ms-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -163,12 +154,12 @@ body {
 }
 
 @keyframes bounce {
-  /* line 87, ../sass/styles.sass */
+  /* line 72, ../sass/styles.sass */
   0%, 100% {
     transform: rotate(-15deg);
   }
 
-  /* line 89, ../sass/styles.sass */
+  /* line 74, ../sass/styles.sass */
   50% {
     transform: rotate(15deg);
   }

@@ -1,31 +1,38 @@
 (function ($) {
-  var NAMESPACE = 'monkeyArena';
+  var NAMESPACE = 'monkeyMusic';
 
   function initialize(level) {
+    console.log('hello');
     var $this = $(this);
     // Calculate metrics
     var arenaWidth = $(window).innerWidth();
     var arenaHeight = $(window).innerHeight();
     var unitWidth = arenaWidth / level.width;
     var unitHeight = arenaHeight / level.height;
-    // Place units
-    $.each(level.units, function (i, unit) {
-      var
-        $unit = $('<div />');
-      $unit
-        .addClass(unit.type.toLowerCase())
-        .addClass('unit')
-        .css({
-          left: unit.x * unitWidth,
-          top: unit.y * unitHeight,
-          width: unitWidth,
-          height: unitHeight,
-          'line-height': unitHeight + 'px'
-        })
-        .data('id', unit.id)
-        .appendTo($this);
-      unit.domElement = $unit;
+    // Initialize scoreboard
+    var monkeys = $.grep(level.units, function (unit) {
+      return unit.type && unit.type === 'Monkey';
     });
+    console.log(monkeys);
+    $('#scoreboard').html(Handlebars.templates.scores(monkeys));
+    // Place units
+    //$.each(level.units, function (i, unit) {
+      //var
+        //$unit = $('<div />');
+      //$unit
+        //.addClass(unit.type.toLowerCase())
+        //.addClass('unit')
+        //.css({
+          //left: unit.x * unitWidth,
+          //top: unit.y * unitHeight,
+          //width: unitWidth,
+          //height: unitHeight,
+          //'line-height': unitHeight + 'px'
+        //})
+        //.data('id', unit.id)
+        //.appendTo($this);
+      //unit.domElement = $unit;
+    //});
     $this.data(NAMESPACE, {
       arenaWidth: arenaWidth,
       arenaHeight: arenaHeight,

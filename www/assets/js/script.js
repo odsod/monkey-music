@@ -1,7 +1,25 @@
 (function ($) {
   $(function () {
 
-    var $body = $('#arena');
+    var $arena = $('#arena');
+
+    $arena.monkeyMusic({
+      level: {
+        units: [{
+          type: 'Monkey',
+          name: 'Short name #1',
+          score: 125
+        }, {
+          type: 'Monkey',
+          name: 'Long team name #2',
+          score: 243
+        }, {
+          type: 'Monkey',
+          name: 'Long team name #3',
+          score: 319
+        }]
+      }
+    });
 
     var socket;
 
@@ -9,7 +27,7 @@
       var level;
       try {
         level = JSON.parse(event.data);
-        $body.monkeyArena({
+        $arena.monkeyArena({
           level: level
         });
       } catch (exception) {
@@ -19,7 +37,7 @@
 
     function onclose() {
       console.log('destroying');
-      $body.monkeyArena('destroy');
+      $arena.monkeyArena('destroy');
     }
 
     function connect() {
@@ -29,13 +47,13 @@
         console.log('Connection established.');
       };
       socket.onclose = function () {
-        $body.monkeyArena('destroy');
+        $arena.monkeyArena('destroy');
         console.log('No connection. Trying to reconnect...');
         setTimeout(connect, 1000);
       };
     }
 
-    connect();
+    //connect();
 
   });
 }(jQuery));
