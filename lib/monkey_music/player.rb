@@ -13,12 +13,13 @@ module MonkeyMusic
         io.puts @monkey.level.width
         io.puts @monkey.level.height
         io.puts @monkey.level.serialize
-        @next_move = parse_move(io.gets.chomp)
+        move = io.gets
+        @next_move = parse_move(move) if move
       end
     end
 
     def parse_move(s)
-      case s
+      case s.chomp
       when "N" then :north
       when "W" then :west
       when "E" then :east

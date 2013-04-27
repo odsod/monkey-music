@@ -22,7 +22,7 @@ module MonkeyMusic
     def interact_with!(unit)
       case unit
       when Track then pick_up!(unit)
-      when Tube then deliver!
+      when Basket then deliver!
       end
     end
 
@@ -48,6 +48,7 @@ module MonkeyMusic
       units.each do |u|
         score += u.value if defined? u.value
       end
+      score
     end
 
     def name
