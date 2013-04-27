@@ -1,4 +1,4 @@
 module MonkeyMusic
-  class Tube < Base
+  class Basket < Base
   end
 end
