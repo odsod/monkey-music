@@ -1,3 +1,5 @@
+require 'json'
+
 module MonkeyMusic
   class Level
     attr_accessor :width, :height, :max_turns
@@ -79,6 +81,12 @@ module MonkeyMusic
 
     def to_s
       asciify
+    end
+
+    def as_json
+      {
+        :units => @units.first
+      }.to_json
     end
 
   end

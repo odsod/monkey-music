@@ -15,8 +15,10 @@ module MonkeyMusic
       # Load level
       @level = Level.new(@players, @user).load_from_file(@level_file)
       # Run game
-      @ui = ConsoleUI.new
+      #@ui = ConsoleUI.new
+      @ui = BrowserUI.new
       @level.max_turns.times do
+        puts "update!"
         if @level.complete?
           @ui.msg("Complete!")
           break
