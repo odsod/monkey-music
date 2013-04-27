@@ -86,7 +86,10 @@ module MonkeyMusic
 
     def as_json
       {
-        :units => [@units.first]
+        :width => @width,
+        :height => @height,
+        :units => @units,
+        :events => @events
       }.to_json
     end
 

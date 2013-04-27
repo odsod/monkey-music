@@ -29,9 +29,8 @@ module MonkeyMusic
     end
 
     def update(level)
-      puts level.as_json
       @ws.send(level.as_json) if @ws
-      sleep 1
+      sleep 2
     end
 
   end
