@@ -15,7 +15,14 @@ module MonkeyMusic
       # Load level
       @level = Level.new(@players, @user).load_from_file(@level_file)
       # Run game
-      @ui = BrowserUI.new
+      if @browser
+        @ui = BrowserUI.new
+        print "Using browser UI. Press the enter key to start game. "
+        gets
+      else
+        @ui = ConsoleUI.new
+      end
+      puts "Starting game..."
       @level.max_turns.times do
         if @level.complete?
           #@ui.msg("Complete!")
@@ -55,6 +62,9 @@ module MonkeyMusic
         end
         opts.on('-p', '--password PASSWORD', "Password for a Spotify premium account.") do |password|
           @password = password
+        end
+        opts.on('-b', '--browser-ui', "View the game through the browser instead of console.") do |password|
+          @browser = true
         end
         opts.on_tail('-h', '--help', "Show this message.") do 
           puts opts
