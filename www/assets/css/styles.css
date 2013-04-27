@@ -1,0 +1,125 @@
+/* line 11, ../sass/styles.sass */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "DejaVu Sans";
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 19, ../sass/styles.sass */
+body {
+  background: #84bd00;
+}
+
+/* line 22, ../sass/styles.sass */
+.unit {
+  font-size: 1.8em;
+  position: absolute;
+  text-align: center;
+}
+
+/* line 27, ../sass/styles.sass */
+.monkey {
+  color: #7c4e20;
+  font-size: 4em;
+}
+/* line 30, ../sass/styles.sass */
+.monkey::after {
+  content: "\1F435";
+}
+
+/* line 33, ../sass/styles.sass */
+.track {
+  text-shadow: 0.15em 0.15em rgba(0, 0, 0, 0.3);
+  color: black;
+  font-size: 3em;
+  -webkit-animation: bounce 3s infinite;
+  -moz-animation: bounce 3s infinite;
+  -ms-animation: bounce 3s infinite;
+  -o-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+/* line 38, ../sass/styles.sass */
+.track::after {
+  content: "\266A";
+}
+
+/* line 41, ../sass/styles.sass */
+.basket {
+  color: black;
+  font-size: 4em;
+}
+/* line 44, ../sass/styles.sass */
+.basket::after {
+  content: "B";
+}
+
+@-moz-keyframes bounce {
+  /* line 48, ../sass/styles.sass */
+  0%, 100% {
+    -moz-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+  /* line 50, ../sass/styles.sass */
+  50% {
+    -moz-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+}
+
+@-webkit-keyframes bounce {
+  /* line 48, ../sass/styles.sass */
+  0%, 100% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+  /* line 50, ../sass/styles.sass */
+  50% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+}
+
+@-o-keyframes bounce {
+  /* line 48, ../sass/styles.sass */
+  0%, 100% {
+    -o-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+  /* line 50, ../sass/styles.sass */
+  50% {
+    -o-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+}
+
+@-ms-keyframes bounce {
+  /* line 48, ../sass/styles.sass */
+  0%, 100% {
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+  /* line 50, ../sass/styles.sass */
+  50% {
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes bounce {
+  /* line 48, ../sass/styles.sass */
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+
+  /* line 50, ../sass/styles.sass */
+  50% {
+    transform: rotate(15deg);
+  }
+}

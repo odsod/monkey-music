@@ -1,15 +1,11 @@
 require 'em-websocket'
 require 'json'
-require 'sinatra'
+require 'rack'
 
 module MonkeyMusic
   class BrowserUI
 
     def initialize
-      puts "Initializing webserver!"
-      #get '/' do 
-        #"Hello!"
-      #end
       puts "Initializing websockets!"
       Thread.new {
         EM.run {
@@ -35,4 +31,3 @@ module MonkeyMusic
 
   end
 end
-

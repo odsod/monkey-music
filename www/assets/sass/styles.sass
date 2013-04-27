@@ -1,0 +1,51 @@
+@import 'compass/css3/images'
+@import 'animation'
+@import 'compass/css3/transform'
+
+$green: rgb(132,189,0)
+$black: rgb(0,0,0)
+$grey: rgb(130,130,130)
+$sand: rgb(236,235,232)
+$brown: #7c4e20
+
+html, body
+  margin: 0
+  padding: 0
+  font-family: 'DejaVu Sans'
+  height: 100%
+  width: 100%
+  overflow: hidden
+
+body
+  background: $green
+
+.unit
+  font-size: 1.8em
+  position: absolute
+  text-align: center
+
+.monkey
+  color: $brown
+  font-size: 4.0em
+  &::after
+    content: '\1F435'
+
+.track
+  text-shadow: .15em .15em rgba(0,0,0,.3)
+  color: $black
+  font-size: 3.0em
+  +animation(bounce 3s infinite)
+  &::after
+    content: '\266A'
+
+.basket
+  color: $black
+  font-size: 4.0em
+  &::after
+    content: 'B'
+
++keyframes(bounce)
+  0%, 100%
+    +transform(rotate(-15deg))
+  50%
+    +transform(rotate(15deg))
