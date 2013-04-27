@@ -1,5 +1,5 @@
 module MonkeyMusic
-  class TrackScoreSystem
+  class ScoreSystem
 
     def initialize(user)
       @user = user

@@ -5,7 +5,6 @@ module MonkeyMusic
 
     def initialize(arguments)
       @arguments = arguments
-      @game = Game.new
       @opt_parser = OptionParser.new
       init_parser(@opt_parser)
     end
@@ -34,6 +33,7 @@ module MonkeyMusic
         Config.ui = ConsoleUI.new
       end
       # Start game
+      @game = Game.new(Config.level, Config.players, Config.ui)
       @game.start
     end
 
