@@ -18,6 +18,7 @@ module MonkeyMusic
     
     def add(unit, x, y)
       unit.place!(self, x, y)
+      unit.assign_id
       @units << unit
     end
     
@@ -85,7 +86,7 @@ module MonkeyMusic
 
     def as_json
       {
-        :units => @units.first
+        :units => [@units.first]
       }.to_json
     end
 

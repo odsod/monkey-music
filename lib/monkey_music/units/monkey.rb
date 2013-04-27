@@ -3,7 +3,6 @@ module MonkeyMusic
     attr_accessor :name, :score, :capacity, :character
 
     def initialize
-      super
       @score = 0
       @capacity = 1
       @carrying = []

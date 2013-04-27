@@ -3,14 +3,11 @@ module MonkeyMusic
     attr_accessor :x, :y, :character
     attr_reader :level, :id
 
-    def get_id
-      # Didn't manage to use auto incrementing class id for some reason.
-      # Might as well play the fail lottery.
-      rand(36**8).to_s(36)
-    end
+    @@curr_id = 0
 
-    def initialize
-      @id = "hej"
+    def assign_id
+      @id = @@curr_id
+      @@curr_id += 1
     end
 
     def place!(level, x, y)
@@ -55,7 +52,6 @@ module MonkeyMusic
     end
 
     def to_json(options = {})
-      puts @id
       {
         :id => @id,
         :x => @x,
