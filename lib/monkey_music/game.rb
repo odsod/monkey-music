@@ -25,11 +25,10 @@ module MonkeyMusic
       puts "Starting game..."
       @level.max_turns.times do
         if @level.complete?
-          #@ui.msg("Complete!")
           break
         end
         @players.each { |p| p.query_move! }
-        @players.each { |p| p.move! }
+        @players.shuffle.each { |p| p.move! }
         @ui.update(@level)
       end
     end

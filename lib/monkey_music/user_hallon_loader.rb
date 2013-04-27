@@ -74,10 +74,6 @@ module MonkeyMusic
       decade_count.each_with_index.max[1]
     end
 
-    def decade_of(album)
-      (album.release_year % 100) / 10
-    end
-
     def parse_track(track)
       album = track.album
       album.load
