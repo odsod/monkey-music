@@ -18,7 +18,7 @@ module MonkeyMusic
       @ui = BrowserUI.new
       @level.max_turns.times do
         if @level.complete?
-          @ui.msg("Complete!")
+          #@ui.msg("Complete!")
           break
         end
         @players.each { |p| p.query_move! }
