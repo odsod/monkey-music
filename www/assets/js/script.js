@@ -1,24 +1,7 @@
 (function ($) {
   $(function () {
 
-    var $body = $('body');
-
-    //var items = [{
-      //id: 0
-    //, x: 5
-    //, y: 5
-    //, type: 'Monkey'
-    //}, {
-      //id: 1
-    //, x: 10
-    //, y: 13
-    //, type: 'Song'
-    //}];
-    //$('body').monkeyArena({
-      //width: 20
-    //, height: 20
-    //, items: items
-    //});
+    var $body = $('#arena');
 
     var socket;
 

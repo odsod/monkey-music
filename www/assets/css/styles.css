@@ -2,36 +2,87 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "DejaVu Sans";
+  font-family: "8-Bit Madness";
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
 /* line 19, ../sass/styles.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 22, ../sass/styles.sass */
 body {
   background: #84bd00;
 }
 
-/* line 22, ../sass/styles.sass */
-.unit {
+/* line 25, ../sass/styles.sass */
+#scoreboard {
+  height: 20%;
+}
+/* line 30, ../sass/styles.sass */
+#scoreboard .team {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+/* line 33, ../sass/styles.sass */
+#scoreboard .team:first-child .score {
+  float: left;
+  text-align: left;
+  padding-left: 20px;
+}
+/* line 39, ../sass/styles.sass */
+#scoreboard .team:last-child .score {
+  float: right;
+  text-align: right;
+  padding-right: 20px;
+}
+/* line 46, ../sass/styles.sass */
+#scoreboard .team ul {
+  width: 70%;
+  height: 100%;
+}
+/* line 49, ../sass/styles.sass */
+#scoreboard .team .score {
+  position: relative;
+  font-size: 140px;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  text-align: left;
+  height: 100%;
+  width: 30%;
+}
+/* line 57, ../sass/styles.sass */
+#scoreboard .team .team-name {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+
+/* line 62, ../sass/styles.sass */
+#arena {
+  height: 80%;
+}
+/* line 64, ../sass/styles.sass */
+#arena .unit {
   font-size: 1.8em;
   position: absolute;
   text-align: center;
 }
-
-/* line 27, ../sass/styles.sass */
-.monkey {
+/* line 68, ../sass/styles.sass */
+#arena .monkey {
   color: #7c4e20;
   font-size: 4em;
 }
-/* line 30, ../sass/styles.sass */
-.monkey::after {
+/* line 71, ../sass/styles.sass */
+#arena .monkey::after {
   content: "\1F435";
 }
-
-/* line 33, ../sass/styles.sass */
-.track {
+/* line 73, ../sass/styles.sass */
+#arena .track {
   text-shadow: 0.15em 0.15em rgba(0, 0, 0, 0.3);
   color: black;
   font-size: 3em;
@@ -41,29 +92,28 @@ body {
   -o-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
-/* line 38, ../sass/styles.sass */
-.track::after {
+/* line 78, ../sass/styles.sass */
+#arena .track::after {
   content: "\266A";
 }
-
-/* line 41, ../sass/styles.sass */
-.basket {
+/* line 80, ../sass/styles.sass */
+#arena .basket {
   color: black;
   font-size: 4em;
 }
-/* line 44, ../sass/styles.sass */
-.basket::after {
+/* line 83, ../sass/styles.sass */
+#arena .basket::after {
   content: "B";
 }
 
 @-moz-keyframes bounce {
-  /* line 48, ../sass/styles.sass */
+  /* line 87, ../sass/styles.sass */
   0%, 100% {
     -moz-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 50, ../sass/styles.sass */
+  /* line 89, ../sass/styles.sass */
   50% {
     -moz-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -71,13 +121,13 @@ body {
 }
 
 @-webkit-keyframes bounce {
-  /* line 48, ../sass/styles.sass */
+  /* line 87, ../sass/styles.sass */
   0%, 100% {
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 50, ../sass/styles.sass */
+  /* line 89, ../sass/styles.sass */
   50% {
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -85,13 +135,13 @@ body {
 }
 
 @-o-keyframes bounce {
-  /* line 48, ../sass/styles.sass */
+  /* line 87, ../sass/styles.sass */
   0%, 100% {
     -o-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 50, ../sass/styles.sass */
+  /* line 89, ../sass/styles.sass */
   50% {
     -o-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -99,13 +149,13 @@ body {
 }
 
 @-ms-keyframes bounce {
-  /* line 48, ../sass/styles.sass */
+  /* line 87, ../sass/styles.sass */
   0%, 100% {
     -ms-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 50, ../sass/styles.sass */
+  /* line 89, ../sass/styles.sass */
   50% {
     -ms-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -113,12 +163,12 @@ body {
 }
 
 @keyframes bounce {
-  /* line 48, ../sass/styles.sass */
+  /* line 87, ../sass/styles.sass */
   0%, 100% {
     transform: rotate(-15deg);
   }
 
-  /* line 50, ../sass/styles.sass */
+  /* line 89, ../sass/styles.sass */
   50% {
     transform: rotate(15deg);
   }

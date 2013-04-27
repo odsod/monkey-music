@@ -52,8 +52,7 @@ module MonkeyMusic
     end
 
     def to_json(options = {})
-      {
-        :id => @id,
+      { :id => @id,
         :x => @x,
         :y => @y,
         :type => self.class.name.split('::').last

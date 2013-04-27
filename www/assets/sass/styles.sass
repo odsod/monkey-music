@@ -11,38 +11,77 @@ $brown: #7c4e20
 html, body
   margin: 0
   padding: 0
-  font-family: 'DejaVu Sans'
+  font-family: '8-Bit Madness'
   height: 100%
   width: 100%
   overflow: hidden
 
+*
+  box-sizing: border-box
+
 body
   background: $green
 
-.unit
-  font-size: 1.8em
-  position: absolute
-  text-align: center
+#scoreboard
+  //border-bottom: 2px solid $black
+  height: 20%
+  //background: $brown
+  //color: $black
+  .team
+    &:first-child
+      //border-right: 1px solid $black
+      .score
+        float: left
+        text-align: left
+        padding-left: 20px
+    &:last-child
+      //border-left: 1px solid $black
+      .score
+        float: right
+        text-align: right
+        padding-right: 20px
+    height: 100%
+    width: 50%
+    float: left
+    ul
+      width: 70%
+      height: 100%
+    .score
+      position: relative
+      font-size: 140px
+      text-shadow: 5px 5px rgba(0,0,0,.3)
+      padding-top: 20px
+      text-align: left
+      height: 100%
+      width: 30%
+    .team-name
+      position: absolute
+      bottom: -30px
+      left: 0
 
-.monkey
-  color: $brown
-  font-size: 4.0em
-  &::after
-    content: '\1F435'
-
-.track
-  text-shadow: .15em .15em rgba(0,0,0,.3)
-  color: $black
-  font-size: 3.0em
-  +animation(bounce 3s infinite)
-  &::after
-    content: '\266A'
-
-.basket
-  color: $black
-  font-size: 4.0em
-  &::after
-    content: 'B'
+#arena
+  height: 80%
+  .unit
+    font-size: 1.8em
+    position: absolute
+    text-align: center
+  .monkey
+    color: $brown
+    font-size: 4.0em
+    &::after
+      content: '\1F435'
+  .track
+    text-shadow: .15em .15em rgba(0,0,0,.3)
+    color: $black
+    font-size: 3.0em
+    +animation(bounce 3s infinite)
+    &::after
+      content: '\266A'
+  .basket
+    color: $black
+    font-size: 4.0em
+    &::after
+      content: 'B'
 
 +keyframes(bounce)
   0%, 100%
