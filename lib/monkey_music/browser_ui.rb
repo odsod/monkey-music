@@ -30,7 +30,7 @@ module MonkeyMusic
 
     def update(level)
       @ws.send(level.as_json) if @ws
-      sleep 2
+      sleep 1
     end
 
   end
