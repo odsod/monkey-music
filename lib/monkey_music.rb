@@ -9,8 +9,9 @@ require 'monkey_music/level_loader'
 require 'monkey_music/user.rb'
 require 'monkey_music/user_generator.rb'
 require 'monkey_music/user_hallon_loader.rb'
-require 'monkey_music/console_ui.rb'
-require 'monkey_music/browser_ui.rb'
+
+require 'monkey_music/ui/console_ui.rb'
+require 'monkey_music/ui/browser_ui.rb'
 
 require 'monkey_music/units/base'
 require 'monkey_music/units/monkey'
