@@ -10,6 +10,10 @@ $sand: rgb(236,235,232)
 $brown: #7c4e20
 $shadow-color: rgba(black, .3)
 
+$nepheritis: #27ae60
+$emerald: #2ecc71
+$sunflower: #f1c40f
+
 html, body
   margin: 0
   padding: 0
@@ -22,7 +26,7 @@ html, body
   box-sizing: border-box
 
 body
-  background: $green
+  background: $nepheritis
 
 table#scoreboard
   table-layout: fixed
@@ -45,8 +49,39 @@ table#scoreboard
     td:nth-child(3n)
       //color: #00e6e6
 
+#splash
+  position: absolute
+  top: 30%
+  width: 100%
+  text-align: center
+  font-size: 200px
+  text-shadow: 5px 5px $shadow-color
+  .brand
+    text-shadow: 3px 3px $shadow-color
+    width: 100%
+    text-align: center
+    font-size: 50px
+    position: absolute
+    top: -20px
+    left: 0
+    padding-right: 200px
+  .addon
+    font-size: 100px
+    position: absolute
+    right: 60px
+    bottom: -10px
+    //-webkit-transform: rotate(-10deg)
+    color: $sunflower
+    -webkit-animation: wagging 2s infinite alternate
+
+@-webkit-keyframes wagging
+  from
+    -webkit-transform: translate(0, -10px) rotate(-10deg)
+  to
+    -webkit-transform: translate(0, 0px) rotate(-10deg)
+
 #arena
-  height: 80%
+  height: 100%
   .unit
     font-size: 1.8em
     position: absolute

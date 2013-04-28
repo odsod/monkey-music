@@ -3,23 +3,23 @@
 
     var $arena = $('#arena');
 
-    $arena.monkeyMusic({
-      level: {
-        units: [{
-          type: 'Monkey',
-          name: 'Short name #1',
-          score: 125
-        }, {
-          type: 'Monkey',
-          name: 'Long team name #2',
-          score: 243
-        }, {
-          type: 'Monkey',
-          name: 'Long team name #3',
-          score: 319
-        }]
-      }
-    });
+    //$arena.monkeyMusic({
+      //level: {
+        //units: [{
+          //type: 'Monkey',
+          //name: 'Short name #1',
+          //score: 125
+        //}, {
+          //type: 'Monkey',
+          //name: 'Long team name #2',
+          //score: 243
+        //}, {
+          //type: 'Monkey',
+          //name: 'Long team name #3',
+          //score: 319
+        //}]
+      //}
+    //});
 
     var socket;
 

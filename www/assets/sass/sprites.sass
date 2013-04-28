@@ -8,14 +8,14 @@
 //@import 'monkey/picking/*.png'
 //@include all-picking-sprites
 
-$monkey70-layout: horizontal
-@import 'monkey70/*.png'
-@include all-monkey70-sprites
+$monkey-layout: horizontal
+@import 'monkey/*.png'
+@include all-monkey-sprites
 
 *
   image-rendering: -webkit-optimize-contrast
 
-.monkey70-sprite
+.monkey-sprite
   width: 70px
   height: 70px
   margin: 0
@@ -29,6 +29,9 @@ $monkey70-layout: horizontal
 
 .grabbing
   -webkit-animation: grabbing .55s steps(2) infinite
+
+.left
+  -webkit-transform: scaleX(-1)
 
 @-webkit-keyframes running
   from

@@ -1,46 +1,46 @@
-/* line 103, monkey70/*.png */
-.monkey70-sprite, .monkey70-laugh1, .monkey70-pick1, .monkey70-pick2, .monkey70-run1, .monkey70-run2, .monkey70-run3, .monkey70-stand1, .monkey70-stand2 {
-  background-image: url('../img/monkey70-s87c15e42cb.png');
+/* line 103, monkey/*.png */
+.monkey-sprite, .monkey-laugh1, .monkey-pick1, .monkey-pick2, .monkey-run1, .monkey-run2, .monkey-run3, .monkey-stand1, .monkey-stand2 {
+  background-image: url('../img/monkey-se33f1106de.png');
   background-repeat: no-repeat;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey70-laugh1 {
+.monkey-laugh1 {
   background-position: 0 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey70-pick1 {
+.monkey-pick1 {
   background-position: -70px 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey70-pick2 {
+.monkey-pick2 {
   background-position: -140px 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey70-run1 {
+.monkey-run1 {
   background-position: -210px 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey70-run2 {
+.monkey-run2 {
   background-position: -280px 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey70-run3 {
+.monkey-run3 {
   background-position: -350px 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey70-stand1 {
+.monkey-stand1 {
   background-position: -420px 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey70-stand2 {
+.monkey-stand2 {
   background-position: -490px 0;
 }
 
@@ -50,7 +50,7 @@
 }
 
 /* line 18, ../sass/sprites.sass */
-.monkey70-sprite, .monkey70-laugh1, .monkey70-pick1, .monkey70-pick2, .monkey70-run1, .monkey70-run2, .monkey70-run3, .monkey70-stand1, .monkey70-stand2 {
+.monkey-sprite, .monkey-laugh1, .monkey-pick1, .monkey-pick2, .monkey-run1, .monkey-run2, .monkey-run3, .monkey-stand1, .monkey-stand2 {
   width: 70px;
   height: 70px;
   margin: 0;
@@ -72,37 +72,42 @@
   -webkit-animation: grabbing 0.55s steps(2) infinite;
 }
 
+/* line 33, ../sass/sprites.sass */
+.left {
+  -webkit-transform: scaleX(-1);
+}
+
 @-webkit-keyframes running {
-  /* line 34, ../sass/sprites.sass */
+  /* line 37, ../sass/sprites.sass */
   from {
     background-position: -210px;
   }
 
-  /* line 36, ../sass/sprites.sass */
+  /* line 39, ../sass/sprites.sass */
   to {
     background-position: -420px;
   }
 }
 
 @-webkit-keyframes standing {
-  /* line 40, ../sass/sprites.sass */
+  /* line 43, ../sass/sprites.sass */
   from {
     background-position: -420px;
   }
 
-  /* line 42, ../sass/sprites.sass */
+  /* line 45, ../sass/sprites.sass */
   to {
     background-position: -560px;
   }
 }
 
 @-webkit-keyframes grabbing {
-  /* line 46, ../sass/sprites.sass */
+  /* line 49, ../sass/sprites.sass */
   from {
     background-position: -70px;
   }
 
-  /* line 48, ../sass/sprites.sass */
+  /* line 51, ../sass/sprites.sass */
   to {
     background-position: -210px;
   }
