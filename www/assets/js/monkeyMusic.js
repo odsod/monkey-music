@@ -15,24 +15,24 @@
     });
     console.log(monkeys);
     $('#scoreboard').html(Handlebars.templates.scores(monkeys));
-    // Place units
-    //$.each(level.units, function (i, unit) {
-      //var
-        //$unit = $('<div />');
-      //$unit
-        //.addClass(unit.type.toLowerCase())
-        //.addClass('unit')
-        //.css({
-          //left: unit.x * unitWidth,
-          //top: unit.y * unitHeight,
-          //width: unitWidth,
-          //height: unitHeight,
-          //'line-height': unitHeight + 'px'
-        //})
-        //.data('id', unit.id)
-        //.appendTo($this);
-      //unit.domElement = $unit;
-    //});
+     //Place units
+    $.each(level.units, function (i, unit) {
+      var
+        $unit = $('<div />');
+      $unit
+        .addClass(unit.type.toLowerCase() + '-sprite')
+        .addClass('unit')
+        .css({
+          left: unit.x * unitWidth,
+          top: unit.y * unitHeight,
+          width: '70px',
+          height: '70px',
+          'line-height': unitHeight + 'px'
+        })
+        .data('id', unit.id)
+        .appendTo($this);
+      unit.domElement = $unit;
+    });
     $this.data(NAMESPACE, {
       arenaWidth: arenaWidth,
       arenaHeight: arenaHeight,

@@ -217,8 +217,8 @@ body.playing #splash {
   position: absolute;
   text-align: center;
 }
-/* line 99, ../sass/styles.sass */
-#arena .track {
+/* line 94, ../sass/styles.sass */
+#arena .track-sprite {
   text-shadow: 0.15em 0.15em rgba(0, 0, 0, 0.3);
   color: black;
   font-size: 3em;
@@ -228,28 +228,28 @@ body.playing #splash {
   -o-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
-/* line 104, ../sass/styles.sass */
-#arena .track::after {
+/* line 99, ../sass/styles.sass */
+#arena .track-sprite::after {
   content: "\266A";
 }
-/* line 106, ../sass/styles.sass */
-#arena .basket {
+/* line 101, ../sass/styles.sass */
+#arena .basket-sprite {
   color: black;
   font-size: 4em;
 }
-/* line 109, ../sass/styles.sass */
-#arena .basket::after {
+/* line 104, ../sass/styles.sass */
+#arena .basket-sprite::after {
   content: "B";
 }
 
 @-moz-keyframes bounce {
-  /* line 113, ../sass/styles.sass */
+  /* line 108, ../sass/styles.sass */
   0%, 100% {
     -moz-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 115, ../sass/styles.sass */
+  /* line 110, ../sass/styles.sass */
   50% {
     -moz-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -257,13 +257,13 @@ body.playing #splash {
 }
 
 @-webkit-keyframes bounce {
-  /* line 113, ../sass/styles.sass */
+  /* line 108, ../sass/styles.sass */
   0%, 100% {
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 115, ../sass/styles.sass */
+  /* line 110, ../sass/styles.sass */
   50% {
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -271,13 +271,13 @@ body.playing #splash {
 }
 
 @-o-keyframes bounce {
-  /* line 113, ../sass/styles.sass */
+  /* line 108, ../sass/styles.sass */
   0%, 100% {
     -o-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 115, ../sass/styles.sass */
+  /* line 110, ../sass/styles.sass */
   50% {
     -o-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -285,13 +285,13 @@ body.playing #splash {
 }
 
 @-ms-keyframes bounce {
-  /* line 113, ../sass/styles.sass */
+  /* line 108, ../sass/styles.sass */
   0%, 100% {
     -ms-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 115, ../sass/styles.sass */
+  /* line 110, ../sass/styles.sass */
   50% {
     -ms-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -299,12 +299,12 @@ body.playing #splash {
 }
 
 @keyframes bounce {
-  /* line 113, ../sass/styles.sass */
+  /* line 108, ../sass/styles.sass */
   0%, 100% {
     transform: rotate(-15deg);
   }
 
-  /* line 115, ../sass/styles.sass */
+  /* line 110, ../sass/styles.sass */
   50% {
     transform: rotate(15deg);
   }
