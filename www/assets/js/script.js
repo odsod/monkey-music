@@ -1,43 +1,37 @@
 (function ($) {
   $(function () {
 
-    var $arena = $('#arena');
-
-    //$arena.monkeyMusic({
-      //level: {
-        //units: [{
-          //type: 'Monkey',
-          //name: 'Short name #1',
-          //score: 125
-        //}, {
-          //type: 'Monkey',
-          //name: 'Long team name #2',
-          //score: 243
-        //}, {
-          //type: 'Monkey',
-          //name: 'Long team name #3',
-          //score: 319
-        //}]
-      //}
-    //});
-
     var socket;
+    var $arena = $('#arena');
+    var isPlaying = false;
 
     function onmessage(event) {
       var level;
       try {
         level = JSON.parse(event.data);
-        $arena.monkeyArena({
-          level: level
-        });
+        if (isPlaying) {
+          // TODO        
+        } else {
+          isPlaying = true;
+          $('body').addClass('playing');
+          $arena.monkeyMusic({
+            level: level
+          });
+        }
+        //if (isPlaying) {
+          //// Perform update if game is on
+          //$arena.monkeyMusic('update', level);
+        //} else {
+          //// Perform initialization if no game
+          //$arena.monkeyMusic({
+            //level: level
+          //});
+          //$('body').addClass('playing');
+          //isPlaying = true;
+        //}
       } catch (exception) {
         console.log('Failed to parse:\n' + event.data);
       }
-    }
-
-    function onclose() {
-      console.log('destroying');
-      $arena.monkeyArena('destroy');
     }
 
     function connect() {
@@ -47,13 +41,18 @@
         console.log('Connection established.');
       };
       socket.onclose = function () {
-        $arena.monkeyArena('destroy');
+        if (isPlaying) {
+          console.log('destroying');
+          $arena.monkeyMusic('destroy');
+          $('body').removeClass('playing');
+          isPlaying = false;
+        }
         console.log('No connection. Trying to reconnect...');
         setTimeout(connect, 1000);
       };
     }
 
-    //connect();
+    connect();
 
   });
 }(jQuery));

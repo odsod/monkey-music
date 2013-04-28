@@ -135,28 +135,33 @@ body {
 
 /* line 31, ../sass/styles.sass */
 table#scoreboard {
+  display: none;
   table-layout: fixed;
   margin-top: 10px;
   position: absolute;
   width: 100%;
   z-index: 5;
 }
-/* line 37, ../sass/styles.sass */
+/* line 33, ../sass/styles.sass */
+body.playing table#scoreboard {
+  display: table;
+}
+/* line 40, ../sass/styles.sass */
 table#scoreboard td {
   text-align: center;
 }
-/* line 39, ../sass/styles.sass */
+/* line 42, ../sass/styles.sass */
 table#scoreboard tr.scores {
   font-size: 80px;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
 }
-/* line 42, ../sass/styles.sass */
+/* line 45, ../sass/styles.sass */
 table#scoreboard tr.teams {
   font-size: 25px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 52, ../sass/styles.sass */
+/* line 55, ../sass/styles.sass */
 #splash {
   position: absolute;
   top: 30%;
@@ -165,7 +170,11 @@ table#scoreboard tr.teams {
   font-size: 200px;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }
-/* line 59, ../sass/styles.sass */
+/* line 56, ../sass/styles.sass */
+body.playing #splash {
+  display: none;
+}
+/* line 64, ../sass/styles.sass */
 #splash .brand {
   text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -176,7 +185,7 @@ table#scoreboard tr.teams {
   left: 0;
   padding-right: 200px;
 }
-/* line 68, ../sass/styles.sass */
+/* line 73, ../sass/styles.sass */
 #splash .addon {
   font-size: 100px;
   position: absolute;
@@ -187,28 +196,28 @@ table#scoreboard tr.teams {
 }
 
 @-webkit-keyframes wagging {
-  /* line 78, ../sass/styles.sass */
+  /* line 83, ../sass/styles.sass */
   from {
     -webkit-transform: translate(0, -10px) rotate(-10deg);
   }
 
-  /* line 80, ../sass/styles.sass */
+  /* line 85, ../sass/styles.sass */
   to {
     -webkit-transform: translate(0, 0px) rotate(-10deg);
   }
 }
 
-/* line 83, ../sass/styles.sass */
+/* line 88, ../sass/styles.sass */
 #arena {
   height: 100%;
 }
-/* line 85, ../sass/styles.sass */
+/* line 90, ../sass/styles.sass */
 #arena .unit {
   font-size: 1.8em;
   position: absolute;
   text-align: center;
 }
-/* line 94, ../sass/styles.sass */
+/* line 99, ../sass/styles.sass */
 #arena .track {
   text-shadow: 0.15em 0.15em rgba(0, 0, 0, 0.3);
   color: black;
@@ -219,28 +228,28 @@ table#scoreboard tr.teams {
   -o-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
-/* line 99, ../sass/styles.sass */
+/* line 104, ../sass/styles.sass */
 #arena .track::after {
   content: "\266A";
 }
-/* line 101, ../sass/styles.sass */
+/* line 106, ../sass/styles.sass */
 #arena .basket {
   color: black;
   font-size: 4em;
 }
-/* line 104, ../sass/styles.sass */
+/* line 109, ../sass/styles.sass */
 #arena .basket::after {
   content: "B";
 }
 
 @-moz-keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 113, ../sass/styles.sass */
   0%, 100% {
     -moz-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 115, ../sass/styles.sass */
   50% {
     -moz-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -248,13 +257,13 @@ table#scoreboard tr.teams {
 }
 
 @-webkit-keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 113, ../sass/styles.sass */
   0%, 100% {
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 115, ../sass/styles.sass */
   50% {
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -262,13 +271,13 @@ table#scoreboard tr.teams {
 }
 
 @-o-keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 113, ../sass/styles.sass */
   0%, 100% {
     -o-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 115, ../sass/styles.sass */
   50% {
     -o-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -276,13 +285,13 @@ table#scoreboard tr.teams {
 }
 
 @-ms-keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 113, ../sass/styles.sass */
   0%, 100% {
     -ms-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 115, ../sass/styles.sass */
   50% {
     -ms-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -290,12 +299,12 @@ table#scoreboard tr.teams {
 }
 
 @keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 113, ../sass/styles.sass */
   0%, 100% {
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 115, ../sass/styles.sass */
   50% {
     transform: rotate(15deg);
   }

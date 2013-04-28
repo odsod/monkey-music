@@ -1,8 +1,8 @@
 (function ($) {
+
   var NAMESPACE = 'monkeyMusic';
 
   function initialize(level) {
-    console.log('hello');
     var $this = $(this);
     // Calculate metrics
     var arenaWidth = $(window).innerWidth();
@@ -54,8 +54,8 @@
         })[0];
       if (newUnit) {
         $unit.animate({
-          left: newUnit.x * data.unitWidth
-        , top: newUnit.y * data.unitHeight
+          left: newUnit.x * data.unitWidth,
+          top: newUnit.y * data.unitHeight
         }, 700);
       } else {
         $unit.fadeOut(500, function () {
@@ -68,27 +68,22 @@
   var methods = {
     init: function (options) {
       return this.each(function () {
-        var
-          $this = $(this),
-          data = $this.data(NAMESPACE);
+        var data = $(this).data(NAMESPACE);
         if (!data) { // Has not been initialized
           console.log('initializing');
           initialize.call(this, options.level);
-        } else {
-          console.log('updating');
-          update.call(this, options.level);
         }
       });
-    }
-  , update: function (units) {
+    },
+    update: function (level) {
       return this.each(function () {
-        var
-          $this = $(this),
-          data = $this.data(NAMESPACE),
-          oldunits = data.units;
+        var data = $(this).data(NAMESPACE);
+        if (data) { // Has been initialized
+          update.call(this, level);
+        }
       });
-    }
-  , destroy: function () {
+    },
+    destroy: function () {
       return this.each(function () {
         var
           $this = $(this),

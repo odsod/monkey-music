@@ -29,6 +29,9 @@ body
   background: $nepheritis
 
 table#scoreboard
+  display: none
+  body.playing &
+    display: table
   table-layout: fixed
   margin-top: 10px
   position: absolute
@@ -50,6 +53,8 @@ table#scoreboard
       //color: #00e6e6
 
 #splash
+  body.playing &
+    display: none
   position: absolute
   top: 30%
   width: 100%

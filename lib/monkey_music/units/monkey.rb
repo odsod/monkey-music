@@ -57,5 +57,15 @@ module MonkeyMusic
       "#{asciify}"
     end
 
+    def to_json(options = {})
+      { :id => @id,
+        :x => @x,
+        :y => @y,
+        :type => self.class.name.split('::').last,
+        :name => @name,
+        :score => @score,
+      }.to_json
+    end
+
   end
 end
