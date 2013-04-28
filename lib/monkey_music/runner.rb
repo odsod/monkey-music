@@ -14,7 +14,12 @@ module MonkeyMusic
     def run
       @opt_parser.parse!
       if Config.generate_user?
-        @user = UserGenerator.new(@generate_user, @account, @password, @app_key).generate!
+        user_generator = 
+          UserGenerator.new(Config.user_to_generate, 
+                            Config.spotify_account, 
+                            Config.spotify_password, 
+                            Config.spotify_appkey)
+        @user = user_generator.generate!
         puts @user.serialize
         exit
       elsif not Config.playable?
@@ -78,7 +83,7 @@ module MonkeyMusic
       opts.on('-k', 
               '--app-key KEY', 
               'Path to libspotify application key.') do |key|
-        Config.spotify_appkey = File.join(Dir.getwd, key)
+        Config.spotify_appkey = IO.read(File.join(Dir.getwd, key))
       end
 
       opts.on('-a', 
