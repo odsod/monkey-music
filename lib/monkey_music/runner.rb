@@ -6,12 +6,13 @@ module MonkeyMusic
     def initialize(arguments)
       @arguments = arguments
       @opt_parser = OptionParser.new
+      Config.players = []
+      Config.delay = 1
       init_parser(@opt_parser)
     end
 
     def run
-      Config.delay = 1
-      parse_options
+      @opt_parser.parse!
       if Config.generate_user?
         @user = UserGenerator.new(@generate_user, @account, @password, @app_key).generate!
         puts @user.serialize
@@ -21,19 +22,19 @@ module MonkeyMusic
         exit
       end
       # Load level
-      Config.level = Level.new(Config.players, Config.user)
-      Config.level.load_from_file(Config.level_file)
+      level = Level.new(Config.players, Config.user)
+      level.load_from_file(Config.level_file)
       # Initialize UI
       if Config.browser_ui?
         print "Using browser UI. Press the enter key to start game. "
         gets
         puts "Starting game..."
-        Config.ui = BrowserUI.new
+        ui = BrowserUI.new
       else
-        Config.ui = ConsoleUI.new
+        ui = ConsoleUI.new
       end
       # Start game
-      @game = Game.new(Config.level, Config.players, Config.ui)
+      @game = Game.new(level, Config.players, ui)
       @game.start
     end
 
@@ -57,7 +58,6 @@ module MonkeyMusic
       opts.on('-f', 
               '--player-file FILE', 
               'The path to a player program.') do |file|
-        Config.players = [] if (not defined? Config.players)
         Config.players << Player.new(file)
       end
 

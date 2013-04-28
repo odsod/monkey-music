@@ -17,14 +17,11 @@ module MonkeyMusic
       # Level
       puts level.asciify
       # Score
+      puts "\n"
       puts "="*10
+      puts "\n"
       level.players.each do |player|
         puts "#{player.monkey.name}: #{player.monkey.score}"
-      end
-      puts "="*10
-      # Events
-      level.events.each do |event|
-        puts event
       end
       sleep 0.5
     end

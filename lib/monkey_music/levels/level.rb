@@ -3,7 +3,6 @@ require 'json'
 module MonkeyMusic
   class Level
     attr_accessor :width, :height, :max_turns
-    attr_accessor :events
     attr_reader :players
     attr_reader :user
     
@@ -13,7 +12,6 @@ module MonkeyMusic
       @width = 0
       @height = 0
       @units = []
-      @events = []
     end
     
     def add(unit, x, y)
@@ -89,7 +87,6 @@ module MonkeyMusic
         :width => @width,
         :height => @height,
         :units => @units,
-        :events => @events
       }.to_json
     end
 

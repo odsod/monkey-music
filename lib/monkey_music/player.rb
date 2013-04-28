@@ -1,6 +1,6 @@
 module MonkeyMusic
   class Player
-    attr_accessor :monkey, :name
+    attr_accessor :monkey
     
     def initialize(file)
       @file = File.join(Dir.pwd, file)
@@ -33,7 +33,7 @@ module MonkeyMusic
     end
 
     def to_s
-      @file
+      "#{@monkey.name}: #{@file}"
     end
 
   end

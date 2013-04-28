@@ -33,7 +33,6 @@ module MonkeyMusic
         if defined? unit.value
           @score += unit.value
         end
-        @level.events << "#{@name} picked up #{unit.to_s}. (#{unit.value} points.)"
       end
     end
 
