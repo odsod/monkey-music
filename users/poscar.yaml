@@ -1,1867 +1,841 @@
+Track toplist loaded!
+Album toplist loaded!
+Artist toplist loaded!
+Recommendations from top albums loaded!
+Recommendations from top artists loaded!
+Recommendations from Mexico loaded!
 --- !ruby/object:MonkeyMusic::User
 name: poscar!
 track_toplist:
-- Moonlight Sonata - Zero Cult Remix
-- Alchemie Dub
-- Caribbeyond
-- Probability Tree
 - Odysseus Under The Old Tree
-- Wilderness
 - Lost In Translation
-- Molecular Sunrise
-- When The Silence Is Speaking
-- Cruise
-- Deeper (feat. Alyssa Palmer)
+- Stereogram
 - Bénarès - Vârânaçî Edit
-- Hibernation
 - Process Of Unfolding
 - After The Guidung Venus
-- Summer
-- Altered State - Album Edit
-- Wellness Farm
-- Jeezlh
+- Sirens
+- Maniac
+- Molecular Sunrise
+- When The Silence Is Speaking
+- Deeper (feat. Alyssa Palmer)
+- Total Overdose
 - Overload - Putput Mix
+- Probability Tree
+- We Are One
+- Erosion - Glenn Morrison & Bruce Aisher remix
+- Moonlight Sonata - Zero Cult Remix
+- Dayvan Cowboy
+- Alchemie Dub
+- Wilderness
 album_toplist:
 - When The Silence Is Speaking
-- Sines And Singularities
-- The Divine Invasion
-- Portal Of Perceptions
-- '360'
-- Future Memories
-- ! '[ Human ]'
-- Elementary Particles/Prima Materia
-- Efflorescence
-- Sun Dial
-- Earthshine
-- Natural Born Chillers 2
-- Distances
-- Emotivision
-- A Deep Dive
-- Midnight`s Children
-- In The Air
 - Lungs Of Life
-- Entheogenic
-- Slower Moves
+- Efflorescence
+- Inside The Sound
+- Portal Of Perceptions
+- Destination Unknown
+- ! '[ Human ]'
+- Floating Point 3
+- Native Sound
+- Thank You For Flying Utopia
+- Earthshine
+- Geometry
+- Sines And Singularities
+- Future Memories
+- The World Is Yours
+- A Deep Dive
+- In The Air
+- Sun Dial
+- Distances
+- Gain Control
 artist_toplist:
-- Bluetech
-- Androcell
 - Koan
+- Ananda Shake
+- Bluetech
+- Vibrasphere
+- Androcell
 - Solar Fields
+- DNA
 - Asura
+- Vibe Tribe
 - Hol Baumann
+- Tripswitch
+- Nordlight
+- Sesto Sento
 - Entheogenic
-- AES DANA
-- Lemonchill
-- Saafi Brothers
 - Phutureprimitive
 - H.U.V.A. Network
-- Nordlight
-- Vibrasphere
+- Aquila
+- Injection
+- Gataka
 - Boards of Canada
-- Huva Network
-- Shulman
-- Kuba
-- David Bowie
-- Easily Embarrassed
 recommendations:
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
   uri: spotify:track:3VdseCxnE1RVt4VMRwJUko
+  name: Back To The Silent Lagoon
   artist: Koan
   album: When The Silence Is Speaking
   popularity: 34
-  value: 4.5225
-  name:
-  - Back To The Silent Lagoon
-  - Koan
-  - When The Silence Is Speaking
-  - 34
-  - 4.5225
+  year: 2009
+  value: 64
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
   uri: spotify:track:7hMYfCldqYwK0za6A3XlNJ
+  name: Selena`s Song
   artist: Koan
   album: When The Silence Is Speaking
   popularity: 39
-  value: 4.69125
-  name:
-  - Selena`s Song
-  - Koan
-  - When The Silence Is Speaking
-  - 39
-  - 4.69125
+  year: 2009
+  value: 64
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Already heard!
   uri: spotify:track:2tSTzxPyDuWUHgBfmTSJRe
+  name: After The Guidung Venus
   artist: Koan
   album: When The Silence Is Speaking
   popularity: 32
-  value: 4.455
-  name:
-  - After The Guidung Venus
-  - Koan
-  - When The Silence Is Speaking
-  - 32
-  - 4.455
+  year: 2009
+  value: -4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
   uri: spotify:track:1EvYgMosZAFj76wbGmyUBX
+  name: The Island Of Deceased Ships
   artist: Koan
   album: When The Silence Is Speaking
-  popularity: 31
-  value: 4.421250000000001
-  name:
-  - The Island Of Deceased Ships
-  - Koan
-  - When The Silence Is Speaking
-  - 31
-  - 4.421250000000001
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0ihVuVtR0x0nEfsk1gi9pU
-  artist: Koan
-  album: When The Silence Is Speaking
-  popularity: 35
-  value: 4.55625
-  name:
-  - Dance The Nereids
-  - Koan
-  - When The Silence Is Speaking
-  - 35
-  - 4.55625
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3UXTlBGgblLeLzSuUvlbP3
-  artist: Bluetech
-  album: Sines And Singularities
-  popularity: 33
-  value: 4.4887500000000005
-  name:
-  - Enter The Lovely
-  - Bluetech
-  - Sines And Singularities
-  - 33
-  - 4.4887500000000005
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:00EFf529AiidsKMvbhjJqB
-  artist: Bluetech
-  album: Sines And Singularities
-  popularity: 29
-  value: 4.35375
-  name:
-  - Condensation
-  - Bluetech
-  - Sines And Singularities
-  - 29
-  - 4.35375
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6CwbbSZcBITj7OHM9QCb8z
-  artist: Bluetech
-  album: Sines And Singularities
-  popularity: 35
-  value: 4.55625
-  name:
-  - Leaving Winter Behind
-  - Bluetech
-  - Sines And Singularities
-  - 35
-  - 4.55625
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:70aB6nMhep2tmPe3N6FgEb
-  artist: Bluetech
-  album: Sines And Singularities
-  popularity: 30
-  value: 4.3875
-  name:
-  - Forgiveness
-  - Bluetech
-  - Sines And Singularities
-  - 30
-  - 4.3875
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0ryVLqWFv4GJJlsJnXUXY3
-  artist: Shulman
-  album: Sines And Singularities
-  popularity: 36
-  value: 4.59
-  name:
-  - First Came The Stars - Bluetech Remix
-  - Shulman
-  - Sines And Singularities
-  - 36
-  - 4.59
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3q7MXhSNgnGqICkAfQ29Vn
-  artist: Bluetech
-  album: The Divine Invasion
-  popularity: 35
-  value: 4.55625
-  name:
-  - Finding The Future By Looking Backwards
-  - Bluetech
-  - The Divine Invasion
-  - 35
-  - 4.55625
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4ggp5vU1FGX2TJzuqdAPQR
-  artist: Bluetech
-  album: The Divine Invasion
   popularity: 32
-  value: 4.455
-  name:
-  - Lost In An Imagined Labyrinth
-  - Bluetech
-  - The Divine Invasion
-  - 32
-  - 4.455
+  year: 2009
+  value: 64
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5naKYR0GfVL0uqZslO7PD3
-  artist: Bluetech
-  album: The Divine Invasion
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:0ihVuVtR0x0nEfsk1gi9pU
+  name: Dance The Nereids
+  artist: Koan
+  album: When The Silence Is Speaking
   popularity: 35
-  value: 4.55625
-  name:
-  - Probability Tree
-  - Bluetech
-  - The Divine Invasion
-  - 35
-  - 4.55625
+  year: 2009
+  value: 64
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2sPUpF5QbBj6ZAl9jfOqZZ
-  artist: Bluetech
-  album: The Divine Invasion
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:05N4cP9jKlH76Thxq38iIW
+  name: Decade
+  artist: Vibrasphere
+  album: Lungs Of Life
+  popularity: 35
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:1Qq3prahymiO6FlKoT7JPC
+  name: Breathing Place
+  artist: Vibrasphere
+  album: Lungs Of Life
+  popularity: 48
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:6Sny0aA3AeTa9epjq4fLGF
+  name: Ensueno - Morning mix
+  artist: Vibrasphere
+  album: Lungs Of Life
+  popularity: 44
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:40k29WvMwGvWlmfhHJF8HM
+  name: Waveguide
+  artist: Vibrasphere
+  album: Lungs Of Life
+  popularity: 34
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:6AzBgFA83miRmi41italkx
+  name: Analog Marinade
+  artist: Vibrasphere
+  album: Lungs Of Life
+  popularity: 35
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Already heard!
+  uri: spotify:track:2Hgph7N4toB1RMjBAsaSB9
+  name: Process Of Unfolding
+  artist: Androcell
+  album: Efflorescence
   popularity: 31
-  value: 4.421250000000001
-  name:
-  - Rite Of The Dragonfly
-  - Bluetech
-  - The Divine Invasion
-  - 31
-  - 4.421250000000001
+  year: 2009
+  value: -4
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0x4cXiJYnfxwi8FwShPHyu
-  artist: Bluetech
-  album: The Divine Invasion
-  popularity: 29
-  value: 4.35375
-  name:
-  - Swimming In A Feverdream
-  - Bluetech
-  - The Divine Invasion
-  - 29
-  - 4.35375
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:6Wpmd61ZEbLkTkMzrEyswN
+  name: Neurosomatic Circuit
+  artist: Androcell
+  album: Efflorescence
+  popularity: 35
+  year: 2009
+  value: 64
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:5TX1EmqKayuxcrIWPQCX9w
+  name: Atmos-Spheres
+  artist: Androcell
+  album: Efflorescence
+  popularity: 33
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:08B1p3lp2il2XATWeR3W0f
+  name: Spectral Processor
+  artist: Androcell
+  album: Efflorescence
+  popularity: 28
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Decade!
+  uri: spotify:track:7aNN1okhSoo6IaP59YOhxz
+  name: Natti Natti - Androcell Remix
+  artist: AES DANA
+  album: Efflorescence
+  popularity: 31
+  year: 2009
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:33o5Nb7NuEoddspANf3BaW
+  name: Inside The Sound
+  artist: Ananda Shake
+  album: Inside The Sound
+  popularity: 17
+  year: 2007
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:1nNEanycVYYpTviTRdox8a
+  name: Final Effect
+  artist: Ananda Shake
+  album: Inside The Sound
+  popularity: 27
+  year: 2007
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:4Bb9MKPNDFBTL6lBqzouAs
+  name: Wise Study Of L.S.D
+  artist: Ananda Shake
+  album: Inside The Sound
+  popularity: 22
+  year: 2007
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:6Za30VNelmEIgZH2cuwj9F
+  name: Disco Dancer
+  artist: Ananda Shake
+  album: Inside The Sound
+  popularity: 31
+  year: 2007
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:0m11r8YjDaWPFC1R5ItzlX
+  name: High Drive
+  artist: Ananda Shake
+  album: Inside The Sound
+  popularity: 21
+  year: 2007
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Decade!
   uri: spotify:track:6qw62yijhcET5bD5RwkLAz
+  name: Aphrodite
   artist: Ishq
   album: Portal Of Perceptions
-  popularity: 29
-  value: 2.9025
-  name:
-  - Aphrodite
-  - Ishq
-  - Portal Of Perceptions
-  - 29
-  - 2.9025
+  popularity: 30
+  year: 2009
+  value: 16
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Decade!
   uri: spotify:track:5UQc9uuQU4i24DwGvZRDVV
+  name: Jasmine
   artist: Makyo
   album: Portal Of Perceptions
   popularity: 29
-  value: 2.9025
-  name:
-  - Jasmine
-  - Makyo
-  - Portal Of Perceptions
-  - 29
-  - 2.9025
+  year: 2009
+  value: 16
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Decade!
   uri: spotify:track:26m9F9XXAcX1w1j9IZgSOb
+  name: Ohm - Transfix Mix
   artist: Adham Shaikh
   album: Portal Of Perceptions
   popularity: 27
-  value: 2.8575
-  name:
-  - Ohm - Transfix Mix
-  - Adham Shaikh
-  - Portal Of Perceptions
-  - 27
-  - 2.8575
+  year: 2009
+  value: 16
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Decade!
   uri: spotify:track:4MzH7GRSNfu7Cd7o2vFGjn
+  name: Haze - Celestrial Mix
   artist: AES DANA
   album: Portal Of Perceptions
-  popularity: 24
-  value: 4.185
-  name:
-  - Haze - Celestrial Mix
-  - AES DANA
-  - Portal Of Perceptions
-  - 24
-  - 4.185
+  popularity: 25
+  year: 2009
+  value: 16
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
   uri: spotify:track:7M1wX77lepdfdTciKecB3g
+  name: Caribbeyond
   artist: Androcell
   album: Portal Of Perceptions
   popularity: 30
-  value: 4.3875
-  name:
-  - Caribbeyond
-  - Androcell
-  - Portal Of Perceptions
-  - 30
-  - 4.3875
+  year: 2009
+  value: 64
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6yEiiWULxtjkwfUENzqlXL
-  artist: Asura
-  album: '360'
-  popularity: 35
-  value: 3.0375
-  name:
-  - El Hai
-  - Asura
-  - '360'
-  - 35
-  - 3.0375
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4koopMXqQ1ZlDh0BENIYDS
-  artist: Asura
-  album: '360'
-  popularity: 36
-  value: 3.0599999999999996
-  name:
-  - Regenesis
-  - Asura
-  - '360'
-  - 36
-  - 3.0599999999999996
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0KPHgPc0NC8oWOp52gi2RM
-  artist: Asura
-  album: '360'
-  popularity: 37
-  value: 3.0825000000000005
-  name:
-  - Altered State - Album Edit
-  - Asura
-  - '360'
-  - 37
-  - 3.0825000000000005
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5eJopoeU72qC20mNzEcORS
-  artist: Asura
-  album: '360'
-  popularity: 41
-  value: 3.1725
-  name:
-  - Atlantis Child
-  - Asura
-  - '360'
-  - 41
-  - 3.1725
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0NYLehwZkHZqnxuz4DyruJ
-  artist: Asura
-  album: '360'
-  popularity: 29
-  value: 2.9025
-  name:
-  - Erase
-  - Asura
-  - '360'
-  - 29
-  - 2.9025
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2XUeQ24ZyyVRs62kJ5Gp9E
-  artist: Bluetech
-  album: Elementary Particles/Prima Materia
-  popularity: 41
-  value: 4.75875
-  name:
-  - Alchemie Dub
-  - Bluetech
-  - Elementary Particles/Prima Materia
-  - 41
-  - 4.75875
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3l7EBD2BwwvITYKAZoTifh
-  artist: Bluetech
-  album: Love Songs to the Source
-  popularity: 39
-  value: 2.085
-  name:
-  - Seed to Soil
-  - Bluetech
-  - Love Songs to the Source
-  - 39
-  - 2.085
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:46JPLBkKI6kcmUKnXto7im
-  artist: Bluetech
-  album: Love Songs to the Source
-  popularity: 38
-  value: 2.07
-  name:
-  - Dread Inna Babylon
-  - Bluetech
-  - Love Songs to the Source
-  - 38
-  - 2.07
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4bUnIY5kXGJKLaIO7rr3N9
-  artist: Bluetech
-  album: Love Songs to the Source
-  popularity: 38
-  value: 2.07
-  name:
-  - To Mend
-  - Bluetech
-  - Love Songs to the Source
-  - 38
-  - 2.07
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0nGDGtGpaLPwRyAaJW1kBh
-  artist: Shulman
-  album: Random Thoughts
-  popularity: 37
-  value: 3.0825000000000005
-  name:
-  - Midnight Bloom
-  - Shulman
-  - Random Thoughts
-  - 37
-  - 3.0825000000000005
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6Wpmd61ZEbLkTkMzrEyswN
-  artist: Androcell
-  album: Efflorescence
-  popularity: 35
-  value: 4.55625
-  name:
-  - Neurosomatic Circuit
-  - Androcell
-  - Efflorescence
-  - 35
-  - 4.55625
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5TX1EmqKayuxcrIWPQCX9w
-  artist: Androcell
-  album: Efflorescence
-  popularity: 33
-  value: 4.4887500000000005
-  name:
-  - Atmos-Spheres
-  - Androcell
-  - Efflorescence
-  - 33
-  - 4.4887500000000005
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2Hgph7N4toB1RMjBAsaSB9
-  artist: Androcell
-  album: Efflorescence
-  popularity: 31
-  value: 4.421250000000001
-  name:
-  - Process Of Unfolding
-  - Androcell
-  - Efflorescence
-  - 31
-  - 4.421250000000001
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7M1wX77lepdfdTciKecB3g
-  artist: Androcell
-  album: Portal Of Perceptions
-  popularity: 30
-  value: 4.3875
-  name:
-  - Caribbeyond
-  - Androcell
-  - Portal Of Perceptions
-  - 30
-  - 4.3875
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3htLkVyrb2OWsXy6jfUTB0
-  artist: Androcell
-  album: Portal Of Perceptions
-  popularity: 29
-  value: 4.35375
-  name:
-  - Fungus Garden - Acoustic Mix
-  - Androcell
-  - Portal Of Perceptions
-  - 29
-  - 4.35375
-- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Already heard!
   uri: spotify:track:2VD2AthBaeEDWBRhHm136i
+  name: Odysseus Under The Old Tree
   artist: Koan
   album: When The Silence Is Speaking
-  popularity: 40
-  value: 4.725
-  name:
-  - Odysseus Under The Old Tree
-  - Koan
-  - When The Silence Is Speaking
-  - 40
-  - 4.725
+  popularity: 41
+  year: 2009
+  value: -4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
   uri: spotify:track:7hMYfCldqYwK0za6A3XlNJ
+  name: Selena`s Song
   artist: Koan
   album: When The Silence Is Speaking
   popularity: 39
-  value: 4.69125
-  name:
-  - Selena`s Song
-  - Koan
-  - When The Silence Is Speaking
-  - 39
-  - 4.69125
+  year: 2009
+  value: 64
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Artist!
   uri: spotify:track:0aHmfjQBQlXPryi9p2RsEU
+  name: The Last Samurai
   artist: Koan
   album: Chillout and Ambient Pieces
   popularity: 37
-  value: 2.055
-  name:
-  - The Last Samurai
-  - Koan
-  - Chillout and Ambient Pieces
-  - 37
-  - 2.055
+  year: 2012
+  value: 4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Already heard!
   uri: spotify:track:6BK8RYPuyjD99Nq2kjAudR
+  name: When The Silence Is Speaking
   artist: Koan
   album: When The Silence Is Speaking
   popularity: 37
-  value: 4.62375
-  name:
-  - When The Silence Is Speaking
-  - Koan
-  - When The Silence Is Speaking
-  - 37
-  - 4.62375
+  year: 2009
+  value: -4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
   uri: spotify:track:0ihVuVtR0x0nEfsk1gi9pU
+  name: Dance The Nereids
   artist: Koan
   album: When The Silence Is Speaking
   popularity: 35
-  value: 4.55625
-  name:
-  - Dance The Nereids
-  - Koan
-  - When The Silence Is Speaking
-  - 35
-  - 4.55625
+  year: 2009
+  value: 64
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7jG5myIiEYVfHPfEGTf8K0
-  artist: Solar Fields
-  album: Mirror's Edge Original Videogame Score
-  popularity: 48
-  value: 3.33
-  name:
-  - Introduction
-  - Solar Fields
-  - Mirror's Edge Original Videogame Score
-  - 48
-  - 3.33
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:78s9ENMqB5MBgV8nhP3ogF
-  artist: Solar Fields
-  album: Movements
-  popularity: 46
-  value: 3.285
-  name:
-  - Sol
-  - Solar Fields
-  - Movements
-  - 46
-  - 3.285
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3bhxsp3YTHwzOMDaBInQSz
-  artist: Solar Fields
-  album: ! 'Origin # 02'
-  popularity: 43
-  value: 2.145
-  name:
-  - Landform (Origin 2005)
-  - Solar Fields
-  - ! 'Origin # 02'
-  - 43
-  - 2.145
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6HE9tdnizI083UQwKxzQc6
-  artist: Solar Fields
-  album: Movements
-  popularity: 42
-  value: 3.195
-  name:
-  - Discovering
-  - Solar Fields
-  - Movements
-  - 42
-  - 3.195
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5jDZmeig1f7c0Sz8xSiocb
-  artist: Solar Fields
-  album: Movements
-  popularity: 41
-  value: 3.1725
-  name:
-  - Sky Trees
-  - Solar Fields
-  - Movements
-  - 41
-  - 3.1725
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5eJopoeU72qC20mNzEcORS
-  artist: Asura
-  album: '360'
-  popularity: 41
-  value: 3.1725
-  name:
-  - Atlantis Child
-  - Asura
-  - '360'
-  - 41
-  - 3.1725
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0KPHgPc0NC8oWOp52gi2RM
-  artist: Asura
-  album: '360'
-  popularity: 37
-  value: 3.0825000000000005
-  name:
-  - Altered State - Album Edit
-  - Asura
-  - '360'
-  - 37
-  - 3.0825000000000005
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4koopMXqQ1ZlDh0BENIYDS
-  artist: Asura
-  album: '360'
-  popularity: 36
-  value: 3.0599999999999996
-  name:
-  - Regenesis
-  - Asura
-  - '360'
-  - 36
-  - 3.0599999999999996
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6yEiiWULxtjkwfUENzqlXL
-  artist: Asura
-  album: '360'
-  popularity: 35
-  value: 3.0375
-  name:
-  - El Hai
-  - Asura
-  - '360'
-  - 35
-  - 3.0375
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5Frgy5QEuRRB7D2fvlTfHn
-  artist: Asura
-  album: Oxygene
+  modifiers:
+  - Already heard!
+  uri: spotify:track:6ddkzWlWBfllcRT7bFaGO4
+  name: Total Overdose
+  artist: Ananda Shake
+  album: Inside The Sound
   popularity: 34
-  value: 2.0100000000000002
-  name:
-  - Dust and Daffodils
-  - Asura
-  - Oxygene
-  - 34
-  - 2.0100000000000002
+  year: 2007
+  value: -4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:6Za30VNelmEIgZH2cuwj9F
+  name: Disco Dancer
+  artist: Ananda Shake
+  album: Inside The Sound
+  popularity: 31
+  year: 2007
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:1nNEanycVYYpTviTRdox8a
+  name: Final Effect
+  artist: Ananda Shake
+  album: Inside The Sound
+  popularity: 27
+  year: 2007
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:1ktZ5YbiZosTGh0XKgOnCO
+  name: Phananda
+  artist: Ananda Shake
+  album: Thank You For Flying Utopia
+  popularity: 26
+  year: 2008
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  uri: spotify:track:6BU5LRYGHq6Z4FohM8CS35
+  name: Scarface
+  artist: Ananda Shake
+  album: The World Is Yours
+  popularity: 26
+  year: 2010
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Already heard!
+  uri: spotify:track:2XUeQ24ZyyVRs62kJ5Gp9E
+  name: Alchemie Dub
+  artist: Bluetech
+  album: Elementary Particles/Prima Materia
+  popularity: 41
+  year: 2003
+  value: -4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Artist!
+  uri: spotify:track:3l7EBD2BwwvITYKAZoTifh
+  name: Seed to Soil
+  artist: Bluetech
+  album: Love Songs to the Source
+  popularity: 40
+  year: 2010
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Artist!
+  uri: spotify:track:46JPLBkKI6kcmUKnXto7im
+  name: Dread Inna Babylon
+  artist: Bluetech
+  album: Love Songs to the Source
+  popularity: 38
+  year: 2010
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Artist!
+  uri: spotify:track:4bUnIY5kXGJKLaIO7rr3N9
+  name: To Mend
+  artist: Bluetech
+  album: Love Songs to the Source
+  popularity: 38
+  year: 2010
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Artist!
+  uri: spotify:track:5YZKQBmrfssnnJmoxsczJy
+  name: Green Sophia - Gnosis Mix
+  artist: Bluetech
+  album: Love Songs to the Source
+  popularity: 37
+  year: 2010
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:1Qq3prahymiO6FlKoT7JPC
+  name: Breathing Place
+  artist: Vibrasphere
+  album: Lungs Of Life
+  popularity: 48
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Artist!
+  - Decade!
+  uri: spotify:track:1L1LHd3JF1UypCRdXsnkp9
+  name: Northern Sunsets
+  artist: Vibrasphere
+  album: Fahrenheit Project Part Four
+  popularity: 47
+  year: 2003
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Artist!
+  - Decade!
+  uri: spotify:track:02ARurN3YINKqNGod37rt7
+  name: Tierra Azul
+  artist: Vibrasphere
+  album: Archipelago
+  popularity: 45
+  year: 2006
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:6Sny0aA3AeTa9epjq4fLGF
+  name: Ensueno - Morning mix
+  artist: Vibrasphere
+  album: Lungs Of Life
+  popularity: 44
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Artist!
+  - Decade!
+  uri: spotify:track:4bOk0aoie5POnT7ALdpfcy
+  name: Manzanilla
+  artist: Vibrasphere
+  album: Lime Structure
+  popularity: 41
+  year: 2001
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:6Wpmd61ZEbLkTkMzrEyswN
+  name: Neurosomatic Circuit
+  artist: Androcell
+  album: Efflorescence
+  popularity: 35
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:5TX1EmqKayuxcrIWPQCX9w
+  name: Atmos-Spheres
+  artist: Androcell
+  album: Efflorescence
+  popularity: 33
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Already heard!
+  uri: spotify:track:2Hgph7N4toB1RMjBAsaSB9
+  name: Process Of Unfolding
+  artist: Androcell
+  album: Efflorescence
+  popularity: 31
+  year: 2009
+  value: -4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:7M1wX77lepdfdTciKecB3g
+  name: Caribbeyond
+  artist: Androcell
+  album: Portal Of Perceptions
+  popularity: 30
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Album!
+  - Artist!
+  - Decade!
+  uri: spotify:track:3htLkVyrb2OWsXy6jfUTB0
+  name: Fungus Garden - Acoustic Mix
+  artist: Androcell
+  album: Portal Of Perceptions
+  popularity: 29
+  year: 2009
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
+  uri: spotify:track:4VC5nFbYO4avKksJ9jN4pY
+  name: Just Give Me a Reason
+  artist: P!nk
+  album: The Truth About Love
+  popularity: 78
+  year: 2012
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
+  uri: spotify:track:4yOn1TEcfsKHUJCL2h1r8I
+  name: Feel This Moment
+  artist: Pitbull
+  album: Global Warming
+  popularity: 93
+  year: 2012
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:054ue8u2erwwGNgSIZLEPq
+  name: Scream & Shout
   artist: will.i.am
   album: Scream & Shout
   popularity: 85
-  value: 1.85
-  name:
-  - Scream & Shout
-  - will.i.am
-  - Scream & Shout
-  - 85
-  - 1.85
+  year: 2012
+  value: 4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:24LS4lQShWyixJ0ZrJXfJ5
+  name: Sweet Nothing
   artist: Calvin Harris
   album: 18 Months
   popularity: 94
-  value: 1.94
-  name:
-  - Sweet Nothing
-  - Calvin Harris
-  - 18 Months
-  - 94
-  - 1.94
+  year: 2012
+  value: 4
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3AHJw2JJqbh07sJc4renBJ
-  artist: The Lumineers
-  album: Ho Hey
-  popularity: 43
-  value: 1.43
-  name:
-  - Ho Hey
-  - The Lumineers
-  - Ho Hey
-  - 43
-  - 1.43
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4yOn1TEcfsKHUJCL2h1r8I
-  artist: Pitbull
-  album: Global Warming
-  popularity: 92
-  value: 1.92
-  name:
-  - Feel This Moment
-  - Pitbull
-  - Global Warming
-  - 92
-  - 1.92
-- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Popular!
   uri: spotify:track:0pCB9UWGXALpeXcns33vnL
+  name: Radioactive
   artist: Imagine Dragons
   album: Night Visions
-  popularity: 43
-  value: 1.43
-  name:
-  - Radioactive
-  - Imagine Dragons
-  - Night Visions
-  - 43
-  - 1.43
+  popularity: 60
+  year: 2012
+  value: 2
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4VC5nFbYO4avKksJ9jN4pY
-  artist: P!nk
-  album: The Truth About Love
-  popularity: 75
-  value: 1.75
-  name:
-  - Just Give Me a Reason
-  - P!nk
-  - The Truth About Love
-  - 75
-  - 1.75
+  modifiers:
+  - Popular!
+  uri: spotify:track:3AHJw2JJqbh07sJc4renBJ
+  name: Ho Hey
+  artist: The Lumineers
+  album: Ho Hey
+  popularity: 60
+  year: 2012
+  value: 2
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:1oF75Qbv8UvOBm1imUAE51
+  name: Don't You Worry Child (Radio Edit) [feat. John Martin]
   artist: Swedish House Mafia
   album: Don't You Worry Child (Radio Edit) [feat. John Martin]
   popularity: 92
-  value: 1.92
-  name:
-  - Don't You Worry Child (Radio Edit) [feat. John Martin]
-  - Swedish House Mafia
-  - Don't You Worry Child (Radio Edit) [feat. John Martin]
-  - 92
-  - 1.92
+  year: 2012
+  value: 4
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0uZ0orE84drZZzPKxCWSmR
-  artist: Of Monsters And Men
-  album: Into The Woods
-  popularity: 83
-  value: 1.83
-  name:
-  - Little Talks
-  - Of Monsters And Men
-  - Into The Woods
-  - 83
-  - 1.83
-- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:01DSvNTUsVROjnSF5j3UbD
+  name: Try
   artist: P!nk
   album: The Truth About Love
   popularity: 79
-  value: 1.79
-  name:
-  - Try
-  - P!nk
-  - The Truth About Love
-  - 79
-  - 1.79
+  year: 2012
+  value: 4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:1sh6lL6cmlcwhqZKGiKBua
+  name: I Could Be The One [Avicii vs Nicky Romero] - Nicktim - Radio Edit
   artist: Avicii
   album: I Could Be The One [Avicii vs Nicky Romero]
   popularity: 78
-  value: 1.78
-  name:
-  - I Could Be The One [Avicii vs Nicky Romero] - Nicktim - Radio Edit
-  - Avicii
-  - I Could Be The One [Avicii vs Nicky Romero]
-  - 78
-  - 1.78
+  year: 2012
+  value: 4
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7wMq5n8mYSKlQIGECKUgTX
-  artist: The Script
-  album: ! '#3 Deluxe Version'
-  popularity: 91
-  value: 1.9100000000000001
-  name:
-  - Hall of Fame
-  - The Script
-  - ! '#3 Deluxe Version'
-  - 91
-  - 1.9100000000000001
+  modifiers:
+  - Super-popular!
+  uri: spotify:track:0uZ0orE84drZZzPKxCWSmR
+  name: Little Talks
+  artist: Of Monsters And Men
+  album: Into The Woods
+  popularity: 84
+  year: 2011
+  value: 4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:1mwt9hzaH7idmC5UCoOUkz
+  name: Diamonds
   artist: Rihanna
   album: Diamonds
   popularity: 91
-  value: 1.9100000000000001
-  name:
-  - Diamonds
-  - Rihanna
-  - Diamonds
-  - 91
-  - 1.9100000000000001
+  year: 2012
+  value: 4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
+  uri: spotify:track:7wMq5n8mYSKlQIGECKUgTX
+  name: Hall of Fame
+  artist: The Script
+  album: ! '#3 Deluxe Version'
+  popularity: 91
+  year: 2012
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:4rHZZAmHpZrA3iH5zx8frV
+  name: Mirrors
   artist: Justin Timberlake
   album: The 20/20 Experience (Deluxe Version)
-  popularity: 90
-  value: 1.9
-  name:
-  - Mirrors
-  - Justin Timberlake
-  - The 20/20 Experience (Deluxe Version)
-  - 90
-  - 1.9
+  popularity: 92
+  year: 2013
+  value: 4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
+  uri: spotify:track:05SBRd4fXgn8FX7bf8BCAE
+  name: I Need Your Love
+  artist: Calvin Harris
+  album: 18 Months
+  popularity: 89
+  year: 2012
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Popular!
+  uri: spotify:track:7rajbpldr5qibDxdZLjft0
+  name: It's Time
+  artist: Imagine Dragons
+  album: Night Visions
+  popularity: 53
+  year: 2012
+  value: 2
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:0kSgECIEu3ARlKI5M6Z30E
+  name: Harlem Shake
   artist: Baauer
   album: Jeffree's Volume 3
   popularity: 90
-  value: 1.9
-  name:
-  - Harlem Shake
-  - Baauer
-  - Jeffree's Volume 3
-  - 90
-  - 1.9
+  year: 2012
+  value: 4
 - !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
+  uri: spotify:track:2Foc5Q5nqNiosCNqttzHof
+  name: Get Lucky - Radio Edit
+  artist: Daft Punk
+  album: Get Lucky
+  popularity: 87
+  year: 2013
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
+  uri: spotify:track:1oHxIPqJyvAYHy0PVrDU98
+  name: Drinking From the Bottle
+  artist: Calvin Harris
+  album: 18 Months
+  popularity: 89
+  year: 2012
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:03gqZZavMKhWbSjdQvpF6O
+  name: Mirrors
   artist: Justin Timberlake
   album: Mirrors
   popularity: 89
-  value: 1.8900000000000001
-  name:
-  - Mirrors
-  - Justin Timberlake
-  - Mirrors
-  - 89
-  - 1.8900000000000001
+  year: 2013
+  value: 4
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:1oHxIPqJyvAYHy0PVrDU98
-  artist: Calvin Harris
-  album: 18 Months
-  popularity: 89
-  value: 1.8900000000000001
-  name:
-  - Drinking From the Bottle
-  - Calvin Harris
-  - 18 Months
-  - 89
-  - 1.8900000000000001
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6vt0I1cw1YmAIKDJvHVIM5
-  artist: Justin Timberlake
-  album: The 20/20 Experience (Deluxe Version)
-  popularity: 84
-  value: 1.8399999999999999
-  name:
-  - Suit & Tie featuring JAY Z
-  - Justin Timberlake
-  - The 20/20 Experience (Deluxe Version)
-  - 84
-  - 1.8399999999999999
-- !ruby/object:MonkeyMusic::Track
+  modifiers:
+  - Super-popular!
   uri: spotify:track:4jOtC832PyIXlCVPRElfQu
+  name: Troublemaker
   artist: Olly Murs
   album: Right Place Right Time
   popularity: 85
-  value: 1.85
-  name:
-  - Troublemaker
-  - Olly Murs
-  - Right Place Right Time
-  - 85
-  - 1.85
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:05SBRd4fXgn8FX7bf8BCAE
-  artist: Calvin Harris
-  album: 18 Months
-  popularity: 87
-  value: 1.87
-  name:
-  - I Need Your Love
-  - Calvin Harris
-  - 18 Months
-  - 87
-  - 1.87
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6ngcO8KQ724LVkDvqSY3VR
-  artist: Passenger
-  album: Let Her Go - Single
-  popularity: 36
-  value: 1.3599999999999999
-  name:
-  - Let Her Go
-  - Passenger
-  - Let Her Go - Single
-  - 36
-  - 1.3599999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:1gihuPhrLraKYrJMAEONyc
-  artist: Calvin Harris
-  album: 18 Months
-  popularity: 84
-  value: 1.8399999999999999
-  name:
-  - Feel So Close - Radio Edit
-  - Calvin Harris
-  - 18 Months
-  - 84
-  - 1.8399999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4lWJjtWbDDALpK9tVG8Dho
-  artist: Lil Wayne
-  album: Love Me
-  popularity: 86
-  value: 1.8599999999999999
-  name:
-  - Love Me
-  - Lil Wayne
-  - Love Me
-  - 86
-  - 1.8599999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7Fw5i56my24ZBnGS7hFX2n
-  artist: Bastille
-  album: Pompeii
-  popularity: 89
-  value: 1.8900000000000001
-  name:
-  - Pompeii
-  - Bastille
-  - Pompeii
-  - 89
-  - 1.8900000000000001
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4DIWRIrMWDFdtSIeEo1gou
-  artist: Justin Timberlake
-  album: Suit & Tie featuring JAY Z
-  popularity: 83
-  value: 1.83
-  name:
-  - Suit & Tie featuring JAY Z
-  - Justin Timberlake
-  - Suit & Tie featuring JAY Z
-  - 83
-  - 1.83
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7rajbpldr5qibDxdZLjft0
-  artist: Imagine Dragons
-  album: Night Visions
-  popularity: 35
-  value: 1.35
-  name:
-  - It's Time
-  - Imagine Dragons
-  - Night Visions
-  - 35
-  - 1.35
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3wJIAMuPdEoBddWlovWXCX
-  artist: Maroon 5
-  album: One More Night
-  popularity: 80
-  value: 1.8
-  name:
-  - One More Night
-  - Maroon 5
-  - One More Night
-  - 80
-  - 1.8
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4YMqbFcDIFiCBd02PzUBcM
-  artist: Macklemore & Ryan Lewis
-  album: The Heist
-  popularity: 77
-  value: 1.77
-  name:
-  - Thrift Shop - feat. Wanz
-  - Macklemore & Ryan Lewis
-  - The Heist
-  - 77
-  - 1.77
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:1PuLHwFZoh5qYK89I5YBdZ
-  artist: Mumford & Sons
-  album: Babel
-  popularity: 34
-  value: 1.34
-  name:
-  - I Will Wait
-  - Mumford & Sons
-  - Babel
-  - 34
-  - 1.34
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0AkQbXGN4KG34TS7xLrM68
-  artist: One Direction
-  album: ! 'Take Me Home: Yearbook Edition'
-  popularity: 88
-  value: 1.88
-  name:
-  - Kiss You
-  - One Direction
-  - ! 'Take Me Home: Yearbook Edition'
-  - 88
-  - 1.88
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4Sfa7hdVkqlM8UW5LsSY3F
-  artist: Passion Pit
-  album: Gossamer
-  popularity: 83
-  value: 1.83
-  name:
-  - Take A Walk
-  - Passion Pit
-  - Gossamer
-  - 83
-  - 1.83
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3ShCJTrnhjvUpL234S4QbJ
-  artist: Shaun Reynolds feat. Laura Pringle
-  album: Stay (originally by Rihanna)
-  popularity: 88
-  value: 1.88
-  name:
-  - Stay (originally by Rihanna)
-  - Shaun Reynolds feat. Laura Pringle
-  - Stay (originally by Rihanna)
-  - 88
-  - 1.88
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0TDLuuLlV54CkRRUOahJb4
-  artist: David Guetta
-  album: Nothing But the Beat Ultimate
-  popularity: 83
-  value: 1.83
-  name:
-  - Titanium - feat. Sia
-  - David Guetta
-  - Nothing But the Beat Ultimate
-  - 83
-  - 1.83
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5Q2bP4QKyM7nOPju1QVZiZ
-  artist: Natalia Lafourcade
-  album: Mujer Divina - Homenaje a Agustín Lara
-  popularity: 44
-  value: 1.44
-  name:
-  - Mujer Divina
-  - Natalia Lafourcade
-  - Mujer Divina - Homenaje a Agustín Lara
-  - 44
-  - 1.44
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6KpC6gpXeIP2jUaDIuMT6v
-  artist: DLD
-  album: Primario
-  popularity: 35
-  value: 1.35
-  name:
-  - Animal
-  - DLD
-  - Primario
-  - 35
-  - 1.35
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7ueP5u2qkdZbIPN2YA6LR0
-  artist: AWOLNATION
-  album: Megalithic Symphony
-  popularity: 84
-  value: 1.8399999999999999
-  name:
-  - Sail
-  - AWOLNATION
-  - Megalithic Symphony
-  - 84
-  - 1.8399999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3jZomvOBa5qfTo5HkqI1p5
-  artist: One Direction
-  album: One Way Or Another (Teenage Kicks)
-  popularity: 87
-  value: 1.87
-  name:
-  - One Way Or Another (Teenage Kicks)
-  - One Direction
-  - One Way Or Another (Teenage Kicks)
-  - 87
-  - 1.87
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2l8D5dB5pXywjeIeWw16E7
-  artist: Maroon 5
-  album: Overexposed
-  popularity: 72
-  value: 1.72
-  name:
-  - Daylight
-  - Maroon 5
-  - Overexposed
-  - 72
-  - 1.72
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:50VNvhzyaSplJCKWchN7a8
-  artist: James Arthur
-  album: Impossible
-  popularity: 88
-  value: 1.88
-  name:
-  - Impossible
-  - James Arthur
-  - Impossible
-  - 88
-  - 1.88
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0gRwWCGghAv0fSiKOrqgL9
-  artist: DLD
-  album: Primario
-  popularity: 37
-  value: 1.37
-  name:
-  - Arsénico
-  - DLD
-  - Primario
-  - 37
-  - 1.37
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:25n4NECujqOxQHdXVIVc9I
-  artist: Demi Lovato
-  album: Heart Attack
-  popularity: 83
-  value: 1.83
-  name:
-  - Heart Attack
-  - Demi Lovato
-  - Heart Attack
-  - 83
-  - 1.83
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7B1Dl3tXqySkB8OPEwVvSu
-  artist: Calvin Harris
-  album: 18 Months
-  popularity: 85
-  value: 1.85
-  name:
-  - We'll Be Coming Back
-  - Calvin Harris
-  - 18 Months
-  - 85
-  - 1.85
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5HSkycOEtb9iQ7cg1Oyqmu
-  artist: Asaf Avidan
-  album: One Day / Reckoning Song (Wankelmut Remix)
-  popularity: 73
-  value: 1.73
-  name:
-  - One Day / Reckoning Song (Wankelmut Remix) - Radio Edit
-  - Asaf Avidan
-  - One Day / Reckoning Song (Wankelmut Remix)
-  - 73
-  - 1.73
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7ed5xBtyYAcDWFCDVZb25M
-  artist: Fall Out Boy
-  album: My Songs Know What You Did In The Dark (Light Em Up)
-  popularity: 82
-  value: 1.8199999999999998
-  name:
-  - My Songs Know What You Did In The Dark (Light Em Up)
-  - Fall Out Boy
-  - My Songs Know What You Did In The Dark (Light Em Up)
-  - 82
-  - 1.8199999999999998
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:25ayfrtkcSJfE93B8mnhRT
-  artist: DLD
-  album: Primario
-  popularity: 37
-  value: 1.37
-  name:
-  - Todo Cuenta
-  - DLD
-  - Primario
-  - 37
-  - 1.37
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:03UrZgTINDqvnUMbbIMhql
-  artist: Psy
-  album: Gangnam Style (강남스타일)
-  popularity: 78
-  value: 1.78
-  name:
-  - Gangnam Style (강남스타일)
-  - Psy
-  - Gangnam Style (강남스타일)
-  - 78
-  - 1.78
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6qOEjO2IUD7PjtpsXawq0d
-  artist: Alicia Keys
-  album: Girl on Fire
-  popularity: 85
-  value: 1.85
-  name:
-  - Girl on Fire
-  - Alicia Keys
-  - Girl on Fire
-  - 85
-  - 1.85
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3bidbhpOYeV4knp8AIu8Xn
-  artist: Macklemore & Ryan Lewis
-  album: The Heist
-  popularity: 96
-  value: 1.96
-  name:
-  - Can't Hold Us - feat. Ray Dalton
-  - Macklemore & Ryan Lewis
-  - The Heist
-  - 96
-  - 1.96
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7ofjLONS47avnVdyf7baNQ
-  artist: Natalia Lafourcade
-  album: Mujer Divina - Homenaje a Agustín Lara
-  popularity: 42
-  value: 1.42
-  name:
-  - Limosna
-  - Natalia Lafourcade
-  - Mujer Divina - Homenaje a Agustín Lara
-  - 42
-  - 1.42
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6OmhkSOpvYBokMKQxpIGx2
-  artist: Pitbull
-  album: Global Warming
-  popularity: 65
-  value: 1.65
-  name:
-  - Global Warming
-  - Pitbull
-  - Global Warming
-  - 65
-  - 1.65
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6G0RXhQJGDnjgUdbQfBZRk
-  artist: Calvin Harris
-  album: 18 Months
-  popularity: 72
-  value: 1.72
-  name:
-  - Green Valley
-  - Calvin Harris
-  - 18 Months
-  - 72
-  - 1.72
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2iblMMIgSznA464mNov7A8
-  artist: Pitbull
-  album: Global Warming
-  popularity: 79
-  value: 1.79
-  name:
-  - Don't Stop The Party
-  - Pitbull
-  - Global Warming
-  - 79
-  - 1.79
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2V65y3PX4DkRhy1djlxd9p
-  artist: Swedish House Mafia
-  album: Don't You Worry Child (feat. John Martin)
-  popularity: 86
-  value: 1.8599999999999999
-  name:
-  - Don't You Worry Child (Radio Edit) [feat. John Martin]
-  - Swedish House Mafia
-  - Don't You Worry Child (feat. John Martin)
-  - 86
-  - 1.8599999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3Dy8QVSgVB3qNw9Xtc2Jjw
-  artist: Lady Danville
-  album: Kids - Single
-  popularity: 70
-  value: 1.7
-  name:
-  - Kids
-  - Lady Danville
-  - Kids - Single
-  - 70
-  - 1.7
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:36cmM3MBMWWCFIiQ90U4J8
-  artist: Calvin Harris
-  album: 18 Months
-  popularity: 78
-  value: 1.78
-  name:
-  - Bounce - Radio Edit
-  - Calvin Harris
-  - 18 Months
-  - 78
-  - 1.78
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:56fwHfJaBpaauvFJrnwk2L
-  artist: David Guetta
-  album: She Wolf (Falling to Pieces)
-  popularity: 86
-  value: 1.8599999999999999
-  name:
-  - She Wolf (Falling to Pieces) [feat. Sia]
-  - David Guetta
-  - She Wolf (Falling to Pieces)
-  - 86
-  - 1.8599999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3gomYwoePusGetRpXYATjx
-  artist: Natalia Lafourcade
-  album: Mujer Divina - Homenaje a Agustín Lara
-  popularity: 42
-  value: 1.42
-  name:
-  - Imposible
-  - Natalia Lafourcade
-  - Mujer Divina - Homenaje a Agustín Lara
-  - 42
-  - 1.42
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0SiomEE1oUlWBxn1e61gh1
-  artist: will.i.am
-  album: ! '#thatPOWER'
-  popularity: 72
-  value: 1.72
-  name:
-  - ! '#thatPOWER'
-  - will.i.am
-  - ! '#thatPOWER'
-  - 72
-  - 1.72
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:773hekg7UEdbGvv3lJ3CmV
-  artist: Justin Timberlake
-  album: The 20/20 Experience (Deluxe Version)
-  popularity: 78
-  value: 1.78
-  name:
-  - Pusher Love Girl
-  - Justin Timberlake
-  - The 20/20 Experience (Deluxe Version)
-  - 78
-  - 1.78
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:01ZslKM941Tz4E1fMkfZEh
-  artist: DLD
-  album: Primario
-  popularity: 32
-  value: 1.32
-  name:
-  - Sea
-  - DLD
-  - Primario
-  - 32
-  - 1.32
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0sY0OXVttb9cwTeH1bpyTj
-  artist: Guy Sebastian
-  album: Battle Scars
-  popularity: 59
-  value: 1.5899999999999999
-  name:
-  - Battle Scars - featuring Lupe Fiasco
-  - Guy Sebastian
-  - Battle Scars
-  - 59
-  - 1.5899999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2Fz9h1NN89KRiPrwWDtSZ7
-  artist: Carla Morrison
-  album: Déjenme Llorar
-  popularity: 44
-  value: 1.44
-  name:
-  - Apague Mi Mente
-  - Carla Morrison
-  - Déjenme Llorar
-  - 44
-  - 1.44
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2XDdHuoRmBeOaBIOSclj2k
-  artist: Drake
-  album: Started From the Bottom
-  popularity: 86
-  value: 1.8599999999999999
-  name:
-  - Started From the Bottom
-  - Drake
-  - Started From the Bottom
-  - 86
-  - 1.8599999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6nek1Nin9q48AVZcWs9e9D
-  artist: Coldplay
-  album: Mylo Xyloto
-  popularity: 84
-  value: 1.8399999999999999
-  name:
-  - Paradise
-  - Coldplay
-  - Mylo Xyloto
-  - 84
-  - 1.8399999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6mnjcTmK8TewHfyOp3fC9C
-  artist: Ke$ha
-  album: Warrior (Deluxe Version)
-  popularity: 87
-  value: 1.87
-  name:
-  - Die Young
-  - Ke$ha
-  - Warrior (Deluxe Version)
-  - 87
-  - 1.87
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4hoB7jVAo22BXwMFWLdlxQ
-  artist: St. Lucia
-  album: St. Lucia
-  popularity: 65
-  value: 1.65
-  name:
-  - All Eyes On You
-  - St. Lucia
-  - St. Lucia
-  - 65
-  - 1.65
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2EcsgXlxz99UMDSPg5T8RF
-  artist: Labrinth
-  album: Electronic Earth
-  popularity: 88
-  value: 1.88
-  name:
-  - Beneath Your Beautiful
-  - Labrinth
-  - Electronic Earth
-  - 88
-  - 1.88
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:067AqILNtaIPWQNeIM7nte
-  artist: Café Tacvba
-  album: El Objeto Antes Llamado Disco
-  popularity: 40
-  value: 1.4
-  name:
-  - Olita Del Altamar
-  - Café Tacvba
-  - El Objeto Antes Llamado Disco
-  - 40
-  - 1.4
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0385HqYimoTQaHZP17KwG1
-  artist: Calvin Harris
-  album: 18 Months
-  popularity: 73
-  value: 1.73
-  name:
-  - We Found Love
-  - Calvin Harris
-  - 18 Months
-  - 73
-  - 1.73
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6vRPkStwQmUrs13jpDG6Sd
-  artist: Imagine Dragons
-  album: It's Time
-  popularity: 71
-  value: 1.71
-  name:
-  - It's Time - Passion Pit Remix
-  - Imagine Dragons
-  - It's Time
-  - 71
-  - 1.71
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:18FDZomlMoJ1pcY1v44Tjn
-  artist: Natalia Lafourcade
-  album: Mujer Divina - Homenaje a Agustín Lara
-  popularity: 43
-  value: 1.43
-  name:
-  - Piensa en Mí
-  - Natalia Lafourcade
-  - Mujer Divina - Homenaje a Agustín Lara
-  - 43
-  - 1.43
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6fw5Tpxt8Ci5ne4BRxdqH6
-  artist: Paty Cantú
-  album: Corazón Bipolar
-  popularity: 38
-  value: 1.38
-  name:
-  - Suerte
-  - Paty Cantú
-  - Corazón Bipolar
-  - 38
-  - 1.38
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7oK9VyNzrYvRFo7nQEYkWN
-  artist: The Killers
-  album: Hot Fuss
-  popularity: 73
-  value: 2.5949999999999998
-  name:
-  - Mr. Brightside
-  - The Killers
-  - Hot Fuss
-  - 73
-  - 2.5949999999999998
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:043vxbUHxQErHDIe7zuC0O
-  artist: David Guetta
-  album: Nothing But the Beat Ultimate
-  popularity: 78
-  value: 1.78
-  name:
-  - Just One Last Time - feat. Taped Rai
-  - David Guetta
-  - Nothing But the Beat Ultimate
-  - 78
-  - 1.78
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:6ol4ZSifr7r3Lb2a9L5ZAB
-  artist: Carly Rae Jepsen
-  album: Call Me Maybe
-  popularity: 76
-  value: 1.76
-  name:
-  - Call Me Maybe
-  - Carly Rae Jepsen
-  - Call Me Maybe
-  - 76
-  - 1.76
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3SPiRBbxVnZQ7h3Ukv2BQA
-  artist: DLD
-  album: Primario
-  popularity: 31
-  value: 1.31
-  name:
-  - A Distancia
-  - DLD
-  - Primario
-  - 31
-  - 1.31
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:25nzKGDiua1lE9Qo5V19GL
-  artist: The Naked And Famous
-  album: Passive Me, Aggressive You
-  popularity: 77
-  value: 1.77
-  name:
-  - Young Blood
-  - The Naked And Famous
-  - Passive Me, Aggressive You
-  - 77
-  - 1.77
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3GfOAdcoc3X5GPiiXmpBjK
-  artist: Blur
-  album: ! 'Blur: The Best Of'
-  popularity: 77
-  value: 2.6550000000000002
-  name:
-  - Song 2
-  - Blur
-  - ! 'Blur: The Best Of'
-  - 77
-  - 2.6550000000000002
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:30CNJpVV1qtEisIeunne7j
-  artist: Natalia Lafourcade
-  album: Mujer Divina - Homenaje a Agustín Lara
-  popularity: 41
-  value: 1.41
-  name:
-  - Farolito
-  - Natalia Lafourcade
-  - Mujer Divina - Homenaje a Agustín Lara
-  - 41
-  - 1.41
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4JnQx0xYuoXdkNHe0dt0oR
-  artist: Ke$ha
-  album: Die Young
-  popularity: 75
-  value: 1.75
-  name:
-  - Die Young
-  - Ke$ha
-  - Die Young
-  - 75
-  - 1.75
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4kO7mrAPfqIrsKwUOK5BFx
-  artist: M83
-  album: Hurry Up, We're Dreaming
-  popularity: 79
-  value: 1.79
-  name:
-  - Midnight City
-  - M83
-  - Hurry Up, We're Dreaming
-  - 79
-  - 1.79
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:437XMj1UkDaiDuby5PFuaD
-  artist: Efecto Pasillo
-  album: No Importa Que Llueva
-  popularity: 76
-  value: 1.76
-  name:
-  - No Importa Que Llueva
-  - Efecto Pasillo
-  - No Importa Que Llueva
-  - 76
-  - 1.76
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3AA8xNhDC0MpqwkGX3EP5V
-  artist: Phoenix
-  album: United
-  popularity: 75
-  value: 2.625
-  name:
-  - If I Ever Feel Better
-  - Phoenix
-  - United
-  - 75
-  - 2.625
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5KQrOv9nFVnM465CVGriW9
-  artist: Matt & Kim
-  album: Lightning
-  popularity: 74
-  value: 1.74
-  name:
-  - Let's Go
-  - Matt & Kim
-  - Lightning
-  - 74
-  - 1.74
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:1jmDkMtuAQJgSiN9AulFcx
-  artist: Natalia Lafourcade
-  album: Mujer Divina - Homenaje a Agustín Lara
-  popularity: 47
-  value: 1.47
-  name:
-  - La Fugitiva
-  - Natalia Lafourcade
-  - Mujer Divina - Homenaje a Agustín Lara
-  - 47
-  - 1.47
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:446rQWVFWcido9fHuW981s
-  artist: Natalia Lafourcade
-  album: Mujer Divina - Homenaje a Agustín Lara
-  popularity: 44
-  value: 1.44
-  name:
-  - Si No Pueden Quererte
-  - Natalia Lafourcade
-  - Mujer Divina - Homenaje a Agustín Lara
-  - 44
-  - 1.44
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3GC3xIxWImpR7dfv2F81ze
-  artist: Swedish House Mafia
-  album: Greyhound
-  popularity: 84
-  value: 1.8399999999999999
-  name:
-  - Greyhound
-  - Swedish House Mafia
-  - Greyhound
-  - 84
-  - 1.8399999999999999
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7kAYyzVhWr3nSqAC7CUOWK
-  artist: Kelly Clarkson
-  album: Catch My Breath
-  popularity: 79
-  value: 1.79
-  name:
-  - Catch My Breath
-  - Kelly Clarkson
-  - Catch My Breath
-  - 79
-  - 1.79
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:77KdcSx54OXNKvn6vMFCod
-  artist: The Black Keys
-  album: Brothers
-  popularity: 28
-  value: 1.28
-  name:
-  - Tighten Up
-  - The Black Keys
-  - Brothers
-  - 28
-  - 1.28
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5JGxJFdgOQdJZdmyEzDtTj
-  artist: Neon Trees
-  album: Everybody Talks
-  popularity: 77
-  value: 1.77
-  name:
-  - Everybody Talks
-  - Neon Trees
-  - Everybody Talks
-  - 77
-  - 1.77
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4vVYPpGmuNowTTqof3k2wP
-  artist: Darius Rucker
-  album: Wagon Wheel
-  popularity: 79
-  value: 1.79
-  name:
-  - Wagon Wheel
-  - Darius Rucker
-  - Wagon Wheel
-  - 79
-  - 1.79
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5ghIJDpPoe3CfHMGu71E6T
-  artist: Nirvana
-  album: Nevermind
-  popularity: 70
-  value: 1.7
-  name:
-  - Smells Like Teen Spirit
-  - Nirvana
-  - Nevermind
-  - 70
-  - 1.7
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3dB42OEuVNiktvt3V5JRVI
-  artist: Natalia Lafourcade
-  album: Mujer Divina - Homenaje a Agustín Lara
-  popularity: 46
-  value: 1.46
-  name:
-  - Amor, Amor de Mis Amores
-  - Natalia Lafourcade
-  - Mujer Divina - Homenaje a Agustín Lara
-  - 46
-  - 1.46
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7HGTkn2aX7MNdKs7nV2xBt
-  artist: The Killers
-  album: Hot Fuss
-  popularity: 69
-  value: 2.535
-  name:
-  - Somebody Told Me
-  - The Killers
-  - Hot Fuss
-  - 69
-  - 2.535
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3WqU0LOANC8xU9BMDpa9gS
-  artist: Justin Bieber
-  album: Believe
-  popularity: 67
-  value: 1.67
-  name:
-  - Beauty And A Beat
-  - Justin Bieber
-  - Believe
-  - 67
-  - 1.67
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7KEajVD9AUG68onXRSFZTv
-  artist: The Killers
-  album: Day & Age
-  popularity: 67
-  value: 2.505
-  name:
-  - Human
-  - The Killers
-  - Day & Age
-  - 67
-  - 2.505
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:1x5MjCffpcdHLf65eR9r3T
-  artist: C2C
-  album: Tetra
-  popularity: 69
-  value: 1.69
-  name:
-  - Down The Road
-  - C2C
-  - Tetra
-  - 69
-  - 1.69
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:3Q5oYtxn6wcI5knu3STL56
-  artist: Selah Sue
-  album: Raggamuffin
-  popularity: 67
-  value: 1.67
-  name:
-  - Crazy Vibes
-  - Selah Sue
-  - Raggamuffin
-  - 67
-  - 1.67
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:70wYA8oYHoMzhRRkARoMhU
-  artist: The Killers
-  album: Sam's Town
-  popularity: 67
-  value: 2.505
-  name:
-  - When You Were Young
-  - The Killers
-  - Sam's Town
-  - 67
-  - 2.505
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:0pcZeECIDq8ell9pwnnw5j
-  artist: Pablo Alboran
-  album: Tanto - Special Edition
-  popularity: 75
-  value: 1.75
-  name:
-  - El Beso
-  - Pablo Alboran
-  - Tanto - Special Edition
-  - 75
-  - 1.75
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7fmpKF0rLGPnP7kcQ5ZMm7
-  artist: Pitbull
-  album: Global Warming
-  popularity: 74
-  value: 1.74
-  name:
-  - Back in Time - featured in "Men In Black 3"
-  - Pitbull
-  - Global Warming
-  - 74
-  - 1.74
+  year: 2012
+  value: 4
+disliked_artists: []
 top_decade: 0

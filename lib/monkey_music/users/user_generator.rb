@@ -8,7 +8,7 @@ module MonkeyMusic
                    spotify_password, 
                    spotify_appkey,
                    load_factor = 5)
-      @user = User.new(@user_to_generate)
+      @user = User.new(user_to_generate)
       @score_system = ScoreSystem.new(@user)
       @spotify_account = spotify_account
       @spotify_password = spotify_password
@@ -76,7 +76,7 @@ module MonkeyMusic
 
     def load_recommendations_from_country_toplist(country)
       toplist = load_toplist(:tracks, country)
-      toplist.each do |track|
+      toplist.first(20).each do |track|
         @user.recommendations << parse_track(track)
       end
     end
