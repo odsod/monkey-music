@@ -21,7 +21,7 @@
         $unit = $('<div />');
       $unit
         .addClass(unit.type.toLowerCase() + '-sprite')
-        .addClass('unit')
+        .addClass('unit running')
         .css({
           left: unit.x * unitWidth,
           top: unit.y * unitHeight,
@@ -45,18 +45,27 @@
   function update(level) {
     var
       $this = $(this),
-      data = $this.data(NAMESPACE);
+      data = $this.data(NAMESPACE),
+      oldUnits = data.units;
     $.each(data.units, function (i, oldUnit) {
       var
         $unit = oldUnit.domElement,
         newUnit = $.grep(level.units, function (unit) {
           return unit.id === oldUnit.id;
         })[0];
+      console.log($unit);
       if (newUnit) {
+        var newLeft = newUnit.x * data.unitWidth;
+        var oldLeft = $unit.css('left');
+        $unit.removeClass('left');
+        if (newLeft < oldLeft) {
+          $unit.addClass('left');
+        }
         $unit.animate({
           left: newUnit.x * data.unitWidth,
           top: newUnit.y * data.unitHeight
-        }, 700);
+        }, 900, function () {
+        });
       } else {
         $unit.fadeOut(500, function () {
           $unit.remove();

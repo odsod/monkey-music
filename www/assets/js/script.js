@@ -7,17 +7,17 @@
 
     function onmessage(event) {
       var level;
-      try {
-        level = JSON.parse(event.data);
-        if (isPlaying) {
-          // TODO        
-        } else {
-          isPlaying = true;
-          $('body').addClass('playing');
-          $arena.monkeyMusic({
-            level: level
-          });
-        }
+      level = JSON.parse(event.data);
+      if (isPlaying) {
+        $arena.monkeyMusic('update', level);
+      } else {
+        console.log(level);
+        isPlaying = true;
+        $('body').addClass('playing');
+        $arena.monkeyMusic({
+          level: level
+        });
+      }
         //if (isPlaying) {
           //// Perform update if game is on
           //$arena.monkeyMusic('update', level);
@@ -29,9 +29,6 @@
           //$('body').addClass('playing');
           //isPlaying = true;
         //}
-      } catch (exception) {
-        console.log('Failed to parse:\n' + event.data);
-      }
     }
 
     function connect() {

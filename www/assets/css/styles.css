@@ -50,6 +50,11 @@
 }
 
 /* line 18, ../sass/sprites.sass */
+.basket-sprite {
+  background-image: url('../img/pipe.png?1367153288');
+}
+
+/* line 21, ../sass/sprites.sass */
 .monkey-sprite, .monkey-laugh1, .monkey-pick1, .monkey-pick2, .monkey-run1, .monkey-run2, .monkey-run3, .monkey-stand1, .monkey-stand2 {
   width: 70px;
   height: 70px;
@@ -57,57 +62,57 @@
   padding: 0;
 }
 
-/* line 24, ../sass/sprites.sass */
+/* line 27, ../sass/sprites.sass */
 .running {
   -webkit-animation: running 0.5s steps(3) infinite;
 }
 
-/* line 27, ../sass/sprites.sass */
+/* line 30, ../sass/sprites.sass */
 .standing {
   -webkit-animation: standing 1.5s steps(2) infinite;
 }
 
-/* line 30, ../sass/sprites.sass */
+/* line 33, ../sass/sprites.sass */
 .grabbing {
   -webkit-animation: grabbing 0.55s steps(2) infinite;
 }
 
-/* line 33, ../sass/sprites.sass */
+/* line 36, ../sass/sprites.sass */
 .left {
   -webkit-transform: scaleX(-1);
 }
 
 @-webkit-keyframes running {
-  /* line 37, ../sass/sprites.sass */
+  /* line 40, ../sass/sprites.sass */
   from {
     background-position: -210px;
   }
 
-  /* line 39, ../sass/sprites.sass */
+  /* line 42, ../sass/sprites.sass */
   to {
     background-position: -420px;
   }
 }
 
 @-webkit-keyframes standing {
-  /* line 43, ../sass/sprites.sass */
+  /* line 46, ../sass/sprites.sass */
   from {
     background-position: -420px;
   }
 
-  /* line 45, ../sass/sprites.sass */
+  /* line 48, ../sass/sprites.sass */
   to {
     background-position: -560px;
   }
 }
 
 @-webkit-keyframes grabbing {
-  /* line 49, ../sass/sprites.sass */
+  /* line 52, ../sass/sprites.sass */
   from {
     background-position: -70px;
   }
 
-  /* line 51, ../sass/sprites.sass */
+  /* line 54, ../sass/sprites.sass */
   to {
     background-position: -210px;
   }
@@ -232,24 +237,15 @@ body.playing #splash {
 #arena .track-sprite::after {
   content: "\266A";
 }
-/* line 101, ../sass/styles.sass */
-#arena .basket-sprite {
-  color: black;
-  font-size: 4em;
-}
-/* line 104, ../sass/styles.sass */
-#arena .basket-sprite::after {
-  content: "B";
-}
 
 @-moz-keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 103, ../sass/styles.sass */
   0%, 100% {
     -moz-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 105, ../sass/styles.sass */
   50% {
     -moz-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -257,13 +253,13 @@ body.playing #splash {
 }
 
 @-webkit-keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 103, ../sass/styles.sass */
   0%, 100% {
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 105, ../sass/styles.sass */
   50% {
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -271,13 +267,13 @@ body.playing #splash {
 }
 
 @-o-keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 103, ../sass/styles.sass */
   0%, 100% {
     -o-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 105, ../sass/styles.sass */
   50% {
     -o-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -285,13 +281,13 @@ body.playing #splash {
 }
 
 @-ms-keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 103, ../sass/styles.sass */
   0%, 100% {
     -ms-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 105, ../sass/styles.sass */
   50% {
     -ms-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -299,12 +295,12 @@ body.playing #splash {
 }
 
 @keyframes bounce {
-  /* line 108, ../sass/styles.sass */
+  /* line 103, ../sass/styles.sass */
   0%, 100% {
     transform: rotate(-15deg);
   }
 
-  /* line 110, ../sass/styles.sass */
+  /* line 105, ../sass/styles.sass */
   50% {
     transform: rotate(15deg);
   }
