@@ -3,9 +3,8 @@ require 'yaml'
 module MonkeyMusic
   class User
     attr_reader :name
-    attr_accessor :track_toplist, :album_toplist, :artist_toplist
-    attr_accessor :top_decade
-    attr_accessor :recommendations
+    attr_accessor :track_toplist, :album_toplist, :artist_toplist, 
+      :top_decade, :recommendations, :disliked_artists
 
     def initialize(name)
       @name = name
@@ -13,6 +12,7 @@ module MonkeyMusic
       @album_toplist = []
       @artist_toplist = []
       @recommendations = []
+      @disliked_artists = []
     end
 
     def serialize

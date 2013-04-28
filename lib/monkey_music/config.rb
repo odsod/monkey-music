@@ -4,7 +4,7 @@ module MonkeyMusic
   class Config
     class << self
       attr_accessor :level_file, :user_to_generate, :players, :user,
-        :spotify_app_key, :spotify_account, :spotify_password, :browser_ui, :delay
+        :spotify_appkey, :spotify_account, :spotify_password, :browser_ui, :delay
       
       def generate_user?
         (defined? @user_to_generate) && 

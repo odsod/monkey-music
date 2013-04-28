@@ -9,8 +9,10 @@ module MonkeyMusic
       multiplier = 0
       if @user.track_toplist.include? track.name
         multiplier = -2
+        track.modifiers << "Already heard!"
       elsif @user.disliked_artists.include? track.artist
         multiplier = -4
+        track.modifiers << "Disliked!"
       else
         if @user.album_toplist.include? track.album
           multiplier += 1
@@ -20,7 +22,6 @@ module MonkeyMusic
           multiplier += 1
           track.modifiers << "Artist!"
         end
-        multip
         if @user.top_decade == decade_of(track.year)
           multiplier += 1
           track.modifiers << "Decade!"

@@ -7,26 +7,32 @@ module MonkeyMusic
                    spotify_account, 
                    spotify_password, 
                    spotify_appkey,
-                   load_factor)
+                   load_factor = 5)
       @user = User.new(@user_to_generate)
       @score_system = ScoreSystem.new(@user)
       @spotify_account = spotify_account
       @spotify_password = spotify_password
       @spotify_appkey = spotify_appkey
-      @load_factor = 5
+      @load_factor = load_factor
     end
 
     def generate!
       session = Hallon::Session.initialize(@spotify_appkey)
       session.login!(@spotify_account, @spotify_password)
       load_track_toplist
+      puts "Track toplist loaded!"
       load_album_toplist
+      puts "Album toplist loaded!"
       load_artist_toplist
+      puts "Artist toplist loaded!"
       load_recommendations_from_top_albums
+      puts "Recommendations from top albums loaded!"
       load_recommendations_from_top_artists
+      puts "Recommendations from top artists loaded!"
       # Load some crappy(?) recommendations from Mexico
       load_recommendations_from_country_toplist(:mx)
-      sleep 2 # Give libspotify a sec or two to cool off and release memory
+      puts "Recommendations from Mexico loaded!"
+      sleep 1 # Give libspotify a sec or two to cool off and release memory
       @user
     end
 
@@ -79,7 +85,7 @@ module MonkeyMusic
       decade_count = Array.new(10, 0)
       albums.each do |album|
         if album.release_year != 0
-          decade_count[decade_of(album)] += 1
+          decade_count[decade_of(album.release_year)] += 1
         end
       end
       decade_count.each_with_index.max[1]
@@ -92,11 +98,12 @@ module MonkeyMusic
       artist.load
       user_track = Track.new
       user_track.uri = track.to_link.to_str
-      user_track.name = track.name,
-      user_track.artist = artist.name,
-      user_track.album = album.name,
-      user_track.popularity = track.popularity,
-      user_track.value = @score_system.evaluate_track(track)
+      user_track.name = track.name
+      user_track.artist = artist.name
+      user_track.album = album.name
+      user_track.popularity = track.popularity
+      user_track.year = album.release_year
+      user_track.value = @score_system.evaluate_track(user_track)
       user_track
     end
 
