@@ -26,6 +26,7 @@ module MonkeyMusic
         puts @opt_parser
         exit
       end
+      puts Config.user
       # Load level
       level = Level.new(Config.players, Config.user)
       level.load_from_file(Config.level_file)

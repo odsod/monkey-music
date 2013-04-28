@@ -1,6 +1,7 @@
 module MonkeyMusic
   class Monkey < Base
     attr_accessor :name, :score, :capacity, :character
+    attr_reader :carrying
 
     def initialize
       @score = 0
@@ -11,12 +12,13 @@ module MonkeyMusic
 
     def move!(direction)
       target = translate(@x, @y, direction)
-      # Interact with unit
       if target_unit = @level.at(*target)
+        # Interact with unit
         interact_with!(target_unit)
+      else
+        # Perform move
+        @x, @y = *target if @level.accessible?(*target)
       end
-      # Perform move
-      @x, @y = *target if @level.accessible?(*target)
     end
 
     def interact_with!(unit)
@@ -30,9 +32,6 @@ module MonkeyMusic
       if @carrying.count < @capacity
         @level.remove(unit)
         @carrying << unit
-        if defined? unit.value
-          @score += unit.value
-        end
       end
     end
 
@@ -42,20 +41,16 @@ module MonkeyMusic
       @carrying = []
     end
 
-    def tally(units)
+    def tally(tracks)
       score = 0
-      units.each do |u|
-        score += u.value if defined? u.value
+      tracks.each do |track|
+        score += track.value
       end
       score
     end
 
-    def name
-      if @name && !@name.empty?
-        @name
-      else
-        "Monkey"
-      end
+    def remaining_capacity
+      @capacity - carrying.count
     end
 
   end

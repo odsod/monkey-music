@@ -20,19 +20,13 @@ module MonkeyMusic
       session = Hallon::Session.initialize(@spotify_appkey)
       session.login!(@spotify_account, @spotify_password)
       load_track_toplist
-      puts "Track toplist loaded!"
       load_album_toplist
-      puts "Album toplist loaded!"
       load_artist_toplist
-      puts "Artist toplist loaded!"
       load_recommendations_from_top_albums
-      puts "Recommendations from top albums loaded!"
       load_recommendations_from_top_artists
-      puts "Recommendations from top artists loaded!"
       # Load some crappy(?) recommendations from Mexico
       load_recommendations_from_country_toplist(:mx)
-      puts "Recommendations from Mexico loaded!"
-      sleep 1 # Give libspotify a sec or two to cool off and release memory
+      sleep 1 # Give libspotify a sec to cool off and release memory
       @user
     end
 

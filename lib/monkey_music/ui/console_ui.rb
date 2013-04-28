@@ -22,6 +22,7 @@ module MonkeyMusic
       puts "\n"
       level.players.each do |player|
         puts "#{player.monkey.name}: #{player.monkey.score}"
+        puts "{ #{"0"*player.monkey.carrying.count}#{"_"*player.monkey.remaining_capacity} }\n"
       end
       sleep 0.5
     end
