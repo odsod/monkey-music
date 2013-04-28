@@ -1,9 +1,3 @@
-Track toplist loaded!
-Album toplist loaded!
-Artist toplist loaded!
-Recommendations from top albums loaded!
-Recommendations from top artists loaded!
-Recommendations from Mexico loaded!
 --- !ruby/object:MonkeyMusic::User
 name: poscar!
 track_toplist:
