@@ -1,0 +1,69 @@
+@import 'animation'
+
+//$running-layout: horizontal
+//@import 'monkey/running/*.png'
+//@include all-running-sprites
+
+//$picking-layout: horizontal
+//@import 'monkey/picking/*.png'
+//@include all-picking-sprites
+
+$monkey70-layout: horizontal
+@import 'monkey70/*.png'
+@include all-monkey70-sprites
+
+*
+  image-rendering: -webkit-optimize-contrast
+
+.monkey70-sprite
+  width: 70px
+  height: 70px
+  margin: 0
+  padding: 0
+
+.running
+  -webkit-animation: running .5s steps(3) infinite
+
+.standing
+  -webkit-animation: standing 1.5s steps(2) infinite
+
+.grabbing
+  -webkit-animation: grabbing .55s steps(2) infinite
+
+@-webkit-keyframes running
+  from
+    background-position: -210px
+  to
+    background-position: -420px
+
+@-webkit-keyframes standing
+  from
+    background-position: -420px
+  to
+    background-position: -560px
+
+@-webkit-keyframes grabbing
+  from
+    background-position: -70px
+  to
+    background-position: -210px
+
+//.running-sprite
+  //width: 32px
+  //height: 32px
+  //margin: 0
+  //padding: 0
+  //-webkit-animation: running .5s steps(3) infinite
+
+//.picking-sprite
+  //width: 32px
+  //height: 32px
+  //margin: 0
+  //padding: 0
+  //-webkit-animation: picking .5s steps(2) infinite
+
+//@-webkit-keyframes picking
+  //from
+    //background-position: 0
+  //to
+    //background-position: -64px

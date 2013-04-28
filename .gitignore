@@ -52,3 +52,14 @@ Icon
 # Spotify
 spotify_appkey.key
 Makefile
+### /home/poscar/.gitignore-boilerplates/Global/SASS.gitignore
+
+### SASS Ignores - "Sassy CSS" http://sass-lang.com/
+*.sass-cache
+
+
+### /home/poscar/.gitignore-boilerplates/Compass.gitignore
+
+.sass-cache
+
+
