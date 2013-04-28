@@ -10,6 +10,7 @@ module MonkeyMusic
     def query_move!
       IO.popen(@file, "r+") do |io|
         io.puts @monkey.serialize
+        io.puts @monkey.remaining_capacity
         io.puts @monkey.level.width
         io.puts @monkey.level.height
         io.puts @monkey.level.serialize

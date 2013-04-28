@@ -29,7 +29,8 @@ module MonkeyMusic
     end
 
     def complete?
-      (@units.detect { |u| u.kind_of? Track }).nil?
+      (@units.detect { |u| u.kind_of? Track }).nil? &&
+        (@players.detect { |p| p.monkey.carrying.count > 0 }).nil?
     end
 
     def remove(unit)
@@ -51,7 +52,7 @@ module MonkeyMusic
 
     def asciify
       rows = []
-      rows << " " + ("_" * @width)
+      rows << " " + ("=" * @width)
       @height.times do |y|
         row = ["|"]
         @width.times do |x|
@@ -61,7 +62,7 @@ module MonkeyMusic
         row << "|"
         rows << row.join
       end
-      rows << "|" + ("_" * @width) + "|"
+      rows << " " + ("=" * @width)
       rows.join("\n")
     end
 

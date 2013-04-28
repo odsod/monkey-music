@@ -2,6 +2,7 @@
 
 # Read indata
 @monkey = gets.chomp
+@remaining_capacity = Integer(gets.chomp)
 @width = Integer(gets.chomp)
 @height = Integer(gets.chomp)
 
@@ -15,6 +16,8 @@
       @x, @y = x, y
     elsif /spotify:track/.match(thing)
       @tracks << [x, y]
+    elsif thing == "B"
+      @basket = [x, y]
     end
   end
 end
@@ -48,4 +51,8 @@ def distance_to(x, y)
   (@x - x).abs + (@y - y).abs
 end
 
-puts move_toward(*closest_track())
+if @remaining_capacity > 0
+  puts move_toward(*closest_track())
+else
+  puts move_toward(*@basket)
+end

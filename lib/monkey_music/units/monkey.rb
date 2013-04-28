@@ -50,7 +50,11 @@ module MonkeyMusic
     end
 
     def remaining_capacity
-      @capacity - carrying.count
+      (@capacity - carrying.count) || 0
+    end
+
+    def serialize
+      "#{asciify}"
     end
 
   end
