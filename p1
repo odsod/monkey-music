@@ -4,16 +4,17 @@
 @monkey = gets.chomp
 @width = Integer(gets.chomp)
 @height = Integer(gets.chomp)
+
 # Read level
-@things = []
+@tracks = []
 @height.times do |y|
   row = gets.chomp.split(',')
   @width.times do |x|
     thing = row[x]
     if thing == @monkey
       @x, @y = x, y
-    elsif thing != '_'
-      @things << [x, y]
+    elsif /spotify:track/.match(thing)
+      @tracks << [x, y]
     end
   end
 end
@@ -30,13 +31,13 @@ def move_toward(x, y)
   end
 end
 
-def closest_thing
-  curr_closest = @things.pop()
+def closest_track
+  curr_closest = @tracks.pop()
   curr_smallest_distance = distance_to(*curr_closest)
-  @things.each do |thing|
-    curr_distance = distance_to(*thing)
+  @tracks.each do |track|
+    curr_distance = distance_to(*track)
     if curr_distance < curr_smallest_distance
-      curr_closest = thing
+      curr_closest = track
       curr_smallest_distance = curr_distance
     end
   end
@@ -47,4 +48,4 @@ def distance_to(x, y)
   (@x - x).abs + (@y - y).abs
 end
 
-puts move_toward(*closest_thing())
+puts move_toward(*closest_track())
