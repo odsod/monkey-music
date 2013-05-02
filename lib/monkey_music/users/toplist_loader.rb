@@ -13,12 +13,8 @@ module MonkeyMusic
 
     private
 
-    def toplist(type, items)
-      @toplists[type] = []
-      items.each do |name, uri|
-        @toplists[type] << uri
-      end
+    def toplist(type, uri)
+      @toplists[type] = uri
     end
-
   end
 end

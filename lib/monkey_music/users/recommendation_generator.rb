@@ -15,10 +15,10 @@ module MonkeyMusic
       session = Hallon::Session.initialize(spotify_appkey)
       session.login!(spotify_account, spotify_password)
       loaded_toplists = {}
-      @toplists.each do |type, list|
-        loaded_toplists[type] = load_toplist(type, list)
+      @toplists.each do |type, uri|
+        loaded_toplists[type] = load_from_list(type, uri)
       end
-      #load_from_albums(loaded_toplists[:albums])
+      load_from_albums(loaded_toplists[:albums])
       #load_from_artists(loaded_toplists[:artists])
       session.logout
       sleep 1 # Give libspotify a sec to cool off and release memory
@@ -26,26 +26,17 @@ module MonkeyMusic
 
     private
 
-    def load_toplist(type, list)
-      to_load = []
-      puts "loading #{type.to_s}..."
-      list.each do |uri|
-        puts uri
-        item = case type
-               when :tracks then Hallon::Track.new(uri).load
-               when :albums then Hallon::Track.new(uri).load.album.load
-               when :artists then Hallon::Track.new(uri).load.artist.load
-               end
-        to_load << item
-        puts "loaded #{item.name}"
+    def load_from_list(type, uri)
+      playlist = Hallon::Playlist.new(uri).load
+      tracks = playlist.tracks.to_a
+      tracks.each(&:load)
+      if type == :tracks
+        tracks
+      elsif type == :artists
+        tracks.map(&:artist).each(&:load)
+      else
+        tracks.map(&:album).each(&:load)
       end
-      #to_load.each do |item|
-        #puts "loading #{item.to_s}"
-        #item.load
-        #puts "loaded #{item.to_s}"
-      #end
-      puts "loaded #{type.to_s}"
-      parse_toplist(to_load)
     end
 
     def load_from_albums(albums)
