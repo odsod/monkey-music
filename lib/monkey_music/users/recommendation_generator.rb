@@ -2,9 +2,10 @@ require 'hallon'
 
 module MonkeyMusic
   class RecommendationGenerator
+    attr_reader :toplists
     attr_reader :recommendations
 
-    def initialize(toplists, load_factor = 5)
+    def initialize(toplists, load_factor = 3)
       @toplists = toplists
       @load_factor = load_factor
       @recommendations = []
@@ -14,17 +15,24 @@ module MonkeyMusic
       Hallon.load_timeout = 0
       session = Hallon::Session.initialize(spotify_appkey)
       session.login!(spotify_account, spotify_password)
+      load_toplists!
+      load_recommendations_from_albums!
+      load_recommendations_from_artists!
+      load_recommendations_from_tracks!
+      load_recommendations_from_already_heard!
+      load_recommendations_from_disliked!
+      session.logout!
+    end
+
+    private
+
+    def load_toplists!
       loaded_toplists = {}
       @toplists.each do |type, uri|
         loaded_toplists[type] = load_from_list(type, uri)
       end
-      load_from_albums(loaded_toplists[:albums])
-      #load_from_artists(loaded_toplists[:artists])
-      session.logout
-      sleep 1 # Give libspotify a sec to cool off and release memory
+      @toplists = loaded_toplists
     end
-
-    private
 
     def load_from_list(type, uri)
       playlist = Hallon::Playlist.new(uri).load
@@ -34,36 +42,55 @@ module MonkeyMusic
         tracks
       elsif type == :artists
         tracks.map(&:artist).each(&:load)
-      else
+      elsif type == :albums
         tracks.map(&:album).each(&:load)
       end
     end
 
-    def load_from_albums(albums)
-      albums.first(@load_factor).each do |album|
-        browse = album.browse
-        browse.load
-        browse.tracks.first(@load_factor).each do |track|
-          @recommendations << parse_track(track)
+    def load_recommendations_from_albums!
+      @toplists[:albums].each do |album|
+        browse = album.browse.load
+        browse.tracks.first(@load_factor).each do |rec|
+          @recommendations << parse_track(rec)
         end
       end
     end
 
-    def load_from_artists(artists)
-      artists.first(@load_factor).each do |artist|
-        browse = artist.browse
-        browse.load
-        browse.top_hits.first(@load_factor).each do |track|
-          @recommendations << parse_track(track)
+    def load_recommendations_from_artists!
+      @toplists[:artists].each do |artist|
+        browse = artist.browse.load
+        browse.top_hits.first(@load_factor).each do |rec|
+          @recommendations << parse_track(rec)
+        end
+      end
+    end
+
+    def load_recommendations_from_tracks!
+      @toplists[:tracks].each do |track|
+        album = track.album.load
+        browse = album.browse.load
+        browse.tracks.first(@load_factor).each do |rec|
+          @recommendations << parse_track(rec)
+        end
+      end
+    end
+
+    def load_recommendations_from_tracks!
+      @recommendations += @toplists[:tracks]
+    end
+
+    def load_recommendations_from_disliked!
+      @toplists[:disliked].each do |artist|
+        browse = artist.browse.load
+        browse.top_hits.first(@load_factor).each do |rec|
+          @recommendations << parse_track(rec)
         end
       end
     end
 
     def parse_track(track)
-      album = track.album
-      album.load
-      artist = track.artist
-      artist.load
+      album = track.album.load
+      artist = track.artist.load
       user_track = Track.new
       user_track.uri = track.to_link.to_str
       user_track.name = track.name

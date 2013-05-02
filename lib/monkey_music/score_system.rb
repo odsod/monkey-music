@@ -8,38 +8,21 @@ module MonkeyMusic
     def evaluate_track(track)
       multiplier = 0
       if @user.track_toplist.include? track.name
-        multiplier = -2
-        track.modifiers << "Already heard!"
+        multiplier = -1
       elsif @user.disliked_artists.include? track.artist
-        multiplier = -4
-        track.modifiers << "Disliked!"
+        multiplier = -2
       else
-        # TODO: Same album as top track
+        if @user.track_toplist_albums.include? track.album
+          multiplier += 1
+        end
         if @user.album_toplist.include? track.album
-          multiplier += 2
-          track.modifiers << "Album!"
+          multiplier += 1
         end
         if @user.artist_toplist.include? track.artist
-          multiplier += 2
-          track.modifiers << "Artist!"
-        end
-        if @user.top_decade == decade_of(track.year)
-          multiplier += 2
-          track.modifiers << "Decade!"
-        end
-        if track.popularity >= 70
-          multiplier += 2
-          track.modifiers << "Super-popular!"
-        elsif track.popularity >= 50
           multiplier += 1
-          track.modifiers << "Popular!"
-        end
-        if multiplier == 0
-            multiplier = -3
-            track.modifiers << "Boring!"
         end
       end
-      return 2**multiplier.abs * sign(multiplier)
+      return 4**multiplier.abs * sign(multiplier)
     end
 
     private

@@ -1,5 +1,5 @@
 module MonkeyMusic
-  class ToplistLoader
+  class UserLoader
     attr_reader :toplists
 
     def initialize(file)
