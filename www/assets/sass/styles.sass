@@ -85,16 +85,17 @@ table#scoreboard
   to
     -webkit-transform: translate(0, 0px) rotate(-10deg)
 
-#arena
+#level
   height: 100%
   .unit
     font-size: 1.8em
     position: absolute
     text-align: center
-  .track-sprite
+  .Track-standing-sprite
     text-shadow: .15em .15em rgba(0,0,0,.3)
     color: $black
     font-size: 3.0em
+    line-height: 70px
     +animation(bounce 3s infinite)
     &::after
       content: '\266A'

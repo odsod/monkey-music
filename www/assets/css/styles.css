@@ -1,118 +1,117 @@
-/* line 103, monkey/*.png */
-.monkey-sprite, .monkey-laugh1, .monkey-pick1, .monkey-pick2, .monkey-run1, .monkey-run2, .monkey-run3, .monkey-stand1, .monkey-stand2 {
-  background-image: url('../img/monkey-se33f1106de.png');
+/* line 63, Monkey-running/*.png */
+.Monkey-running-sprite, .Monkey-running-run1, .Monkey-running-run2, .Monkey-running-run3 {
+  background-image: url('../img/Monkey-running-s63573ff88f.png');
   background-repeat: no-repeat;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey-laugh1 {
+.Monkey-running-run1 {
   background-position: 0 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey-pick1 {
+.Monkey-running-run2 {
   background-position: -70px 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey-pick2 {
+.Monkey-running-run3 {
   background-position: -140px 0;
 }
 
-/* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey-run1 {
-  background-position: -210px 0;
+/* line 55, Monkey-standing/*.png */
+.Monkey-standing-sprite, .Monkey-standing-stand1, .Monkey-standing-stand2 {
+  background-image: url('../img/Monkey-standing-sb4da98c4d0.png');
+  background-repeat: no-repeat;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey-run2 {
-  background-position: -280px 0;
+.Monkey-standing-stand1 {
+  background-position: 0 0;
 }
 
 /* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey-run3 {
-  background-position: -350px 0;
+.Monkey-standing-stand2 {
+  background-position: -70px 0;
 }
 
-/* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey-stand1 {
-  background-position: -420px 0;
-}
-
-/* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.monkey-stand2 {
-  background-position: -490px 0;
-}
-
-/* line 15, ../sass/sprites.sass */
+/* line 21, ../sass/sprites.sass */
 * {
   image-rendering: -webkit-optimize-contrast;
 }
 
-/* line 18, ../sass/sprites.sass */
+/* line 24, ../sass/sprites.sass */
 .basket-sprite {
   background-image: url('../img/pipe.png?1367153288');
 }
 
-/* line 21, ../sass/sprites.sass */
-.monkey-sprite, .monkey-laugh1, .monkey-pick1, .monkey-pick2, .monkey-run1, .monkey-run2, .monkey-run3, .monkey-stand1, .monkey-stand2 {
+/* line 27, ../sass/sprites.sass */
+.unit {
   width: 70px;
   height: 70px;
   margin: 0;
   padding: 0;
 }
 
-/* line 27, ../sass/sprites.sass */
+/* line 33, ../sass/sprites.sass */
+.monkey-sprite {
+  width: 70px;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 39, ../sass/sprites.sass */
 .running {
   -webkit-animation: running 0.5s steps(3) infinite;
 }
 
-/* line 30, ../sass/sprites.sass */
+/* line 42, ../sass/sprites.sass */
 .standing {
   -webkit-animation: standing 1.5s steps(2) infinite;
 }
 
-/* line 33, ../sass/sprites.sass */
+/* line 45, ../sass/sprites.sass */
 .grabbing {
   -webkit-animation: grabbing 0.55s steps(2) infinite;
 }
 
-/* line 36, ../sass/sprites.sass */
+/* line 48, ../sass/sprites.sass */
 .left {
   -webkit-transform: scaleX(-1);
 }
 
 @-webkit-keyframes running {
-  /* line 40, ../sass/sprites.sass */
+  /* line 52, ../sass/sprites.sass */
   from {
     background-position: -210px;
   }
 
-  /* line 42, ../sass/sprites.sass */
+  /* line 54, ../sass/sprites.sass */
   to {
     background-position: -420px;
   }
 }
 
 @-webkit-keyframes standing {
-  /* line 46, ../sass/sprites.sass */
+  /* line 58, ../sass/sprites.sass */
   from {
     background-position: -420px;
   }
 
-  /* line 48, ../sass/sprites.sass */
+  /* line 60, ../sass/sprites.sass */
   to {
     background-position: -560px;
   }
 }
 
 @-webkit-keyframes grabbing {
-  /* line 52, ../sass/sprites.sass */
+  /* line 64, ../sass/sprites.sass */
   from {
     background-position: -70px;
   }
 
-  /* line 54, ../sass/sprites.sass */
+  /* line 66, ../sass/sprites.sass */
   to {
     background-position: -210px;
   }
@@ -213,39 +212,40 @@ body.playing #splash {
 }
 
 /* line 88, ../sass/styles.sass */
-#arena {
+#level {
   height: 100%;
 }
 /* line 90, ../sass/styles.sass */
-#arena .unit {
+#level .unit {
   font-size: 1.8em;
   position: absolute;
   text-align: center;
 }
 /* line 94, ../sass/styles.sass */
-#arena .track-sprite {
+#level .Track-standing-sprite {
   text-shadow: 0.15em 0.15em rgba(0, 0, 0, 0.3);
   color: black;
   font-size: 3em;
+  line-height: 70px;
   -webkit-animation: bounce 3s infinite;
   -moz-animation: bounce 3s infinite;
   -ms-animation: bounce 3s infinite;
   -o-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
-/* line 99, ../sass/styles.sass */
-#arena .track-sprite::after {
+/* line 100, ../sass/styles.sass */
+#level .Track-standing-sprite::after {
   content: "\266A";
 }
 
 @-moz-keyframes bounce {
-  /* line 103, ../sass/styles.sass */
+  /* line 104, ../sass/styles.sass */
   0%, 100% {
     -moz-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 105, ../sass/styles.sass */
+  /* line 106, ../sass/styles.sass */
   50% {
     -moz-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -253,13 +253,13 @@ body.playing #splash {
 }
 
 @-webkit-keyframes bounce {
-  /* line 103, ../sass/styles.sass */
+  /* line 104, ../sass/styles.sass */
   0%, 100% {
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 105, ../sass/styles.sass */
+  /* line 106, ../sass/styles.sass */
   50% {
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -267,13 +267,13 @@ body.playing #splash {
 }
 
 @-o-keyframes bounce {
-  /* line 103, ../sass/styles.sass */
+  /* line 104, ../sass/styles.sass */
   0%, 100% {
     -o-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 105, ../sass/styles.sass */
+  /* line 106, ../sass/styles.sass */
   50% {
     -o-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -281,13 +281,13 @@ body.playing #splash {
 }
 
 @-ms-keyframes bounce {
-  /* line 103, ../sass/styles.sass */
+  /* line 104, ../sass/styles.sass */
   0%, 100% {
     -ms-transform: rotate(-15deg);
     transform: rotate(-15deg);
   }
 
-  /* line 105, ../sass/styles.sass */
+  /* line 106, ../sass/styles.sass */
   50% {
     -ms-transform: rotate(15deg);
     transform: rotate(15deg);
@@ -295,12 +295,12 @@ body.playing #splash {
 }
 
 @keyframes bounce {
-  /* line 103, ../sass/styles.sass */
+  /* line 104, ../sass/styles.sass */
   0%, 100% {
     transform: rotate(-15deg);
   }
 
-  /* line 105, ../sass/styles.sass */
+  /* line 106, ../sass/styles.sass */
   50% {
     transform: rotate(15deg);
   }

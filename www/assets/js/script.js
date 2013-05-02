@@ -1,51 +1,40 @@
 (function ($) {
   $(function () {
 
-    var socket;
-    var $arena = $('#arena');
-    var isPlaying = false;
+    var
+      socket,
+      $body = $('body'),
+      $level = $('#level'),
+      $scoreboard = $('#scoreboard'),
+      isPlaying = false;
 
     function onmessage(event) {
-      var level;
-      level = JSON.parse(event.data);
-      if (isPlaying) {
-        $arena.monkeyMusic('update', level);
-      } else {
-        console.log(level);
+      var level = JSON.parse(event.data);
+      if (!isPlaying) {
+        $body.addClass('playing');
+        $level.monkeyMusicLevel(level);
+        $scoreboard.monkeyMusicScoreboard(level);
         isPlaying = true;
-        $('body').addClass('playing');
-        $arena.monkeyMusic({
-          level: level
-        });
       }
-        //if (isPlaying) {
-          //// Perform update if game is on
-          //$arena.monkeyMusic('update', level);
-        //} else {
-          //// Perform initialization if no game
-          //$arena.monkeyMusic({
-            //level: level
-          //});
-          //$('body').addClass('playing');
-          //isPlaying = true;
-        //}
+    }
+
+    function onclose() {
+      if (isPlaying) {
+        $scoreboard.monkeyMusicScoreboard('destroy');
+        $level.monkeyMusicLevel('destroy');
+        $body.removeClass('playing');
+        isPlaying = false;
+      }
+      console.log('No connection. Trying to reconnect...');
+      setTimeout(connect, 1000);
     }
 
     function connect() {
       socket = new WebSocket('ws://localhost:3000');
       socket.onmessage = onmessage;
+      socket.onclose = onclose;
       socket.onopen = function () {
         console.log('Connection established.');
-      };
-      socket.onclose = function () {
-        if (isPlaying) {
-          console.log('destroying');
-          $arena.monkeyMusic('destroy');
-          $('body').removeClass('playing');
-          isPlaying = false;
-        }
-        console.log('No connection. Trying to reconnect...');
-        setTimeout(connect, 1000);
       };
     }
 
