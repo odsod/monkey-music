@@ -8,16 +8,13 @@ module MonkeyMusic
     def evaluate_track(track)
       multiplier = 0
       if @user.track_toplist.include? track.name
-        #puts "##### TRACKS #####"
-        #puts @user.track_toplist
-        #puts "##### /TRACKS #####"
-        #puts track.name
         multiplier = -2
         track.modifiers << "Already heard!"
       elsif @user.disliked_artists.include? track.artist
         multiplier = -4
         track.modifiers << "Disliked!"
       else
+        # TODO: Same album as top track
         if @user.album_toplist.include? track.album
           multiplier += 2
           track.modifiers << "Album!"
