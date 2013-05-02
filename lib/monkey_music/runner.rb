@@ -14,13 +14,16 @@ module MonkeyMusic
     def run
       @opt_parser.parse!
       if Config.generate_user?
-        user_generator = 
-          UserGenerator.new(Config.user_to_generate, 
-                            Config.spotify_account, 
-                            Config.spotify_password, 
-                            Config.spotify_appkey)
-        @user = user_generator.generate!
-        puts @user.serialize
+        toplist_loader = ToplistLoader.new(Config.user_to_generate)
+        toplist_loader.load!
+        toplists = toplist_loader.toplists
+        generator = RecommendationGenerator.new(toplists)
+        generator.generate!(
+          Config.spotify_account, 
+          Config.spotify_password, 
+          Config.spotify_appkey
+        )
+        puts YAML.dump(generator.recommendations)
         exit
       elsif not Config.playable?
         puts @opt_parser
@@ -57,7 +60,7 @@ module MonkeyMusic
       opts.on('-g',
               '--generate-user USER',
               'Generate music recommendations for a Spotify user.') do |user|
-        Config.user_to_generate = user
+        Config.user_to_generate = IO.read File.join(Dir.getwd, user)
       end
 
       opts.on('-f', 
@@ -77,7 +80,7 @@ module MonkeyMusic
       opts.on('-u', 
               '--user USER', 
               'The user to get recommendations from.') do |user|
-        Config.user = User.read_from_file(File.join(Dir.getwd, user))
+        Config.user_to_generate = IO.read File.join(Dir.getwd, user)
       end
 
       opts.on('-k', 

@@ -13,6 +13,8 @@ require 'monkey_music/levels/level_loader'
 
 require 'monkey_music/users/user'
 require 'monkey_music/users/user_generator'
+require 'monkey_music/users/toplist_loader'
+require 'monkey_music/users/recommendation_generator'
 
 require 'monkey_music/ui/console_ui'
 require 'monkey_music/ui/browser_ui'

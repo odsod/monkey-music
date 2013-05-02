@@ -1,4 +1,4 @@
-track_toplist({
+toplist(:tracks, {
   "Condemnation" => "spotify:track:5H85hOp2oMlhMh9JlkdJP2",
   "The Fog Rose High" => "spotify:track:3NwaVr6RJg2LPBcJ1Ysl1O",
   "Cars" => "spotify:track:3CKLPDN1AIOYa7QPpy6oDH",
@@ -9,22 +9,22 @@ track_toplist({
   "Something New" => "spotify:track:0GqRSiO3OF89bNwe9V8HYi",
   "Guilty Partner" => "spotify:track:0gksEnBiPqADMHtLdwgvue",
   "The New Stone Age" => "spotify:track:4P9BeQkwwcWIuioP8YzeQD",
-}) 
+})
 
-album_toplist({
-  "Exciter" => "spotify:album:4RkkMLFBX7DSklOQpt2vMf",
+toplist(:albums, {
+  "Telekon" => "spotify:album:3QEbNm2vlHTCnTESDISwIA",
   "The Pleasure Principle" => "spotify:album:6wHjdKs7VVPVcqaHRzwqJt",
-  "Dare!" => "spotify:album:3ls7tE9D2SIvjTmRuEtsQY",
-  "Non-Stop Erotic Cabaret" => "spotify:album:3KFWViJ1wIHAdOVLFTVzjD",
   "Vienna" => "spotify:album:5VNwBgzgJlmdfyyfjWb7Ap",
   "The Hurting" => "spotify:album:3lP0Pu6a0jUWGPM83XYPip",
   "Rio" => "spotify:album:0vndiSM8xxlb8CQFOMMO9h",
   "604" => "spotify:album:4Y2PojX6zFEvvLMpk5mGB9",
   "Maiden Voyage" => "spotify:album:5oFT8PTDoQ9CB2MpbeqgTW",
-  "Telekon" => "spotify:album:3QEbNm2vlHTCnTESDISwIA",
+  "Exciter" => "spotify:album:4RkkMLFBX7DSklOQpt2vMf",
+  "Dare!" => "spotify:album:3ls7tE9D2SIvjTmRuEtsQY",
+  "Non-Stop Erotic Cabaret" => "spotify:album:3KFWViJ1wIHAdOVLFTVzjD",
 })
 
-artist_toplist({
+toplist(:artists, {
   "Erasure" => "spotify:artist:0z5DFXmhT4ZNzWElsM7V89",
   "Gary Numan" => "spotify:artist:5KQMtyPE8DCQNUzoNqlEsE",
   "Depeche Mode" => "spotify:artist:762310PdDnwsDxAQxzQkfX",
