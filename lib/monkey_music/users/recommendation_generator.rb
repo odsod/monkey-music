@@ -18,8 +18,8 @@ module MonkeyMusic
       @toplists.each do |type, list|
         loaded_toplists[type] = load_toplist(type, list)
       end
-      load_from_albums(loaded_toplists[:albums])
-      load_from_artists(loaded_toplists[:artists])
+      #load_from_albums(loaded_toplists[:albums])
+      #load_from_artists(loaded_toplists[:artists])
       session.logout
       sleep 1 # Give libspotify a sec to cool off and release memory
     end
