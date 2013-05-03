@@ -3,7 +3,6 @@ $: << File.dirname(__FILE__)
 require 'set'
 
 require 'monkey_music/runner'
-require 'monkey_music/config'
 require 'monkey_music/game'
 require 'monkey_music/player'
 require 'monkey_music/score_system.rb'

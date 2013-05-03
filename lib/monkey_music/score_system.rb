@@ -1,11 +1,14 @@
 module MonkeyMusic
   class ScoreSystem
 
-    def initialize(user)
+    def evaluate_user_recommendations!(user)
       @user = user
+      @user.recommendations.each do |track|
+        track.value, track.multiplier = *evaluate(track)
+      end
     end
 
-    def evaluate_track(track)
+    def evaluate(track)
       multiplier = 0
       if @user.track_toplist.include? track.name
         multiplier = -1
@@ -22,17 +25,13 @@ module MonkeyMusic
           multiplier += 1
         end
       end
-      return 4**multiplier.abs * sign(multiplier)
+      return [4**multiplier.abs * sign(multiplier), multiplier]
     end
 
     private
 
     def sign(num)
       num < 0 ? -1 : 1
-    end
-
-    def decade_of(year)
-      (year % 100) / 10
     end
 
   end

@@ -6,34 +6,44 @@ module MonkeyMusic
     def initialize(arguments)
       @arguments = arguments
       @opt_parser = OptionParser.new
-      Config.players = []
-      Config.delay = 1
+      @players = []
+      @delay = 1
       init_parser(@opt_parser)
     end
 
     def run
       @opt_parser.parse!
-      if Config.generate_user?
-        toplist_loader = ToplistLoader.new(Config.user_to_generate)
-        toplist_loader.load!
-        toplists = toplist_loader.toplists
-        generator = RecommendationGenerator.new(toplists)
-        generator.generate!(
-          Config.spotify_account, 
-          Config.spotify_password, 
-          Config.spotify_appkey
-        )
-        puts YAML.dump(generator.recommendations)
+      if generate_user?
+        # Create user
+        user = User.new("Testuser")
+        # Connect to libspotify
+        Hallon.load_timeout = 0
+        session = Hallon::Session.initialize(IO.read(@spotify_appkey_file))
+        session.login!(@spotify_account, @spotify_password)
+        # Load toplists
+        toplist_loader = ToplistLoader.new(@toplist_file)
+        toplist_loader.load_for_user!(user)
+        # Generate recommendations
+        loaded_toplists = toplist_loader.loaded_toplists
+        recommendation_loader = RecommendationLoader.new(loaded_toplists)
+        recommendation_loader.load_for_user!(user)
+        # Disconnect from libspotify
+        session.logout!
+        # Evaluate recommendations
+        score_system = ScoreSystem.new
+        score_system.evaluate_user_recommendations!(user)
+        # Dump and print the user
+        puts user.serialize
         exit
-      elsif not Config.playable?
+      elsif not game_is_playable?
         puts @opt_parser
         exit
       end
       # Load level
-      level = Level.new(Config.players, Config.user)
-      level.load_from_file(Config.level_file)
+      level = Level.new(@players, @user)
+      level.load_from_file(@level_file)
       # Initialize UI
-      if Config.browser_ui?
+      if browser_ui?
         print "Using browser UI. Press the enter key to start game. "
         gets
         puts "Starting game..."
@@ -42,11 +52,19 @@ module MonkeyMusic
         ui = ConsoleUI.new
       end
       # Start game
-      @game = Game.new(level, Config.players, ui)
+      @game = Game.new(level, @players, ui)
       @game.start
     end
 
     private
+
+    def game_is_playable?
+      false
+    end
+
+    def browser_ui?
+      false
+    end
 
     def init_parser(opts)
       opts.banner = 'Usage: monkeymusic [options]'
@@ -54,60 +72,59 @@ module MonkeyMusic
       opts.on('-l',
               '--level LEVEL',
               'The level to play.') do |file|
-        Config.level_file = File.join(Dir.getwd, file)
+        @level_file = File.join(Dir.getwd, file)
       end
 
       opts.on('-g',
               '--generate-user USER',
               'Generate music recommendations for a Spotify user.') do |user|
-        Config.user_to_generate = IO.read File.join(Dir.getwd, user)
+        @user_to_generate_file = File.join(Dir.getwd, user)
       end
 
       opts.on('-f', 
               '--player-file FILE', 
               'The path to a player program.') do |file|
-        Config.players << Player.new(file)
+        player_file = File.join(Dir.getwd, file)
+        @players << Player.new(player_file)
       end
 
       opts.on('-n', 
               '--player-name NAME', 
               'Set the name of the last entered player.') do |name|
-        unless (not defined? Config.players) || Config.players.empty?
-          Config.players[-1].monkey.name = name
-        end
+        @players[-1].monkey.name = name unless @players.empty?
       end
       
       opts.on('-u', 
               '--user USER', 
               'The user to get recommendations from.') do |user|
-        Config.user_to_generate = IO.read File.join(Dir.getwd, user)
+        @user_file = File.join(Dir.getwd, user)
       end
 
       opts.on('-k', 
               '--app-key KEY', 
               'Path to libspotify application key.') do |key|
-        Config.spotify_appkey = IO.read(File.join(Dir.getwd, key))
+        @spotify_appkey_file = File.join(Dir.getwd, key)
       end
 
       opts.on('-a', 
               '--account ACCOUNT', 
               'Username for a Spotify premium account.') do |account|
-        Config.spotify_account = account
+        @spotify_account = account
       end
 
       opts.on('-p', '--password PASSWORD', 
               'Password for a Spotify premium account.') do |password|
-        Config.spotify_password = password
+        @spotify_password = password
       end
 
       opts.on('-b', '--browser-ui', 
               'View the game through the browser instead of console.') do |password|
-        Config.browser_ui = true
+        @browser_ui = true
       end
 
       opts.on('-d', '--delay',
               'The delay between each round.') do |delay|
-        Config.delay = delay
+        @delay = delay
       end
 
       opts.on_tail('-h',

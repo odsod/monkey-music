@@ -3,7 +3,7 @@ module MonkeyMusic
     attr_accessor :monkey
     
     def initialize(file)
-      @file = File.join(Dir.pwd, file)
+      @file = file
       @monkey = Monkey.new()
     end
 

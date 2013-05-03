@@ -1,6 +1,7 @@
 module MonkeyMusic
   class Track < Base
-    attr_accessor :uri, :name, :artist, :album, :popularity, :value, :modifiers, :year
+    attr_accessor :uri, :name, :artist, :album, :popularity, :year,
+      :value, :multiplier
 
     def initialize
       @modifiers = []

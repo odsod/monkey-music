@@ -3,16 +3,12 @@ require 'yaml'
 module MonkeyMusic
   class User
     attr_reader :name
-    attr_accessor :track_toplist, :album_toplist, :artist_toplist, 
-      :top_decade, :recommendations, :disliked_artists
+    attr_accessor :toplists, :recommendations
 
     def initialize(name)
       @name = name
-      @track_toplist = []
-      @album_toplist = []
-      @artist_toplist = []
+      @toplists = {}
       @recommendations = []
-      @disliked_artists = []
     end
 
     def serialize
@@ -23,11 +19,5 @@ module MonkeyMusic
       YAML::load(IO.read(file))
     end
     
-    private
-
-    def load_path
-      File.join(File.expand_path("."), "users/#{@name}.rb")
-    end
-
   end
 end
