@@ -3,29 +3,28 @@ module MonkeyMusic
 
     def evaluate_user_recommendations!(user)
       @user = user
-      @user.recommendations.each do |track|
-        track.value, track.multiplier = *evaluate(track)
-      end
+      @user.recommendations.each { |track| evaluate!(track) }
     end
 
-    def evaluate(track)
+    def evaluate!(track)
       multiplier = 0
-      if @user.toplists[:tracks].include? track.name
+      if @user.toplists[:top_tracks].include? track.name
         multiplier = -1
       elsif @user.toplists[:disliked].include? track.artist
         multiplier = -2
       else
-        if @user.toplists[:albums].include? track.album
+        if @user.toplists[:top_albums].include? track.album
           multiplier += 1
         end
-        if @user.toplists[:albums].include? track.album
+        if @user.toplists[:top_artists].include? track.artist
           multiplier += 1
         end
-        if @user.toplists[:artists].include? track.artist
+        if @user.toplists[:top_track_albums].include? track.album
           multiplier += 1
         end
       end
-      return [4**multiplier.abs * sign(multiplier), multiplier]
+      track.multiplier = multiplier
+      track.value = 4**multiplier.abs * sign(multiplier)
     end
 
     private

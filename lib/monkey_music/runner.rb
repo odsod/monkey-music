@@ -14,7 +14,6 @@ module MonkeyMusic
     def run
       @opt_parser.parse!
       if generate_user?
-        puts "Generating user!"
         # Create user
         user = User.new("Testuser")
         # Connect to libspotify
@@ -31,8 +30,8 @@ module MonkeyMusic
         # Disconnect from libspotify
         session.logout!
         # Evaluate recommendations
-        #score_system = ScoreSystem.new
-        #score_system.evaluate_user_recommendations!(user)
+        score_system = ScoreSystem.new
+        score_system.evaluate_user_recommendations!(user)
         # Dump and print the user
         puts user.serialize
         exit

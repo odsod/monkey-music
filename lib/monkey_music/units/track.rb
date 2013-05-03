@@ -3,10 +3,6 @@ module MonkeyMusic
     attr_accessor :uri, :name, :artist, :album, :popularity, :year,
       :value, :multiplier
 
-    def initialize
-      @modifiers = []
-    end
-
     def serialize
       @uri
     end
