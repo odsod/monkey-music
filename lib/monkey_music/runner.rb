@@ -39,10 +39,12 @@ module MonkeyMusic
         puts @opt_parser
         exit
       end
+      # Load user
+      user = User.read_from_file(@user_file)
       # Load level
-      level = Level.new(@players, @user)
+      level = Level.new(@players, user)
       level.load_from_file(@level_file)
-      # Initialize UI
+      ## Initialize UI
       if browser_ui?
         print "Using browser UI. Press the enter key to start game. "
         gets
@@ -51,7 +53,7 @@ module MonkeyMusic
       else
         ui = ConsoleUI.new
       end
-      # Start game
+      ## Start game
       @game = Game.new(level, @players, ui)
       @game.start
     end
@@ -66,7 +68,9 @@ module MonkeyMusic
     end
 
     def game_is_playable?
-      false
+      (defined? @user_file) &&
+        (defined? @level_file) &&
+        (not @players.empty?)
     end
 
     def browser_ui?

@@ -46,7 +46,7 @@ module MonkeyMusic
     end
 
     def load_from_file(file)
-      LevelLoader.new(self).instance_eval(File.read(file))
+      LevelLoader.new(self).instance_eval(IO.read(file))
       self
     end
 
