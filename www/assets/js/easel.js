@@ -6,7 +6,7 @@
     circle;
 
   var
-    width = 14,
+    width = 10,
     height = 10,
     unitWidth = 70,
     unitHeight = 70,
@@ -14,16 +14,18 @@
     gameHeight = height * unitHeight;
 
   function resizeCanvas() {
-    canvas.width = gameWidth;
-    canvas.height = gameHeight;
+    stage.canvas.width = gameWidth;
+    stage.canvas.height = gameHeight;
     var
       windowWidth = window.innerWidth,
       windowHeight = window.innerHeight,
       scaleToFitX = windowWidth / gameWidth,
       scaleToFitY = windowHeight / gameHeight,
       optimalRatio = Math.min(scaleToFitX, scaleToFitY);
-    canvas.style.width = gameWidth * optimalRatio + 'px';
-    canvas.style.height = gameHeight * optimalRatio + 'px';
+    stage.canvas.style.width = gameWidth * optimalRatio + 'px';
+    stage.canvas.style.height = gameHeight * optimalRatio + 'px';
+    stage.canvas.style.marginTop = (windowHeight - gameHeight * optimalRatio) / 2;
+    stage.canvas.style.marginLeft = (windowWidth - gameWidth * optimalRatio) / 2;
   }
 
   function init() {
