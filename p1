@@ -51,7 +51,7 @@ def distance_to(x, y)
   (@x - x).abs + (@y - y).abs
 end
 
-if @remaining_capacity > 0
+if (@remaining_capacity > 0) && (not @tracks.empty?)
   puts move_toward(*closest_track())
 else
   puts move_toward(*@basket)
