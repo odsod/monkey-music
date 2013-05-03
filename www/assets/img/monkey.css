@@ -1,0 +1,30 @@
+/*
+
+        Creating a sprite from following images:
+        
+        monkey/laugh1.png (70x70)
+        monkey/pick1.png (70x70)
+        monkey/pick2.png (70x70)
+        monkey/run1.png (70x70)
+        monkey/run2.png (70x70)
+        monkey/run3.png (70x70)
+        monkey/stand1.png (70x70)
+        monkey/stand2.png (70x70)
+
+        Output files:
+          monkey.png
+          monkey.css
+
+        Output size:
+          560x70
+
+
+*/
+img.laugh1 { width: 70px; height: 70px; background: url(monkey.png) 0px 0px no-repeat; }
+img.pick1 { width: 70px; height: 70px; background: url(monkey.png) -70px 0px no-repeat; }
+img.pick2 { width: 70px; height: 70px; background: url(monkey.png) -140px 0px no-repeat; }
+img.run1 { width: 70px; height: 70px; background: url(monkey.png) -210px 0px no-repeat; }
+img.run2 { width: 70px; height: 70px; background: url(monkey.png) -280px 0px no-repeat; }
+img.run3 { width: 70px; height: 70px; background: url(monkey.png) -350px 0px no-repeat; }
+img.stand1 { width: 70px; height: 70px; background: url(monkey.png) -420px 0px no-repeat; }
+img.stand2 { width: 70px; height: 70px; background: url(monkey.png) -490px 0px no-repeat; }
