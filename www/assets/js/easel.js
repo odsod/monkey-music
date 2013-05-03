@@ -5,9 +5,25 @@
     stage,
     circle;
 
+  var
+    width = 14,
+    height = 10,
+    unitWidth = 70,
+    unitHeight = 70,
+    gameWidth = width * unitWidth,
+    gameHeight = height * unitHeight;
+
   function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = gameWidth;
+    canvas.height = gameHeight;
+    var
+      windowWidth = window.innerWidth,
+      windowHeight = window.innerHeight,
+      scaleToFitX = windowWidth / gameWidth,
+      scaleToFitY = windowHeight / gameHeight,
+      optimalRatio = Math.min(scaleToFitX, scaleToFitY);
+    canvas.style.width = gameWidth * optimalRatio + 'px';
+    canvas.style.height = gameHeight * optimalRatio + 'px';
   }
 
   function init() {
