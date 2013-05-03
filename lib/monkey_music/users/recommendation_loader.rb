@@ -10,18 +10,24 @@ module MonkeyMusic
 
     def load_for_user!(user)
       @user = user
+      puts "Loading recommendations from albums..."
       load_recommendations_from_albums!
+      puts "Loading recommendations from artists..."
       load_recommendations_from_artists!
+      puts "Loading recommendations from track albums..."
       load_recommendations_from_top_track_albums!
+      puts "Loading recommendations from already heard..."
       load_recommendations_from_already_heard!
+      puts "Loading recommendations from disliked..."
       load_recommendations_from_disliked!
     end
 
     private
 
     def load_recommendations_from_albums!
-      loaded_toplists[:top_albums].each do |album|
-        browse = album.browse.load
+      @loaded_toplists[:top_albums].each do |album|
+        browse = album.browse
+        browse.load unless browse.loaded?
         browse.tracks.first(@load_factor).each do |rec|
           @user.recommendations << parse_track(rec)
         end
@@ -29,17 +35,22 @@ module MonkeyMusic
     end
 
     def load_recommendations_from_artists!
-      loaded_toplists[:top_artists].each do |artist|
-        browse = artist.browse.load
+      @loaded_toplists[:top_artists].each do |artist|
+        puts "loading from artist: #{artist.name}"
+        browse = artist.browse(:no_albums)
+        browse.load unless browse.loaded?
+        puts "loaded artist: #{artist.name}"
         browse.top_hits.first(@load_factor).each do |rec|
+          puts "loading song: #{rec.name}"
           @user.recommendations << parse_track(rec)
         end
       end
     end
 
     def load_recommendations_from_top_track_albums!
-      loaded_toplists[:top_track_albums].each do |album|
-        browse = album.browse.load
+      @loaded_toplists[:top_track_albums].each do |album|
+        browse = album.browse
+        browse.load unless browse.loaded?
         browse.tracks.first(@load_factor).each do |rec|
           @user.recommendations << parse_track(rec)
         end
@@ -47,16 +58,18 @@ module MonkeyMusic
     end
 
     def load_recommendations_from_already_heard!
-      loaded_toplists[:tracks].each do |track|
+      @loaded_toplists[:top_tracks].each do |track|
         @user.recommendations << parse_track(track)
       end
     end
 
     def load_recommendations_from_disliked!
-      loaded_toplists[:disliked].each do |artist|
-        browse = artist.browse.load
+      @loaded_toplists[:disliked].each do |artist|
+        puts "loading from disliked: #{artist.name}"
+        browse = artist.browse(:no_albums)
+        browse.load unless browse.loaded?
         browse.top_hits.first(@load_factor).each do |rec|
-          @recommendations << parse_track(rec)
+          @user.recommendations << parse_track(rec)
         end
       end
     end

@@ -25,9 +25,9 @@ module MonkeyMusic
         toplist_loader = ToplistLoader.new(@toplist_file)
         toplist_loader.load_for_user!(user)
         # Generate recommendations
-        #loaded_toplists = toplist_loader.loaded_toplists
-        #recommendation_loader = RecommendationLoader.new(loaded_toplists)
-        #recommendation_loader.load_for_user!(user)
+        loaded_toplists = toplist_loader.loaded_toplists
+        recommendation_loader = RecommendationLoader.new(loaded_toplists)
+        recommendation_loader.load_for_user!(user)
         # Disconnect from libspotify
         session.logout!
         # Evaluate recommendations

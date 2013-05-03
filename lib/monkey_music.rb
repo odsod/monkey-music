@@ -5,15 +5,14 @@ require 'set'
 require 'monkey_music/runner'
 require 'monkey_music/game'
 require 'monkey_music/player'
-require 'monkey_music/score_system.rb'
 
 require 'monkey_music/levels/level'
 require 'monkey_music/levels/level_loader'
 
 require 'monkey_music/users/user'
-require 'monkey_music/users/user_generator'
 require 'monkey_music/users/toplist_loader'
-require 'monkey_music/users/recommendation_generator'
+require 'monkey_music/users/recommendation_loader'
+require 'monkey_music/users/score_system'
 
 require 'monkey_music/ui/console_ui'
 require 'monkey_music/ui/browser_ui'
