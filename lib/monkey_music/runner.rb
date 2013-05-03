@@ -14,6 +14,7 @@ module MonkeyMusic
     def run
       @opt_parser.parse!
       if generate_user?
+        puts "Generating user!"
         # Create user
         user = User.new("Testuser")
         # Connect to libspotify
@@ -24,14 +25,14 @@ module MonkeyMusic
         toplist_loader = ToplistLoader.new(@toplist_file)
         toplist_loader.load_for_user!(user)
         # Generate recommendations
-        loaded_toplists = toplist_loader.loaded_toplists
-        recommendation_loader = RecommendationLoader.new(loaded_toplists)
-        recommendation_loader.load_for_user!(user)
+        #loaded_toplists = toplist_loader.loaded_toplists
+        #recommendation_loader = RecommendationLoader.new(loaded_toplists)
+        #recommendation_loader.load_for_user!(user)
         # Disconnect from libspotify
         session.logout!
         # Evaluate recommendations
-        score_system = ScoreSystem.new
-        score_system.evaluate_user_recommendations!(user)
+        #score_system = ScoreSystem.new
+        #score_system.evaluate_user_recommendations!(user)
         # Dump and print the user
         puts user.serialize
         exit
@@ -58,6 +59,13 @@ module MonkeyMusic
 
     private
 
+    def generate_user?
+      (defined? @toplist_file) &&
+        (defined? @spotify_appkey_file) &&
+        (defined? @spotify_account) &&
+        (defined? @spotify_password)
+    end
+
     def game_is_playable?
       false
     end
@@ -78,7 +86,7 @@ module MonkeyMusic
       opts.on('-g',
               '--generate-user USER',
               'Generate music recommendations for a Spotify user.') do |user|
-        @user_to_generate_file = File.join(Dir.getwd, user)
+        @toplist_file = File.join(Dir.getwd, user)
       end
 
       opts.on('-f', 

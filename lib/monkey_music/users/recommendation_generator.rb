@@ -12,7 +12,7 @@ module MonkeyMusic
       @user = user
       load_recommendations_from_albums!
       load_recommendations_from_artists!
-      load_recommendations_from_tracks!
+      load_recommendations_from_top_track_albums!
       load_recommendations_from_already_heard!
       load_recommendations_from_disliked!
     end
@@ -20,7 +20,7 @@ module MonkeyMusic
     private
 
     def load_recommendations_from_albums!
-      loaded_toplists[:albums].each do |album|
+      loaded_toplists[:top_albums].each do |album|
         browse = album.browse.load
         browse.tracks.first(@load_factor).each do |rec|
           @user.recommendations << parse_track(rec)
@@ -29,7 +29,7 @@ module MonkeyMusic
     end
 
     def load_recommendations_from_artists!
-      loaded_toplists[:artists].each do |artist|
+      loaded_toplists[:top_artists].each do |artist|
         browse = artist.browse.load
         browse.top_hits.first(@load_factor).each do |rec|
           @user.recommendations << parse_track(rec)
@@ -37,9 +37,8 @@ module MonkeyMusic
       end
     end
 
-    def load_recommendations_from_tracks!
-      loaded_toplists[:tracks].each do |track|
-        album = track.album.load
+    def load_recommendations_from_top_track_albums!
+      loaded_toplists[:top_track_albums].each do |album|
         browse = album.browse.load
         browse.tracks.first(@load_factor).each do |rec|
           @user.recommendations << parse_track(rec)

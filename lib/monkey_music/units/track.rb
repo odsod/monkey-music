@@ -21,7 +21,8 @@ module MonkeyMusic
         :y => @y,
         :type => self.class.name.split('::').last,
         :name => @name,
-        :value => @value
+        :multiplier => @multiplier,
+        :value => @value,
       }.to_json
     end
   end

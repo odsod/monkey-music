@@ -6,6 +6,7 @@ module MonkeyMusic
 
     def initialize(toplist_file)
       @toplist_file = IO.read(toplist_file)
+      @toplists = {}
     end
 
     def load_for_user!(user)
@@ -14,6 +15,7 @@ module MonkeyMusic
       self.instance_eval(@toplist_file)
       # Load toplist contents from libspotify
       load_toplists!
+      load_top_track_albums!
     end
 
     private
@@ -34,15 +36,22 @@ module MonkeyMusic
       end
     end
 
+    def load_top_track_albums!
+      @loaded_toplists[:top_track_albums] = 
+        @loaded_toplists[:top_tracks].map(&:album).each(&:load)
+      @user.toplists[:top_track_albums] = 
+        parse_toplist(@loaded_toplists[:top_track_albums])
+    end
+
     def load_from_list(type, uri)
       playlist = Hallon::Playlist.new(uri).load
       tracks = playlist.tracks.to_a
       tracks.each(&:load)
-      if type == :tracks
+      if type == :top_tracks
         tracks
-      elsif type == :artists
+      elsif type == :top_artists || type == :disliked
         tracks.map(&:artist).each(&:load)
-      elsif type == :albums
+      elsif type == :top_albums
         tracks.map(&:album).each(&:load)
       end
     end

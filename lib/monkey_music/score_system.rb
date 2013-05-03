@@ -10,18 +10,18 @@ module MonkeyMusic
 
     def evaluate(track)
       multiplier = 0
-      if @user.track_toplist.include? track.name
+      if @user.toplists[:tracks].include? track.name
         multiplier = -1
-      elsif @user.disliked_artists.include? track.artist
+      elsif @user.toplists[:disliked].include? track.artist
         multiplier = -2
       else
-        if @user.track_toplist_albums.include? track.album
+        if @user.toplists[:albums].include? track.album
           multiplier += 1
         end
-        if @user.album_toplist.include? track.album
+        if @user.toplists[:albums].include? track.album
           multiplier += 1
         end
-        if @user.artist_toplist.include? track.artist
+        if @user.toplists[:artists].include? track.artist
           multiplier += 1
         end
       end
