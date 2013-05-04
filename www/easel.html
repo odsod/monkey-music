@@ -3,14 +3,20 @@
   <title>Monkey Music</title>
   <script src="vendor/js/easeljs-0.6.0.min.js"></script>
   <script src="vendor/js/tweenjs-0.4.0.min.js"></script>
-  <script src="assets/js/easel.js"></script>
+  <script src="assets/js/level.js"></script>
+  <script>
+    function init() {
+      var canvas = document.getElementById('canvas');
+      monkeymusic.level.init(canvas, { width: 10, height: 10 });
+    }
+  </script>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
-      background: #ccc;
+      background: #eee;
     }
   </style>
 </head>
