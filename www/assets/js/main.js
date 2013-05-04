@@ -1,4 +1,9 @@
-window.monkeymusic = (function (document) {
+var monkeymusic = (function (document) {
+
+  var constants = {
+    UNIT_WIDTH: 70,
+    UNIT_HEIGHT: 70
+  };
 
   function init() {
     var canvas = document.getElementById('canvas');
@@ -6,7 +11,8 @@ window.monkeymusic = (function (document) {
   }
 
   return {
-    init: init
+    init: init,
+    constants: constants
   };
 
 }(document));

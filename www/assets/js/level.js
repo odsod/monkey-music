@@ -1,11 +1,6 @@
-window.monkeymusic = window.monkeymusic || {};
+var monkeymusic = monkeymusic || {};
 
-window.monkeymusic.level = (function (createjs, tween, window) {
-
-  /* Constants */
-  var
-    UNIT_WIDTH = 70,
-    UNIT_HEIGHT = 70;
+monkeymusic.level = (function (createjs, tween, window) {
 
   /* Settings */
   createjs.Ticker.setFPS(60);
@@ -14,29 +9,30 @@ window.monkeymusic.level = (function (createjs, tween, window) {
   var
     stage;
 
-  var spriteSheets = {
-    'Monkey': (function () {
-      return new createjs.SpriteSheet({
-        images: ['assets/img/monkey.png'],
-        frames: { width: UNIT_WIDTH, height: UNIT_HEIGHT },
-        animations: {
-          run: [3, 5, 'run', 8],
-          stand: [6, 7, 'stand', 16]
-        }
-      });
-    }())
-  };
+  //var spriteSheets = {
+    //'Monkey': (function () {
+      //return new createjs.SpriteSheet({
+        //images: ['assets/img/monkey.png'],
+        //frames: { width: UNIT_WIDTH, height: UNIT_HEIGHT },
+        //animations: {
+          //run: [3, 5, 'run', 8],
+          //stand: [6, 7, 'stand', 16]
+        //}
+      //});
+    //}())
+  //};
 
-  var sprites = {
-    'Monkey': function () {
-      return new createjs.BitmapAnimation(spriteSheets.Monkey);
-    },
-  };
+  //var sprites = {
+    //'Monkey': function () {
+      //return new createjs.BitmapAnimation(spriteSheets.Monkey);
+    //},
+  //};
 
   function initStage(canvas, level) {
     stage = new createjs.Stage(canvas);
-    canvas.width = level.width * UNIT_WIDTH;
-    canvas.height = level.height * UNIT_HEIGHT;
+    createjs.Ticker.addEventListener('tick', stage);
+    canvas.width = level.width * monkeymusic.constants.UNIT_WIDTH;
+    canvas.height = level.height * monkeymusic.constants.UNIT_HEIGHT;
     window.onresize = resizeCanvas;
     resizeCanvas();
   }
@@ -64,8 +60,7 @@ window.monkeymusic.level = (function (createjs, tween, window) {
 
   function init(canvas, level) {
     initStage(canvas, level);
-    createjs.Ticker.addEventListener('tick', stage);
-    var monkey = sprites.Monkey();
+    var monkey = monkeymusic.sprites.Monkey();
     stage.addChild(monkey);
     monkey.gotoAndPlay('run');
   }
