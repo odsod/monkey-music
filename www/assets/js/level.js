@@ -9,25 +9,6 @@ monkeymusic.level = (function (createjs, tween, window) {
   var
     stage;
 
-  //var spriteSheets = {
-    //'Monkey': (function () {
-      //return new createjs.SpriteSheet({
-        //images: ['assets/img/monkey.png'],
-        //frames: { width: UNIT_WIDTH, height: UNIT_HEIGHT },
-        //animations: {
-          //run: [3, 5, 'run', 8],
-          //stand: [6, 7, 'stand', 16]
-        //}
-      //});
-    //}())
-  //};
-
-  //var sprites = {
-    //'Monkey': function () {
-      //return new createjs.BitmapAnimation(spriteSheets.Monkey);
-    //},
-  //};
-
   function initStage(canvas, level) {
     stage = new createjs.Stage(canvas);
     createjs.Ticker.addEventListener('tick', stage);
@@ -60,9 +41,12 @@ monkeymusic.level = (function (createjs, tween, window) {
 
   function init(canvas, level) {
     initStage(canvas, level);
-    var monkey = monkeymusic.sprites.Monkey();
+    var monkey = monkeymusic.sprites.Basket();
     stage.addChild(monkey);
-    monkey.gotoAndPlay('run');
+    monkey.gotoAndPlay('default');
+    //tween.get(monkey).to({
+      //x: 300
+    //}, 2000);
   }
 
   function update(level) {
