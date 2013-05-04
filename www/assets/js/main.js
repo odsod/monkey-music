@@ -5,9 +5,42 @@ var monkeymusic = (function (document) {
     UNIT_HEIGHT: 70
   };
 
+  var
+    socket,
+    canvas,
+    isPlaying = false;
+
+  function onmessage(event) {
+    var level = JSON.parse(event.data);
+    if (!isPlaying) {
+      monkeymusic.level.init(canvas, level);
+      isPlaying = true;
+    } else {
+      monkeymusic.level.update(level);
+    }
+  }
+
+  function onclose() {
+    if (isPlaying) {
+      monkeymusic.level.destroy();
+      isPlaying = false;
+    }
+    console.log('No connection. Trying to reconnect...');
+    setTimeout(connect, 10);
+  }
+
+  function connect() {
+    socket = new WebSocket('ws://localhost:3000');
+    socket.onmessage = onmessage;
+    socket.onclose = onclose;
+    socket.onopen = function () {
+      console.log('Connection established.');
+    };
+  }
+
   function init() {
-    var canvas = document.getElementById('canvas');
-    monkeymusic.level.init(canvas, { width: 10, height: 10 });
+    canvas = document.getElementById('canvas');
+    connect();
   }
 
   return {

@@ -8,26 +8,30 @@ monkeymusic.sprites = (function (createjs) {
   };
 
   var sheets = {
-    Monkey: new createjs.SpriteSheet({
-      images: ['assets/img/monkey.png'],
-      frames: SPRITE_SIZE,
-      animations: {
-        run: [3, 5, 'run', 8],
-        stand: [6, 7, 'stand', 16]
-      }
-    }),
+    Monkey: (function () {
+      var sheet = new createjs.SpriteSheet({
+        images: ['assets/img/monkey.png'],
+        frames: SPRITE_SIZE,
+        animations: {
+          run: [3, 5, 'run', 8],
+          normal: [6, 7, 'normal', 48]
+        }
+      });
+      //createjs.SpriteSheetUtils.addFlippedFrames(sheet, true, false, fa, falselse);
+      return sheet;
+    }()),
     Track: new createjs.SpriteSheet({
       images: ['assets/img/track.png'],
       frames: SPRITE_SIZE,
       animations: {
-        default: [0]
+        normal: [0]
       }
     }),
     Basket: new createjs.SpriteSheet({
       images: ['assets/img/basket.png'],
       frames: SPRITE_SIZE,
       animations: {
-        default: [0]
+        normal: [0]
       }
     })
   };

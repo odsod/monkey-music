@@ -7,7 +7,8 @@ monkeymusic.level = (function (createjs, tween, window) {
   createjs.useRAF = true;
 
   var
-    stage;
+    stage,
+    units;
 
   function initStage(canvas, level) {
     stage = new createjs.Stage(canvas);
@@ -39,17 +40,52 @@ monkeymusic.level = (function (createjs, tween, window) {
     canvasStyle.marginLeft = (windowWidth - newWidth) / 2;
   }
 
+  function initUnits() {
+    for (var i = 0; i < units.length; ++i) {
+      var unit = units[i];
+      var sprite = monkeymusic.sprites[unit.type]();
+      sprite.gotoAndPlay('normal');
+      sprite.x = monkeymusic.constants.UNIT_WIDTH * unit.x;
+      sprite.y = monkeymusic.constants.UNIT_HEIGHT * unit.y;
+      stage.addChild(sprite);
+      unit.sprite = sprite;
+    }
+  }
+
+  function updateUnits(newUnits) {
+    _(units).each(function (oldUnit) {
+      var newUnit = _(newUnits).find(function (unit) {
+        return unit.id === oldUnit.id;
+      });
+      if (newUnit) {
+        if (newUnit.x !== oldUnit.x || newUnit.y !== oldUnit.y) {
+          console.log(oldUnit.type + ' moved!');
+          oldUnit.sprite.gotoAndPlay('run');
+          tween.get(oldUnit.sprite)
+            .to({
+              x: newUnit.x * monkeymusic.constants.UNIT_WIDTH,
+              y: newUnit.y * monkeymusic.constants.UNIT_HEIGHT
+            }, 800)
+            .call(function () {
+              oldUnit.sprite.gotoAndPlay('normal');
+            });
+        }
+        return;
+      } else {
+        stage.removeChild(oldUnit.sprite);
+      }
+    });
+  }
+
   function init(canvas, level) {
+    console.log(level);
     initStage(canvas, level);
-    var monkey = monkeymusic.sprites.Basket();
-    stage.addChild(monkey);
-    monkey.gotoAndPlay('default');
-    //tween.get(monkey).to({
-      //x: 300
-    //}, 2000);
+    units = level.units;
+    initUnits();
   }
 
   function update(level) {
+    updateUnits(level.units);
   }
 
   function destroy() {
