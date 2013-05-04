@@ -74,6 +74,11 @@ window.monkeymusic.level = (function (createjs, tween, window) {
   }
 
   function destroy() {
+    // Reset ticker
+    createjs.Ticker.init();
+    // Reset stage
+    stage.clear();
+    stage.removeAllChildren();
   }
 
   return {
