@@ -13,16 +13,8 @@ module MonkeyMusic
       @level.max_turns = max_turns
     end
 
-    def width(width)
-      @level.width = width
-    end
-
     def carrying_capacity(capacity)
       @level.players.each { |p| p.monkey.capacity = capacity }
-    end
-
-    def height(height)
-      @level.height = height
     end
 
     def legend(legend)
@@ -32,6 +24,8 @@ module MonkeyMusic
     def layout(layout)
       # Transform layout into x y indexed array
       units = (layout.lines.map { |l| l.chomp.split(//) }).transpose
+      @level.width = units[0].length
+      @level.height = units.length
       # Add units from layout to level
       @level.height.times do |y|
         @level.width.times do |x|

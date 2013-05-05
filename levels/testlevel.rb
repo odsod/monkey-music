@@ -1,5 +1,3 @@
-width 11
-height 11
 max_turns 100
 carrying_capacity 3
 
