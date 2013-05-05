@@ -13,6 +13,10 @@ module MonkeyMusic
       @level.max_turns = max_turns
     end
 
+    def metadata_requests_per_turn(n)
+      @metadata_requests_per_turn = n
+    end
+
     def carrying_capacity(capacity)
       @level.players.each { |p| p.monkey.capacity = capacity }
     end

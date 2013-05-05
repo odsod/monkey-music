@@ -1,5 +1,6 @@
-max_turns 100
 carrying_capacity 3
+metadata_requests_per_turn 2
+max_turns 100
 
 legend({ 
   "1" => Monkey.player(1),
