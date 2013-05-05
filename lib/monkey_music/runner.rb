@@ -37,7 +37,7 @@ module MonkeyMusic
         score_system.evaluate_user_recommendations!(user)
         # Dump and print the user
         File.open(@out_file, 'w') do |f|
-          f.write(user.serialize)
+          f.write(user.dump)
         end
         exit
       elsif not game_is_playable?
@@ -112,8 +112,8 @@ module MonkeyMusic
         @players[-1].monkey.name = name unless @players.empty?
       end
 
-      opts.on('-d', '--delay',
-              'The delay between each round.') do |delay|
+      opts.on('-d', '--delay DELAY', OptionParser::DecimalNumeric,
+              'The delay (in seconds) between each round.') do |delay|
         @delay = delay
       end
 

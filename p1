@@ -16,8 +16,8 @@
       @x, @y = x, y
     elsif /spotify:track/.match(thing)
       @tracks << [x, y]
-    elsif thing == "B"
-      @basket = [x, y]
+    elsif thing == "U"
+      @user = [x, y]
     end
   end
 end
@@ -54,5 +54,5 @@ end
 if (@remaining_capacity > 0) && (not @tracks.empty?)
   puts move_toward(*closest_track())
 else
-  puts move_toward(*@basket)
+  puts move_toward(*@user)
 end

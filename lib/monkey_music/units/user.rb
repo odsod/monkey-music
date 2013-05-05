@@ -9,7 +9,7 @@ module MonkeyMusic
       @recommendations = []
     end
 
-    def serialize
+    def dump
       YAML::dump({
         :toplists => @toplists,
         :recommendations => @recommendations

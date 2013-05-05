@@ -43,10 +43,12 @@ module MonkeyMusic
       asciify
     end
 
+    # As shown to player
     def serialize
       asciify
     end
 
+    # As shown in console ui
     def asciify
       @character
     end

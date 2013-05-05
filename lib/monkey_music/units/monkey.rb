@@ -41,7 +41,7 @@ module MonkeyMusic
     def interact_with!(unit)
       case unit
       when Track then pick_up!(unit)
-      when Basket then deliver!
+      when User then deliver!
       end
     end
 
