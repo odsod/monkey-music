@@ -3,6 +3,21 @@ module MonkeyMusic
     attr_accessor :uri, :name, :artist, :album, :popularity, :year,
       :value, :multiplier
 
+    def self.worth(n)
+      Class.new Track do @worth = n end
+    end
+
+    def self.from_recommendations(recommendations)
+      if @worth
+        found = recommendations.shuffle.find do 
+          |r| r.multiplier == @worth 
+        end
+        found || recommendations.sample
+      else
+        recommendations.sample
+      end
+    end
+
     def serialize
       @uri
     end

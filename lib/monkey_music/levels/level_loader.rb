@@ -45,18 +45,16 @@ module MonkeyMusic
     private
 
     def parse_character(character)
-      if unit_class = @legend[character]
-        if unit_class == Monkey
-          if player = @available_players.pop
-            player.monkey.character = character
-            player.monkey
-          end
-        elsif unit_class == Track
-          track = @level.user.recommendations.sample
-          track.character = character
-          track
+      klass = @legend[character]
+      if klass
+        unit = if (klass == Monkey) 
+          @available_players.pop.monkey unless @available_players.empty?
+        elsif klass <= Track
+          klass.from_recommendations(@level.user.recommendations)
         else
-          unit = unit_class.new
+          klass.new
+        end
+        if unit
           unit.character = character
           unit
         end
