@@ -3,7 +3,7 @@ require 'hallon'
 module MonkeyMusic
   class RecommendationLoader
 
-    def initialize(loaded_toplists, load_factor = 3)
+    def initialize(loaded_toplists, load_factor = 5)
       @loaded_toplists = loaded_toplists
       @load_factor = load_factor
     end
@@ -26,6 +26,7 @@ module MonkeyMusic
 
     def load_recommendations_from_albums!
       @loaded_toplists[:top_albums].each do |album|
+        puts "Browsing #{album.name}..."
         browse = album.browse
         browse.load unless browse.loaded?
         browse.tracks.first(@load_factor).each do |rec|
@@ -36,6 +37,7 @@ module MonkeyMusic
 
     def load_recommendations_from_artists!
       @loaded_toplists[:top_artists].each do |artist|
+        puts "Browsing #{artist.name}..."
         browse = artist.browse(:no_albums)
         browse.load unless browse.loaded?
         browse.top_hits.first(@load_factor).each do |rec|
@@ -46,6 +48,7 @@ module MonkeyMusic
 
     def load_recommendations_from_top_track_albums!
       @loaded_toplists[:top_track_albums].each do |album|
+        puts "Browsing #{album.name}..."
         browse = album.browse
         browse.load unless browse.loaded?
         browse.tracks.first(@load_factor).each do |rec|
