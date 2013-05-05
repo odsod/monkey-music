@@ -2,17 +2,18 @@
 :toplists:
   :top_tracks:
   - Condemnation
+  - Enola Gay - 2003 - Remaster
   - The Fog Rose High
   - Cars
   - Tainted Love
   - You Surround Me
-  - Enola Gay - 2003 - Remaster
   - Something New
   - Guilty Partner
   - The New Stone Age - 2003 Digital Remaster
   - Don't Go
   :top_artists:
   - Depeche Mode
+  - Orchestral Manoeuvres In The Dark
   - Gary Numan
   - Ultravox
   - Erasure
@@ -20,15 +21,16 @@
   - New Order
   - Ladytron
   - Anoraak
+  - Eurythmics
   :top_albums:
   - Songs Of Faith And Devotion
+  - Organisation
   - Dare!
   - Power, Corruption And Lies
   - Give Up
   - Trans Europe Express - 2009 Digital Remaster
   - The Pleasure Principle
   - Oracular Spectacular
-  - Songs From The Big Chair
   - Hurry Up, We're Dreaming
   - Rio - Collector's Edition
   :disliked:
@@ -39,11 +41,11 @@
   - Sex Pistols
   :top_track_albums:
   - Songs Of Faith And Devotion
+  - Organisation
   - Idle Labor
   - Premier Hits
   - Tainted Love / Where Did Our Love Go
   - Wild!
-  - ! 'Messages: Greatest Hits'
   - Something New
   - Technique [Collector's Edition]
   - Architecture And Morality
@@ -77,6 +79,69 @@
   multiplier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:5RfxhhAnZyU9sq38ztA4fg
+  name: Mercy In You
+  artist: Depeche Mode
+  album: Songs Of Faith And Devotion
+  popularity: 28
+  year: 1993
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:0Um9yCvb9MPCFvbuwQXNtt
+  name: Judas
+  artist: Depeche Mode
+  album: Songs Of Faith And Devotion
+  popularity: 29
+  year: 1993
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3NYCaxkggl0Hh8vQptSUvV
+  name: Enola Gay - 2003 - Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 44
+  year: 2003
+  multiplier: -1
+  value: -4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4x4Ja5WXwRjqP66Puowv07
+  name: 2nd Thought - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 29
+  year: 2003
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2yzLHdLeFhMScM7oK4TrGM
+  name: VCL XI - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 27
+  year: 2003
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:1yhESfatYnySdBaX9OPUny
+  name: Motion And Heart - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 26
+  year: 2003
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3kdwWT3iCswX4N6qniSmRs
+  name: Statues - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 27
+  year: 2003
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:5GLYtND9tYHCEdIQ1i1JH3
   name: The Things That Dreams Are Made of - 2002 - Remaster
   artist: The Human League
@@ -100,6 +165,24 @@
   artist: The Human League
   album: Dare!
   popularity: 33
+  year: 2003
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:1KU3Mbq6j2vk9jJGdfEMwi
+  name: Darkness - 2002 Digital Remaster
+  artist: The Human League
+  album: Dare!
+  popularity: 29
+  year: 2003
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2fGpjXZR9z1DtlQnsgYQ1o
+  name: Do Or Die - 2002 Digital Remaster
+  artist: The Human League
+  album: Dare!
+  popularity: 28
   year: 2003
   multiplier: 1
   value: 4
@@ -131,6 +214,24 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4eTm4tqMspXlAeop3DR1DX
+  name: '586'
+  artist: New Order
+  album: Power, Corruption And Lies
+  popularity: 30
+  year: 1983
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3LNkKavNccXFOagcao1twL
+  name: Your Silent Face
+  artist: New Order
+  album: Power, Corruption And Lies
+  popularity: 36
+  year: 1983
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:5Bf5C7RkyXTqE1h3Q8KZJ7
   name: The District Sleeps Alone Tonight
   artist: The Postal Service
@@ -154,6 +255,24 @@
   artist: The Postal Service
   album: Give Up
   popularity: 65
+  year: 2003
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:6ZHc4hKjDdUdzk2DgFyvMQ
+  name: Nothing Better
+  artist: The Postal Service
+  album: Give Up
+  popularity: 65
+  year: 2003
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2iAP4oTt3NiUZCztU4Q8Gu
+  name: Recycled Air
+  artist: The Postal Service
+  album: Give Up
+  popularity: 58
   year: 2003
   multiplier: 1
   value: 4
@@ -185,6 +304,24 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3UjH6apk0ogZeIqhHbjrRU
+  name: Trans Europe Express - 2009 Digital Remaster
+  artist: Kraftwerk
+  album: Trans Europe Express - 2009 Digital Remaster
+  popularity: 43
+  year: 2009
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2GQwwgabX1VBacz4kP5fSX
+  name: Metal On Metal - 2009 Digital Remaster
+  artist: Kraftwerk
+  album: Trans Europe Express - 2009 Digital Remaster
+  popularity: 35
+  year: 2009
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:17sIJiSJptTjso9t9dvd0p
   name: Airlane
   artist: Gary Numan
@@ -208,6 +345,24 @@
   artist: Gary Numan
   album: The Pleasure Principle
   popularity: 29
+  year: 1979
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2KZm6767RrM9k5EKTIafOV
+  name: Films
+  artist: Gary Numan
+  album: The Pleasure Principle
+  popularity: 31
+  year: 1979
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3OiBc6E43P6Y5LoqNbbMKf
+  name: M.e.
+  artist: Gary Numan
+  album: The Pleasure Principle
+  popularity: 40
   year: 1979
   multiplier: 2
   value: 16
@@ -239,30 +394,21 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:2NmpZSCAfrpYSdxos8hIri
-  name: Shout
-  artist: Tears For Fears
-  album: Songs From The Big Chair
-  popularity: 49
-  year: 1999
+  uri: spotify:track:3FtYbEfBqAlGO46NUDQSAt
+  name: Electric Feel
+  artist: MGMT
+  album: Oracular Spectacular
+  popularity: 77
+  year: 2007
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:1rMwkQ6onAmHoQ0HO1HHyk
-  name: The Working Hour
-  artist: Tears For Fears
-  album: Songs From The Big Chair
-  popularity: 31
-  year: 1999
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5kg57mIZxVEy2vBhk1aPMb
-  name: Everybody Wants To Rule The World
-  artist: Tears For Fears
-  album: Songs From The Big Chair
-  popularity: 63
-  year: 1999
+  uri: spotify:track:1jJci4qxiYcOHhQR247rEU
+  name: Kids
+  artist: MGMT
+  album: Oracular Spectacular
+  popularity: 79
+  year: 2007
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
@@ -293,6 +439,24 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4DY3ceEXrXAoU8z0cvfa9N
+  name: Where The Boats Go
+  artist: M83
+  album: Hurry Up, We're Dreaming
+  popularity: 54
+  year: 2011
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:70y3OsCu7GBkJ3aqD94Agv
+  name: Wait
+  artist: M83
+  album: Hurry Up, We're Dreaming
+  popularity: 60
+  year: 2011
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:43eBgYRTmu5BJnCJDBU5Hb
   name: Rio - 2009 - Remaster
   artist: Duran Duran
@@ -313,6 +477,24 @@
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:6lJ9nqpZslu0Xo116X8U1Z
   name: Lonely In Your Nightmare - 2009 Digital Remaster
+  artist: Duran Duran
+  album: Rio - Collector's Edition
+  popularity: 35
+  year: 2009
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:39lSeqnyjZJejRuaREfyLL
+  name: Hungry Like The Wolf - 2009 Digital Remaster
+  artist: Duran Duran
+  album: Rio - Collector's Edition
+  popularity: 43
+  year: 2009
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:25fQaP5GWQXhqHeLkcdPzO
+  name: Hold Back The Rain - 2009 Digital Remaster
   artist: Duran Duran
   album: Rio - Collector's Edition
   popularity: 35
@@ -347,6 +529,69 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:24nDMmzJlHcDfF8iSXWFnA
+  name: Angel
+  artist: Depeche Mode
+  album: Delta Machine
+  popularity: 68
+  year: 2013
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:62nmAEHbcpxxwnwAlb1Z7a
+  name: Secret To The End
+  artist: Depeche Mode
+  album: Delta Machine
+  popularity: 68
+  year: 2013
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:6VzfdkKU7J6ideJPwVJnAN
+  name: If You Leave
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  popularity: 58
+  year: 2003
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3vy2QK19RCnS4Egaq9fGhy
+  name: Electricity
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  popularity: 55
+  year: 1998
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:7tEDqanTZ8NWxV7zzqth3m
+  name: Enola Gay - 2003 - Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: ! 'Messages: Greatest Hits'
+  popularity: 55
+  year: 2008
+  multiplier: -1
+  value: -4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3WIg3fd3W8I5HU8g3Y6P0k
+  name: Enola Gay
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  popularity: 54
+  year: 1998
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:7bljdWZ5t9VqfBbGFjwZ98
+  name: Sailing On The Seven Seas
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  popularity: 51
+  year: 1998
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:3CKLPDN1AIOYa7QPpy6oDH
   name: Cars
   artist: Gary Numan
@@ -371,6 +616,24 @@
   album: Replicas
   popularity: 42
   year: 1979
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2gsY0pB4cJOVX32K3qOZgB
+  name: Metal
+  artist: Gary Numan
+  album: The Pleasure Principle
+  popularity: 42
+  year: 1979
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4BZME9a6m2q3amBBxYpdcW
+  name: Big Noise Transmission (Tim Burgess Remix) - Tim Burgess Remix
+  artist: Gary Numan
+  album: Dead Moon Falling
+  popularity: 40
+  year: 2013
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
@@ -401,6 +664,24 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3dOWFBg3Pv31n9mYyhqH44
+  name: The Voice - Edit
+  artist: Ultravox
+  album: The Best Of Ultravox
+  popularity: 41
+  year: 1997
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:7t7cCejdvIQUGLIwtBWana
+  name: Vienna
+  artist: Ultravox
+  album: Ultravox & Midge Ure - Finest
+  popularity: 40
+  year: 2004
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:2WmC4RGB4bDAkN81j4RIwP
   name: A Little Respect
   artist: Erasure
@@ -424,6 +705,24 @@
   artist: Erasure
   album: Hits The Very Best Of Erasure
   popularity: 55
+  year: 2003
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:0f4FdMaOUjxGBZ4djEAgE3
+  name: Sometimes
+  artist: Erasure
+  album: Hits The Very Best Of Erasure
+  popularity: 52
+  year: 2003
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:1TuJc293ljt05YUIWnnZoF
+  name: Oh L'Amour
+  artist: Erasure
+  album: Hits The Very Best Of Erasure
+  popularity: 50
   year: 2003
   multiplier: 1
   value: 4
@@ -455,6 +754,24 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:6hWuImKdrd2E4fZvUBhJop
+  name: Tainted Love / Where Did Our Love Go - Extended Version
+  artist: Soft Cell
+  album: Non Stop Ecstatic Dancing
+  popularity: 43
+  year: 1998
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3QmsY1D95tCgBIXaAuFReG
+  name: You Sexy Thing
+  artist: Soft Cell
+  album: 100 Disco Hits of The '70s & '80s (Re-Recorded Versions)
+  popularity: 43
+  year: 2010
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:6wVViUl2xSRoDK2T7dMZbR
   name: Bizarre Love Triangle
   artist: New Order
@@ -482,6 +799,24 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:31MOjWj3CT3dCQsMV2b8Wu
+  name: Blue Monday [88]
+  artist: New Order
+  album: The Best Of New Order
+  popularity: 60
+  year: 1994
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:01jBLs7IZQzPt3dVdn5rDa
+  name: True Faith - '94
+  artist: New Order
+  album: The Best Of New Order
+  popularity: 57
+  year: 1994
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:5MyNnNXNNxqKR8nZMrdL0o
   name: Destroy Everything You Touch
   artist: Ladytron
@@ -505,6 +840,24 @@
   artist: Ladytron
   album: Best of 00-10
   popularity: 47
+  year: 2011
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2YFdGBub0ixBM5eaMCo40P
+  name: Ace Of Hz
+  artist: Ladytron
+  album: Best of 00-10
+  popularity: 45
+  year: 2011
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:1nke7Q0CrOn8Rxiwe0CT5G
+  name: International Dateline
+  artist: Ladytron
+  album: Best of 00-10
+  popularity: 40
   year: 2011
   multiplier: 1
   value: 4
@@ -536,6 +889,69 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:41MKLYPmi3YUGNGj2tac6X
+  name: Don't Be Afraid (feat. Sally Shapiro)
+  artist: Anoraak
+  album: Wherever the Sun Sets
+  popularity: 42
+  year: 2010
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:6N6UN3LA9rTNF3pmqXcD3N
+  name: Try me
+  artist: Anoraak
+  album: Wherever the Sun Sets
+  popularity: 41
+  year: 2010
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2CVqF1sLhwut4NiZxzNUnC
+  name: Sweet Dreams (Are Made Of This)
+  artist: Eurythmics
+  album: The Best Of The 80's
+  popularity: 69
+  year: 2007
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:5vYhr2kgOonJtWeJq5qZzU
+  name: Here Comes The Rain Again
+  artist: Eurythmics
+  album: Boxed
+  popularity: 63
+  year: 2005
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4wjTmQikELGmAPpXibB8fR
+  name: Thorn In My Side
+  artist: Eurythmics
+  album: Ultimate Collection
+  popularity: 60
+  year: 2005
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4Yn20PcIohkarnV1HcHY0P
+  name: Sweet Dreams (Are Made Of This) - Steve Angello Remix Edit
+  artist: Eurythmics
+  album: I've Got A Life/Sweet Dreams Remix
+  popularity: 57
+  year: 2005
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2hbA72TFulrNGTEBUMAnzG
+  name: There Must Be An Angel (Playing With My Heart)
+  artist: Eurythmics
+  album: Ultimate Collection
+  popularity: 57
+  year: 2005
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:7wlYxYOZCS4VL0OyZM6trc
   name: I Feel You
   artist: Depeche Mode
@@ -562,6 +978,69 @@
   year: 1993
   multiplier: -1
   value: -4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:5RfxhhAnZyU9sq38ztA4fg
+  name: Mercy In You
+  artist: Depeche Mode
+  album: Songs Of Faith And Devotion
+  popularity: 28
+  year: 1993
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:0Um9yCvb9MPCFvbuwQXNtt
+  name: Judas
+  artist: Depeche Mode
+  album: Songs Of Faith And Devotion
+  popularity: 29
+  year: 1993
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3NYCaxkggl0Hh8vQptSUvV
+  name: Enola Gay - 2003 - Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 44
+  year: 2003
+  multiplier: -1
+  value: -4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4x4Ja5WXwRjqP66Puowv07
+  name: 2nd Thought - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 29
+  year: 2003
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2yzLHdLeFhMScM7oK4TrGM
+  name: VCL XI - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 27
+  year: 2003
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:1yhESfatYnySdBaX9OPUny
+  name: Motion And Heart - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 26
+  year: 2003
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3kdwWT3iCswX4N6qniSmRs
+  name: Statues - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 27
+  year: 2003
+  multiplier: 3
+  value: 64
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:3Z5ZFVlrhZISJbV45GZYMG
   name: For the Ages
@@ -590,6 +1069,24 @@
   multiplier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:6N2kBsYvZaS7tO5awPcnSV
+  name: Party Talk
+  artist: Craft Spells
+  album: Idle Labor
+  popularity: 34
+  year: 2011
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:1MVsfoLLeYqQbJKFziYHAN
+  name: From the Morning Heat
+  artist: Craft Spells
+  album: Idle Labor
+  popularity: 33
+  year: 2011
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:2XAw1S7wT9KOipBctja3KJ
   name: Cars (premier Mix)
   artist: Gary Numan
@@ -613,6 +1110,24 @@
   artist: Gary Numan
   album: Premier Hits
   popularity: 33
+  year: 1981
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:7cy6DlAuHmskYKt7xNCUlR
+  name: Down In The Park
+  artist: Gary Numan
+  album: Premier Hits
+  popularity: 24
+  year: 1981
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3S2h7OkP4ijUIDfWkjjVhN
+  name: We Are Glass
+  artist: Gary Numan
+  album: Premier Hits
+  popularity: 21
   year: 1981
   multiplier: 2
   value: 16
@@ -662,32 +1177,23 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:26DezTLm7aJlgCLvdS3iq0
-  name: Messages (10'' Single Version) - 2003 - Remaster
-  artist: Orchestral Manoeuvres In The Dark
-  album: ! 'Messages: Greatest Hits'
-  popularity: 36
-  year: 2008
-  multiplier: 1
-  value: 4
+  uri: spotify:track:1tZlyv4LnbBl5ZWUdRHtBG
+  name: How Many Times?
+  artist: Erasure
+  album: Wild!
+  popularity: 22
+  year: 1989
+  multiplier: 2
+  value: 16
 - !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:1wWl4uVbtN9HJ4bOHT1M5m
-  name: Electricity
-  artist: Orchestral Manoeuvres In The Dark
-  album: ! 'Messages: Greatest Hits'
-  popularity: 35
-  year: 2008
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7tEDqanTZ8NWxV7zzqth3m
-  name: Enola Gay - 2003 - Remaster
-  artist: Orchestral Manoeuvres In The Dark
-  album: ! 'Messages: Greatest Hits'
-  popularity: 55
-  year: 2008
-  multiplier: -1
-  value: -4
+  uri: spotify:track:7d2b4IlrfOufItYUwwI1nG
+  name: Star
+  artist: Erasure
+  album: Wild!
+  popularity: 22
+  year: 1989
+  multiplier: 2
+  value: 16
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:0GqRSiO3OF89bNwe9V8HYi
   name: Something New
@@ -712,6 +1218,15 @@
   artist: Girls Aloud
   album: Something New
   popularity: 32
+  year: 2012
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4sojwWcmdOcOA9HbkNVkMe
+  name: Something New - Manhattan Clique Remix
+  artist: Girls Aloud
+  album: Something New
+  popularity: 28
   year: 2012
   multiplier: 1
   value: 4
@@ -743,6 +1258,24 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2qmJwQXUz9FyaHyVLtjoe3
+  name: Round & Round
+  artist: New Order
+  album: Technique [Collector's Edition]
+  popularity: 35
+  year: 2008
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:0gksEnBiPqADMHtLdwgvue
+  name: Guilty Partner
+  artist: New Order
+  album: Technique [Collector's Edition]
+  popularity: 31
+  year: 2008
+  multiplier: -1
+  value: -4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:4P9BeQkwwcWIuioP8YzeQD
   name: The New Stone Age - 2003 Digital Remaster
   artist: Orchestral Manoeuvres In The Dark
@@ -758,8 +1291,8 @@
   album: Architecture And Morality
   popularity: 32
   year: 2003
-  multiplier: 1
-  value: 4
+  multiplier: 2
+  value: 16
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:4i4QN9Zs5s7OZRRLIYHMmP
   name: Souvenir - 2003 Digital Remaster
@@ -767,8 +1300,26 @@
   album: Architecture And Morality
   popularity: 34
   year: 2003
-  multiplier: 1
-  value: 4
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:0F0mS09ruZO2zWaEbl6hGQ
+  name: Sealand - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Architecture And Morality
+  popularity: 29
+  year: 2003
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:15RDSwmEEcG0LKhDnzLj7x
+  name: Joan Of Arc - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Architecture And Morality
+  popularity: 32
+  year: 2003
+  multiplier: 2
+  value: 16
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:7Lzj8nFU3U9WOnFLAjFQ8n
   name: Don't Go
@@ -797,12 +1348,39 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:6eZHgcqye6cYkH9BrOMoif
+  name: Midnight
+  artist: Yazoo
+  album: Upstairs At Eric’s
+  popularity: 24
+  year: 1982
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:7KYUVQgFgWFmESn6vH5JjB
+  name: In My Room
+  artist: Yazoo
+  album: Upstairs At Eric’s
+  popularity: 24
+  year: 1982
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:5H85hOp2oMlhMh9JlkdJP2
   name: Condemnation
   artist: Depeche Mode
   album: Songs Of Faith And Devotion
   popularity: 30
   year: 1993
+  multiplier: -1
+  value: -4
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3NYCaxkggl0Hh8vQptSUvV
+  name: Enola Gay - 2003 - Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Organisation
+  popularity: 44
+  year: 2003
   multiplier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Track
@@ -839,15 +1417,6 @@
   album: Wild!
   popularity: 23
   year: 1989
-  multiplier: -1
-  value: -4
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:7tEDqanTZ8NWxV7zzqth3m
-  name: Enola Gay - 2003 - Remaster
-  artist: Orchestral Manoeuvres In The Dark
-  album: ! 'Messages: Greatest Hits'
-  popularity: 55
-  year: 2008
   multiplier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Track
@@ -914,6 +1483,24 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:4Rme8TxEaNV09wp64AWd2y
+  name: Die, Die My Darling - Fox Studio 1983
+  artist: Misfits
+  album: Collection
+  popularity: 55
+  year: 1986
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:0PTP53h7PvqEMeGyGClkOk
+  name: Attitude - 1995 Digital Remaster
+  artist: Misfits
+  album: Collection 2
+  popularity: 54
+  year: 1995
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:07b5vArZtW08PuEqCw61Ei
   name: Pet Semetary
   artist: The Ramones
@@ -938,6 +1525,24 @@
   album: Adios Amigos
   popularity: 44
   year: 1995
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:6YYGoARcDRYdJu9ezMPzUx
+  name: I Believe In Miracles
+  artist: The Ramones
+  album: Brain Drain
+  popularity: 41
+  year: 1989
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2JcUB7LyS4MDI5fvSWU6se
+  name: Spiderman
+  artist: The Ramones
+  album: The Chrysalis Years Anthology
+  popularity: 40
+  year: 2002
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Track
@@ -968,6 +1573,24 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:27KrzUfX8fHDEYyvmZdrqa
+  name: Los Angeles Is Burning
+  artist: Bad Religion
+  album: The Empire Strikes First
+  popularity: 55
+  year: 2004
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3qriuhIxVQXmdHRIIzP4Fe
+  name: American Jesus
+  artist: Bad Religion
+  album: Recipe For Hate
+  popularity: 54
+  year: 1990
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:4LzsPH7Z8GqxeiAIUYKswd
   name: London Calling
   artist: The Clash
@@ -995,6 +1618,24 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:19Ze27TdtFYssgeGCStFIC
+  name: I Fought the Law
+  artist: The Clash
+  album: The Essential Clash
+  popularity: 58
+  year: 2010
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:326OKIhvo9ZJBcjGah2e1E
+  name: Bankrobber
+  artist: The Clash
+  album: The Story Of The Clash Volume 1
+  popularity: 55
+  year: 1988
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
   uri: spotify:track:2mHchPRtQWet3iIS3jANr1
   name: God Save The Queen
   artist: Sex Pistols
@@ -1019,5 +1660,23 @@
   album: Never Mind The Bollocks, Here’s The Sex Pistols
   popularity: 54
   year: 2012
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:2jfy5umLwAO22PIaXjJWPu
+  name: Pretty Vacant
+  artist: Sex Pistols
+  album: Personal Effects
+  popularity: 51
+  year: 1999
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:3Lx7TcHWXlXdwxkxxZMETj
+  name: My Way
+  artist: Sex Pistols
+  album: ! 'Agents Of Anarchy - File 2: Submission'
+  popularity: 50
+  year: 2009
   multiplier: -2
   value: -16
