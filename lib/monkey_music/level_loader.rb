@@ -5,7 +5,6 @@ module MonkeyMusic
   class LevelLoader
     def initialize(level)
       @level = level
-      @available_players = Array.new(level.players)
       @legend = {}
     end
 
@@ -46,7 +45,7 @@ module MonkeyMusic
       klass = @legend[character]
       if klass
         unit = if (klass <= Monkey) 
-          klass.from_available_players(@available_players)
+          klass.from_players(@level.players)
         elsif klass <= Track
           klass.from_recommendations(@level.user.recommendations)
         elsif klass == User

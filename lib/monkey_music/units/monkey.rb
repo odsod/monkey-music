@@ -7,7 +7,7 @@ module MonkeyMusic
       Class.new Monkey do @player_index = number - 1 end
     end
 
-    def self.from_available_players(players)
+    def self.from_players(players)
       @player_index &&
         players[@player_index] &&
         players[@player_index].monkey
