@@ -3,6 +3,16 @@ module MonkeyMusic
     attr_accessor :name, :score, :capacity, :character
     attr_reader :carrying, :facing
 
+    def self.player(number)
+      Class.new Monkey do @player_index = number - 1 end
+    end
+
+    def self.from_available_players(players)
+      @player_index &&
+        players[@player_index] &&
+        players[@player_index].monkey
+    end
+
     def initialize
       @score = 0
       @capacity = 1
