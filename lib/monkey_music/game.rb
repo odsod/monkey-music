@@ -20,6 +20,7 @@ module MonkeyMusic
         # Move players in random order
         @players.shuffle.each { |p| p.move! }
       end
+      @ui.update(@level)
     end
 
   end
