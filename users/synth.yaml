@@ -1,6 +1,5 @@
---- !ruby/object:MonkeyMusic::User
-name: Testuser
-toplists:
+---
+:toplists:
   :top_tracks:
   - Condemnation
   - The Fog Rose High
@@ -49,7 +48,7 @@ toplists:
   - Technique [Collector's Edition]
   - Architecture And Morality
   - Upstairs At Eric’s
-recommendations:
+:recommendations:
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:5GLYtND9tYHCEdIQ1i1JH3
   name: The Things That Dreams Are Made of - 2002 - Remaster

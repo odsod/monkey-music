@@ -36,7 +36,9 @@ module MonkeyMusic
         score_system = ScoreSystem.new
         score_system.evaluate_user_recommendations!(user)
         # Dump and print the user
-        puts user.serialize
+        File.open(@out_file, 'w') do |f|
+          f.write(user.serialize)
+        end
         exit
       elsif not game_is_playable?
         puts @opt_parser
@@ -66,6 +68,7 @@ module MonkeyMusic
 
     def generate_user?
       (defined? @toplist_file) &&
+        (defined? @out_file) &&
         (defined? @spotify_appkey_file) &&
         (defined? @spotify_account) &&
         (defined? @spotify_password)
@@ -109,10 +112,21 @@ module MonkeyMusic
         @players[-1].monkey.name = name unless @players.empty?
       end
 
+      opts.on('-d', '--delay',
+              'The delay between each round.') do |delay|
+        @delay = delay
+      end
+
       opts.on('-g',
               '--generate TOPLIST_FILE',
               'Generate a user from a toplist file.') do |user|
         @toplist_file = File.join(Dir.getwd, user)
+      end
+
+      opts.on('-o',
+              '--out OUT_FILE',
+              'The file to dump a generated user to.') do |file|
+        @out_file = File.join(Dir.getwd, file)
       end
 
       opts.on('-k', 
@@ -133,13 +147,8 @@ module MonkeyMusic
       end
 
       opts.on('-b', '--browser-ui', 
-              'View the game through the browser instead of console.') do |password|
+              'View the game through the browser instead of the console.') do |password|
         @browser_ui = true
-      end
-
-      opts.on('-d', '--delay',
-              'The delay between each round.') do |delay|
-        @delay = delay
       end
 
       opts.on_tail('-h',
