@@ -5,7 +5,8 @@ require 'rack'
 module MonkeyMusic
   class BrowserUI
 
-    def initialize
+    def initialize(delay)
+      @delay = delay || 1
       puts "Initializing websockets..."
       Thread.new {
         EM.run {
@@ -28,7 +29,7 @@ module MonkeyMusic
 
     def update(level)
       @ws.send(level.as_json) if @ws
-      sleep 1
+      sleep @delay
     end
 
   end

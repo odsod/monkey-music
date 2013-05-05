@@ -1,7 +1,8 @@
 module MonkeyMusic
   class ConsoleUI
 
-    def initialize
+    def initialize(delay)
+      @delay = delay || 1
     end
 
     def msg(msg)
@@ -24,7 +25,7 @@ module MonkeyMusic
         puts "#{player.monkey.name}: #{player.monkey.score}"
         puts "{ #{"0"*player.monkey.carrying.count}#{"_"*player.monkey.remaining_capacity} }\n"
       end
-      sleep 0.2
+      sleep @delay
     end
   end
 end
