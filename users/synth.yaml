@@ -21,12 +21,12 @@
   - Ladytron
   - Anoraak
   :top_albums:
+  - Songs Of Faith And Devotion
   - Dare!
   - Power, Corruption And Lies
   - Give Up
   - Trans Europe Express - 2009 Digital Remaster
   - The Pleasure Principle
-  - Violator
   - Oracular Spectacular
   - Songs From The Big Chair
   - Hurry Up, We're Dreaming
@@ -49,6 +49,33 @@
   - Architecture And Morality
   - Upstairs At Eric’s
 :recommendations:
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:7wlYxYOZCS4VL0OyZM6trc
+  name: I Feel You
+  artist: Depeche Mode
+  album: Songs Of Faith And Devotion
+  popularity: 33
+  year: 1993
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:6T0qQV5nrXOd8zgowGBX1t
+  name: Walking In My Shoes
+  artist: Depeche Mode
+  album: Songs Of Faith And Devotion
+  popularity: 35
+  year: 1993
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Track
+  uri: spotify:track:5H85hOp2oMlhMh9JlkdJP2
+  name: Condemnation
+  artist: Depeche Mode
+  album: Songs Of Faith And Devotion
+  popularity: 30
+  year: 1993
+  multiplier: -1
+  value: -4
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:5GLYtND9tYHCEdIQ1i1JH3
   name: The Things That Dreams Are Made of - 2002 - Remaster
@@ -182,33 +209,6 @@
   album: The Pleasure Principle
   popularity: 29
   year: 1979
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:1eGYYQ5qDUTmqBcWi25Z7j
-  name: World In My Eyes
-  artist: Depeche Mode
-  album: Violator
-  popularity: 47
-  year: 1990
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:5ZUjQjmI5l5ODJGaqr4wmF
-  name: Sweetest Perfection
-  artist: Depeche Mode
-  album: Violator
-  popularity: 43
-  year: 1990
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Track
-  uri: spotify:track:4Oa88jEmc8VIHwEaVLETYO
-  name: Personal Jesus
-  artist: Depeche Mode
-  album: Violator
-  popularity: 50
-  year: 1990
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Track
@@ -542,8 +542,8 @@
   album: Songs Of Faith And Devotion
   popularity: 33
   year: 1993
-  multiplier: 2
-  value: 16
+  multiplier: 3
+  value: 64
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:6T0qQV5nrXOd8zgowGBX1t
   name: Walking In My Shoes
@@ -551,8 +551,8 @@
   album: Songs Of Faith And Devotion
   popularity: 35
   year: 1993
-  multiplier: 2
-  value: 16
+  multiplier: 3
+  value: 64
 - !ruby/object:MonkeyMusic::Track
   uri: spotify:track:5H85hOp2oMlhMh9JlkdJP2
   name: Condemnation
