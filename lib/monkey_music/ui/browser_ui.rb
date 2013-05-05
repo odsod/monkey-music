@@ -6,7 +6,7 @@ module MonkeyMusic
   class BrowserUI
 
     def initialize
-      puts "Initializing websockets!"
+      puts "Initializing websockets..."
       Thread.new {
         EM.run {
           EM::WebSocket.run(:host => "0.0.0.0", :port => 3000) do |ws|
@@ -22,6 +22,8 @@ module MonkeyMusic
           end
         }
       }
+      sleep 1 # TODO: Asynchronous acknowledge that ui is ready
+      puts "Websockets initialized!"
     end
 
     def update(level)

@@ -14,11 +14,11 @@ module MonkeyMusic
         if @level.complete?
           break
         end
+        @ui.update(@level)
         # Query players for moves
         @players.each { |p| p.query_move! }
         # Move players in random order
         @players.shuffle.each { |p| p.move! }
-        @ui.update(@level)
       end
     end
 

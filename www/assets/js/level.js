@@ -58,8 +58,8 @@ monkeymusic.level = (function (createjs, tween, window) {
         return unit.id === oldUnit.id;
       });
       if (newUnit) {
+        // Move unit
         if (newUnit.x !== oldUnit.x || newUnit.y !== oldUnit.y) {
-          console.log(oldUnit.type + ' moved!');
           oldUnit.sprite.gotoAndPlay('run');
           tween.get(oldUnit.sprite)
             .to({
@@ -69,8 +69,9 @@ monkeymusic.level = (function (createjs, tween, window) {
             .call(function () {
               oldUnit.sprite.gotoAndPlay('normal');
             });
+          oldUnit.x = newUnit.x;
+          oldUnit.y = newUnit.y;
         }
-        return;
       } else {
         stage.removeChild(oldUnit.sprite);
       }

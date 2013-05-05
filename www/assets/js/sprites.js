@@ -14,7 +14,8 @@ monkeymusic.sprites = (function (createjs) {
         frames: SPRITE_SIZE,
         animations: {
           run: [3, 5, 'run', 8],
-          normal: [6, 7, 'normal', 48]
+          normal: [6, 7, 'normal', 48],
+          pick: [1, 2, 'pick', 16],
         }
       });
       //createjs.SpriteSheetUtils.addFlippedFrames(sheet, true, false, fa, falselse);

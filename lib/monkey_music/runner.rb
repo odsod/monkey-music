@@ -74,7 +74,7 @@ module MonkeyMusic
     end
 
     def browser_ui?
-      false
+      @browser_ui == true
     end
 
     def init_parser(opts)
