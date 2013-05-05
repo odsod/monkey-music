@@ -40,7 +40,8 @@ module MonkeyMusic
         exit
       end
       # Load user
-      user = User.read_from_file(@user_file)
+      user = User.new
+      user.load_from_file(@user_file)
       # Load level
       level = Level.new(@players, user)
       level.load_from_file(@level_file)

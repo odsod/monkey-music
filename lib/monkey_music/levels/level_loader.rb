@@ -45,6 +45,8 @@ module MonkeyMusic
           klass.from_available_players(@available_players)
         elsif klass <= Track
           klass.from_recommendations(@level.user.recommendations)
+        elsif klass == User
+          @level.user
         else
           klass.new
         end
