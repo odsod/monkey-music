@@ -6,7 +6,18 @@ module MonkeyMusic
 
     def initialize
       @toplists = {}
-      @recommendations = []
+      @recommendations = @remaining_recommendations = []
+    end
+
+    def recommend!(worth)
+      index = @remaining_recommendations.index do |r|
+        r.multiplier == worth
+      end
+      if index
+        @remaining_recommendations.delete_at(index)
+      else
+        @recommendations.find { |r| r.multiplier == worth }
+      end
     end
 
     def dump
@@ -20,6 +31,7 @@ module MonkeyMusic
       data = YAML::load(IO.read(file))
       @toplists = data[:toplists]
       @recommendations = data[:recommendations]
+      @remaining_recommendations = @recommendations
     end
     
   end

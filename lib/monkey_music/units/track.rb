@@ -7,14 +7,11 @@ module MonkeyMusic
       Class.new Track do @worth = n end
     end
 
-    def self.from_recommendations(recommendations)
+    def self.from_user(user)
       if @worth
-        found = recommendations.shuffle.find do 
-          |r| r.multiplier == @worth 
-        end
-        found || recommendations.sample
+        user.recommend!(@worth) || user.recommendations.sample
       else
-        recommendations.sample
+        user.recommendations.sample
       end
     end
 

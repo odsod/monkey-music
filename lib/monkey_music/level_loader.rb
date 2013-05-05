@@ -44,10 +44,10 @@ module MonkeyMusic
     def parse_character(character)
       klass = @legend[character]
       if klass
-        unit = if (klass <= Monkey) 
+        unit = if (klass <= Monkey)
           klass.from_players(@level.players)
         elsif klass <= Track
-          klass.from_recommendations(@level.user.recommendations)
+          klass.from_user(@level.user)
         elsif klass == User
           @level.user
         else
