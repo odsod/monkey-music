@@ -40,17 +40,12 @@ module MonkeyMusic
     end
 
     def to_s
-      asciify
+      @character
     end
 
     # As shown to player
     def serialize
-      asciify
-    end
-
-    # As shown in console ui
-    def asciify
-      @character
+      to_s
     end
 
     def to_json(options = {})

@@ -70,10 +70,6 @@ module MonkeyMusic
       (@capacity - carrying.count) || 0
     end
 
-    def serialize
-      "#{asciify}"
-    end
-
     def to_json(options = {})
       { :id => @id,
         :x => @x,

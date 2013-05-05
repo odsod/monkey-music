@@ -22,10 +22,6 @@ module MonkeyMusic
       @uri
     end
 
-    def to_s
-      @name
-    end
-
     def to_json(options = {})
       { :id => @id,
         :x => @x,

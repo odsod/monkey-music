@@ -50,14 +50,14 @@ module MonkeyMusic
       self
     end
 
-    def asciify
+    def to_s
       rows = []
       rows << " " + ("=" * @width)
       @height.times do |y|
         row = ["|"]
         @width.times do |x|
           unit = at(x, y)
-          row << if unit then unit.asciify else ' ' end
+          row << if unit then unit.to_s else ' ' end
         end
         row << "|"
         rows << row.join
@@ -77,10 +77,6 @@ module MonkeyMusic
         rows << row.join(",")
       end
       rows.join("\n")
-    end
-
-    def to_s
-      asciify
     end
 
     def as_json

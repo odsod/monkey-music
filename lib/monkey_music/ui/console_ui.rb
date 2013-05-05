@@ -16,7 +16,7 @@ module MonkeyMusic
       # Clear screen
       puts "\e[H\e[2J"
       # Level
-      puts level.asciify
+      puts level.to_s
       # Score
       puts "\n"
       puts "="*10
