@@ -39,9 +39,12 @@ module MonkeyMusic
         File.open(@out_file, 'w') do |f|
           f.write(user.dump)
         end
+        puts "====="
+        puts "DONE!"
+        puts "====="
         puts "Loaded tracks:"
         user.recommendations.group_by(&:multiplier).sort.each do |k,v| 
-          puts "#With multiplier #{k}: #{v.length}"
+          puts "#Multiplier #{k}:\t#{v.length}"
         end
         exit
       elsif not game_is_playable?
