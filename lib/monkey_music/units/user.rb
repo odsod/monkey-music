@@ -4,7 +4,7 @@ module MonkeyMusic
   class User < Base
     attr_accessor :toplists, :recommendations
 
-    def initialize(name)
+    def initialize
       @toplists = {}
       @recommendations = []
     end

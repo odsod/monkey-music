@@ -15,21 +15,24 @@ module MonkeyMusic
       @opt_parser.parse!
       if generate_user?
         # Create user
-        user = User.new("Testuser")
+        user = User.new
         # Connect to libspotify
         Hallon.load_timeout = 0
         session = Hallon::Session.initialize(IO.read(@spotify_appkey_file))
         session.login!(@spotify_account, @spotify_password)
         # Load toplists
+        puts "Loading toplists from #{@toplist_file}..."
         toplist_loader = ToplistLoader.new(@toplist_file)
         toplist_loader.load_for_user!(user)
         # Generate recommendations
+        puts "Loading recommendations..."
         loaded_toplists = toplist_loader.loaded_toplists
         recommendation_loader = RecommendationLoader.new(loaded_toplists)
         recommendation_loader.load_for_user!(user)
         # Disconnect from libspotify
         session.logout!
         # Evaluate recommendations
+        puts "Evaluating recommendations..."
         score_system = ScoreSystem.new
         score_system.evaluate_user_recommendations!(user)
         # Dump and print the user
@@ -50,9 +53,9 @@ module MonkeyMusic
         print "Using browser UI. Press the enter key to start game. "
         gets
         puts "Starting game..."
-        ui = BrowserUI.new
+        ui = BrowserUI.new(@delay)
       else
-        ui = ConsoleUI.new
+        ui = ConsoleUI.new(@delay)
       end
       ## Start game
       @game = Game.new(level, @players, ui)
@@ -86,30 +89,30 @@ module MonkeyMusic
               'The level to play.') do |file|
         @level_file = File.join(Dir.getwd, file)
       end
-
-      opts.on('-g',
-              '--generate-user USER',
-              'Generate music recommendations for a Spotify user.') do |user|
-        @toplist_file = File.join(Dir.getwd, user)
+      
+      opts.on('-u',
+              '--user USER',
+              'The user the players will recommend music for.') do |user|
+        @user_file = File.join(Dir.getwd, user)
       end
 
-      opts.on('-f', 
-              '--player-file FILE', 
+      opts.on('-p',
+              '--player FILE',
               'The path to a player program.') do |file|
         player_file = File.join(Dir.getwd, file)
         @players << Player.new(player_file)
       end
 
-      opts.on('-n', 
+      opts.on('-n',
               '--player-name NAME', 
               'Set the name of the last entered player.') do |name|
         @players[-1].monkey.name = name unless @players.empty?
       end
-      
-      opts.on('-u', 
-              '--user USER', 
-              'The user to get recommendations from.') do |user|
-        @user_file = File.join(Dir.getwd, user)
+
+      opts.on('-g',
+              '--generate TOPLIST_FILE',
+              'Generate a user from a toplist file.') do |user|
+        @toplist_file = File.join(Dir.getwd, user)
       end
 
       opts.on('-k', 
@@ -124,7 +127,7 @@ module MonkeyMusic
         @spotify_account = account
       end
 
-      opts.on('-p', '--password PASSWORD', 
+      opts.on('-w', '--password PASSWORD', 
               'Password for a Spotify premium account.') do |password|
         @spotify_password = password
       end
