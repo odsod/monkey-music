@@ -1,13 +1,14 @@
 module MonkeyMusic
   class Monkey < Base
     attr_accessor :name, :score, :capacity, :character
-    attr_reader :carrying
+    attr_reader :carrying, :facing
 
     def initialize
       @score = 0
       @capacity = 1
       @carrying = []
       @delivered = []
+      @facing = [:west, :east].sample
     end
 
     def move!(direction)
@@ -16,6 +17,12 @@ module MonkeyMusic
         # Interact with unit
         interact_with!(target_unit)
       else
+        # Face the right direction
+        @facing = case direction
+          when :west then :west
+          when :east then :east
+          else @facing
+        end
         # Perform move
         @x, @y = *target if @level.accessible?(*target)
       end
@@ -61,6 +68,7 @@ module MonkeyMusic
       { :id => @id,
         :x => @x,
         :y => @y,
+        :facing => @facing,
         :type => self.class.name.split('::').last,
         :name => @name,
         :score => @score,

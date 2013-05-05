@@ -13,9 +13,15 @@ monkeymusic.sprites = (function (createjs) {
         images: ['assets/img/monkey.png'],
         frames: SPRITE_SIZE,
         animations: {
-          run: [3, 5, 'run', 8],
-          normal: [6, 7, 'normal', 48],
-          pick: [1, 2, 'pick', 16],
+          normal: [0, 1, 'normal', 48],
+          normalwest: [0, 1, 'normalwest', 48],
+          laughwest: [2],
+          runwest: [3, 5, 'runwest', 8],
+          pickwest: [6, 7, 'pickwest', 16],
+          normaleast: [8, 9, 'normaleast', 48],
+          laugheast: [10],
+          runeast: [11, 13, 'runeast', 8],
+          pickeast: [14, 15, 'pickeast', 16],
         }
       });
       //createjs.SpriteSheetUtils.addFlippedFrames(sheet, true, false, fa, falselse);
@@ -23,6 +29,13 @@ monkeymusic.sprites = (function (createjs) {
     }()),
     Track: new createjs.SpriteSheet({
       images: ['assets/img/track.png'],
+      frames: SPRITE_SIZE,
+      animations: {
+        normal: [0]
+      }
+    }),
+    Wall: new createjs.SpriteSheet({
+      images: ['assets/img/palm.png'],
       frames: SPRITE_SIZE,
       animations: {
         normal: [0]

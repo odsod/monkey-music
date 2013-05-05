@@ -60,14 +60,14 @@ monkeymusic.level = (function (createjs, tween, window) {
       if (newUnit) {
         // Move unit
         if (newUnit.x !== oldUnit.x || newUnit.y !== oldUnit.y) {
-          oldUnit.sprite.gotoAndPlay('run');
+          oldUnit.sprite.gotoAndPlay('run' + newUnit.facing || 'west');
           tween.get(oldUnit.sprite)
             .to({
               x: newUnit.x * monkeymusic.constants.UNIT_WIDTH,
               y: newUnit.y * monkeymusic.constants.UNIT_HEIGHT
             }, 800)
             .call(function () {
-              oldUnit.sprite.gotoAndPlay('normal');
+              oldUnit.sprite.gotoAndPlay('normal' + newUnit.facing || 'west');
             });
           oldUnit.x = newUnit.x;
           oldUnit.y = newUnit.y;

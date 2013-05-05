@@ -1,8 +1,8 @@
 var monkeymusic = (function (document) {
 
   var constants = {
-    UNIT_WIDTH: 70,
-    UNIT_HEIGHT: 70
+    UNIT_WIDTH: 64,
+    UNIT_HEIGHT: 64
   };
 
   var

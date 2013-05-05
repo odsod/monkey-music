@@ -13,6 +13,7 @@ GEM
     http_parser.rb (0.5.3)
     json (1.7.7)
     libspotify (12.1.51.3)
+    rack (1.5.2)
     ref (1.0.4)
     spotify (12.5.1)
       ffi (~> 1.0, >= 1.0.11)
@@ -27,3 +28,4 @@ DEPENDENCIES
   em-websocket
   hallon
   json
+  rack
