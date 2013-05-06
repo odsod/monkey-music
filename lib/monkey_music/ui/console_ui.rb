@@ -19,12 +19,16 @@ module MonkeyMusic
       puts level.to_s
       # Score
       puts "\n"
-      puts "="*10
-      puts "\n"
       level.players.each do |player|
-        puts "#{player.monkey.name}: #{player.monkey.score}"
-        puts "{ #{"0"*player.monkey.carrying.count}#{"_"*player.monkey.remaining_capacity} }\n"
+        monkey = player.monkey
+        puts "---"
+        print "#{monkey.name} | "
+        print "Score: #{monkey.score} | "
+        puts "Capacity: #{monkey.remaining_capacity}"
+        monkey.carrying.each { |t| puts "#{t.value}p: #{t.name}" }
+        print("\n"*monkey.remaining_capacity)
       end
+      puts "---"
       sleep @delay
     end
   end
