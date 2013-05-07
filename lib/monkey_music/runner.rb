@@ -3,6 +3,9 @@ require 'optparse'
 module MonkeyMusic
   class Runner
 
+    @@default_level = 'testlevel.rb'
+    @@default_user = 'synth.yaml'
+
     def initialize(arguments)
       @arguments = arguments
       @opt_parser = OptionParser.new
@@ -13,6 +16,18 @@ module MonkeyMusic
 
     def run
       @opt_parser.parse!
+      # Handle fallback to default level
+      @level_file ||= File.join(
+        File.dirname(__FILE__), 
+        "../../levels", 
+        @@default_level
+      )
+      # Handle fallback to default user
+      @user_file ||= File.join(
+        File.dirname(__FILE__), 
+        "../../users", 
+        @@default_user
+      )
       if (not game_is_playable?)
         puts @opt_parser
         exit
