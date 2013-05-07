@@ -23,8 +23,6 @@ module MonkeyMusic
       # Load level
       level = Level.new(@players, user)
       level.load_from_file(@level_file)
-      puts level.to_s
-      exit
       ## Initialize UI
       if browser_ui?
         print "Using browser UI. Press the enter key to start game. "
