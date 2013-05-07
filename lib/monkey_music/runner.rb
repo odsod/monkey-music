@@ -65,19 +65,7 @@ module MonkeyMusic
     end
 
     def init_parser(opts)
-      opts.banner = 'Usage: monkeymusic [options]'
-
-      opts.on('-l',
-              '--level LEVEL',
-              'The level to play.') do |file|
-        @level_file = File.join(Dir.getwd, file)
-      end
-      
-      opts.on('-u',
-              '--user USER',
-              'The user the players will recommend music for.') do |user|
-        @user_file = File.join(Dir.getwd, user)
-      end
+      opts.banner = 'Usage: monkeymusic -p PLAYER_FILE -n PLAYER_NAME [-u USER_FILE] [-l LEVEL_FILE]'
 
       opts.on('-p',
               '--player FILE',
@@ -90,6 +78,18 @@ module MonkeyMusic
               '--player-name NAME', 
               'Set the name of the last entered player.') do |name|
         @players[-1].monkey.name = name unless @players.empty?
+      end
+
+      opts.on('-l',
+              '--level LEVEL',
+              'The level to play.') do |file|
+        @level_file = File.join(Dir.getwd, file)
+      end
+      
+      opts.on('-u',
+              '--user USER',
+              'The user the players will recommend music for.') do |user|
+        @user_file = File.join(Dir.getwd, user)
       end
 
       opts.on('-d', '--delay DELAY', OptionParser::DecimalNumeric,
