@@ -14,7 +14,7 @@ legend({
 })
 
 layout <<LAYOUT
- ll       U       ll 
+ Xl       U       lX 
 t    ll  1 2  ll    t
 ###t ########### t###
 #t # #T tlTlt T# # t#
