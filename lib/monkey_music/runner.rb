@@ -102,6 +102,12 @@ module MonkeyMusic
         @browser_ui = true
       end
 
+      opts.on('-v', '--version', 
+              'Show the current version.') do |password|
+        puts '0.0.3' # TODO: Find out how to extract version from GemSpec
+        exit
+      end
+
       opts.on_tail('-h',
                    '--help', 
                    'Show this message.') do 
