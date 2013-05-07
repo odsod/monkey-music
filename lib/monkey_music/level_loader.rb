@@ -27,8 +27,8 @@ module MonkeyMusic
     def layout(layout)
       # Transform layout into x y indexed array
       units = (layout.lines.map { |l| l.chomp.split(//) }).transpose
-      @level.width = units[0].length
-      @level.height = units.length
+      @level.width = units.length
+      @level.height = units[0].length
       # Add units from layout to level
       @level.height.times do |y|
         @level.width.times do |x|

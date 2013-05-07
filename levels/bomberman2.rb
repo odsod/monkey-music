@@ -11,6 +11,7 @@ legend({
   "t" => Track.worth(2),
   "T" => Track.worth(3),
   "U" => User,
+  "#" => Wall,
 })
 
 layout <<LAYOUT
