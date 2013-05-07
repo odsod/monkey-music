@@ -1,6 +1,6 @@
 module MonkeyMusic
   class Player
-    attr_accessor :monkey
+    attr_accessor :monkey, :level
     
     def initialize(file)
       @file = file
@@ -9,14 +9,20 @@ module MonkeyMusic
 
     def query_move!
       IO.popen(@file, "r+") do |io|
-        io.puts @monkey.serialize
-        io.puts @monkey.remaining_capacity
-        io.puts @monkey.level.width
-        io.puts @monkey.level.height
-        io.puts @monkey.level.serialize
+        io.puts player_output
         move = io.gets
         @next_move = parse_move(move) if move
       end
+    end
+
+    def player_output
+      [ @monkey.id,
+        @monkey.remaining_capacity,
+        @monkey.level.requests_per_turn,
+        @monkey.level.width,
+        @monkey.level.height,
+        @monkey.level.serialize,
+      ].join("\n")
     end
 
     def parse_move(s)

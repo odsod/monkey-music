@@ -13,7 +13,7 @@ module MonkeyMusic
     end
 
     def metadata_requests_per_turn(n)
-      @metadata_requests_per_turn = n
+      @level.requests_per_turn = n
     end
 
     def carrying_capacity(capacity)

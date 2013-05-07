@@ -3,6 +3,7 @@
 # Read indata
 @monkey = gets.chomp
 @remaining_capacity = Integer(gets.chomp)
+@num_requests = Integer(gets.chomp)
 @width = Integer(gets.chomp)
 @height = Integer(gets.chomp)
 
