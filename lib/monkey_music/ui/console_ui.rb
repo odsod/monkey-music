@@ -12,7 +12,7 @@ module MonkeyMusic
       puts "\n"*5
     end
     
-    def update(level)
+    def update(level, query_time = 0)
       # Clear screen
       puts "\e[H\e[2J"
       # Level
@@ -29,7 +29,7 @@ module MonkeyMusic
         print("\n"*monkey.remaining_capacity)
       end
       puts "---"
-      sleep @delay
+      sleep [@delay - query_time, 0].max
     end
   end
 end

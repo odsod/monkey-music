@@ -34,7 +34,7 @@ module MonkeyMusic
     end
 
     def to_s
-      "#{@monkey.name}: #{@file}"
+      @monkey.name
     end
 
   end

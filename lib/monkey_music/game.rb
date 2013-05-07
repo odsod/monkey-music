@@ -1,4 +1,5 @@
 require 'optparse'
+require 'benchmark'
 
 module MonkeyMusic
   class Game
@@ -10,17 +11,26 @@ module MonkeyMusic
     end
 
     def start
+      @ui.update(@level)
       @level.max_turns.times do
         if @level.complete?
           break
         end
-        @ui.update(@level)
         # Query players for moves
-        @players.each { |p| p.query_move! }
+        query_threads = []
+        query_time = Benchmark.realtime do
+          @players.each do |p|
+            query_threads << Thread.new do
+              p.query_move!
+            end
+          end
+          query_threads.each(&:join)
+        end
         # Move players in random order
         @players.shuffle.each { |p| p.move! }
+        # Update ui
+        @ui.update(@level, query_time)
       end
-      @ui.update(@level)
     end
 
   end
