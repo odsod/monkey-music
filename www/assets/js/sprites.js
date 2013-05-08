@@ -24,7 +24,6 @@ monkeymusic.sprites = (function (createjs) {
           pickeast: [14, 15, 'pickeast', 16],
         }
       });
-      //createjs.SpriteSheetUtils.addFlippedFrames(sheet, true, false, fa, falselse);
       return sheet;
     }()),
     Track: new createjs.SpriteSheet({
@@ -50,27 +49,11 @@ monkeymusic.sprites = (function (createjs) {
     })
   };
 
-  function Monkey() {
-    return new createjs.BitmapAnimation(sheets.Monkey);
-  }
-
-  function Track() {
-    return new createjs.BitmapAnimation(sheets.Track);
-  }
-
-  function User() {
-    return new createjs.BitmapAnimation(sheets.User);
-  }
-
-  function Wall() {
-    return new createjs.BitmapAnimation(sheets.Wall);
-  }
-
   return {
-    Monkey: Monkey,
-    Track: Track,
-    Wall: Wall,
-    User: User
+    Monkey: function () { return new createjs.BitmapAnimation(sheets.Monkey); },
+    Track: function () { return new createjs.BitmapAnimation(sheets.Track); },
+    Wall: function () { return new createjs.BitmapAnimation(sheets.Wall); },
+    User: function () { return new createjs.BitmapAnimation(sheets.User); }
   };
 
 }(createjs));

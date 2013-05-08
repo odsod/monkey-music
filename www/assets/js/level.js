@@ -15,6 +15,7 @@ monkeymusic.level = (function (createjs, tween, window) {
     createjs.Ticker.addEventListener('tick', stage);
     canvas.width = level.width * monkeymusic.constants.UNIT_WIDTH;
     canvas.height = level.height * monkeymusic.constants.UNIT_HEIGHT;
+    console.log(canvas.width, canvas.height);
     window.onresize = resizeCanvas;
     resizeCanvas();
   }
@@ -33,11 +34,13 @@ monkeymusic.level = (function (createjs, tween, window) {
       newHeight = canvasHeight * scale,
       newWidth = canvasWidth * scale;
     // Scale canvas
-    canvasStyle.width = newHeight + 'px';
-    canvasStyle.height = newWidth + 'px';
+    //canvasStyle.width = newHeight + 'px';
+    //canvasStyle.height = newWidth + 'px';
+    canvasStyle.width = '100%';
+    canvasStyle.height = '100%';
     // Center canvas
-    canvasStyle.marginTop = (windowHeight - newHeight) / 2;
-    canvasStyle.marginLeft = (windowWidth - newWidth) / 2;
+    //canvasStyle.marginTop = (windowHeight - newHeight) / 2;
+    //canvasStyle.marginLeft = (windowWidth - newWidth) / 2;
   }
 
   function initUnits() {
