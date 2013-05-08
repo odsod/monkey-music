@@ -43,9 +43,9 @@ module MonkeyMusic
         print "Using browser UI. Press the enter key to start game. "
         gets
         puts "Starting game..."
-        ui = BrowserUI.new(@delay)
+        ui = UI::Browser.new(@delay)
       else
-        ui = ConsoleUI.new(@delay)
+        ui = UI::Console.new(@delay)
       end
       ## Start game
       @game = Game.new(level, @players, ui)

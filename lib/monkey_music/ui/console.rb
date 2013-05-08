@@ -24,6 +24,7 @@ module MonkeyMusic::UI
         puts "---"
         print "#{monkey.name} | "
         print "Score: #{monkey.score} | "
+        print "Time: #{player.remaining_time} | "
         puts "Capacity: #{monkey.remaining_capacity}"
         monkey.carrying.each { |t| puts "#{t.value}p: #{t.name}" }
         print("\n"*monkey.remaining_capacity)
