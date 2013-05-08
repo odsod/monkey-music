@@ -1,21 +1,48 @@
+require 'benchmark'
+
 module MonkeyMusic
   class Player
     attr_accessor :monkey, :level, :has_boost
     
     def initialize(file)
       @file = file
-      @monkey = Monkey.new()
+      @monkey = Monkey.new
       @remaining_time = 30000
       @has_boost = true
     end
 
+    def init!
+      IO.popen(@file) {|io| io.puts initial_output }
+    end
+
+    def query!(turn)
+      IO.popen(@file, "r+") do |io|
+        io.puts turn_output
+        @remaining_time -= Benchmark.realtime { @input = io.gets }
+        parse!(@input) if @input
+        io.puts response_to(@queries) unless @queries.empty?
+        @queries = []
+      end
+    end
+
+    private
+
     def initial_output
+      level = @monkey.level
+      user = @monkey.level.user
       [ "INIT",
         @monkey.id,
-        @monkey.level.width,
-        @monkey.level.height,
-        @monkey.level.max_turns,
-        @monkey.level.user.serialize_toplists,
+        level.width,
+        level.height,
+        level.max_turns,
+        user.toplists[:top_tracks].length,
+        user.toplists[:top_tracks].map(&:serialize).join("\n"),
+        user.toplists[:top_albums].length,
+        user.toplists[:top_albums].map(&:serialize).join("\n"),
+        user.toplists[:top_artists].length,
+        user.toplists[:top_artists].map(&:serialize).join("\n"),
+        user.toplists[:disliked_artists].length,
+        user.toplists[:disliked_artists].map(&:serialize).join("\n"),
       ].join("\n")
     end
 
@@ -26,22 +53,6 @@ module MonkeyMusic
         @remaining_time,
         @monkey.level.serialize,
       ].join("\n")
-    end
-
-    def init!
-      IO.popen(@file, "r+") do |io|
-        io.puts initial_output
-      end
-    end
-
-    def query!(turn)
-      IO.popen(@file, "r+") do |io|
-        io.puts turn_output
-        input = io.gets
-        parse!(input) if input
-        io.puts response_to(@queries) unless @queries.empty?
-        @queries = []
-      end
     end
 
     def parse!(s)

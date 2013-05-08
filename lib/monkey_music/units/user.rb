@@ -26,7 +26,7 @@ module MonkeyMusic
     end
 
     def load_from_file(file)
-      data = YAML::load(IO.read(file))
+      data = YAML::load(IO.read file)
       @toplists = data[:toplists]
       @recommendations = data[:recommendations]
       @remaining_recommendations = @recommendations

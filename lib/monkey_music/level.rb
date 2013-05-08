@@ -2,7 +2,7 @@ require 'json'
 
 module MonkeyMusic
   class Level
-    attr_accessor :width, :height, :max_turns, :requests_per_turn
+    attr_accessor :width, :height, :max_turns
     attr_reader :players, :user, :units
     
     def initialize(players, user)
