@@ -41,7 +41,7 @@ monkeymusic.sprites = (function (createjs) {
         normal: [0]
       }
     }),
-    Basket: new createjs.SpriteSheet({
+    User: new createjs.SpriteSheet({
       images: ['assets/img/basket.png'],
       frames: SPRITE_SIZE,
       animations: {
@@ -58,14 +58,19 @@ monkeymusic.sprites = (function (createjs) {
     return new createjs.BitmapAnimation(sheets.Track);
   }
 
-  function Basket() {
-    return new createjs.BitmapAnimation(sheets.Basket);
+  function User() {
+    return new createjs.BitmapAnimation(sheets.User);
+  }
+
+  function Wall() {
+    return new createjs.BitmapAnimation(sheets.Wall);
   }
 
   return {
     Monkey: Monkey,
     Track: Track,
-    Basket: Basket
+    Wall: Wall,
+    User: User
   };
 
 }(createjs));
