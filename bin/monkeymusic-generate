@@ -2,5 +2,5 @@
 require File.dirname(__FILE__) + '/../lib/monkey_music'
 require File.dirname(__FILE__) + '/../lib/monkey_music_generate'
 
-generator = MonkeyMusic::Generator.new
-generator.run
+runner = MonkeyMusic::Generate::Runner.new
+runner.run

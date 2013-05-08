@@ -1,5 +1,5 @@
-module MonkeyMusic
-  class ConsoleUI
+module MonkeyMusic::UI
+  class Console
 
     def initialize(delay)
       @delay = delay || 1

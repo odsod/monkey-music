@@ -21,10 +21,8 @@ module MonkeyMusic
     end
 
     def dump
-      YAML::dump({
-        :toplists => @toplists,
-        :recommendations => @recommendations
-      })
+      YAML::dump :toplists => @toplists,
+                 :recommendations => @recommendations
     end
 
     def load_from_file(file)
