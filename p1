@@ -1,19 +1,37 @@
 #!/usr/bin/env ruby
+#
+require 'yaml'
+
+@type = gets.chomp
+
+if @type == "INIT"
+  cache = {}
+  cache[:monkey] = gets.chomp
+  cache[:width] = Integer(gets.chomp)
+  cache[:height] = Integer(gets.chomp)
+  cache[:turn_limit] = Integer(gets.chomp)
+  [:top_tracks, :top_albums, :top_artists, :disliked_artists].each do |toplist|
+    cache[toplist] = []
+    n = Integer(gets.chomp)
+    n.times { cache[toplist] << gets.chomp }
+  end
+  File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(cache)}
+  exit
+end
+
+@cache = YAML::load(IO.read "cache_p1")
 
 # Read indata
-@monkey = gets.chomp
+@turn = Integer(gets.chomp)
 @remaining_capacity = Integer(gets.chomp)
-@num_requests = Integer(gets.chomp)
-@width = Integer(gets.chomp)
-@height = Integer(gets.chomp)
 
 # Read level
 @tracks = []
-@height.times do |y|
+@cache[:height].times do |y|
   row = gets.chomp.split(',')
-  @width.times do |x|
+  @cache[:width].times do |x|
     thing = row[x]
-    if thing == @monkey
+    if thing == @cache[:monkey]
       @x, @y = x, y
     elsif /spotify:track/.match(thing)
       @tracks << [x, y]

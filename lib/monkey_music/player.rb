@@ -2,30 +2,34 @@ require 'benchmark'
 
 module MonkeyMusic
   class Player
-    attr_accessor :monkey, :level, :has_boost
+    attr_accessor :monkey, :level, :has_boost, :remaining_time
     
     def initialize(file)
       @file = file
       @monkey = Monkey.new
-      @remaining_time = 30000
       @has_boost = true
+      @penalty = 0
     end
 
     def init!
-      IO.popen(@file) {|io| io.puts initial_output }
+      IO.popen(@file, "r+") {|io| io.puts initial_output }
     end
 
     def query!(turn)
-      IO.popen(@file, "r+") do |io|
-        io.puts turn_output
-        @remaining_time -= Benchmark.realtime { @input = io.gets }
-        parse!(@input) if @input
-        io.puts response_to(@queries) unless @queries.empty?
-        @queries = []
+      if @penalty > 1
+        @penalty -= 1
+        @remaining_time = @monkey.level.time_limit if @penalty == 0
+      else
+        IO.popen(@file, "r+") do |io|
+          io.puts turn_output
+          @remaining_time -= Benchmark.realtime { @input = io.gets }
+          parse!(@input) if @input
+          io.puts response_to(@queries) unless @queries.empty?
+          @queries = []
+        end
+        @penalty = 5 if @remaining_time < 0
       end
     end
-
-    private
 
     def initial_output
       level = @monkey.level
@@ -34,7 +38,7 @@ module MonkeyMusic
         @monkey.id,
         level.width,
         level.height,
-        level.max_turns,
+        level.turn_limit,
         user.toplists[:top_tracks].length,
         user.toplists[:top_tracks].map(&:serialize).join("\n"),
         user.toplists[:top_albums].length,

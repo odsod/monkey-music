@@ -1,5 +1,6 @@
 carrying_capacity 5
-max_turns 100
+turn_limit 100
+time_limit 30000
 
 legend "1" => Monkey.player(1),
        "2" => Monkey.player(2),
