@@ -12,17 +12,21 @@ module MonkeyMusic
 
     def start
       @ui.update(@level)
-      @level.max_turns.times do
-        if @level.complete?
-          break
+      # Send initial state to players
+      init_threads = @players.each do |p|
+        query_threads << Thread.new do
+          p.init!
         end
+      end
+      init_threads.each(&:join)
+      # Start the game
+      @level.max_turns.times do |turn|
+        break if @level.complete?
         # Query players for moves
         query_threads = []
         query_time = Benchmark.realtime do
           @players.each do |p|
-            query_threads << Thread.new do
-              p.query_move!
-            end
+            query_threads << Thread.new { p.query! }
           end
           query_threads.each(&:join)
         end
