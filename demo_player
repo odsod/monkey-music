@@ -1,0 +1,98 @@
+#!/usr/bin/env ruby
+
+if RUBY_VERSION =~ /1.9/
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
+end
+
+require 'yaml'
+
+@type = gets.chomp
+
+if @type == "INIT"
+  @cache = {}
+  @cache[:monkey] = gets.chomp
+  @cache[:width] = Integer(gets.chomp)
+  @cache[:height] = Integer(gets.chomp)
+  @cache[:turn_limit] = Integer(gets.chomp)
+  [:top_tracks, :top_albums, :top_artists, :disliked_artists].each do |toplist|
+    @cache[toplist] = []
+    n = Integer(gets.chomp)
+    n.times { @cache[toplist] << gets.chomp }
+  @cache[:uris] = {}
+  end
+  File.open(File.join(Dir.getwd, "cache_demo_player"), "w+") {|f| f.write YAML::dump(@cache)}
+  exit
+end
+
+@cache = YAML::load(IO.read "cache_demo_player")
+
+# Read indata
+@turn = Integer(gets.chomp)
+@remaining_capacity = Integer(gets.chomp)
+@remaining_time = Integer(gets.chomp)
+
+@unknown = []
+
+# Read level
+@tracks = []
+@cache[:height].times do |y|
+  row = gets.chomp.split(',')
+  @cache[:width].times do |x|
+    thing = row[x]
+    if thing == @cache[:monkey]
+      @x, @y = x, y
+    elsif /spotify:track/.match(thing)
+      @unknown << thing unless @cache[:uris][thing]
+      @tracks << [x, y]
+    elsif thing == "U"
+      @user = [x, y]
+    end
+  end
+end
+
+#if uri = @unknown.pop
+  #puts uri
+  #$stdout.flush
+  #n = Integer(gets.chomp)
+  #if n == 1
+    #@cache[:uris][uri] = gets.chomp
+  #end
+  #File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(@cache)}
+  #exit
+#end
+
+def move_toward(x, y)
+  if @x < x
+    "E"
+  elsif @x > x
+    "W"
+  elsif @y < y
+    "S"
+  elsif @y > y
+    "N"
+  end
+end
+
+def closest_track
+  curr_closest = @tracks.pop()
+  curr_smallest_distance = distance_to(*curr_closest)
+  @tracks.each do |track|
+    curr_distance = distance_to(*track)
+    if curr_distance < curr_smallest_distance
+      curr_closest = track
+      curr_smallest_distance = curr_distance
+    end
+  end
+  curr_closest
+end
+
+def distance_to(x, y)
+  (@x - x).abs + (@y - y).abs
+end
+
+if (@remaining_capacity > 0) && (not @tracks.empty?)
+  puts move_toward(*closest_track())
+else
+  puts move_toward(*@user)
+end

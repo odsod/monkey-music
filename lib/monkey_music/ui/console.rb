@@ -1,5 +1,5 @@
-module MonkeyMusic
-  class ConsoleUI
+module MonkeyMusic::UI
+  class Console
 
     def initialize(delay)
       @delay = delay || 1
@@ -12,7 +12,7 @@ module MonkeyMusic
       puts "\n"*5
     end
     
-    def update(level, query_time = 0)
+    def update(level, turn = 0, query_time = 0)
       # Clear screen
       puts "\e[H\e[2J"
       # Level
@@ -21,9 +21,10 @@ module MonkeyMusic
       puts "\n"
       level.players.each do |player|
         monkey = player.monkey
-        puts "---"
+        puts "--- Turn: #{turn}/#{level.turn_limit} ---"
         print "#{monkey.name} | "
         print "Score: #{monkey.score} | "
+        print "Time: #{player.remaining_time} | "
         puts "Capacity: #{monkey.remaining_capacity}"
         monkey.carrying.each { |t| puts "#{t.value}p: #{t.name}" }
         print("\n"*monkey.remaining_capacity)

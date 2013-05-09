@@ -1,22 +1,32 @@
 module MonkeyMusic
   class Track < Base
-    attr_accessor :uri, :name, :artist, :album, :popularity, :year,
-      :value, :multiplier
+    attr_accessor :metadata
 
     def self.worth(n)
       Class.new Track do @worth = n end
     end
 
     def self.from_user(user)
-      if @worth
+      track = Track.new
+      track.metadata = if @worth
         user.recommend!(@worth) || user.recommendations.sample
       else
         user.recommendations.sample
       end
+      track
+    end
+
+    # Delegate to metadata
+    def method_missing(method, *args, &block)    
+      if @metadata.respond_to?(method)
+        @metadata.send(method, *args, &block)
+      else
+        raise NoMethodError  
+      end    
     end
 
     def serialize
-      @uri
+      @metadata.uri
     end
 
     def to_json(options = {})
@@ -24,9 +34,9 @@ module MonkeyMusic
         :x => @x,
         :y => @y,
         :type => self.class.name.split('::').last,
-        :name => @name,
-        :multiplier => @multiplier,
-        :value => @value,
+        :name => @metadata.name,
+        :multiplier => @metadata.multiplier,
+        :value => @metadata.value,
       }.to_json
     end
   end

@@ -21,14 +21,12 @@ module MonkeyMusic
     end
 
     def dump
-      YAML::dump({
-        :toplists => @toplists,
-        :recommendations => @recommendations
-      })
+      YAML::dump :toplists => @toplists,
+                 :recommendations => @recommendations
     end
 
     def load_from_file(file)
-      data = YAML::load(IO.read(file))
+      data = YAML::load(IO.read file)
       @toplists = data[:toplists]
       @recommendations = data[:recommendations]
       @remaining_recommendations = @recommendations

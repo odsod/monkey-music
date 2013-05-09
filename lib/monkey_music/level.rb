@@ -2,9 +2,8 @@ require 'json'
 
 module MonkeyMusic
   class Level
-    attr_accessor :width, :height, :max_turns, :requests_per_turn
-    attr_reader :players
-    attr_reader :user
+    attr_accessor :width, :height, :turn_limit, :time_limit
+    attr_reader :players, :user, :units
     
     def initialize(players, user)
       @players = players
@@ -31,6 +30,10 @@ module MonkeyMusic
     def complete?
       (@units.detect { |u| u.kind_of? Track }).nil? &&
         (@players.detect { |p| p.monkey.carrying.count > 0 }).nil?
+    end
+
+    def tracks
+      @units.select {|u| u.kind_of? Track }
     end
 
     def remove(unit)

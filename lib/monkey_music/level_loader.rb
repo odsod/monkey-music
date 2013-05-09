@@ -8,12 +8,13 @@ module MonkeyMusic
       @legend = {}
     end
 
-    def max_turns(max_turns)
-      @level.max_turns = max_turns
+    def turn_limit(turn_limit)
+      @level.turn_limit = turn_limit
     end
 
-    def metadata_requests_per_turn(n)
-      @level.requests_per_turn = n
+    def time_limit(time_limit)
+      @level.time_limit = time_limit
+      @level.players.each {|p| p.remaining_time = time_limit }
     end
 
     def carrying_capacity(capacity)

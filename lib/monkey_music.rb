@@ -8,8 +8,12 @@ require 'monkey_music/player'
 require 'monkey_music/level'
 require 'monkey_music/level_loader'
 
-require 'monkey_music/ui/console_ui'
-require 'monkey_music/ui/browser_ui'
+require 'monkey_music/ui/console'
+require 'monkey_music/ui/browser'
+
+require 'monkey_music/metadata/track'
+require 'monkey_music/metadata/album'
+require 'monkey_music/metadata/artist'
 
 require 'monkey_music/units/base'
 require 'monkey_music/units/monkey'

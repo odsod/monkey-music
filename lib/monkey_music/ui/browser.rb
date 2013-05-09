@@ -1,9 +1,8 @@
 require 'em-websocket'
 require 'json'
-require 'rack'
 
-module MonkeyMusic
-  class BrowserUI
+module MonkeyMusic::UI
+  class Browser
 
     def initialize(delay = 1)
       @delay = delay
