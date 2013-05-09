@@ -26,10 +26,10 @@ module MonkeyMusic
           io.puts turn_output(turn)
           @remaining_time -= (Benchmark.realtime { @input = io.gets } * 1000).round
           parse!(@input) if @input
-          #io.puts response_to(@queries) unless @queries.empty?
+          io.puts response_to(@queries) unless @queries.empty?
           @queries = []
         end
-        #@penalty = 5 if @remaining_time < 0
+        @penalty = 5 if @remaining_time < 0
       end
     end
 

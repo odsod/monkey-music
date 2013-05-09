@@ -32,7 +32,7 @@ module MonkeyMusic
         # Move players in random order
         @players.shuffle.each { |p| p.move! }
         ## Update ui
-        @ui.update(@level, turn_time)
+        @ui.update(@level, turn, turn_time)
       end
     end
 
