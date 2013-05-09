@@ -68,8 +68,8 @@ module MonkeyMusic
 
     def parse_next_token!
       token = @tokens.shift
-      if /[NWES]/.match(token) then @moves << parse_move(token)
-      elsif /^(spotify:track:)/.match(token) then @queries << token
+      if /^[NWES]$/.match(token) then @moves << parse_move(token)
+      elsif /^spotify:track:/.match(token) then @queries << token
       elsif "B" == token then boost!
       end
     end
@@ -88,7 +88,7 @@ module MonkeyMusic
       lines = []
       lines << tracks.length
       tracks.each do |track|
-        lines << "#{track.uri},#{track.serialize}"
+        lines << "#{track.uri},#{track.metadata.serialize}"
       end
       lines.join("\n")
     end

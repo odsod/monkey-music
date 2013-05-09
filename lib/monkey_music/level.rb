@@ -32,6 +32,10 @@ module MonkeyMusic
         (@players.detect { |p| p.monkey.carrying.count > 0 }).nil?
     end
 
+    def tracks
+      @units.select {|u| u.kind_of? Track }
+    end
+
     def remove(unit)
       @units.reject! { |u| u == unit }
     end

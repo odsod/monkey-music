@@ -14,6 +14,7 @@ if @type == "INIT"
     cache[toplist] = []
     n = Integer(gets.chomp)
     n.times { cache[toplist] << gets.chomp }
+  cache[:uris] = {}
   end
   File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(cache)}
   exit
@@ -26,6 +27,8 @@ end
 @remaining_capacity = Integer(gets.chomp)
 @remaining_time = Integer(gets.chomp)
 
+@unknown = []
+
 # Read level
 @tracks = []
 @cache[:height].times do |y|
@@ -35,6 +38,7 @@ end
     if thing == @cache[:monkey]
       @x, @y = x, y
     elsif /spotify:track/.match(thing)
+      @unknown << thing unless @cache[:uris][thing]
       @tracks << [x, y]
     elsif thing == "U"
       @user = [x, y]
@@ -42,10 +46,16 @@ end
   end
 end
 
-#if @turn == 1
-  puts "B,W,W,W"
+if uri = @unknown.pop
+  puts uri
+  $stdout.flush
+  n = Integer(gets.chomp)
+  if n == 1
+    @cache[:uris][uri] = gets.chomp
+  end
+  File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(@cache)}
   exit
-#end
+end
 
 def move_toward(x, y)
   if @x < x
