@@ -18,10 +18,11 @@ module MonkeyMusic
     end
 
     def query!(turn)
-      if @penalty > 1
+      if @penalty > 0
         @penalty -= 1
-        @remaining_time = @monkey.level.time_limit if @penalty == 0
+        @remaining_time = @monkey.level.time_limit if @penalty < 1
       else
+        STDOUT.sync = true # Flush?
         IO.popen(@file, "r+") do |io|
           io.puts turn_output(turn)
           @remaining_time -= (Benchmark.realtime { @input = io.gets } * 1000).round
