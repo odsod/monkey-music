@@ -136,7 +136,7 @@ module MonkeyMusic
 
       opts.on('-v', '--version', 
               'Show the current version.') do |password|
-        puts '0.0.5' # TODO: Find out how to extract version from GemSpec
+        puts '0.0.11' # TODO: Find out how to extract version from GemSpec
         exit
       end
 

@@ -256,6 +256,46 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Slow
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:7p2KrJyMLprzUiYsIAPQFG
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Broken
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:1Hm9pX5iwwS7jJLLPad9yJ
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Child Inside
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:64ZErTt9RyifRACEGNyFDn
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Soft Touch/Raw Nerve
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:4FiOSWit6wdaYY6dDGHexv
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Should Be Higher
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:3sqQ4ocD4M9fsvbHrr1Z2M
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: The New Stone Age - 2003 Digital Remaster
   artist: Orchestral Manoeuvres In The Dark
   album: Architecture And Morality
@@ -293,6 +333,46 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:15RDSwmEEcG0LKhDnzLj7x
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Joan Of Arc (Maid Of Orleans) - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Architecture And Morality
+  year: 2003
+  uri: spotify:track:5WeMMlylGCVGc0ChHSysJA
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Architecture And Morality - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Architecture And Morality
+  year: 2003
+  uri: spotify:track:2wt2ncc9cEsJqKwLo4eTDm
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Georgia - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Architecture And Morality
+  year: 2003
+  uri: spotify:track:5VtqYOQrtrBoaZKMaY0HcK
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Beginning And The End - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Architecture And Morality
+  year: 2003
+  uri: spotify:track:6LK02wa4H5KqXKjA3kBlsZ
+  multiplier: 3
+  value: 64
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Extended Souvenir - 2003 Digital Remaster
+  artist: Orchestral Manoeuvres In The Dark
+  album: Architecture And Morality
+  year: 2003
+  uri: spotify:track:3R14PSng7wtMo81cNG67Q6
   multiplier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -336,6 +416,46 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: You Are In My Vision
+  artist: Tubeway Army
+  album: Replicas
+  year: 1979
+  uri: spotify:track:3tjvNb8ZfH1Mmbr9ys3pdq
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Replicas
+  artist: Tubeway Army
+  album: Replicas
+  year: 1979
+  uri: spotify:track:3qVB1E1CVJYh3J0dL1AT6e
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: It Must Have Been Years
+  artist: Tubeway Army
+  album: Replicas
+  year: 1979
+  uri: spotify:track:4r1dZ3HFwircgyXB6VKtgS
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: When The Machines Rock
+  artist: Tubeway Army
+  album: Replicas
+  year: 1979
+  uri: spotify:track:2Vsy7ExI2mxIz4cNQKsxRa
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: I Nearly Married A Human
+  artist: Tubeway Army
+  album: Replicas
+  year: 1979
+  uri: spotify:track:1ngS1pVIUQcMImN5KInl1U
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Astradyne - 2008 - Remaster
   artist: Ultravox
   album: Vienna
@@ -376,6 +496,46 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Mr X - 2008 - Remaster
+  artist: Ultravox
+  album: Vienna
+  year: 2008
+  uri: spotify:track:0BpHWoxBO4vqehtdWMthQa
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Western Promise - 2008 - Remaster
+  artist: Ultravox
+  album: Vienna
+  year: 2008
+  uri: spotify:track:0fgby4p4e0ht7E4Z62MhFm
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Vienna - 2008 - Remaster
+  artist: Ultravox
+  album: Vienna
+  year: 2008
+  uri: spotify:track:7AmdLtDBBMHWTvneMLm8Nj
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: All Stood Still - 2008 - Remaster
+  artist: Ultravox
+  album: Vienna
+  year: 2008
+  uri: spotify:track:08zNmGwhoEvJVgGwGTPIKP
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Sleepwalk (Early Version) [2008 - Remaster]
+  artist: Ultravox
+  album: Vienna
+  year: 2008
+  uri: spotify:track:617yqenyZRz1VuDCUju1Gx
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Oh L'Amour
   artist: Erasure
   album: Hits The Very Best Of Erasure
@@ -413,6 +573,46 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:0DRTeS4GPjd99T9Vd16zUf
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: A Little Respect
+  artist: Erasure
+  album: Hits The Very Best Of Erasure
+  year: 2003
+  uri: spotify:track:2WmC4RGB4bDAkN81j4RIwP
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Stop!
+  artist: Erasure
+  album: Hits The Very Best Of Erasure
+  year: 2003
+  uri: spotify:track:7sYM7MIlJJQZH0IiQcJ122
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Blue Savannah
+  artist: Erasure
+  album: Hits The Very Best Of Erasure
+  year: 2003
+  uri: spotify:track:1poXIbjCh9xYMYii8IWVbN
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Chorus
+  artist: Erasure
+  album: Hits The Very Best Of Erasure
+  year: 2003
+  uri: spotify:track:7lWTki9QAISM5IwroQRBRj
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Love To Hate You
+  artist: Erasure
+  album: Hits The Very Best Of Erasure
+  year: 2003
+  uri: spotify:track:5qjiNJemV61fFwz7FKznjn
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -472,6 +672,46 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Perfect Kiss
+  artist: New Order
+  album: The Best Of New Order
+  year: 1994
+  uri: spotify:track:60xGwhjbRfQjDVuFXeemB1
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Shellshock
+  artist: New Order
+  album: The Best Of New Order
+  year: 1994
+  uri: spotify:track:3HI1yqFW7yhSkNXhtBTwly
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Thieves Like Us
+  artist: New Order
+  album: The Best Of New Order
+  year: 1994
+  uri: spotify:track:0kQTkXqjtWSPCM2D14cGq3
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Vanishing Point
+  artist: New Order
+  album: The Best Of New Order
+  year: 1994
+  uri: spotify:track:5PO9hh3767mKoLBIPOYUhw
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Run 2
+  artist: New Order
+  album: The Best Of New Order
+  year: 1994
+  uri: spotify:track:7L8z4moYTHAHLXkmPTWHZJ
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: High Rise
   artist: Ladytron
   album: Witching Hour
@@ -509,6 +749,46 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:4ZaRxeMcMSWV3nzWCh0ISO
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: AMTV
+  artist: Ladytron
+  album: Witching Hour
+  year: 2007
+  uri: spotify:track:1kXYypFMce54qZVd0wG7le
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Sugar
+  artist: Ladytron
+  album: Witching Hour
+  year: 2007
+  uri: spotify:track:3bMQHtzstPZL36O0DfiHk1
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Fighting In Build Up Areas
+  artist: Ladytron
+  album: Witching Hour
+  year: 2007
+  uri: spotify:track:0xhUa9FMztr7tdcRVJXzIK
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Last One Standing
+  artist: Ladytron
+  album: Witching Hour
+  year: 2007
+  uri: spotify:track:6l8RcxJAMFzflVODplcJcf
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Weekend
+  artist: Ladytron
+  album: Witching Hour
+  year: 2007
+  uri: spotify:track:1XhaSJEkSPzXgUOWYKBoTV
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -552,6 +832,30 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Waiting for Your Phone Call
+  artist: Anoraak
+  album: Nightdrive With You
+  year: 2008
+  uri: spotify:track:2id516aQDb0Be1bAbJ8AU6
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Teenage Color (Anoraak Remix)
+  artist: College
+  album: Nightdrive With You
+  year: 2008
+  uri: spotify:track:3DjBDQs8ebkxMBo2V8V3SH
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Nightdrive With You (Adeyhawke Remix)
+  artist: Anoraak
+  album: Nightdrive With You
+  year: 2008
+  uri: spotify:track:5LCTP8QawTk2Olk2UM8Yqn
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: English Summer
   artist: Eurythmics
   album: Boxed
@@ -592,6 +896,46 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Caveman Head
+  artist: Eurythmics
+  album: Boxed
+  year: 2005
+  uri: spotify:track:5eZJsNeFgS4jXo452275o3
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Never Gonna Cry Again
+  artist: Eurythmics
+  album: Boxed
+  year: 2005
+  uri: spotify:track:5qNsQPcPN8VBi38QwWb5Hh
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: All The Young (People Of Today)
+  artist: Eurythmics
+  album: Boxed
+  year: 2005
+  uri: spotify:track:2SlC2rhaTE5Ny14fwY1069
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Sing-Sing
+  artist: Eurythmics
+  album: Boxed
+  year: 2005
+  uri: spotify:track:2j3enTujhVsIOV1oiJbMMP
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Revenge
+  artist: Eurythmics
+  album: Boxed
+  year: 2005
+  uri: spotify:track:5wkwIaPT49HsI4fhOiPT8u
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Enjoy the Silence - Single Version;2006 - Remaster
   artist: Depeche Mode
   album: The Best Of Depeche Mode - Volume One
@@ -624,11 +968,51 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Soothe My Soul
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:2AxI7waLrZSY9KkL3D2huk
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Personal Jesus - Single Version;2006 Digital Remaster
+  artist: Depeche Mode
+  album: The Best Of Depeche Mode - Volume One
+  year: 2006
+  uri: spotify:track:601h6t4AYzjENLTGjHDbhw
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Secret To The End
   artist: Depeche Mode
   album: Delta Machine
   year: 2013
   uri: spotify:track:62nmAEHbcpxxwnwAlb1Z7a
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Broken
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:1Hm9pX5iwwS7jJLLPad9yJ
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Just Can't Get Enough - Single Version;2006 Digital Remaster
+  artist: Depeche Mode
+  album: The Best Of Depeche Mode - Volume One
+  year: 2006
+  uri: spotify:track:2FpyKkCFIfqmp6eQx4Rn1V
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: My Little Universe
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:1ciLBf4Gzrbgj66sqfMegO
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -672,6 +1056,46 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Maid Of Orleans
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  year: 1998
+  uri: spotify:track:1nnxUoTcEaWd6mHfD0Ukdw
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Walking On The Milky Way
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  year: 1998
+  uri: spotify:track:5rN6eummWzwLTQxXZcyeCY
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Souvenir
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  year: 1998
+  uri: spotify:track:1H6dcVdpMiMIydKdykY6W0
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Pandora's Box
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  year: 1998
+  uri: spotify:track:0HKZ3bXq9IU33QS2vMNJ4V
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: So In Love
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  year: 1998
+  uri: spotify:track:0NX9bRl4d6SHR0hWIIie5N
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Don't You Want Me - 2002 - Remaster
   artist: The Human League
   album: The Very Best Of The Human League
@@ -711,6 +1135,46 @@
   uri: spotify:track:5gHZapv1Sb4AV3JHYyM3a0
   multiplier: 1
   value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Don't You Want Me - Special Extended Dance Mix
+  artist: The Human League
+  album: so80s (So Eighties) - Pres. By Blank & Jones
+  year: 2010
+  uri: spotify:track:3KRSol6uUsTTV1eMrps9MI
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: (Keep Feeling) Fascination - 2003 - Remaster
+  artist: The Human League
+  album: The Very Best Of The Human League
+  year: 2003
+  uri: spotify:track:26VPSrPYX6Ks5OL3sHQEJY
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Love Action (I Believe in Love) - 2002 - Remaster
+  artist: The Human League
+  album: The Very Best Of The Human League
+  year: 2003
+  uri: spotify:track:7t2DtwDaxiuZDulbXsWrnO
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Love Action (I Believe in Love)
+  artist: The Human League
+  album: The Best Of
+  year: 1998
+  uri: spotify:track:7ttwrfe807K63aXv3VSKU1
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Mirror Man - 2003 - Remaster
+  artist: The Human League
+  album: The Very Best Of The Human League
+  year: 2003
+  uri: spotify:track:3pI8laGp6QKWVfPfuQIhy3
+  multiplier: 2
+  value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Bizarre Love Triangle
   artist: New Order
@@ -752,6 +1216,46 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: I'll Stay With You
+  artist: New Order
+  album: Lost Sirens
+  year: 2013
+  uri: spotify:track:6MpyaUgutthEieLdLtMmVr
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Bizarre Love Triangle '94
+  artist: New Order
+  album: The Best Of New Order
+  year: 1994
+  uri: spotify:track:0NvJy5gPR591Qh2z22EAak
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Temptation [7" Version]
+  artist: New Order
+  album: Movement [Collector's Edition]
+  year: 2008
+  uri: spotify:track:6aydUK6llaiRoKQyQTDNPY
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Ceremony
+  artist: New Order
+  album: Substance
+  year: 1987
+  uri: spotify:track:3SBFG67CSynjdeyETVAsRF
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Temptation
+  artist: New Order
+  album: Substance
+  year: 1987
+  uri: spotify:track:58IihaOsYb2riCPEVabDol
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Such Great Heights
   artist: The Postal Service
   album: Give Up
@@ -789,6 +1293,46 @@
   album: Give Up (Deluxe 10th Anniversary Edition)
   year: 2013
   uri: spotify:track:64ZutGB9OXDUDho6bcttqb
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Brand New Colony
+  artist: The Postal Service
+  album: Give Up
+  year: 2003
+  uri: spotify:track:4PxCWMPfDLqFMl1i9IX04W
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Clark Gable
+  artist: The Postal Service
+  album: Give Up
+  year: 2003
+  uri: spotify:track:3kGBuxGlnQrSozuO1Z9dps
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: We Will Become Silhouettes
+  artist: The Postal Service
+  album: Give Up
+  year: 2003
+  uri: spotify:track:53hXLQsByJC4B3UCNcmh0E
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Recycled Air
+  artist: The Postal Service
+  album: Give Up
+  year: 2003
+  uri: spotify:track:2iAP4oTt3NiUZCztU4Q8Gu
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The District Sleeps Alone Tonight (Remastered)
+  artist: The Postal Service
+  album: Give Up (Deluxe 10th Anniversary Edition)
+  year: 2013
+  uri: spotify:track:0NktjP45rBAkuXeCRGalj3
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -832,6 +1376,46 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Computer Love - 2009 - Remaster
+  artist: Kraftwerk
+  album: Computer World - 2009 Digital Remaster
+  year: 2009
+  uri: spotify:track:5BXBi5pLeJhblMVH2ltjpl
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Tour De France - 2009 - Remaster
+  artist: Kraftwerk
+  album: Tour De France - 2009 Digital Remaster
+  year: 2009
+  uri: spotify:track:5uNlgK7FEg6r9BGy12P9Sx
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Europe Endless - 2009 Digital Remaster
+  artist: Kraftwerk
+  album: Trans Europe Express - 2009 Digital Remaster
+  year: 2009
+  uri: spotify:track:5jEfJiugp5E2E2kxQbhRcQ
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Prologue - 2009 - Remaster
+  artist: Kraftwerk
+  album: Tour De France - 2009 Digital Remaster
+  year: 2009
+  uri: spotify:track:5bRcU0Jo1gyCBOsSln1War
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Man Machine - 2009 Digital Remaster
+  artist: Kraftwerk
+  album: The Man Machine - 2009 Digital Remaster
+  year: 2009
+  uri: spotify:track:4rbt9xJMIYwjTyMUYSvEL2
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Cars
   artist: Gary Numan
   album: Premier Hits
@@ -864,11 +1448,51 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: M.e.
+  artist: Gary Numan
+  album: The Pleasure Principle
+  year: 1979
+  uri: spotify:track:3OiBc6E43P6Y5LoqNbbMKf
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Big Noise Transmission (Tim Burgess Remix) - Tim Burgess Remix
   artist: Gary Numan
   album: Dead Moon Falling
   year: 2013
   uri: spotify:track:4BZME9a6m2q3amBBxYpdcW
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Cars (Remastered 2009)
+  artist: Gary Numan
+  album: The Pleasure Principle (Expanded Edition)
+  year: 2009
+  uri: spotify:track:0FHs04UuTgcj1bAWfxbrFw
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Dead Sun Rising (Sonoio Remix) - Sonoio Remix
+  artist: Gary Numan
+  album: Dead Moon Falling
+  year: 2013
+  uri: spotify:track:5t8sVFvTOpR8rl8u4dcFcW
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Music For Chameleons
+  artist: Gary Numan
+  album: I, Assassin
+  year: 1982
+  uri: spotify:track:4fqRCykZ9uVe4PNSjWIR2f
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: We Are The Lost (Gazelle Twin Remix) - Gazelle Twin Remix
+  artist: Gary Numan
+  album: Dead Moon Falling
+  year: 2013
+  uri: spotify:track:66p5HEkdMgsObsBv5Ddq3j
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -912,6 +1536,46 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Youth
+  artist: MGMT
+  album: Oracular Spectacular
+  year: 2007
+  uri: spotify:track:5nv854ey1k43KaZ0kHmE4Z
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Pieces of What
+  artist: MGMT
+  album: Oracular Spectacular
+  year: 2007
+  uri: spotify:track:6wxDu7ISgm5nppPMea4W7D
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Congratulations
+  artist: MGMT
+  album: Congratulations
+  year: 2010
+  uri: spotify:track:6kblAEj0T0312fv5QWsXzo
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Of Moons, Birds & Monsters
+  artist: MGMT
+  album: Oracular Spectacular
+  year: 2007
+  uri: spotify:track:0w8dULoVhTuC8x8m8PKwX7
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Handshake
+  artist: MGMT
+  album: Oracular Spectacular
+  year: 2007
+  uri: spotify:track:7d4coyGabEbHZ5tRpTbQT5
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Midnight City
   artist: M83
   album: Hurry Up, We're Dreaming
@@ -949,6 +1613,46 @@
   album: Oblivion - Original Motion Picture Soundtrack
   year: 2013
   uri: spotify:track:7fco9ocFesu9I09AMmpWkW
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Kim & Jessie
+  artist: M83
+  album: Saturdays = Youth
+  year: 2008
+  uri: spotify:track:5pCTXoSYslXKP2D21e3ZJK
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Midnight City [Eric Prydz Private Remix] - Eric Prydz Private Remix
+  artist: M83
+  album: Midnight City [Eric Prydz Private Remix]
+  year: 2012
+  uri: spotify:track:4IkgcBeRd6R8MJgdYWg4te
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: StarWaves
+  artist: M83
+  album: Oblivion - Original Motion Picture Soundtrack
+  year: 2013
+  uri: spotify:track:6qO6qwKZ5v2X23rPdwtMVv
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Tech 49
+  artist: M83
+  album: Oblivion - Original Motion Picture Soundtrack
+  year: 2013
+  uri: spotify:track:67TjQxwD1073on0kKeDXGN
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Odyssey Rescue
+  artist: M83
+  album: Oblivion - Original Motion Picture Soundtrack
+  year: 2013
+  uri: spotify:track:1E3O3g7xZsFAGyK4g7ott4
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -992,6 +1696,46 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Girls on Film
+  artist: Duran Duran
+  album: Duran Duran
+  year: 1993
+  uri: spotify:track:5KE4iIOeucoLMnkF6NEwKM
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Wild Boys
+  artist: Duran Duran
+  album: Greatest
+  year: 1998
+  uri: spotify:track:23M7cQkNJLiddeubvVgaQl
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Reflex
+  artist: Duran Duran
+  album: Greatest
+  year: 1998
+  uri: spotify:track:0OsWMTxDjtpmJjX43113oq
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Notorious
+  artist: Duran Duran
+  album: Notorious
+  year: 1986
+  uri: spotify:track:1stJclD9IGUbxtUnl8CzG3
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Save A Prayer - 2009 Digital Remaster
+  artist: Duran Duran
+  album: Rio - Collector's Edition
+  year: 2009
+  uri: spotify:track:1ff8lsrJ2kuZuofMw81EQo
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Last Caress
   artist: Misfits
   album: Collection 2
@@ -1029,6 +1773,46 @@
   album: Collection 2
   year: 1995
   uri: spotify:track:0PTP53h7PvqEMeGyGClkOk
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Scream
+  artist: Misfits
+  album: Famous Monsters
+  year: 1999
+  uri: spotify:track:2uqQXl3CWniLE0Uhfb7izu
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Saturday Night
+  artist: Misfits
+  album: Famous Monsters
+  year: 1999
+  uri: spotify:track:3jXptpf8Z3aU9O1Bj6YCl0
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Dig Up Her Bones
+  artist: Misfits
+  album: American Psycho
+  year: 1997
+  uri: spotify:track:16MPZDpM5JTtIBs3pOMSWx
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: She
+  artist: Misfits
+  album: Collection
+  year: 1986
+  uri: spotify:track:38T3oJ4ykhLtoHFjhpjOoL
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: We Are 138 - 1995 Digital Remaster
+  artist: Misfits
+  album: Collection 2
+  year: 1995
+  uri: spotify:track:3TQ4GxL3oghmLVpUD1oKmb
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1072,6 +1856,46 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Merry Christmas (I Don't Want to Fight Tonight)
+  artist: The Ramones
+  album: Brain Drain
+  year: 1989
+  uri: spotify:track:6HA6r647BX7lOIDzQ3PBb9
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Rock And Roll High School - Live
+  artist: The Ramones
+  album: All the Best
+  year: 2012
+  uri: spotify:track:5KAII1Bt2SgySRfPByKgcJ
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: She Talks to Rainbows
+  artist: The Ramones
+  album: Adios Amigos
+  year: 1995
+  uri: spotify:track:0GVcm9IeiuWWOQk3yXI7yx
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Kkk Took My Baby Away - Live
+  artist: The Ramones
+  album: Loco Live
+  year: 1991
+  uri: spotify:track:29KP3ieVXuw7rahzuK422u
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Have You Ever Seen The Rain
+  artist: The Ramones
+  album: Acid Eaters
+  year: 1993
+  uri: spotify:track:4Ri7GhJiAHy9dCYnxxWuzM
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: 21st Century
   artist: Bad Religion
   album: Against The Grain
@@ -1096,6 +1920,14 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: American Jesus
+  artist: Bad Religion
+  album: Recipe For Hate
+  year: 1990
+  uri: spotify:track:3qriuhIxVQXmdHRIIzP4Fe
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Los Angeles Is Burning
   artist: Bad Religion
   album: The Empire Strikes First
@@ -1104,11 +1936,43 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: American Jesus
+  name: Past is Dead
   artist: Bad Religion
-  album: Recipe For Hate
-  year: 1990
-  uri: spotify:track:3qriuhIxVQXmdHRIIzP4Fe
+  album: True North
+  year: 2013
+  uri: spotify:track:0yC8t1Rd1RbscJAZI4n8aD
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Punk Rock Song
+  artist: Bad Religion
+  album: The Gray Race
+  year: 1996
+  uri: spotify:track:3cAeRRvExh8FwzWPQqMhsS
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: I Want to Conquer the World
+  artist: Bad Religion
+  album: No Control
+  year: 2004
+  uri: spotify:track:5E4MtBoFdkuNTEqYC23TSH
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Robin Hood in Reverse
+  artist: Bad Religion
+  album: True North
+  year: 2013
+  uri: spotify:track:6nWNZQeEMgkM0al5pmxazN
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: You
+  artist: Bad Religion
+  album: Punk-O-Rama 3
+  year: 1998
+  uri: spotify:track:2taLSL36n5j5BxOqBAILMN
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1152,6 +2016,46 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Rock The Casbah
+  artist: The Clash
+  album: The Essential Clash
+  year: 2001
+  uri: spotify:track:6w1YiN1EjTVTZfjHJ8iFfw
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Should I Stay Or Should I Go
+  artist: The Clash
+  album: The Essential Clash
+  year: 2001
+  uri: spotify:track:7EwcNyYIMehlWfjk0yprbj
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Guns of Brixton
+  artist: The Clash
+  album: The Essential Clash
+  year: 2010
+  uri: spotify:track:7CaiFy9kev8lXNanEa0kO1
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Train in Vain
+  artist: The Clash
+  album: The Essential Clash
+  year: 2010
+  uri: spotify:track:3fwTbn0TzYE57fXjIcvvGT
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: White Riot
+  artist: The Clash
+  album: The Clash (UK Version)
+  year: 1977
+  uri: spotify:track:7CIPRuchST3qQ1K1QIKZuC
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: God Save The Queen
   artist: Sex Pistols
   album: Never Mind The Bollocks, Here’s The Sex Pistols
@@ -1189,5 +2093,45 @@
   album: ! 'Agents Of Anarchy - File 2: Submission'
   year: 2009
   uri: spotify:track:3Lx7TcHWXlXdwxkxxZMETj
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Holidays In The Sun
+  artist: Sex Pistols
+  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  year: 2012
+  uri: spotify:track:4e3TIXJcX3oQJnLup57I0r
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Bodies
+  artist: Sex Pistols
+  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  year: 2012
+  uri: spotify:track:4kU7cIlf4FDrWrs99AcaWS
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: God Save the Queen - Live
+  artist: Sex Pistols
+  album: Filthy Lucre - Live
+  year: 1996
+  uri: spotify:track:2H3jDABHGWblEaR5rtY5tH
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: No Feelings
+  artist: Sex Pistols
+  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  year: 2012
+  uri: spotify:track:5Pl46yccvPXXcIiXps3qHl
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Problems
+  artist: Sex Pistols
+  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  year: 2012
+  uri: spotify:track:5dI4YIBXUmat0Kp6N1SjuV
   multiplier: -2
   value: -16

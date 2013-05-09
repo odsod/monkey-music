@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 
+if RUBY_VERSION =~ /1.9/
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
+end
+
 require 'yaml'
 
 @type = gets.chomp
@@ -16,11 +21,11 @@ if @type == "INIT"
     n.times { @cache[toplist] << gets.chomp }
   @cache[:uris] = {}
   end
-  File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(@cache)}
+  File.open(File.join(Dir.getwd, "cache_demo_player"), "w+") {|f| f.write YAML::dump(@cache)}
   exit
 end
 
-@cache = YAML::load(IO.read "cache_p1")
+@cache = YAML::load(IO.read "cache_demo_player")
 
 # Read indata
 @turn = Integer(gets.chomp)

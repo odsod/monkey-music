@@ -74,6 +74,10 @@ module MonkeyMusic
       @id
     end
 
+    def name
+      @name || "monkey#{@id}"
+    end
+
     def to_json(options = {})
       { :id => @id,
         :x => @x,

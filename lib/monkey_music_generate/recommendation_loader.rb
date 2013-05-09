@@ -3,7 +3,7 @@ require 'hallon'
 module MonkeyMusic::Generate
   class RecommendationLoader
 
-    def initialize(loaded_toplists, load_factor = 5)
+    def initialize(loaded_toplists, load_factor = 10)
       @loaded_toplists = loaded_toplists
       @load_factor = load_factor
     end
