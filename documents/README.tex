@@ -1,0 +1,140 @@
+%LaTeX-inställningar%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{spotifygreen}{HTML}{7AB800}
+\definecolor{spotifygeen}{HTML}{EC5810}
+%\usepackage{ae} %För riktiga fonts?
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+%\pagecolor{spotifygreen}
+\topmargin -20.0pt
+\headheight 56.0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{logo}
+\end{figure}
+\newpage
+\section*{The game}
+Uppgiften är att styra en apa i en 2-D värld. Ni ska programmera apan så att den klarar sig ute i en labyrint och kan samla in bra låtar som den  sedan ger till er. \\
+\section*{How to play}
+Era program kan skrivas i valfritt språk och kommunikationen sker via standard in och standard out. \\\\
+Tävlingsmiljön är skriven i Ruby och för att testköra din apa så behöver du ruby samt gem. Det finns i paketet ruby-dev. \\\\
+Installera tävlingsmiljön med: \\ gem install monkeymusic \\\\
+För att hämta en bana, en stanard spelare samt users skriver ni: \\
+monkeymusic demo \\
+Och kör sedan med kommandot: \\
+monkeymusic -p demo\_player \\
+Vilket startar en körning av er apa mot en given testbana. \\\\
+Nedan betecknas en spotify-URI "$spotify:track:<hash>$" som $<$URI$>$.
+\\
+Flusha standard in! 
+\newpage
+\subsection*{Standard input}
+Varje rad som ges är kommaseparerat och varje rad bryts med ett newline.\\\\
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.2]{stdinflow} \\
+\caption{Flow chart över input. }
+\end{figure} \\
+\begin{tabular}{l l}
+\textbf{INIT}				 & \textbf{TURN} \\
+“INIT”,				 & ”TURN” , \\
+The monkeys ID , 	 & Remaining round of the game,	\\
+Width of the map,  & Remaining capacity that your monkey can carry,\\
+Height of the map , & Remaining time to execute before getting freezed,  \\
+Total nr of turns of the map , & The map. \\ 
+N - Number of favorite tracks  \\
+N-times: Namn, Artist, Album, Year  \\
+N - Number of favorite albums \\
+N-time: Name, Artist, Year \\
+N - Favorite artists \\
+N-times: Name\\
+N - Disliked artists \\
+N-times: Name \\
+\end{tabular}
+\subsection*{Standard output}
+Du kan ge följande kommandon för att styra apan: \\
+\begin{tabular}{l l}
+“N” & North \\
+“W” & West \\
+“E” & East \\
+“S” & South \\
+“$<$URI$>$” & Requested track URI \\
+“B, [N/W/E/S/$<$URI$>$]$^3$ " &Boost!	  \\
+\end{tabular} \\
+You are only allowed to use the boost once during each game. 
+\newpage
+\section*{Appendix}
+\begin{verbatim}
+INIT 
+9
+11
+11
+100
+10
+Condemnation,Depeche Mode,Songs Of Faith And Devotion,1993
+Enola Gay - 2003 - Remaster,Orchestral Manoeuvres In The Dark,Organisation,2003
+The Fog Rose High,Craft Spells,Idle Labor,2011
+Cars,Gary Numan,Premier Hits,1981
+Tainted Love,Soft Cell,Tainted Love / Where Did Our Love Go,2009
+You Surround Me,Erasure,Wild!,1989
+Something New,Girls Aloud,Something New,2012
+Guilty Partner,New Order,Technique [Collector's Edition],2008
+The New Stone Age - 2003 Digital Remaster,Orchestral Manoeuvres In The Dark,Architecture And Morality,2003
+Don't Go,Yazoo,Upstairs At Eric’s,1982
+10
+Delta Machine,Depeche Mode,2013
+Architecture And Morality,Orchestral Manoeuvres In The Dark,2003
+Replicas,Tubeway Army,1979
+Vienna,Ultravox,2008
+Hits The Very Best Of Erasure,Erasure,2003
+Tainted Love / Where Did Our Love Go,Soft Cell,2009
+The Best Of New Order,New Order,1994
+Witching Hour,Ladytron,2007
+Nightdrive With You,Anoraak,2008
+Boxed,Eurythmics,2005
+10
+Depeche Mode
+Orchestral Manoeuvres In The Dark
+The Human League
+New Order
+The Postal Service
+Kraftwerk
+Gary Numan
+MGMT
+M83
+Duran Duran
+5
+Misfits
+The Ramones
+Bad Religion
+The Clash
+Sex Pistols
+
+
+TURN
+1
+3
+10000
+_,_,_,_,_,_,_,_,_,_,_
+_,W,W,_,_,_,_,_,W,W,_
+_,W,spotify:track:5H85hOp2oMlhMh9JlkdJP2,_,_,_,_,_,spotify:track:3NYCaxkggl0Hh8vQptSUvV,W,_
+_,_,_,_,_,_,_,spotify:track:3qAEEfC57OI4SCuj7Zk5va,_,_,_
+9,_,_,_,_,_,_,_,_,_,_
+_,_,_,spotify:track:4CARtDIJS87fOmWb1RxLKK,_,_,_,_,_,_,U
+_,_,_,_,_,_,_,_,_,_,_
+_,_,_,_,_,_,_,spotify:track:1ARZpuJ5KjxvmsFU4NryQH,_,_,_
+_,W,spotify:track:0S8LgLoseDB6W2HWd1ym6P,_,_,_,_,_,spotify:track:3NwaVr6RJg2LPBcJ1Ysl1O,W,_
+_,W,W,_,_,_,_,_,W,W,_
+_,_,_,_,_,_,_,_,_,_,_
+
+\end{verbatim}
+
+\end{document}
+
