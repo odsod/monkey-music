@@ -1,10 +1,12 @@
 require 'optparse'
+require 'fileutils'
 
 module MonkeyMusic
   class Runner
 
-    @@default_level = 'testlevel.rb'
-    @@default_user = 'synth.yaml'
+    @@default_level = 'demo_level.rb'
+    @@default_user = 'demo_user.yaml'
+    @@default_player = 'demo_player'
 
     def initialize(arguments)
       @arguments = arguments
@@ -15,6 +17,36 @@ module MonkeyMusic
     end
 
     def run
+      if ARGV[0] == "demo"
+        puts "\tcreate ./#{@@default_level}"
+        FileUtils.cp(
+          File.join(
+            File.dirname(__FILE__), 
+            "../../levels", 
+            @@default_level
+          ),
+          Dir.getwd
+        )
+        puts "\tcreate ./#{@@default_user}"
+        FileUtils.cp(
+          File.join(
+            File.dirname(__FILE__), 
+            "../../users", 
+            @@default_user
+          ),
+          Dir.getwd
+        )
+        puts "\tcreate ./#{@@default_player}"
+        FileUtils.cp(
+          File.join(
+            File.dirname(__FILE__), 
+            "../../", 
+            @@default_player
+          ),
+          Dir.getwd
+        )
+        exit
+      end
       @opt_parser.parse!
       # Handle fallback to default level
       @level_file ||= File.join(
@@ -65,7 +97,7 @@ module MonkeyMusic
     end
 
     def init_parser(opts)
-      opts.banner = 'Usage: monkeymusic -p PLAYER_FILE -n PLAYER_NAME [-u USER_FILE] [-l LEVEL_FILE]'
+      opts.banner = "Usage: monkeymusic [demo] [-p PLAYER_FILE -n PLAYER_NAME [-u USER_FILE] [-l LEVEL_FILE]]"
 
       opts.on('-p',
               '--player FILE',
@@ -97,14 +129,14 @@ module MonkeyMusic
         @delay = delay
       end
 
-      opts.on('-b', '--browser-ui', 
-              'View the game through the browser instead of the console.') do |password|
-        @browser_ui = true
-      end
+      #opts.on('-b', '--browser-ui', 
+              #'View the game through the browser instead of the console.') do |password|
+        #@browser_ui = true
+      #end
 
       opts.on('-v', '--version', 
               'Show the current version.') do |password|
-        puts '0.0.3' # TODO: Find out how to extract version from GemSpec
+        puts '0.0.5' # TODO: Find out how to extract version from GemSpec
         exit
       end
 

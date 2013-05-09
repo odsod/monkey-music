@@ -5,18 +5,18 @@ require 'yaml'
 @type = gets.chomp
 
 if @type == "INIT"
-  cache = {}
-  cache[:monkey] = gets.chomp
-  cache[:width] = Integer(gets.chomp)
-  cache[:height] = Integer(gets.chomp)
-  cache[:turn_limit] = Integer(gets.chomp)
+  @cache = {}
+  @cache[:monkey] = gets.chomp
+  @cache[:width] = Integer(gets.chomp)
+  @cache[:height] = Integer(gets.chomp)
+  @cache[:turn_limit] = Integer(gets.chomp)
   [:top_tracks, :top_albums, :top_artists, :disliked_artists].each do |toplist|
-    cache[toplist] = []
+    @cache[toplist] = []
     n = Integer(gets.chomp)
-    n.times { cache[toplist] << gets.chomp }
-  cache[:uris] = {}
+    n.times { @cache[toplist] << gets.chomp }
+  @cache[:uris] = {}
   end
-  File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(cache)}
+  File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(@cache)}
   exit
 end
 
@@ -46,16 +46,16 @@ end
   end
 end
 
-if uri = @unknown.pop
-  puts uri
-  $stdout.flush
-  n = Integer(gets.chomp)
-  if n == 1
-    @cache[:uris][uri] = gets.chomp
-  end
-  File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(@cache)}
-  exit
-end
+#if uri = @unknown.pop
+  #puts uri
+  #$stdout.flush
+  #n = Integer(gets.chomp)
+  #if n == 1
+    #@cache[:uris][uri] = gets.chomp
+  #end
+  #File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(@cache)}
+  #exit
+#end
 
 def move_toward(x, y)
   if @x < x
