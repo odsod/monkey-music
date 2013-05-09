@@ -42,6 +42,11 @@ end
   end
 end
 
+#if @turn == 1
+  puts "B,W,W,W"
+  exit
+#end
+
 def move_toward(x, y)
   if @x < x
     "E"

@@ -20,6 +20,7 @@ module MonkeyMusic
       init_threads.each(&:join)
       # Start the game
       @level.turn_limit.times do |turn|
+        turn += 1
         break if @level.complete?
         # Query players for moves
         query_threads = []

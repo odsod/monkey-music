@@ -67,8 +67,8 @@ module MonkeyMusic
     end
 
     def parse_next_token!
-      token = @tokens.pop
-      if /^([NWES])$/.match(token) then @moves << parse_move($1)
+      token = @tokens.shift
+      if /[NWES]/.match(token) then @moves << parse_move(token)
       elsif /^(spotify:track:)/.match(token) then @queries << token
       elsif "B" == token then boost!
       end
