@@ -9,6 +9,8 @@ module MonkeyMusic
       @monkey = Monkey.new
       @has_boost = true
       @penalty = 0
+      @moves = []
+      @queries = []
     end
 
     def init!
@@ -21,13 +23,13 @@ module MonkeyMusic
         @remaining_time = @monkey.level.time_limit if @penalty == 0
       else
         IO.popen(@file, "r+") do |io|
-          io.puts turn_output
-          @remaining_time -= Benchmark.realtime { @input = io.gets }
+          io.puts turn_output(turn)
+          @remaining_time -= (Benchmark.realtime { @input = io.gets } * 1000).round
           parse!(@input) if @input
-          io.puts response_to(@queries) unless @queries.empty?
+          #io.puts response_to(@queries) unless @queries.empty?
           @queries = []
         end
-        @penalty = 5 if @remaining_time < 0
+        #@penalty = 5 if @remaining_time < 0
       end
     end
 

@@ -16,16 +16,17 @@ module MonkeyMusic
       track
     end
 
-    def value
-      @metadata[:value]
-    end
-
-    def uri
-      @metadata[:uri]
+    # Delegate to metadata
+    def method_missing(method, *args, &block)    
+      if @metadata.respond_to?(method)
+        @metadata.send(method, *args, &block)
+      else
+        raise NoMethodError  
+      end    
     end
 
     def serialize
-      uri
+      @metadata.uri
     end
 
     def to_json(options = {})
@@ -33,9 +34,9 @@ module MonkeyMusic
         :x => @x,
         :y => @y,
         :type => self.class.name.split('::').last,
-        :name => @metadata[:name],
-        :multiplier => @metadata[:multiplier],
-        :value => @metadata[:value]
+        :name => @metadata.name,
+        :multiplier => @metadata.multiplier,
+        :value => @metadata.value,
       }.to_json
     end
   end

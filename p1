@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-#
+
 require 'yaml'
 
 @type = gets.chomp
@@ -24,6 +24,7 @@ end
 # Read indata
 @turn = Integer(gets.chomp)
 @remaining_capacity = Integer(gets.chomp)
+@remaining_time = Integer(gets.chomp)
 
 # Read level
 @tracks = []
