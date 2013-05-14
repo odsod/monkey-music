@@ -1,0 +1,64 @@
+/* line 61, ../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, ../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 8, ../sass/styles.sass */
+body {
+  font-family: "Proxima Nova";
+}
+
+/* line 11, ../sass/styles.sass */
+p {
+  font-weight: 300;
+}
+
+/* line 14, ../sass/styles.sass */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* line 17, ../sass/styles.sass */
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+/* line 20, ../sass/styles.sass */
+img.logo {
+  width: 100%;
+}
+
+/* line 23, ../sass/styles.sass */
+pre {
+  padding-left: 1.5em;
+  page-break-inside: avoid;
+}
+
+/* line 27, ../sass/styles.sass */
+code {
+  font-family: Monaco;
+}
+
+/* line 30, ../sass/styles.sass */
+.tip {
+  position: relative;
+  padding: 0.75em 6em;
+  border: 1px solid black;
+}
+/* line 34, ../sass/styles.sass */
+.tip::before {
+  position: absolute;
+  color: white;
+  background: black;
+  top: 0;
+  left: 0;
+  padding: 0 0.5em;
+  content: "protip:";
+}
