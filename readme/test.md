@@ -18,6 +18,85 @@ You have therefore decided to write a computer program that helps monkeys find g
 This is all entirely fictional of course.
 {: .tip}
 
+Task summary
+============
+
+The task consists of implementing a program to move a monkey around a level. The monkey's mission is 
+to score points by gathering track recommendations and giving them to a Spotify user. 
+
+Level layout
+------------
+
+The level is a `n x m` grid of cells. It is sent to the standard input of your program. 
+
+Each cell contains one of the following things:
+
+Monkeys
+: ASCII: `M[id]`
+: You, and your competitors each have your own monkey to control. 
+: Every monkey is identified by a unique numerical id.
+
+Walls
+: ASCII: `#`
+: Walls are inanimate objects that monkeys cannot pass through.
+
+Tracks
+: ASCII: `[URI]`
+: Tracks are identified by their unique Spotify URI. Every track URI starts with `spotify:track:`, 
+: followed by `22` alphanumerical characters. Example: `spotify:track:5H85hOp2oMlhMh9JlkdJP2`.
+: Tracks can be picked up and carried around by monkeys.
+
+The User
+: ASCII: `U`
+: The user is where monkeys deliver their track recommendations. Monkeys are scored for every track
+: delivered to the user according to how well the track fits the user's music taste.
+
+Empty
+: ASCII: `[SPACE]`
+: Nothing to do here.
+
+Any given cell can only contain one thing at any time.
+{: .tip}
+
+Monkey movement
+---------------
+
+Commands are sent from the standard output of your program. 
+In each turn of the game, every monkey executes one command. 
+
+Commands which the monkeys can execute are:
+
+Move west
+: ASCII: `W`
+: Moves the monkey one cell to the left.
+
+Move east
+: ASCII: `E`
+: Moves the monkey one cell to the right.
+
+Move north
+: ASCII: `N`
+: Moves the monkey one cell up.
+
+Move down
+: ASCII: `N`
+: Moves the monkey one cell down.
+
+Metadata lookup
+: ASCII: `[URI]`
+: Queries the metadata for a track URI. 
+: After issuing this command, your program will immediately receive a response
+: via its standard input. The response will be one line consisting of one integer `n`, saying 
+: how many queries succeeded. The following `n` lines will contain metadata for the requested tracks.
+
+Boost
+: ASCII: `B,[COMMAND],[COMMAND],[COMMAND]`
+: Once every game, the monkey can issue a boost command and then issue three
+: other comma separated commands during the same turn.
+
+Your monkey must every turn choose between moving and looking up the metadata of a track!
+{: .tip}
+
 Quick start
 ===========
 
