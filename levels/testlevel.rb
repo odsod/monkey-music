@@ -1,6 +1,6 @@
 carrying_capacity 3
 turn_limit 100
-time_limit 300
+time_limit 10000
 
 legend({ 
   "1" => Monkey.player(1),

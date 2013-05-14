@@ -129,10 +129,10 @@ module MonkeyMusic
         @delay = delay
       end
 
-      #opts.on('-b', '--browser-ui', 
-              #'View the game through the browser instead of the console.') do |password|
-        #@browser_ui = true
-      #end
+      opts.on('-b', '--browser-ui', 
+              'View the game through the browser instead of the console.') do |password|
+        @browser_ui = true
+      end
 
       opts.on('-v', '--version', 
               'Show the current version.') do |password|

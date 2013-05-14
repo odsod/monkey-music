@@ -22,11 +22,11 @@ module MonkeyMusic::UI
           end
         }
       }
-      sleep 1 # TODO: Asynchronous acknowledge that ui is ready
+      sleep 1.5 # TODO: Asynchronous acknowledge that ui is ready
       puts "Websockets initialized!"
     end
 
-    def update(level, query_time = 0)
+    def update(level, turn = 0, turn_time = 0)
       @ws.send(level.as_json) if @ws
       sleep 1
     end
