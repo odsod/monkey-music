@@ -98,3 +98,6 @@ cache_*
 *.xdy
 *.tdo
 
+*.html
+*.pdf
+assets/css/
