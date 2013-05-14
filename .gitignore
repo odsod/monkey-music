@@ -98,3 +98,5 @@ cache_*
 *.xdy
 *.tdo
 
+*.html
+*.pdf
