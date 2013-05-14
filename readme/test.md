@@ -1,5 +1,23 @@
 <img class="logo" src="documents/logo.png" />
 
+Introduction
+============
+
+The Spotify backend is consists of a multitude of individual services.
+One such service is the music recommendation service, which is responsible
+for finding and recommending new tracks to users, according to their taste in music.
+
+The music recommendation service has lately been getting some pretty negative feedback
+from users. The word out on Twitter is that even monkeys could find better music recommendations!
+
+Therefore, upper management has made an informed decision that the next version of the music recommendation
+service shall be operated by monkeys. As product manager for the music recommendation service, your job is to make sure that the monkeys do a good job. 
+
+You have therefore decided to write a computer program that guides monkeys in finding good track recommendations for Spotify users.
+
+This is all entirely fictional of course.
+{: .tip}
+
 Quick start
 ===========
 
