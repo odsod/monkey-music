@@ -16,7 +16,7 @@ module MonkeyMusic::Metadata
     end
     
     def serialize
-      "#{@name},#{@artist},#{@album},#{@year}"
+      "#{@name};;#{@artist};;#{@album};;#{@year}"
     end
   end
 end
