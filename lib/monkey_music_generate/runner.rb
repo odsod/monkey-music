@@ -52,7 +52,7 @@ module MonkeyMusic
           # Create user
           user = User.new
           # Connect to libspotify
-          Hallon.load_timeout = 0
+          #Hallon.load_timeout = 0
           session = Hallon::Session.initialize(IO.read(@spotify_appkey_file))
           session.login!(@spotify_account, @spotify_password)
           # Load toplists
@@ -72,15 +72,16 @@ module MonkeyMusic
           score_system.evaluate_user_recommendations!(user)
           # Dump and print the user
           File.open(@out_file, 'w') do |f|
-            f.write(user.dump)
+            # Clean out all commas before writing
+            f.write(user.dump.gsub(',', ''))
           end
           puts "====="
           puts "DONE!"
           puts "====="
-          #puts "Loaded tracks:"
-          #user.recommendations.group_by(&:multiplier).sort.each do |k,v| 
-            #puts "#Multiplier #{k}:\t#{v.length}"
-          #end
+          puts "Loaded tracks:"
+          user.recommendations.group_by(&:multiplier).sort.each do |k,v| 
+            puts "#Multiplier #{k}:\t#{v.length}"
+          end
           exit
         end
       end

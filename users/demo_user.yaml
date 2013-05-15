@@ -1194,7 +1194,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Age Of Consent
   artist: New Order
-  album: Power, Corruption & Lies [Collector's Edition]
+  album: Power Corruption & Lies [Collector's Edition]
   year: 2008
   uri: spotify:track:1iKCbLGTa0uNJ3AZhfoFOL
   multiplier: 2
@@ -1482,7 +1482,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Music For Chameleons
   artist: Gary Numan
-  album: I, Assassin
+  album: I Assassin
   year: 1982
   uri: spotify:track:4fqRCykZ9uVe4PNSjWIR2f
   multiplier: 1
@@ -1560,7 +1560,7 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Of Moons, Birds & Monsters
+  name: Of Moons Birds & Monsters
   artist: MGMT
   album: Oracular Spectacular
   year: 2007
@@ -1578,7 +1578,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Midnight City
   artist: M83
-  album: Hurry Up, We're Dreaming
+  album: Hurry Up We're Dreaming
   year: 2011
   uri: spotify:track:4kO7mrAPfqIrsKwUOK5BFx
   multiplier: 1
@@ -1760,7 +1760,7 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Die, Die My Darling - Fox Studio 1983
+  name: Die Die My Darling - Fox Studio 1983
   artist: Misfits
   album: Collection
   year: 1986
@@ -2058,7 +2058,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: God Save The Queen
   artist: Sex Pistols
-  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:2mHchPRtQWet3iIS3jANr1
   multiplier: -2
@@ -2074,7 +2074,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Anarchy In The UK
   artist: Sex Pistols
-  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:5moTxUGPZXgGmosl4rIELm
   multiplier: -2
@@ -2098,7 +2098,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Holidays In The Sun
   artist: Sex Pistols
-  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:4e3TIXJcX3oQJnLup57I0r
   multiplier: -2
@@ -2106,7 +2106,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Bodies
   artist: Sex Pistols
-  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:4kU7cIlf4FDrWrs99AcaWS
   multiplier: -2
@@ -2122,7 +2122,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: No Feelings
   artist: Sex Pistols
-  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:5Pl46yccvPXXcIiXps3qHl
   multiplier: -2
@@ -2130,7 +2130,7 @@
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Problems
   artist: Sex Pistols
-  album: Never Mind The Bollocks, Here’s The Sex Pistols
+  album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:5dI4YIBXUmat0Kp6N1SjuV
   multiplier: -2

@@ -7,46 +7,48 @@ end
 
 require 'yaml'
 
-@type = gets.chomp
+@type = $stdin.gets.chomp
 
 if @type == "INIT"
   @cache = {}
-  @cache[:monkey] = gets.chomp
-  @cache[:width] = Integer(gets.chomp)
-  @cache[:height] = Integer(gets.chomp)
-  @cache[:turn_limit] = Integer(gets.chomp)
+  @cache[:width] = Integer($stdin.gets.chomp)
+  @cache[:height] = Integer($stdin.gets.chomp)
+  @cache[:turn_limit] = Integer($stdin.gets.chomp)
   [:top_tracks, :top_albums, :top_artists, :disliked_artists].each do |toplist|
     @cache[toplist] = []
-    n = Integer(gets.chomp)
-    n.times { @cache[toplist] << gets.chomp }
+    n = Integer($stdin.gets.chomp)
+    n.times { @cache[toplist] << $stdin.gets.chomp }
   @cache[:uris] = {}
   end
   File.open(File.join(Dir.getwd, "cache_demo_player"), "w+") {|f| f.write YAML::dump(@cache)}
   exit
-end
-
-@cache = YAML::load(IO.read "cache_demo_player")
-
-# Read indata
-@turn = Integer(gets.chomp)
-@remaining_capacity = Integer(gets.chomp)
-@remaining_time = Integer(gets.chomp)
-
-@unknown = []
-
-# Read level
-@tracks = []
-@cache[:height].times do |y|
-  row = gets.chomp.split(',')
-  @cache[:width].times do |x|
-    thing = row[x]
-    if thing == @cache[:monkey]
-      @x, @y = x, y
-    elsif /spotify:track/.match(thing)
-      @unknown << thing unless @cache[:uris][thing]
-      @tracks << [x, y]
-    elsif thing == "U"
-      @user = [x, y]
+elsif @type == "TURN"
+  @cache = YAML::load(IO.read "cache_demo_player")
+  # Read indata
+  @turn = Integer($stdin.gets.chomp)
+  @monkey = $stdin.gets.chomp
+  @remaining_capacity = Integer($stdin.gets.chomp)
+  @remaining_time = Integer($stdin.gets.chomp)
+  @num_responses = Integer($stdin.gets.chomp)
+  @num_responses.times do
+    response = $stdin.gets.chomp.split(",")
+    cache[:uris][response[0]][response]
+  end
+  @unknown = []
+  # Read level
+  @tracks = []
+  @cache[:height].times do |y|
+    row = $stdin.gets.chomp.split(',')
+    @cache[:width].times do |x|
+      thing = row[x]
+      if thing == @monkey
+        @x, @y = x, y
+      elsif /spotify:track/.match(thing)
+        @unknown << thing unless @cache[:uris][thing]
+        @tracks << [x, y]
+      elsif thing == "U"
+        @user = [x, y]
+      end
     end
   end
 end
@@ -54,9 +56,9 @@ end
 #if uri = @unknown.pop
   #puts uri
   #$stdout.flush
-  #n = Integer(gets.chomp)
+  #n = Integer($stdin.gets.chomp)
   #if n == 1
-    #@cache[:uris][uri] = gets.chomp
+    #@cache[:uris][uri] = $stdin.gets.chomp
   #end
   #File.open(File.join(Dir.getwd, "cache_p1"), "w+") {|f| f.write YAML::dump(@cache)}
   #exit

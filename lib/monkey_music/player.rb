@@ -2,7 +2,7 @@ require 'benchmark'
 
 module MonkeyMusic
   class Player
-    attr_accessor :monkey, :level, :has_boost, :remaining_time
+    attr_accessor :monkey, :level, :has_boost, :remaining_time, :command_line_argument
     
     def initialize(file)
       @file = file
@@ -11,10 +11,13 @@ module MonkeyMusic
       @penalty = 0
       @moves = []
       @queries = []
+      @command_line_argument = ""
     end
 
     def init!
-      IO.popen(@file, "r+") {|io| io.puts initial_output }
+      IO.popen([@file, @command_line_argument], "r+") do |io| 
+        io.puts initial_output
+      end
     end
 
     def query!(turn)
@@ -26,8 +29,6 @@ module MonkeyMusic
           io.puts turn_output(turn)
           @remaining_time -= (Benchmark.realtime { @input = io.gets } * 1000).round
           parse!(@input) if @input
-          io.puts response_to(@queries) unless @queries.empty?
-          @queries = []
         end
         @penalty = 5 if @remaining_time < 0
       end
@@ -37,7 +38,6 @@ module MonkeyMusic
       level = @monkey.level
       user = @monkey.level.user
       [ "INIT",
-        @monkey.id,
         level.width,
         level.height,
         level.turn_limit,
@@ -55,13 +55,16 @@ module MonkeyMusic
     def turn_output(turn)
       [ "TURN",
         turn,
+        @monkey.id,
         @monkey.remaining_capacity,
         @remaining_time,
+        response_to(@queries),
         @monkey.level.serialize,
       ].join("\n")
     end
 
     def parse!(s)
+      @queries = []
       @tokens = s.chomp.split(",")
       parse_next_token!
     end

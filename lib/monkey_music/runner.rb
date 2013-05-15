@@ -112,6 +112,12 @@ module MonkeyMusic
         @players[-1].monkey.name = name unless @players.empty?
       end
 
+      opts.on('-c',
+              '--command-line-argument ARG',
+              'An argument that will be passed to the last entered program on every execution.') do |arg|
+        @players[-1].command_line_argument = arg
+      end
+
       opts.on('-l',
               '--level LEVEL',
               'The level to play.') do |file|
