@@ -364,8 +364,8 @@ Input
 ### Turn
   
     TURN
-    [TURN NUMBER]
     M[ID]
+    [TURN NUMBER]
     [REMAINING CAPACITY]
     [REMAINING TIME]
     [n]

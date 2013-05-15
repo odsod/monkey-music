@@ -71,11 +71,11 @@ module MonkeyMusic
     end
 
     def serialize
-      @id
+      "M#{@id}"
     end
 
     def name
-      @name || "monkey#{@id}"
+      @name || serialize
     end
 
     def to_json(options = {})

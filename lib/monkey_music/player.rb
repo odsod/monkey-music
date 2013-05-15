@@ -38,6 +38,7 @@ module MonkeyMusic
       level = @monkey.level
       user = @monkey.level.user
       [ "INIT",
+        @monkey.id,
         level.width,
         level.height,
         level.turn_limit,
