@@ -367,3 +367,12 @@ To see something on the screen:
     > monkeymusic -p demo_player
 
 You can probably learn a lot about the game from reading the `demo_player`.
+
+Handing in
+==========
+
+Your competition entry is to be handed in as a zip archive containing
+everything needed to run your program.
+
+When unpacked, your program should be runned through an executable file
+called `runme`. This file should be put into a subfolder.
