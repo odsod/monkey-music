@@ -341,6 +341,95 @@ recieve score according to the score system.
 
 Be careful about picking up negative tier tracks. You'll have to deliver them.
 
+Protocol specification
+======================
+
+Input
+-----
+
+### Initialization
+
+    INIT
+    M[id]
+    [WIDTH]
+    [HEIGHT]
+    [TURN LIMIT]
+    [n]
+    [TRACK],[ALBUM],[ARTIST],[YEAR]
+    [n]
+    [ALBUM],[ARTIST],[YEAR]
+    [n]
+    [ARTIST]
+
+### Turn
+  
+    TURN
+    [TURN NUMBER]
+    M[ID]
+    [REMAINING CAPACITY]
+    [REMAINING TIME]
+    [n]
+    [URI],[TRACK],[ALBUM],[ARTIST],[YEAR]
+    [LEVEL]
+
+Output
+------
+
+    [DIRECTION]|[URI]|B,[COMMAND],[COMMAND],[COMMAND]
+
+Examples
+--------
+
+#### Move west
+
+The following command will result in your monkey moving one step to the
+east during the turn:
+  
+    `W`
+
+#### Track lookup
+
+The following command will result in a track metadata query:
+
+    `spotify:track:5H85hOp2oMlhMh9JlkdJP2`
+
+Your monkey will not move during the turn.
+
+The next turn, the requested track metadata can be read from
+the turn input.
+
+#### Boost
+
+The following command:
+
+    `B,W,spotify:track:5H85hOp2oMlhMh9JlkdJP2,E`
+
+will result in the monkey moving one step west, one step to the east, and
+looking up the metadata of one track during one turn.
+
+### Initialization
+
+### Turn (without metadata)
+
+### Turn (with metadata)
+
+### Turn (after boost)
+
+The turn input after having issued this command:
+
+    `B,W,spotify:track:5H85hOp2oMlhMh9JlkdJP2,spotify:track:5H85hOp2oMlhMh9JlkdJP2`
+
+could look like:
+
+    TURN
+    10
+    M2
+    1
+    4529
+    2
+    spotify:track:5H85hOp2oMlhMh9JlkdJP2,TODO,TODO,TODO,TODO
+    spotify:track:5H85hOp2oMlhMh9JlkdJP2,TODO,TODO,TODO,TODO
+
 Getting started
 ===============
 
