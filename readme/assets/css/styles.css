@@ -1,66 +1,94 @@
 /* line 61, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
-  font-size: 100%;
+  font-size: 87.5%;
 }
 
 /* line 64, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: 14px;
+  line-height: 1.71429em;
 }
 
-/* line 8, ../sass/styles.sass */
+/* line 10, ../sass/styles.sass */
 body {
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", sans-serif;
   text-align: justify;
 }
 
-/* line 12, ../sass/styles.sass */
+/* line 14, ../sass/styles.sass */
 p {
   font-weight: 300;
 }
 
-/* line 15, ../sass/styles.sass */
+/* line 17, ../sass/styles.sass */
 h1, h2, h3 {
   font-weight: 700;
 }
 
-/* line 18, ../sass/styles.sass */
+/* line 20, ../sass/styles.sass */
 h1 {
+  display: none;
   font-size: 2em;
-  line-height: 1.5em;
+  line-height: 1.71429em;
+  color: #84bd00;
+  margin: 0.85714em 0;
+  border-bottom: 2px solid #84bd00;
 }
 
-/* line 21, ../sass/styles.sass */
+/* line 27, ../sass/styles.sass */
+h2 {
+  font-size: 1.8em;
+  line-height: 1.90476em;
+  color: #84bd00;
+  margin: 0.85714em 0;
+  border-bottom: 2px solid #84bd00;
+}
+
+/* line 33, ../sass/styles.sass */
+h3 {
+  font-size: 1.5em;
+  line-height: 2.28571em;
+}
+
+/* line 36, ../sass/styles.sass */
 img.logo {
   width: 100%;
 }
 
-/* line 24, ../sass/styles.sass */
+/* line 39, ../sass/styles.sass */
 pre {
-  padding-left: 1.5em;
+  padding-left: 1.71429em;
   page-break-inside: avoid;
 }
 
-/* line 28, ../sass/styles.sass */
+/* line 43, ../sass/styles.sass */
 code {
   font-family: Monaco;
 }
 
-/* line 31, ../sass/styles.sass */
+/* line 46, ../sass/styles.sass */
 .tip {
+  margin-top: 2.57143em;
+  padding-top: 0.85714em;
+  padding-bottom: 0.85714em;
+  margin-bottom: 2.57143em;
   position: relative;
-  padding: 0.75em 6em;
-  border: 1px solid black;
+  padding-left: 72px;
+  padding-right: 48px;
+  border: 2px solid #84bd00;
   page-break-inside: avoid;
 }
-/* line 36, ../sass/styles.sass */
+/* line 53, ../sass/styles.sass */
 .tip::before {
+  font-size: 2.14286em;
+  line-height: 1.6em;
+  content: "!";
   position: absolute;
   color: white;
-  background: black;
+  background: #84bd00;
   top: 0;
   left: 0;
-  padding: 0 0.5em;
-  content: "protip:";
+  height: 100%;
+  width: 48px;
+  text-align: center;
 }
