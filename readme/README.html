@@ -1,0 +1,495 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+<p><img class="logo" src="assets/img/logo.png" /></p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>The Spotify backend is consists of a multitude of individual services.  One
+such service is the music recommendation service, which is responsible for
+finding and recommending new tracks to Spotify users, according to their music 
+taste.</p>
+
+<p>The music recommendation service has lately been getting some pretty negative
+feedback from users. The word out on Twitter is that even monkeys could find
+better music recommendations!</p>
+
+<p>Therefore, upper management has made an informed decision that the next version
+of the music recommendation service shall be operated entirely by monkeys. As
+product manager for the music recommendation service, your job is to make sure
+that the monkeys do a good job. </p>
+
+<p>You have therefore decided to write a computer program that helps monkeys find
+good track recommendations for Spotify users.</p>
+
+<p class="tip">This is all entirely fictional of course.</p>
+
+<h1 id="task-summary">Task summary</h1>
+
+<p>The task consists of implementing a program to play the Monkey Music game.
+The goal of the game is to score points by gathering track recommendations and
+giving them to a Spotify user.</p>
+
+<h1 id="the-game">The game</h1>
+
+<p>Every game of Monkey Music is broken up into a number of turns. </p>
+
+<p>Every turn, your program will be executed and fed information about the current
+ state of the level by reading from <code>stdin</code>. Your program responds by printing 
+one command to <code>stdout</code>. The command decides what your monkey does during the c
+urrent turn.</p>
+
+<p class="tip">Fate decides the order in which monkeys execute their commands in a turn.</p>
+
+<p>Before every turn, execution of your program starts. After every turn, executio
+n of your program stops.</p>
+
+<h2 id="rules">Rules</h2>
+
+<h3 id="scoring">Scoring</h3>
+
+<p>Your monkey will pick up tracks and deliver them to a user. </p>
+
+<p>When a track is delivered, you will recieve a score according to how well the t
+rack fits the music taste of the user.  The player with the highest score at th
+e end of the game will be the winner.</p>
+
+<p>You should try to get as high a score as possible.
+{. tip}</p>
+
+<h3 id="turn-limit">Turn limit</h3>
+
+<p>Every game is played for a limited amount of turns. This limit is different for
+ different levels.</p>
+
+<p>The game ends when the turn limit is reached.</p>
+
+<h3 id="time-limit">Time limit</h3>
+
+<p>Every time your program is executed, the execution time will be measured. Every
+ level has a total time limit, that your program should not exceed.</p>
+
+<p>If your execution time reaches the time limit, your monkey will run out of ener
+gy and fall asleep for <code>5</code> turns. Afte sleeping for <code>5</code> turns, the remaining ex
+ecution time of your program will be replenished.</p>
+
+<h3 id="carrying-capacity">Carrying capacity</h3>
+
+<p>The number of tracks your monkey can pick up and hold at any given time is call
+ed carrying capacity.</p>
+
+<p>The carrying capacity of your monkey is different for every level.</p>
+
+<h2 id="game-progression">Game progression</h2>
+
+<h3 id="initialization-phase">Initialization phase</h3>
+
+<p>The game consists of two different phases.</p>
+
+<p>The first phase is the initialization phase, it occurs once every game.</p>
+
+<p>During the initialization phase, your program will be given information about 
+the level that will be useful during the entire course of the game.</p>
+
+<p>The information that can be read from <code>stdin</code> during the <code>init</code> phase is:</p>
+
+<ul>
+  <li>The string <code>"INIT"</code></li>
+  <li>The id of your monkey</li>
+  <li>The <code>width</code> of the map</li>
+  <li>The <code>height</code> of the map</li>
+  <li>The <code>turn limit</code> of the game</li>
+  <li>The <code>toplists</code> of the user</li>
+</ul>
+
+<p>After the initialization phase, execution of your program will stop until the next phase.</p>
+
+<p class="tip">Make sure to keep the data from the initialization phase in a persistent cache!</p>
+
+<h3 id="turn-phases">Turn phases</h3>
+
+<p>After the initialization phase, a number of turn phases will follow. </p>
+
+<p>The total number of turn phases is decided by the turn limit of the level.</p>
+
+<p>The information that can be read from <code>stdin</code> during a turn phase is:</p>
+
+<ul>
+  <li>The string <code>"TURN"</code></li>
+  <li>The turn number</li>
+  <li>The remaining carrying capacity of your monkey</li>
+  <li>The remaining execution time of your program</li>
+  <li>Results from metadata lookups from the previous phase</li>
+  <li>The current state of the level</li>
+</ul>
+
+<p>After reading the turn information from <code>stdin</code>, your program will print a comm
+and for your monkey to <code>stdout</code>.</p>
+
+<h2 id="level-layout">Level layout</h2>
+
+<p>The level is a <code>n x m</code> grid of cells. It is sent to the standard input of your
+program. </p>
+
+<p>Each cell contains one of the following things:</p>
+
+<h3 id="monkeys">Monkeys</h3>
+
+<ul>
+  <li>ASCII: <code>M[id]</code></li>
+</ul>
+
+<p>You, and your competitors each have your own monkey to control. 
+Every monkey is identified by a unique numerical id.</p>
+
+<h3 id="walls">Walls</h3>
+
+<ul>
+  <li>ASCII: <code>#</code></li>
+</ul>
+
+<p>Walls are inanimate objects that monkeys cannot pass through.</p>
+
+<h3 id="tracks">Tracks</h3>
+
+<ul>
+  <li>ASCII: <code>[URI]</code></li>
+</ul>
+
+<p>Tracks are identified by their unique Spotify URI. Every track URI starts with <code>spotify:track:</code>, 
+followed by <code>22</code> alphanumerical characters. Example: <code>spotify:track:5H85hOp2oMlhMh9JlkdJP2</code>.
+Tracks can be picked up and carried around by monkeys.</p>
+
+<h3 id="the-user">The User</h3>
+
+<ul>
+  <li>ASCII: <code>U</code></li>
+</ul>
+
+<p>The user is where monkeys deliver their track recommendations. Monkeys are scored for every track
+delivered to the user according to how well the track fits the user’s music taste.</p>
+
+<h3 id="empty">Empty</h3>
+
+<ul>
+  <li>ASCII: <code>[SPACE]</code></li>
+</ul>
+
+<p>Nothing to do here.</p>
+
+<p class="tip">A cell can only contain one thing at any time.</p>
+
+<h2 id="user-toplists">User toplists</h2>
+
+<p>How well track matches the music taste of a user is decided by the user’s toplists.</p>
+
+<p>Every Spotify user has a track toplist, an album toplist and an artist toplist. Every entry 
+in a toplist is a comma-separated string of metadata.</p>
+
+<p>The toplists are sent to the standard input of your program on the following formats:</p>
+
+<h3 id="track-toplist">Track toplist</h3>
+
+<p>First an integer <code>n</code>, followed by <code>n</code> lines of track metadata entries.</p>
+
+<pre><code>n
+track,album,artist,year
+track,album,artist,year
+...
+</code></pre>
+
+<h3 id="album-toplist">Album toplist</h3>
+
+<p>First an integer <code>n</code>, followed by <code>n</code> lines of album metadata entries.</p>
+
+<pre><code>n
+album,artist,year
+album,artist,year
+...
+</code></pre>
+
+<h3 id="artist-toplist">Artist toplist</h3>
+
+<p>First an integer <code>n</code>, followed by <code>n</code> lines of artist metadata entries.</p>
+
+<pre><code>n
+artist
+artist
+...
+</code></pre>
+
+<h3 id="disliked-artist-toplist">Disliked artist toplist</h3>
+
+<p>You will also receive a list of artists that the user does not like.</p>
+
+<p>First an integer <code>n</code>, followed by <code>n</code> lines of artist entries.</p>
+
+<pre><code>n
+artist
+artist
+...
+</code></pre>
+
+<p class="tip">Spotify does not actually keep toplists of disliked artists.</p>
+
+<h2 id="score-system">Score system</h2>
+
+<p>Each track is scored according to the user toplists by placing it into 1 out of
+ 5 score tiers.</p>
+
+<p>There are three positive tiers: <code>1</code>, <code>2</code> and <code>3</code>. There are two negative tiers,
+ <code>-1</code> and <code>-2</code></p>
+
+<p>The following criteria decide which tier a track belongs to:</p>
+
+<h3 id="tier--2-disliked-artist">Tier -2: Disliked artist</h3>
+
+<p>To recommend a track whose <code>artist</code> is among the user’s disliked artist toplist
+ is simply an epic fail.</p>
+
+<h3 id="tier--1-snderlyssnad">Tier -1: “Sönderlyssnad”</h3>
+
+<p>When the <code>track</code> is already in the user’s track toplist, there is not much
+point in recommending it, is there?</p>
+
+<h3 id="tier--1-favorite-artist">Tier += 1: Favorite artist</h3>
+
+<p>If the <code>artist</code> of the track is in the user’s artist toplist, the track
+will be bumped up one tier.</p>
+
+<h3 id="tier--1-favorite-album">Tier += 1: Favorite album</h3>
+
+<p>If the <code>album</code> of the track is in the user’s album toplist, the track
+will be bumped up one tier.</p>
+
+<h3 id="tier--1-favorite-decade">Tier += 1: Favorite decade</h3>
+
+<p>This is an interesting one. Every user has a top decade, which is the
+decade that is most prominent in the user’s track toplist and album toplist.</p>
+
+<p>If the <code>year</code> of the track belongs to the user’s top decade, the track
+will be bumped up one tier.</p>
+
+<h3 id="tally">Tally</h3>
+
+<p>Your track will be scored according to it’s tier:</p>
+
+<ul>
+  <li>Tier -2: -16 points</li>
+  <li>Tier -1: -4 points</li>
+  <li>Tier 1: 4 points</li>
+  <li>Tier 2: 16 points</li>
+  <li>Tier 3: 64 points</li>
+</ul>
+
+<p class="tip">Tier 3 tracks are obviously very valuable, so be on the lookout for
+these.</p>
+
+<h2 id="monkey-commands">Monkey commands</h2>
+
+<p>Commands are sent from the standard output of your program. 
+In each turn of the game, every monkey executes one command. </p>
+
+<p>Commands which the monkeys can execute are:</p>
+
+<h3 id="move-west">Move west</h3>
+
+<ul>
+  <li>ASCII: <code>W</code></li>
+</ul>
+
+<p>Moves the monkey one cell to the left.</p>
+
+<h3 id="move-east">Move east</h3>
+
+<ul>
+  <li>ASCII: <code>E</code></li>
+</ul>
+
+<p>Moves the monkey one cell to the right.</p>
+
+<h3 id="move-north">Move north</h3>
+
+<ul>
+  <li>ASCII: <code>N</code></li>
+</ul>
+
+<p>Moves the monkey one cell up.</p>
+
+<h3 id="move-down">Move down</h3>
+
+<ul>
+  <li>ASCII: <code>S</code></li>
+</ul>
+
+<p>Moves the monkey one cell down.</p>
+
+<h3 id="metadata-lookup">Metadata lookup</h3>
+
+<ul>
+  <li>ASCII: <code>[URI]</code></li>
+</ul>
+
+<p>Queries the metadata for a track URI. You will recieve the metadata the following turn.</p>
+
+<h3 id="boost">Boost</h3>
+
+<ul>
+  <li>ASCII: <code>B,[COMMAND],[COMMAND],[COMMAND]</code></li>
+</ul>
+
+<p>Once every game, the monkey can issue a boost command and then issue three
+other comma separated commands during the same turn.</p>
+
+<p class="tip">Your monkey must every turn choose between moving and looking up the metadata of a track!</p>
+
+<h3 id="picking-up-tracks">Picking up tracks</h3>
+
+<p>When standing next to a track and executing a move command toward the track, your monkey will
+remain in the same cell and pick up the track. If the carrying capacity of your monkey is maxed
+out, nothing will happen.</p>
+
+<p class="tip">Once a track is picked up, there is no way to get rid of it but to deliver it.</p>
+
+<h3 id="delivering-tracks">Delivering tracks</h3>
+
+<p>When standing next to the user and issuing a move command toward the track, your monkey will
+remain in the same cell and deliver all currently carried tracks to the user. You will then
+recieve score according to the score system.</p>
+
+<p>Be careful about picking up negative tier tracks. You’ll have to deliver them.</p>
+
+<h1 id="protocol-specification">Protocol specification</h1>
+
+<h2 id="input">Input</h2>
+
+<h3 id="initialization">Initialization</h3>
+
+<pre><code>INIT
+M[id]
+[WIDTH]
+[HEIGHT]
+[TURN LIMIT]
+[n]
+[TRACK],[ALBUM],[ARTIST],[YEAR]
+[n]
+[ALBUM],[ARTIST],[YEAR]
+[n]
+[ARTIST]
+</code></pre>
+
+<h3 id="turn">Turn</h3>
+
+<pre><code>TURN
+M[ID]
+[TURN NUMBER]
+[REMAINING CAPACITY]
+[REMAINING TIME]
+[n]
+[URI],[TRACK],[ALBUM],[ARTIST],[YEAR]
+[LEVEL]
+</code></pre>
+
+<h2 id="output">Output</h2>
+
+<pre><code>[DIRECTION]|[URI]|B,[COMMAND],[COMMAND],[COMMAND]
+</code></pre>
+
+<h2 id="examples">Examples</h2>
+
+<h4 id="move-west-1">Move west</h4>
+
+<p>The following command will result in your monkey moving one step to the
+east during the turn:</p>
+
+<pre><code>`W`
+</code></pre>
+
+<h4 id="track-lookup">Track lookup</h4>
+
+<p>The following command will result in a track metadata query:</p>
+
+<pre><code>`spotify:track:5H85hOp2oMlhMh9JlkdJP2`
+</code></pre>
+
+<p>Your monkey will not move during the turn.</p>
+
+<p>The next turn, the requested track metadata can be read from
+the turn input.</p>
+
+<h4 id="boost-1">Boost</h4>
+
+<p>The following command:</p>
+
+<pre><code>`B,W,spotify:track:5H85hOp2oMlhMh9JlkdJP2,E`
+</code></pre>
+
+<p>will result in the monkey moving one step west, one step to the east, and
+looking up the metadata of one track during one turn.</p>
+
+<h3 id="initialization-1">Initialization</h3>
+
+<h3 id="turn-without-metadata">Turn (without metadata)</h3>
+
+<h3 id="turn-with-metadata">Turn (with metadata)</h3>
+
+<h3 id="turn-after-boost">Turn (after boost)</h3>
+
+<p>The turn input after having issued this command:</p>
+
+<pre><code>`B,W,spotify:track:5H85hOp2oMlhMh9JlkdJP2,spotify:track:5H85hOp2oMlhMh9JlkdJP2`
+</code></pre>
+
+<p>could look like:</p>
+
+<pre><code>TURN
+10
+M2
+1
+4529
+2
+spotify:track:5H85hOp2oMlhMh9JlkdJP2,TODO,TODO,TODO,TODO
+spotify:track:5H85hOp2oMlhMh9JlkdJP2,TODO,TODO,TODO,TODO
+</code></pre>
+
+<h1 id="getting-started">Getting started</h1>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>Monkey Music depends on Ruby 1.9. </p>
+
+<p>If your OS does not provide it by default, you can always get it using RVM.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>To install the challenge runtime:</p>
+
+<pre><code>&gt; gem install monkeymusic
+</code></pre>
+
+<p>To get started quickly:</p>
+
+<pre><code>&gt; monkeymusic demo
+</code></pre>
+
+<p>To see something on the screen:</p>
+
+<pre><code>&gt; monkeymusic -p demo_player
+</code></pre>
+
+<p>You can probably learn a lot about the game from reading the <code>demo_player</code>.</p>
+
+<h1 id="handing-in">Handing in</h1>
+
+<p>Your competition entry is to be handed in as a zip archive containing
+everything needed to run your program.</p>
+
+<p>When unpacked, your program should be runned through an executable file
+called <code>runme</code>. This file should be put into a subfolder.</p>
+
+</body>
+</html>

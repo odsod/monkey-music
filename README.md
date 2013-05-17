@@ -1,4 +1,4 @@
-<img class="logo" src="documents/logo.png" />
+<img class="logo" src="assets/img/logo.png" />
 
 Introduction
 ============
@@ -304,7 +304,7 @@ Moves the monkey one cell up.
 
 ### Move down
 
-* ASCII: `N`
+* ASCII: `S`
 
 Moves the monkey one cell down.
 
