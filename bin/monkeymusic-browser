@@ -2,4 +2,5 @@
 require File.dirname(__FILE__) + '/../lib/monkey_music'
 require File.dirname(__FILE__) + '/../lib/monkey_music/ui/browser'
 
-runner = MonkeyMusic::Runner.new(MonkeyMusic::UI::Browser)
+runner = MonkeyMusic::Runner.new
+runner.run(MonkeyMusic::UI::Browser)

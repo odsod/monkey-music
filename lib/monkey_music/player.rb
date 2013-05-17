@@ -55,8 +55,8 @@ module MonkeyMusic
 
     def turn_output(turn)
       [ "TURN",
-        turn,
         @monkey.id,
+        turn,
         @monkey.remaining_capacity,
         @remaining_time,
         response_to(@queries),

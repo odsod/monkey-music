@@ -14,7 +14,7 @@ module MonkeyMusic::UI
     
     def update(level, turn = 0, query_time = 0)
       # Clear screen
-      puts "\e[H\e[2J"
+      #puts "\e[H\e[2J"
       # Level
       puts level.to_s
       # Score

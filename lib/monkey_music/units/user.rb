@@ -9,14 +9,14 @@ module MonkeyMusic
       @recommendations = @remaining_recommendations = []
     end
 
-    def recommend!(worth)
+    def recommend!(tier)
       index = @remaining_recommendations.index do |r|
-        r.multiplier == worth
+        r.tier == tier
       end
       if index
         @remaining_recommendations.delete_at(index)
       else
-        @recommendations.find { |r| r.multiplier == worth }
+        @recommendations.find { |r| r.tier == tier }
       end
     end
 

@@ -8,16 +8,17 @@ end
 
 class DemoPlayer
 
-  @@cache_prefix = ".cache"
+  @@cache_prefix = "cache"
 
   def initialize(id)
     @id = id
     @known_tracks = {}
     @unknown_tracks = {}
+    @track_positions = []
+    @cache_file = DemoPlayer.cache_file(id)
   end
 
   def do_init_phase!
-    @id = $stdin.gets.chomp
     @width = Integer($stdin.gets.chomp)
     @height = Integer($stdin.gets.chomp)
     @turn_limit = Integer($stdin.gets.chomp)
@@ -41,19 +42,19 @@ class DemoPlayer
   end
 
   def write_to_file!
-    File.open(cache_file(@id), "w+") do |f| 
+    File.open(@cache_file, "w+") do |f| 
       f.write YAML::dump(self)
     end
   end
 
   def self.read_from_file(id)
-    YAML::load IO.read(cache_file(id))
+    YAML::load IO.read(DemoPlayer.cache_file(id))
   end
 
   private
 
-  def cache_file(id)
-    File.join(Dir.getwd, "#{@@cache_prefix}#{id}") 
+  def self.cache_file(id)
+    File.join(Dir.getwd, "#{@@cache_prefix}_#{id}") 
   end
 
   def read_turn!
@@ -75,7 +76,7 @@ class DemoPlayer
       row = $stdin.gets.chomp.split(',')
       @width.times do |x|
         case row[x]
-        when @id then @x, @y = x, y
+        when "M#{@id}" then @x, @y = x, y
         when /spotify:track/ then @track_positions << [x, y]
         when "U" then @user_position = [x, y]
         end
@@ -100,10 +101,10 @@ class DemoPlayer
   end
 
   def closest_track
-    return if @tracks_positions.empty?
+    return if @track_positions.empty?
     curr_closest = @track_positions[0]
     curr_smallest_distance = distance_to(*curr_closest)
-    @tracks.each do |track|
+    @track_positions.each do |track|
       curr_distance = distance_to(*track)
       if curr_distance < curr_smallest_distance
         curr_closest = track
