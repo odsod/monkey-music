@@ -9,7 +9,6 @@ require 'monkey_music/level'
 require 'monkey_music/level_loader'
 
 require 'monkey_music/ui/console'
-require 'monkey_music/ui/browser'
 
 require 'monkey_music/metadata/track'
 require 'monkey_music/metadata/album'

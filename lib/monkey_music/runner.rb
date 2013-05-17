@@ -8,15 +8,14 @@ module MonkeyMusic
     @@default_user = 'demo_user.yaml'
     @@default_player = 'demo_player'
 
-    def initialize(arguments)
-      @arguments = arguments
+    def initialize
       @opt_parser = OptionParser.new
       @players = []
       @delay = 1
       init_parser(@opt_parser)
     end
 
-    def run
+    def run(ui_class)
       if ARGV[0] == "demo"
         puts "\tcreate ./#{@@default_level}"
         FileUtils.cp(
@@ -70,16 +69,9 @@ module MonkeyMusic
       # Load level
       level = Level.new(@players, user)
       level.load_from_file(@level_file)
-      ## Initialize UI
-      if browser_ui?
-        print "Using browser UI. Press the enter key to start game. "
-        gets
-        puts "Starting game..."
-        ui = UI::Browser.new(@delay)
-      else
-        ui = UI::Console.new(@delay)
-      end
-      ## Start game
+      # Initialize UI
+      ui = ui_class.new(@delay)
+      # Start game
       @game = Game.new(level, @players, ui)
       @game.start
     end
@@ -90,10 +82,6 @@ module MonkeyMusic
       (defined? @user_file) &&
         (defined? @level_file) &&
         (not @players.empty?)
-    end
-
-    def browser_ui?
-      @browser_ui == true
     end
 
     def init_parser(opts)
@@ -133,11 +121,6 @@ module MonkeyMusic
       opts.on('-d', '--delay DELAY', OptionParser::DecimalNumeric,
               'The delay (in seconds) between each round.') do |delay|
         @delay = delay
-      end
-
-      opts.on('-b', '--browser-ui', 
-              'View the game through the browser instead of the console.') do |password|
-        @browser_ui = true
       end
 
       opts.on('-v', '--version', 

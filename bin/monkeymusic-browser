@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require File.dirname(__FILE__) + '/../lib/monkey_music'
+require File.dirname(__FILE__) + '/../lib/monkey_music/ui/browser'
+
+runner = MonkeyMusic::Runner.new(MonkeyMusic::UI::Browser)

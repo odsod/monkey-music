@@ -1,11 +1,13 @@
 require 'em-websocket'
-require 'json'
 
 module MonkeyMusic::UI
   class Browser
 
     def initialize(delay = 1)
       @delay = delay
+      print "Using browser UI. Press the enter key to start game. "
+      gets
+      puts "Starting game..."
       puts "Initializing websockets..."
       Thread.new {
         EM.run {
