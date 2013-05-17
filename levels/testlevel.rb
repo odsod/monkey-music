@@ -5,11 +5,11 @@ time_limit 10000
 legend({ 
   "1" => Monkey.player(1),
   "2" => Monkey.player(2),
-  "X" => Track.worth(-2),
-  "x" => Track.worth(-1),
-  "l" => Track.worth(1),
-  "t" => Track.worth(2),
-  "T" => Track.worth(3),
+  "X" => Track.tier(-2),
+  "x" => Track.tier(-1),
+  "l" => Track.tier(1),
+  "t" => Track.tier(2),
+  "T" => Track.tier(3),
   "U" => User,
   "W" => Wall,
 })

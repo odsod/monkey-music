@@ -2,14 +2,14 @@ module MonkeyMusic
   class Track < Base
     attr_accessor :metadata
 
-    def self.worth(n)
-      Class.new Track do @worth = n end
+    def self.tier(n)
+      Class.new Track do @tier = n end
     end
 
     def self.from_user(user)
       track = Track.new
-      track.metadata = if @worth
-        user.recommend!(@worth) || user.recommendations.sample
+      track.metadata = if @tier
+        user.recommend!(@tier) || user.recommendations.sample
       else
         user.recommendations.sample
       end
@@ -35,7 +35,7 @@ module MonkeyMusic
         :y => @y,
         :type => self.class.name.split('::').last,
         :name => @metadata.name,
-        :multiplier => @metadata.multiplier,
+        :tier => @metadata.tier,
         :value => @metadata.value,
       }.to_json
     end

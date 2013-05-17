@@ -1,6 +1,6 @@
 module MonkeyMusic::Metadata
   class Track
-    attr_reader :uri, :name, :artist, :album, :year, :multiplier, :value
+    attr_reader :uri, :name, :artist, :album, :year, :tier, :value
 
     def initialize(args = {})
       @name = args[:name]
@@ -10,13 +10,13 @@ module MonkeyMusic::Metadata
       @uri = args[:uri]
     end
 
-    def set_value(multiplier, value)
-      @multiplier = multiplier
+    def set_value(tier, value)
+      @tier = tier
       @value = value
     end
     
     def serialize
-      "#{@name};;#{@artist};;#{@album};;#{@year}"
+      "#{@name},#{@artist},#{@album},#{@year}"
     end
   end
 end

@@ -960,19 +960,19 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Angel
-  artist: Depeche Mode
-  album: Delta Machine
-  year: 2013
-  uri: spotify:track:24nDMmzJlHcDfF8iSXWFnA
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Soothe My Soul
   artist: Depeche Mode
   album: Delta Machine
   year: 2013
   uri: spotify:track:2AxI7waLrZSY9KkL3D2huk
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Angel
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:24nDMmzJlHcDfF8iSXWFnA
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -992,19 +992,19 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Broken
-  artist: Depeche Mode
-  album: Delta Machine
-  year: 2013
-  uri: spotify:track:1Hm9pX5iwwS7jJLLPad9yJ
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Just Can't Get Enough - Single Version;2006 Digital Remaster
   artist: Depeche Mode
   album: The Best Of Depeche Mode - Volume One
   year: 2006
   uri: spotify:track:2FpyKkCFIfqmp6eQx4Rn1V
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Broken
+  artist: Depeche Mode
+  album: Delta Machine
+  year: 2013
+  uri: spotify:track:1Hm9pX5iwwS7jJLLPad9yJ
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1024,14 +1024,6 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Electricity
-  artist: Orchestral Manoeuvres In The Dark
-  album: The OMD Singles
-  year: 1998
-  uri: spotify:track:3vy2QK19RCnS4Egaq9fGhy
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Enola Gay - 2003 - Remaster
   artist: Orchestral Manoeuvres In The Dark
   album: ! 'Messages: Greatest Hits'
@@ -1039,6 +1031,14 @@
   uri: spotify:track:7tEDqanTZ8NWxV7zzqth3m
   multiplier: -1
   value: -4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Electricity
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  year: 1998
+  uri: spotify:track:3vy2QK19RCnS4Egaq9fGhy
+  multiplier: 1
+  value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Enola Gay
   artist: Orchestral Manoeuvres In The Dark
@@ -1064,19 +1064,19 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Walking On The Milky Way
-  artist: Orchestral Manoeuvres In The Dark
-  album: The OMD Singles
-  year: 1998
-  uri: spotify:track:5rN6eummWzwLTQxXZcyeCY
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Souvenir
   artist: Orchestral Manoeuvres In The Dark
   album: The OMD Singles
   year: 1998
   uri: spotify:track:1H6dcVdpMiMIydKdykY6W0
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Walking On The Milky Way
+  artist: Orchestral Manoeuvres In The Dark
+  album: The OMD Singles
+  year: 1998
+  uri: spotify:track:5rN6eummWzwLTQxXZcyeCY
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1160,14 +1160,6 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Love Action (I Believe in Love)
-  artist: The Human League
-  album: The Best Of
-  year: 1998
-  uri: spotify:track:7ttwrfe807K63aXv3VSKU1
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Mirror Man - 2003 - Remaster
   artist: The Human League
   album: The Very Best Of The Human League
@@ -1175,6 +1167,14 @@
   uri: spotify:track:3pI8laGp6QKWVfPfuQIhy3
   multiplier: 2
   value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Love Action (I Believe in Love)
+  artist: The Human League
+  album: The Best Of
+  year: 1998
+  uri: spotify:track:7ttwrfe807K63aXv3VSKU1
+  multiplier: 1
+  value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Bizarre Love Triangle
   artist: New Order
@@ -1192,19 +1192,19 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Age Of Consent
-  artist: New Order
-  album: Power Corruption & Lies [Collector's Edition]
-  year: 2008
-  uri: spotify:track:1iKCbLGTa0uNJ3AZhfoFOL
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Blue Monday [88]
   artist: New Order
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:31MOjWj3CT3dCQsMV2b8Wu
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Age Of Consent
+  artist: New Order
+  album: Power Corruption & Lies [Collector's Edition]
+  year: 2008
+  uri: spotify:track:1iKCbLGTa0uNJ3AZhfoFOL
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1232,14 +1232,6 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Temptation [7" Version]
-  artist: New Order
-  album: Movement [Collector's Edition]
-  year: 2008
-  uri: spotify:track:6aydUK6llaiRoKQyQTDNPY
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Ceremony
   artist: New Order
   album: Substance
@@ -1255,6 +1247,14 @@
   uri: spotify:track:58IihaOsYb2riCPEVabDol
   multiplier: 1
   value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Temptation [7" Version]
+  artist: New Order
+  album: Movement [Collector's Edition]
+  year: 2008
+  uri: spotify:track:6aydUK6llaiRoKQyQTDNPY
+  multiplier: 2
+  value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Such Great Heights
   artist: The Postal Service
@@ -1400,19 +1400,19 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Prologue - 2009 - Remaster
-  artist: Kraftwerk
-  album: Tour De France - 2009 Digital Remaster
-  year: 2009
-  uri: spotify:track:5bRcU0Jo1gyCBOsSln1War
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: The Man Machine - 2009 Digital Remaster
   artist: Kraftwerk
   album: The Man Machine - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:4rbt9xJMIYwjTyMUYSvEL2
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Robots
+  artist: Kraftwerk
+  album: The Mix (2009 Digital Remaster)
+  year: 2009
+  uri: spotify:track:2Dx4OYlS0zhjSm0z43midb
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1472,19 +1472,19 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Dead Sun Rising (Sonoio Remix) - Sonoio Remix
-  artist: Gary Numan
-  album: Dead Moon Falling
-  year: 2013
-  uri: spotify:track:5t8sVFvTOpR8rl8u4dcFcW
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Music For Chameleons
   artist: Gary Numan
   album: I Assassin
   year: 1982
   uri: spotify:track:4fqRCykZ9uVe4PNSjWIR2f
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Dead Sun Rising (Sonoio Remix) - Sonoio Remix
+  artist: Gary Numan
+  album: Dead Moon Falling
+  year: 2013
+  uri: spotify:track:5t8sVFvTOpR8rl8u4dcFcW
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1536,19 +1536,19 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: The Youth
-  artist: MGMT
-  album: Oracular Spectacular
-  year: 2007
-  uri: spotify:track:5nv854ey1k43KaZ0kHmE4Z
-  multiplier: 2
-  value: 16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Pieces of What
   artist: MGMT
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:6wxDu7ISgm5nppPMea4W7D
+  multiplier: 2
+  value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Youth
+  artist: MGMT
+  album: Oracular Spectacular
+  year: 2007
+  uri: spotify:track:5nv854ey1k43KaZ0kHmE4Z
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1584,14 +1584,6 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Oblivion (feat. Susanne Sundfør)
-  artist: M83
-  album: Oblivion (feat. Susanne Sundfør)
-  year: 2013
-  uri: spotify:track:66fKIbn90iaQZ0jEuurozt
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: We Own The Sky
   artist: M83
   album: Saturdays = Youth
@@ -1600,19 +1592,19 @@
   multiplier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Oblivion (feat. Susanne Sundfør)
+  artist: M83
+  album: Oblivion (feat. Susanne Sundfør)
+  year: 2013
+  uri: spotify:track:66fKIbn90iaQZ0jEuurozt
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Jack's Dream
   artist: M83
   album: Oblivion - Original Motion Picture Soundtrack
   year: 2013
   uri: spotify:track:2OsVwe7SubQyge9LJFTh0Y
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Metadata::Track
-  name: Waking Up
-  artist: M83
-  album: Oblivion - Original Motion Picture Soundtrack
-  year: 2013
-  uri: spotify:track:7fco9ocFesu9I09AMmpWkW
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1623,6 +1615,14 @@
   uri: spotify:track:5pCTXoSYslXKP2D21e3ZJK
   multiplier: 2
   value: 16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Waking Up
+  artist: M83
+  album: Oblivion - Original Motion Picture Soundtrack
+  year: 2013
+  uri: spotify:track:7fco9ocFesu9I09AMmpWkW
+  multiplier: 1
+  value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Midnight City [Eric Prydz Private Remix] - Eric Prydz Private Remix
   artist: M83
@@ -1648,11 +1648,11 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Odyssey Rescue
+  name: Reunion
   artist: M83
-  album: Oblivion - Original Motion Picture Soundtrack
-  year: 2013
-  uri: spotify:track:1E3O3g7xZsFAGyK4g7ott4
+  album: Hurry Up We're Dreaming
+  year: 2011
+  uri: spotify:track:4dNCg774LzE2kmtbMOLdP7
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1696,14 +1696,6 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Girls on Film
-  artist: Duran Duran
-  album: Duran Duran
-  year: 1993
-  uri: spotify:track:5KE4iIOeucoLMnkF6NEwKM
-  multiplier: 1
-  value: 4
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: The Wild Boys
   artist: Duran Duran
   album: Greatest
@@ -1712,11 +1704,11 @@
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: The Reflex
+  name: Girls on Film
   artist: Duran Duran
-  album: Greatest
-  year: 1998
-  uri: spotify:track:0OsWMTxDjtpmJjX43113oq
+  album: Duran Duran
+  year: 1993
+  uri: spotify:track:5KE4iIOeucoLMnkF6NEwKM
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1725,6 +1717,14 @@
   album: Notorious
   year: 1986
   uri: spotify:track:1stJclD9IGUbxtUnl8CzG3
+  multiplier: 1
+  value: 4
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: The Reflex
+  artist: Duran Duran
+  album: Greatest
+  year: 1998
+  uri: spotify:track:0OsWMTxDjtpmJjX43113oq
   multiplier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1776,14 +1776,6 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Scream
-  artist: Misfits
-  album: Famous Monsters
-  year: 1999
-  uri: spotify:track:2uqQXl3CWniLE0Uhfb7izu
-  multiplier: -2
-  value: -16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Saturday Night
   artist: Misfits
   album: Famous Monsters
@@ -1792,11 +1784,11 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Dig Up Her Bones
+  name: Scream
   artist: Misfits
-  album: American Psycho
-  year: 1997
-  uri: spotify:track:16MPZDpM5JTtIBs3pOMSWx
+  album: Famous Monsters
+  year: 1999
+  uri: spotify:track:2uqQXl3CWniLE0Uhfb7izu
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1805,6 +1797,14 @@
   album: Collection
   year: 1986
   uri: spotify:track:38T3oJ4ykhLtoHFjhpjOoL
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Dig Up Her Bones
+  artist: Misfits
+  album: American Psycho
+  year: 1997
+  uri: spotify:track:16MPZDpM5JTtIBs3pOMSWx
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1856,6 +1856,22 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: She Talks to Rainbows
+  artist: The Ramones
+  album: Adios Amigos
+  year: 1995
+  uri: spotify:track:0GVcm9IeiuWWOQk3yXI7yx
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: Have You Ever Seen The Rain
+  artist: The Ramones
+  album: Acid Eaters
+  year: 1993
+  uri: spotify:track:4Ri7GhJiAHy9dCYnxxWuzM
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: Merry Christmas (I Don't Want to Fight Tonight)
   artist: The Ramones
   album: Brain Drain
@@ -1872,27 +1888,11 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: She Talks to Rainbows
-  artist: The Ramones
-  album: Adios Amigos
-  year: 1995
-  uri: spotify:track:0GVcm9IeiuWWOQk3yXI7yx
-  multiplier: -2
-  value: -16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: The Kkk Took My Baby Away - Live
   artist: The Ramones
   album: Loco Live
   year: 1991
   uri: spotify:track:29KP3ieVXuw7rahzuK422u
-  multiplier: -2
-  value: -16
-- !ruby/object:MonkeyMusic::Metadata::Track
-  name: Have You Ever Seen The Rain
-  artist: The Ramones
-  album: Acid Eaters
-  year: 1993
-  uri: spotify:track:4Ri7GhJiAHy9dCYnxxWuzM
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1912,6 +1912,14 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
+  name: Los Angeles Is Burning
+  artist: Bad Religion
+  album: The Empire Strikes First
+  year: 2004
+  uri: spotify:track:27KrzUfX8fHDEYyvmZdrqa
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
   name: True North
   artist: Bad Religion
   album: True North
@@ -1928,27 +1936,19 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Los Angeles Is Burning
-  artist: Bad Religion
-  album: The Empire Strikes First
-  year: 2004
-  uri: spotify:track:27KrzUfX8fHDEYyvmZdrqa
-  multiplier: -2
-  value: -16
-- !ruby/object:MonkeyMusic::Metadata::Track
-  name: Past is Dead
-  artist: Bad Religion
-  album: True North
-  year: 2013
-  uri: spotify:track:0yC8t1Rd1RbscJAZI4n8aD
-  multiplier: -2
-  value: -16
-- !ruby/object:MonkeyMusic::Metadata::Track
   name: Punk Rock Song
   artist: Bad Religion
   album: The Gray Race
   year: 1996
   uri: spotify:track:3cAeRRvExh8FwzWPQqMhsS
+  multiplier: -2
+  value: -16
+- !ruby/object:MonkeyMusic::Metadata::Track
+  name: You
+  artist: Bad Religion
+  album: Punk-O-Rama 3
+  year: 1998
+  uri: spotify:track:2taLSL36n5j5BxOqBAILMN
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -1960,19 +1960,19 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Robin Hood in Reverse
+  name: Past is Dead
   artist: Bad Religion
   album: True North
   year: 2013
-  uri: spotify:track:6nWNZQeEMgkM0al5pmxazN
+  uri: spotify:track:0yC8t1Rd1RbscJAZI4n8aD
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: You
+  name: Sorrow
   artist: Bad Religion
-  album: Punk-O-Rama 3
-  year: 1998
-  uri: spotify:track:2taLSL36n5j5BxOqBAILMN
+  album: The Process Of Belief
+  year: 2002
+  uri: spotify:track:2ccdGN0u41iaveyQeae9Iy
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -2008,11 +2008,11 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Bankrobber
+  name: Should I Stay Or Should I Go
   artist: The Clash
-  album: The Story Of The Clash Volume 1
-  year: 1988
-  uri: spotify:track:326OKIhvo9ZJBcjGah2e1E
+  album: The Essential Clash
+  year: 2001
+  uri: spotify:track:7EwcNyYIMehlWfjk0yprbj
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
@@ -2024,11 +2024,11 @@
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
-  name: Should I Stay Or Should I Go
+  name: Bankrobber
   artist: The Clash
-  album: The Essential Clash
-  year: 2001
-  uri: spotify:track:7EwcNyYIMehlWfjk0yprbj
+  album: The Story Of The Clash Volume 1
+  year: 1988
+  uri: spotify:track:326OKIhvo9ZJBcjGah2e1E
   multiplier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track

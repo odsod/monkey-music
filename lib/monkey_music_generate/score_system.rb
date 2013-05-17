@@ -9,23 +9,23 @@ module MonkeyMusic::Generate
     end
 
     def evaluate!(track)
-      multiplier = 0
+      tier = 0
       if @user.toplists[:top_tracks].any? {|t| t.name == track.name }
-        multiplier = -1
+        tier = -1
       elsif @user.toplists[:disliked_artists].any? {|ar| ar.name == track.artist }
-        multiplier = -2
+        tier = -2
       else
         if @user.toplists[:top_albums].any? {|al| al.name == track.album }
-          multiplier += 1
+          tier += 1
         end
         if @user.toplists[:top_artists].any? {|ar| ar.name == track.artist }
-          multiplier += 1
+          tier += 1
         end
         if @top_decade == decade_of(track.year)
-          multiplier += 1
+          tier += 1
         end
       end
-      track.set_value(multiplier, 4**multiplier.abs * sign(multiplier))
+      track.set_value(tier, 4**tier.abs * sign(tier))
     end
 
     private
