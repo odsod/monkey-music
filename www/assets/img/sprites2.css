@@ -1,0 +1,134 @@
+/*
+
+        Creating a sprite from following images:
+        
+        sprites2/flipped_sprites00.png (64x64)
+        sprites2/flipped_sprites01.png (64x64)
+        sprites2/flipped_sprites02.png (64x64)
+        sprites2/flipped_sprites03.png (64x64)
+        sprites2/flipped_sprites04.png (64x64)
+        sprites2/flipped_sprites05.png (64x64)
+        sprites2/flipped_sprites06.png (64x64)
+        sprites2/flipped_sprites07.png (64x64)
+        sprites2/flipped_sprites08.png (64x64)
+        sprites2/flipped_sprites09.png (64x64)
+        sprites2/flipped_sprites10.png (64x64)
+        sprites2/flipped_sprites11.png (64x64)
+        sprites2/flipped_sprites12.png (64x64)
+        sprites2/flipped_sprites13.png (64x64)
+        sprites2/flipped_sprites14.png (64x64)
+        sprites2/flipped_sprites15.png (64x64)
+        sprites2/flipped_sprites16.png (64x64)
+        sprites2/flipped_sprites17.png (64x64)
+        sprites2/flipped_sprites18.png (64x64)
+        sprites2/flipped_sprites19.png (64x64)
+        sprites2/flipped_sprites20.png (64x64)
+        sprites2/flipped_sprites21.png (64x64)
+        sprites2/flipped_sprites22.png (64x64)
+        sprites2/flipped_sprites23.png (64x64)
+        sprites2/flipped_sprites24.png (64x64)
+        sprites2/flipped_sprites25.png (64x64)
+        sprites2/flipped_sprites26.png (64x64)
+        sprites2/flipped_sprites27.png (64x64)
+        sprites2/flipped_sprites28.png (64x64)
+        sprites2/flipped_sprites29.png (64x64)
+        sprites2/sprites00.png (64x64)
+        sprites2/sprites01.png (64x64)
+        sprites2/sprites02.png (64x64)
+        sprites2/sprites03.png (64x64)
+        sprites2/sprites04.png (64x64)
+        sprites2/sprites05.png (64x64)
+        sprites2/sprites06.png (64x64)
+        sprites2/sprites07.png (64x64)
+        sprites2/sprites08.png (64x64)
+        sprites2/sprites09.png (64x64)
+        sprites2/sprites10.png (64x64)
+        sprites2/sprites11.png (64x64)
+        sprites2/sprites12.png (64x64)
+        sprites2/sprites13.png (64x64)
+        sprites2/sprites14.png (64x64)
+        sprites2/sprites15.png (64x64)
+        sprites2/sprites16.png (64x64)
+        sprites2/sprites17.png (64x64)
+        sprites2/sprites18.png (64x64)
+        sprites2/sprites19.png (64x64)
+        sprites2/sprites20.png (64x64)
+        sprites2/sprites21.png (64x64)
+        sprites2/sprites22.png (64x64)
+        sprites2/sprites23.png (64x64)
+        sprites2/sprites24.png (64x64)
+        sprites2/sprites25.png (64x64)
+        sprites2/sprites26.png (64x64)
+        sprites2/sprites27.png (64x64)
+        sprites2/sprites28.png (64x64)
+        sprites2/sprites29.png (64x64)
+
+        Output files:
+          sprites2.png
+          sprites2.css
+
+        Output size:
+          3840x64
+
+
+*/
+img.flipped_sprites00 { width: 64px; height: 64px; background: url(sprites2.png) 0px 0px no-repeat; }
+img.flipped_sprites01 { width: 64px; height: 64px; background: url(sprites2.png) -64px 0px no-repeat; }
+img.flipped_sprites02 { width: 64px; height: 64px; background: url(sprites2.png) -128px 0px no-repeat; }
+img.flipped_sprites03 { width: 64px; height: 64px; background: url(sprites2.png) -192px 0px no-repeat; }
+img.flipped_sprites04 { width: 64px; height: 64px; background: url(sprites2.png) -256px 0px no-repeat; }
+img.flipped_sprites05 { width: 64px; height: 64px; background: url(sprites2.png) -320px 0px no-repeat; }
+img.flipped_sprites06 { width: 64px; height: 64px; background: url(sprites2.png) -384px 0px no-repeat; }
+img.flipped_sprites07 { width: 64px; height: 64px; background: url(sprites2.png) -448px 0px no-repeat; }
+img.flipped_sprites08 { width: 64px; height: 64px; background: url(sprites2.png) -512px 0px no-repeat; }
+img.flipped_sprites09 { width: 64px; height: 64px; background: url(sprites2.png) -576px 0px no-repeat; }
+img.flipped_sprites10 { width: 64px; height: 64px; background: url(sprites2.png) -640px 0px no-repeat; }
+img.flipped_sprites11 { width: 64px; height: 64px; background: url(sprites2.png) -704px 0px no-repeat; }
+img.flipped_sprites12 { width: 64px; height: 64px; background: url(sprites2.png) -768px 0px no-repeat; }
+img.flipped_sprites13 { width: 64px; height: 64px; background: url(sprites2.png) -832px 0px no-repeat; }
+img.flipped_sprites14 { width: 64px; height: 64px; background: url(sprites2.png) -896px 0px no-repeat; }
+img.flipped_sprites15 { width: 64px; height: 64px; background: url(sprites2.png) -960px 0px no-repeat; }
+img.flipped_sprites16 { width: 64px; height: 64px; background: url(sprites2.png) -1024px 0px no-repeat; }
+img.flipped_sprites17 { width: 64px; height: 64px; background: url(sprites2.png) -1088px 0px no-repeat; }
+img.flipped_sprites18 { width: 64px; height: 64px; background: url(sprites2.png) -1152px 0px no-repeat; }
+img.flipped_sprites19 { width: 64px; height: 64px; background: url(sprites2.png) -1216px 0px no-repeat; }
+img.flipped_sprites20 { width: 64px; height: 64px; background: url(sprites2.png) -1280px 0px no-repeat; }
+img.flipped_sprites21 { width: 64px; height: 64px; background: url(sprites2.png) -1344px 0px no-repeat; }
+img.flipped_sprites22 { width: 64px; height: 64px; background: url(sprites2.png) -1408px 0px no-repeat; }
+img.flipped_sprites23 { width: 64px; height: 64px; background: url(sprites2.png) -1472px 0px no-repeat; }
+img.flipped_sprites24 { width: 64px; height: 64px; background: url(sprites2.png) -1536px 0px no-repeat; }
+img.flipped_sprites25 { width: 64px; height: 64px; background: url(sprites2.png) -1600px 0px no-repeat; }
+img.flipped_sprites26 { width: 64px; height: 64px; background: url(sprites2.png) -1664px 0px no-repeat; }
+img.flipped_sprites27 { width: 64px; height: 64px; background: url(sprites2.png) -1728px 0px no-repeat; }
+img.flipped_sprites28 { width: 64px; height: 64px; background: url(sprites2.png) -1792px 0px no-repeat; }
+img.flipped_sprites29 { width: 64px; height: 64px; background: url(sprites2.png) -1856px 0px no-repeat; }
+img.sprites00 { width: 64px; height: 64px; background: url(sprites2.png) -1920px 0px no-repeat; }
+img.sprites01 { width: 64px; height: 64px; background: url(sprites2.png) -1984px 0px no-repeat; }
+img.sprites02 { width: 64px; height: 64px; background: url(sprites2.png) -2048px 0px no-repeat; }
+img.sprites03 { width: 64px; height: 64px; background: url(sprites2.png) -2112px 0px no-repeat; }
+img.sprites04 { width: 64px; height: 64px; background: url(sprites2.png) -2176px 0px no-repeat; }
+img.sprites05 { width: 64px; height: 64px; background: url(sprites2.png) -2240px 0px no-repeat; }
+img.sprites06 { width: 64px; height: 64px; background: url(sprites2.png) -2304px 0px no-repeat; }
+img.sprites07 { width: 64px; height: 64px; background: url(sprites2.png) -2368px 0px no-repeat; }
+img.sprites08 { width: 64px; height: 64px; background: url(sprites2.png) -2432px 0px no-repeat; }
+img.sprites09 { width: 64px; height: 64px; background: url(sprites2.png) -2496px 0px no-repeat; }
+img.sprites10 { width: 64px; height: 64px; background: url(sprites2.png) -2560px 0px no-repeat; }
+img.sprites11 { width: 64px; height: 64px; background: url(sprites2.png) -2624px 0px no-repeat; }
+img.sprites12 { width: 64px; height: 64px; background: url(sprites2.png) -2688px 0px no-repeat; }
+img.sprites13 { width: 64px; height: 64px; background: url(sprites2.png) -2752px 0px no-repeat; }
+img.sprites14 { width: 64px; height: 64px; background: url(sprites2.png) -2816px 0px no-repeat; }
+img.sprites15 { width: 64px; height: 64px; background: url(sprites2.png) -2880px 0px no-repeat; }
+img.sprites16 { width: 64px; height: 64px; background: url(sprites2.png) -2944px 0px no-repeat; }
+img.sprites17 { width: 64px; height: 64px; background: url(sprites2.png) -3008px 0px no-repeat; }
+img.sprites18 { width: 64px; height: 64px; background: url(sprites2.png) -3072px 0px no-repeat; }
+img.sprites19 { width: 64px; height: 64px; background: url(sprites2.png) -3136px 0px no-repeat; }
+img.sprites20 { width: 64px; height: 64px; background: url(sprites2.png) -3200px 0px no-repeat; }
+img.sprites21 { width: 64px; height: 64px; background: url(sprites2.png) -3264px 0px no-repeat; }
+img.sprites22 { width: 64px; height: 64px; background: url(sprites2.png) -3328px 0px no-repeat; }
+img.sprites23 { width: 64px; height: 64px; background: url(sprites2.png) -3392px 0px no-repeat; }
+img.sprites24 { width: 64px; height: 64px; background: url(sprites2.png) -3456px 0px no-repeat; }
+img.sprites25 { width: 64px; height: 64px; background: url(sprites2.png) -3520px 0px no-repeat; }
+img.sprites26 { width: 64px; height: 64px; background: url(sprites2.png) -3584px 0px no-repeat; }
+img.sprites27 { width: 64px; height: 64px; background: url(sprites2.png) -3648px 0px no-repeat; }
+img.sprites28 { width: 64px; height: 64px; background: url(sprites2.png) -3712px 0px no-repeat; }
+img.sprites29 { width: 64px; height: 64px; background: url(sprites2.png) -3776px 0px no-repeat; }

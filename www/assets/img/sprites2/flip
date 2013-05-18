@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+Dir.glob('./*.png').each do |img|
+  system("convert #{img} -flop flipped_#{img.split("/").pop}");
+end

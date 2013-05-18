@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+Dir.glob('./*.png').each do |img|
+  system("convert #{img} -modulate 100,100,50 #{img}");
+end

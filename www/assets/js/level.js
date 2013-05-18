@@ -20,11 +20,15 @@ monkeymusic.level = (function (createjs, tween, window) {
     stage.removeAllChildren();
     stage.clear();
     // Initialize units
+    var numMonkeys = 0;
     _(level.units).each(function (unit) {
       var sprite = monkeymusic.sprites.Sheet();
       if (unit.type === 'Track') {
         sprite.gotoAndPlay('Track' + (unit.tier < 0 ? 'M' : '') + Math.abs(unit.tier) + 'normalwest');
         sprite.shadow = new createjs.Shadow('#999', 3, 3, 5);
+      } else if (unit.type === 'Monkey') {
+        sprite = monkeymusic.sprites.Monkey();
+        sprite.gotoAndPlay(unit.type + 'normal' + (unit.facing || 'east'));
       } else {
         sprite.gotoAndPlay(unit.type + 'normal' + (unit.facing || 'east'));
       }

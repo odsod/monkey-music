@@ -26,6 +26,7 @@ var monkeymusic = (function (document) {
   function onclose() {
     if (isPlaying) {
       monkeymusic.level.destroy();
+      monkeymusic.sprites.reset();
       isPlaying = false;
       $('body').removeClass('playing');
       $('#scores').scoreboard('destroy');

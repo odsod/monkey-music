@@ -134,29 +134,46 @@ html, body {
 table#scores {
   display: none;
   table-layout: fixed;
-  margin-top: 10px;
   z-index: 5;
 }
 /* line 33, ../sass/styles.sass */
 body.playing table#scores {
   display: table;
 }
-/* line 40, ../sass/styles.sass */
+/* line 39, ../sass/styles.sass */
 table#scores td {
   text-align: center;
 }
-/* line 42, ../sass/styles.sass */
+/* line 41, ../sass/styles.sass */
 table#scores tr.scores {
   font-size: 80px;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
 }
-/* line 45, ../sass/styles.sass */
+/* line 44, ../sass/styles.sass */
+table#scores tr.scores td {
+  background-repeat: no-repeat;
+  background-position: 35% top;
+  background-size: 50px;
+}
+/* line 48, ../sass/styles.sass */
+table#scores tr.scores td:nth-child(3n+1) {
+  background-image: url('../img/sprites/sprites16.png?1368881095');
+}
+/* line 50, ../sass/styles.sass */
+table#scores tr.scores td:nth-child(3n+2) {
+  background-image: url('../img/sprites2/sprites16.png?1368896709');
+}
+/* line 52, ../sass/styles.sass */
+table#scores tr.scores td:nth-child(3n) {
+  background-image: url('../img/sprites3/sprites16.png?1368896964');
+}
+/* line 54, ../sass/styles.sass */
 table#scores tr.teams {
   font-size: 25px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 55, ../sass/styles.sass */
+/* line 64, ../sass/styles.sass */
 #splash {
   position: absolute;
   top: 30%;
@@ -165,11 +182,11 @@ table#scores tr.teams {
   font-size: 200px;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }
-/* line 56, ../sass/styles.sass */
+/* line 65, ../sass/styles.sass */
 body.playing #splash {
   display: none;
 }
-/* line 64, ../sass/styles.sass */
+/* line 73, ../sass/styles.sass */
 #splash .brand {
   text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -180,7 +197,7 @@ body.playing #splash {
   left: 0;
   padding-right: 200px;
 }
-/* line 73, ../sass/styles.sass */
+/* line 82, ../sass/styles.sass */
 #splash .addon {
   font-size: 100px;
   position: absolute;
@@ -190,18 +207,18 @@ body.playing #splash {
   -webkit-animation: wagging 2s infinite alternate;
 }
 
-/* line 82, ../sass/styles.sass */
+/* line 91, ../sass/styles.sass */
 #scores-container {
   height: 10%;
 }
 
-/* line 85, ../sass/styles.sass */
+/* line 94, ../sass/styles.sass */
 table#scores {
   height: 100%;
   width: 100%;
 }
 
-/* line 89, ../sass/styles.sass */
+/* line 98, ../sass/styles.sass */
 #canvas-container {
   height: 90%;
 }

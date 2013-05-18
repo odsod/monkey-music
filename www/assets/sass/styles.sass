@@ -33,7 +33,6 @@ table#scores
   body.playing &
     display: table
   table-layout: fixed
-  margin-top: 10px
   //position: absolute
   //width: 100%
   z-index: 5
@@ -42,12 +41,22 @@ table#scores
   tr.scores
     font-size: 80px
     text-shadow: 4px 4px $shadow-color
+    td
+      background-repeat: no-repeat
+      background-position: 35% top
+      background-size: 50px
+    td:nth-child(3n+1)
+      background-image: image-url('sprites/sprites16.png')
+    td:nth-child(3n+2)
+      background-image: image-url('sprites2/sprites16.png')
+    td:nth-child(3n)
+      background-image: image-url('sprites3/sprites16.png')
   tr.teams
     font-size: 25px
     text-shadow: 1px 1px $shadow-color
-    td:nth-child(n)
+    td:nth-child(3n+1)
       //color: #0000e6
-    td:nth-child(2n)
+    td:nth-child(3n+2)
       //color: #ff1a1a
     td:nth-child(3n)
       //color: #00e6e6
