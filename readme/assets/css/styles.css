@@ -6,77 +6,117 @@
 /* line 64, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 14px;
-  line-height: 1.71429em;
+  line-height: 1.57143em;
 }
 
 /* line 10, ../sass/styles.sass */
 body {
   font-family: "Proxima Nova", sans-serif;
   text-align: justify;
+  font-weight: 100;
 }
 
-/* line 14, ../sass/styles.sass */
-p {
-  font-weight: 300;
-}
-
-/* line 17, ../sass/styles.sass */
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-/* line 20, ../sass/styles.sass */
+/* line 15, ../sass/styles.sass */
 h1 {
-  display: none;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.57143em;
+  color: rgba(0, 0, 0, 0);
+  background-image: url('../img/logo.png?1368562860');
+  height: 150px;
+  background-size: 100% 100%;
 }
 
-/* line 23, ../sass/styles.sass */
+/* line 22, ../sass/styles.sass */
 h2 {
   font-size: 1.8em;
-  line-height: 1.90476em;
+  line-height: 1.74603em;
+  margin-top: 3.14286em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.78571em;
   color: #84bd00;
-  margin: 0.85714em 0;
+  margin: 0.78571em 0;
   border-bottom: 2px solid #84bd00;
+  background-repeat: no-repeat;
+  background-position: right -22px;
+  page-break-after: avoid;
+  text-align: left;
+}
+/* line 33, ../sass/styles.sass */
+h2:nth-of-type(6n+1) {
+  background-image: url('../img/sprites/sprites08.png?1368865261');
+}
+/* line 35, ../sass/styles.sass */
+h2:nth-of-type(6n+2) {
+  background-image: url('../img/sprites/sprites22.png?1368865261');
+}
+/* line 37, ../sass/styles.sass */
+h2:nth-of-type(6n+3) {
+  background-image: url('../img/sprites/sprites18.png?1368865261');
+}
+/* line 39, ../sass/styles.sass */
+h2:nth-of-type(6n+4) {
+  background-image: url('../img/sprites/sprites12.png?1368865261');
+}
+/* line 41, ../sass/styles.sass */
+h2:nth-of-type(6n+5) {
+  background-image: url('../img/sprites/sprites17.png?1368865261');
+}
+/* line 43, ../sass/styles.sass */
+h2:nth-of-type(6n) {
+  background-image: url('../img/sprites/sprites23.png?1368865261');
 }
 
-/* line 29, ../sass/styles.sass */
+/* line 46, ../sass/styles.sass */
 h3 {
-  font-size: 1.5em;
-  line-height: 2.28571em;
+  font-size: 1.2em;
+  line-height: 1.30952em;
+  margin-top: 1.57143em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.78571em;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  padding-left: 42px;
+  background-position: 0px -10px;
+  background-image: url('../img/sprites/sprites00.png?1368865261');
+  background-size: 32px 32px;
 }
 
-/* line 32, ../sass/styles.sass */
+/* line 56, ../sass/styles.sass */
 img.logo {
   width: 100%;
 }
 
-/* line 35, ../sass/styles.sass */
+/* line 59, ../sass/styles.sass */
 pre {
-  padding-left: 1.71429em;
+  padding-left: 1.57143em;
   page-break-inside: avoid;
 }
 
-/* line 39, ../sass/styles.sass */
+/* line 63, ../sass/styles.sass */
 code {
-  font-family: Monaco;
+  font-family: Monaco, "DejaVu Sans Mono", monospace;
 }
 
-/* line 42, ../sass/styles.sass */
+/* line 66, ../sass/styles.sass */
 .tip {
-  margin-top: 2.57143em;
-  padding-top: 0.85714em;
-  padding-bottom: 0.85714em;
-  margin-bottom: 2.57143em;
+  margin-top: 2.35714em;
+  padding-top: 0.78571em;
+  padding-bottom: 0.78571em;
+  margin-bottom: 2.35714em;
   position: relative;
-  padding-left: 72px;
-  padding-right: 48px;
+  padding-left: 66px;
+  padding-right: 44px;
   border: 2px solid #84bd00;
   page-break-inside: avoid;
 }
-/* line 49, ../sass/styles.sass */
+/* line 73, ../sass/styles.sass */
 .tip::before {
   font-size: 2.14286em;
-  line-height: 1.6em;
+  line-height: 1.46667em;
   content: "!";
   position: absolute;
   color: white;
@@ -84,6 +124,6 @@ code {
   top: 0;
   left: 0;
   height: 100%;
-  width: 48px;
+  width: 44px;
   text-align: center;
 }

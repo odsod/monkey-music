@@ -1,7 +1,7 @@
 @import "compass/typography/vertical_rhythm"
 
 $base-font-size: 14px
-$base-line-height: 24px
+$base-line-height: 22px
 
 $green: rgb(132,189,0)
 
@@ -10,24 +10,48 @@ $green: rgb(132,189,0)
 body
   font-family: "Proxima Nova", sans-serif
   text-align: justify
-
-p
-  font-weight: 300
-
-h1, h2, h3
-  font-weight: 700
+  font-weight: 100
 
 h1
-  display: none
+  +rhythm(0, 0, 0, 1)
+  color: rgba(0,0,0,0)
+  background-image: image-url("logo.png")
+  height: 150px
+  background-size: 100% 100%
 
 h2
   +adjust-font-size-to($base-font-size*1.8)
+  +rhythm(2, 0, 0, 0.5)
   color: $green
   margin: rhythm(0.5) 0
   border-bottom: 2px solid $green
+  background-repeat: no-repeat
+  //padding-left: 74px
+  background-position: right -22px
+  page-break-after: avoid
+  text-align: left
+  &:nth-of-type(6n+1)
+    background-image: image-url("sprites/sprites08.png")
+  &:nth-of-type(6n+2)
+    background-image: image-url("sprites/sprites22.png")
+  &:nth-of-type(6n+3)
+    background-image: image-url("sprites/sprites18.png")
+  &:nth-of-type(6n+4)
+    background-image: image-url("sprites/sprites12.png")
+  &:nth-of-type(6n+5)
+    background-image: image-url("sprites/sprites17.png")
+  &:nth-of-type(6n)
+    background-image: image-url("sprites/sprites23.png")
 
 h3
-  +adjust-font-size-to($base-font-size*1.5)
+  +adjust-font-size-to($base-font-size*1.2)
+  +rhythm(1, 0, 0, 0.5)
+  font-weight: 500
+  background-repeat: no-repeat
+  padding-left: 42px
+  background-position: 0px -10px
+  background-image: image-url("sprites/sprites00.png")
+  background-size: 32px 32px
 
 img.logo
   width: 100%
@@ -37,7 +61,7 @@ pre
   page-break-inside: avoid
 
 code
-  font-family: Monaco
+  font-family: Monaco, "DejaVu Sans Mono", monospace
 
 .tip
   +rhythm(1.5, .5, .5, 1.5)
