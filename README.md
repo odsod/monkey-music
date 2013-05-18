@@ -93,6 +93,10 @@ Example: `spotify:track:5H85hOp2oMlhMh9JlkdJP2`.
 
 Tracks can be picked up and carried around by monkeys.
 
+Tracks will remain stationary until picked up. They will neither move nor
+suddenly appear out of nowhere.
+{: .tip}
+
 ### The User
 
 * ASCII: `U`
