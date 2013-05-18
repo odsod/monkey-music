@@ -19,11 +19,12 @@ public class DemoPlayer {
     Monkey monkey;
     if (roundType.equals("INIT")) {
       monkey = new Monkey(id);
-      monkey.init();
+      monkey.init(sc);
     } else {
       monkey = Monkey.readFromCache(id);
-      monkey.turn();
+      monkey.turn(sc);
     }
+    sc.close();
     monkey.writeToCache();
   }
 }
@@ -31,7 +32,7 @@ public class DemoPlayer {
 class Monkey implements Serializable {
   public static final long serialVersionUID = 0;
 
-  public static final String CACHE_PREFIX = "cache_";
+  static final String CACHE_PREFIX = "cache_";
 
   final String id;
   // Position
@@ -47,11 +48,8 @@ class Monkey implements Serializable {
   // Tracks
   List<Track> unknownTracks;
   List<Track> knownTracks;
-  boolean firstTurn = true;
-  int turnLimit;
-  int width;
-  int height;
-  int turn;
+  int turn, turnLimit;
+  int width, height;
   int remainingCapacity, remainingExecutionTime;
   String[][] level;
 
@@ -59,33 +57,33 @@ class Monkey implements Serializable {
     this.id = id;
   }
 
-  void init() {
-    parseInit();
-    parseToplists();
+  void init(Scanner sc) {
+    parseInit(sc);
+    parseToplists(sc);
   }
 
-  void turn() {
-    parseTurn();
-    parseMetadata();
-    parseLevel();
+  void turn(Scanner sc) {
+    parseTurn(sc);
+    parseMetadata(sc);
+    parseLevel(sc);
   }
 
-  void parseInit() {
-    Scanner sc = new Scanner(System.in);
+  void parseInit(Scanner sc) {
     width = sc.nextInt();
     height = sc.nextInt();
     turnLimit = sc.nextInt();
     level = new String[width][height];
-    sc.close();
   }
 
-  void parseToplists() {
-    Scanner sc = new Scanner(System.in);
+  void parseToplists(Scanner sc) {
     List<Integer> decades = new ArrayList<Integer>();
     // Top tracks
     int numTracks = sc.nextInt();
+    sc.nextLine();
+    System.err.println(numTracks);
     for (int i = 0; i < numTracks; i++) {
       String entry = sc.nextLine();
+      System.err.println(entry);
       // 0:[track],1:[album],2:[artist],3:[year]
       String[] parts = entry.split(",");
       topTracks.add(parts[0]);
@@ -94,6 +92,7 @@ class Monkey implements Serializable {
     }
     // Top albums
     int numAlbums = sc.nextInt();
+    sc.nextLine();
     for (int i = 0; i < numAlbums; i++) {
       String entry = sc.nextLine();
       // 0:[album],1:[artist],2:[year]
@@ -107,6 +106,7 @@ class Monkey implements Serializable {
         decades.toArray(new Integer[decades.size()]));
     // Top artists
     int numArtists = sc.nextInt();
+    sc.nextLine();
     for (int i = 0; i < numArtists; i++) {
       // 0:[artist]
       String entry = sc.nextLine();
@@ -114,25 +114,23 @@ class Monkey implements Serializable {
     }
     // Disliked artists
     int numDislikedArtists = sc.nextInt();
+    sc.nextLine();
     for (int i = 0; i < numDislikedArtists; i++) {
       // 0:[artist]
       String entry = sc.nextLine();
       dislikedArtists.add(entry);
     }
-    sc.close();
   }
 
-  void parseTurn() {
-    Scanner sc = new Scanner(System.in);
+  void parseTurn(Scanner sc) {
     turn = sc.nextInt();
     remainingCapacity = sc.nextInt();
     remainingExecutionTime = sc.nextInt();
-    sc.close();
   }
 
-  void parseMetadata() {
-    Scanner sc = new Scanner(System.in);
+  void parseMetadata(Scanner sc) {
     int numResults = sc.nextInt();
+    sc.nextLine();
     for (int i = 0; i < numResults; i++) {
       String metadata = sc.nextLine();
       Track knownTrack = Track.fromMetadata(metadata);
@@ -140,13 +138,11 @@ class Monkey implements Serializable {
       String[] parts = metadata.split(",", 1);
       knownURIs.put(parts[0], knownTrack);
     }
-    sc.close();
   }
 
-  void parseLevel() {
+  void parseLevel(Scanner sc) {
     unknownTracks = new ArrayList<Track>();
     knownTracks = new ArrayList<Track>();
-    Scanner sc = new Scanner(System.in);
     for (int y = 0; y < height; y++) {
       String row = sc.nextLine();
       String[] cells = row.split(",");
@@ -162,7 +158,6 @@ class Monkey implements Serializable {
         }
       }
     }
-    sc.close();
   }
 
   void writeToCache() throws Exception {
@@ -182,7 +177,9 @@ class Monkey implements Serializable {
 
 }
 
-class Track implements Cloneable {
+class Track implements Cloneable, Serializable {
+  public static final long serialVersionUID = 0;
+
   String uri, name, album, artist, year;
   int x, y;
   int value;
@@ -222,7 +219,6 @@ class Track implements Cloneable {
 }
 
 class Util {
-
   /** 
   * http://stackoverflow.com/questions/8545590/java-find-the-most-popular-element-in-int-array
   */
@@ -250,6 +246,6 @@ class Util {
   }
 
   static boolean isURI(String s) {
-    return s.substring(0, 14).equals("spotify:track:");
+    return s.length() == 36 && s.substring(0, 14).equals("spotify:track:");
   }
 }
