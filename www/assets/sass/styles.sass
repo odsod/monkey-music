@@ -25,17 +25,17 @@ html, body
 *
   box-sizing: border-box
 
-body
-  background: $nepheritis
+//body
+  //background: $nepheritis
 
-table#scoreboard
+table#scores
   display: none
   body.playing &
     display: table
   table-layout: fixed
   margin-top: 10px
-  position: absolute
-  width: 100%
+  //position: absolute
+  //width: 100%
   z-index: 5
   td
     text-align: center
@@ -79,32 +79,36 @@ table#scoreboard
     color: $sunflower
     -webkit-animation: wagging 2s infinite alternate
 
-@-webkit-keyframes wagging
-  from
-    -webkit-transform: translate(0, -10px) rotate(-10deg)
-  to
-    -webkit-transform: translate(0, 0px) rotate(-10deg)
+#scores-container
+  height: 10%
 
-#level
+table#scores
   height: 100%
-  .unit
-    font-size: 1.8em
-    position: absolute
-    text-align: center
-  .Track-standing-sprite
-    text-shadow: .15em .15em rgba(0,0,0,.3)
-    color: $black
-    font-size: 3.0em
-    line-height: 70px
-    +animation(bounce 3s infinite)
-    &::after
-      content: '\266A'
+  width: 100%
 
-+keyframes(bounce)
-  0%, 100%
-    +transform(rotate(-15deg))
-  50%
-    +transform(rotate(15deg))
+#canvas-container
+  height: 90%
+
+//#level
+  //margin-top: 100%
+  //.unit
+    //font-size: 1.8em
+    //position: absolute
+    //text-align: center
+  //.Track-standing-sprite
+    //text-shadow: .15em .15em rgba(0,0,0,.3)
+    //color: $black
+    //font-size: 3.0em
+    //line-height: 70px
+    //+animation(bounce 3s infinite)
+    //&::after
+      //content: '\266A'
+
+//+keyframes(bounce)
+  //0%, 100%
+    //+transform(rotate(-15deg))
+  //50%
+    //+transform(rotate(15deg))
 
 //+keyframes(monkey-run)
   //from

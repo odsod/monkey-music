@@ -8,4 +8,3 @@ end
 gem 'hallon'
 gem 'em-websocket'
 gem 'json'
-gem 'rack'

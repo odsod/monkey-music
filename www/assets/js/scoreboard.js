@@ -1,6 +1,6 @@
 (function ($) {
 
-  var NAMESPACE = 'monkeyMusicScoreboard';
+  var NAMESPACE = 'scoreboard';
 
   function grepMonkeys(units) {
     return $.grep(units, function (unit) {
@@ -12,24 +12,29 @@
     var
       self = this,
       monkeys = grepMonkeys(level.units),
-      scores = this.data(NAMESPACE).scores = {};
+      scores = [];
     this.html(Handlebars.templates.scores(monkeys));
     $.each(monkeys, function (i, monkey) {
+      console.log('HEHEH');
       var $el = self.find('[data-id=\'' + monkey.id + '\']');
+      console.log($el);
       scores[monkey.id] = {
         $el: $el
       };
     });
+    this.data(NAMESPACE, scores);
   }
 
   function update(level) {
     var
       monkeys = grepMonkeys(level.units),
-      scores = this.data(NAMESPACE).scores;
-    this.scores.each(function (id, score) {
-      var monkey = $.grep(monkeys, function (monkey) {
+      data = this.data(NAMESPACE);
+    _(data).each(function (score, id) {
+      var monkey = _(monkeys).find(function (monkey) {
         return monkey.id === id;
       });
+      console.log('MONKEY:');
+      console.log(monkey);
       score.$el.tickTo(monkey.score);
     });
   }

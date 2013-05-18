@@ -14,9 +14,12 @@ var monkeymusic = (function (document) {
     var level = JSON.parse(event.data);
     if (!isPlaying) {
       monkeymusic.level.init(canvas, level);
+      $('body').addClass('playing');
+      $('#scores').scoreboard(level);
       isPlaying = true;
     } else {
       monkeymusic.level.update(level);
+      $('#scores').scoreboard(level);
     }
   }
 
@@ -24,6 +27,8 @@ var monkeymusic = (function (document) {
     if (isPlaying) {
       monkeymusic.level.destroy();
       isPlaying = false;
+      $('body').removeClass('playing');
+      $('#scores').scoreboard('destroy');
     }
     console.log('No connection. Trying to reconnect...');
     setTimeout(connect, 10);

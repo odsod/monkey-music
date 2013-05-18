@@ -1,36 +1,34 @@
-/* line 63, Monkey-running/*.png */
+/* line 58, Monkey-running/*.png */
 .Monkey-running-sprite, .Monkey-running-run1, .Monkey-running-run2, .Monkey-running-run3 {
-  background-image: url('../img/Monkey-running-s63573ff88f.png');
-  background-repeat: no-repeat;
+  background: url('../img/Monkey-running-s63573ff88f.png') no-repeat;
 }
 
-/* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-running-run1 {
   background-position: 0 0;
 }
 
-/* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-running-run2 {
   background-position: -70px 0;
 }
 
-/* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-running-run3 {
   background-position: -140px 0;
 }
 
-/* line 55, Monkey-standing/*.png */
+/* line 50, Monkey-standing/*.png */
 .Monkey-standing-sprite, .Monkey-standing-stand1, .Monkey-standing-stand2 {
-  background-image: url('../img/Monkey-standing-sb4da98c4d0.png');
-  background-repeat: no-repeat;
+  background: url('../img/Monkey-standing-sb4da98c4d0.png') no-repeat;
 }
 
-/* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-standing-stand1 {
   background-position: 0 0;
 }
 
-/* line 77, ../../../../../../.rbenv/versions/1.9.3-p374/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-standing-stand2 {
   background-position: -70px 0;
 }
@@ -42,7 +40,7 @@
 
 /* line 24, ../sass/sprites.sass */
 .basket-sprite {
-  background-image: url('../img/pipe.png?1367153288');
+  background-image: url('../img/pipe.png?1368877200');
 }
 
 /* line 27, ../sass/sprites.sass */
@@ -132,35 +130,28 @@ html, body {
   box-sizing: border-box;
 }
 
-/* line 28, ../sass/styles.sass */
-body {
-  background: #27ae60;
-}
-
 /* line 31, ../sass/styles.sass */
-table#scoreboard {
+table#scores {
   display: none;
   table-layout: fixed;
   margin-top: 10px;
-  position: absolute;
-  width: 100%;
   z-index: 5;
 }
 /* line 33, ../sass/styles.sass */
-body.playing table#scoreboard {
+body.playing table#scores {
   display: table;
 }
 /* line 40, ../sass/styles.sass */
-table#scoreboard td {
+table#scores td {
   text-align: center;
 }
 /* line 42, ../sass/styles.sass */
-table#scoreboard tr.scores {
+table#scores tr.scores {
   font-size: 80px;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
 }
 /* line 45, ../sass/styles.sass */
-table#scoreboard tr.teams {
+table#scores tr.teams {
   font-size: 25px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
@@ -199,109 +190,18 @@ body.playing #splash {
   -webkit-animation: wagging 2s infinite alternate;
 }
 
-@-webkit-keyframes wagging {
-  /* line 83, ../sass/styles.sass */
-  from {
-    -webkit-transform: translate(0, -10px) rotate(-10deg);
-  }
-
-  /* line 85, ../sass/styles.sass */
-  to {
-    -webkit-transform: translate(0, 0px) rotate(-10deg);
-  }
+/* line 82, ../sass/styles.sass */
+#scores-container {
+  height: 10%;
 }
 
-/* line 88, ../sass/styles.sass */
-#level {
+/* line 85, ../sass/styles.sass */
+table#scores {
   height: 100%;
-}
-/* line 90, ../sass/styles.sass */
-#level .unit {
-  font-size: 1.8em;
-  position: absolute;
-  text-align: center;
-}
-/* line 94, ../sass/styles.sass */
-#level .Track-standing-sprite {
-  text-shadow: 0.15em 0.15em rgba(0, 0, 0, 0.3);
-  color: black;
-  font-size: 3em;
-  line-height: 70px;
-  -webkit-animation: bounce 3s infinite;
-  -moz-animation: bounce 3s infinite;
-  -ms-animation: bounce 3s infinite;
-  -o-animation: bounce 3s infinite;
-  animation: bounce 3s infinite;
-}
-/* line 100, ../sass/styles.sass */
-#level .Track-standing-sprite::after {
-  content: "\266A";
+  width: 100%;
 }
 
-@-moz-keyframes bounce {
-  /* line 104, ../sass/styles.sass */
-  0%, 100% {
-    -moz-transform: rotate(-15deg);
-    transform: rotate(-15deg);
-  }
-
-  /* line 106, ../sass/styles.sass */
-  50% {
-    -moz-transform: rotate(15deg);
-    transform: rotate(15deg);
-  }
-}
-
-@-webkit-keyframes bounce {
-  /* line 104, ../sass/styles.sass */
-  0%, 100% {
-    -webkit-transform: rotate(-15deg);
-    transform: rotate(-15deg);
-  }
-
-  /* line 106, ../sass/styles.sass */
-  50% {
-    -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
-  }
-}
-
-@-o-keyframes bounce {
-  /* line 104, ../sass/styles.sass */
-  0%, 100% {
-    -o-transform: rotate(-15deg);
-    transform: rotate(-15deg);
-  }
-
-  /* line 106, ../sass/styles.sass */
-  50% {
-    -o-transform: rotate(15deg);
-    transform: rotate(15deg);
-  }
-}
-
-@-ms-keyframes bounce {
-  /* line 104, ../sass/styles.sass */
-  0%, 100% {
-    -ms-transform: rotate(-15deg);
-    transform: rotate(-15deg);
-  }
-
-  /* line 106, ../sass/styles.sass */
-  50% {
-    -ms-transform: rotate(15deg);
-    transform: rotate(15deg);
-  }
-}
-
-@keyframes bounce {
-  /* line 104, ../sass/styles.sass */
-  0%, 100% {
-    transform: rotate(-15deg);
-  }
-
-  /* line 106, ../sass/styles.sass */
-  50% {
-    transform: rotate(15deg);
-  }
+/* line 89, ../sass/styles.sass */
+#canvas-container {
+  height: 90%;
 }
