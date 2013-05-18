@@ -79,10 +79,9 @@ module MonkeyMusic
           puts "DONE!"
           puts "====="
           puts "Loaded tracks:"
-          user.recommendations.group_by(&:multiplier).sort.each do |k,v| 
-            puts "#Multiplier #{k}:\t#{v.length}"
+          user.recommendations.group_by(&:tier).sort.each do |k,v| 
+            puts "#Tier #{k}:\t#{v.length}"
           end
-          exit
         end
       end
     

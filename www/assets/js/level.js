@@ -21,8 +21,13 @@ monkeymusic.level = (function (createjs, tween, window) {
     stage.clear();
     // Initialize units
     _(level.units).each(function (unit) {
-      var sprite = monkeymusic.sprites[unit.type]();
-      sprite.gotoAndPlay('normal');
+      var sprite = monkeymusic.sprites.Sheet();
+      if (unit.type === 'Track') {
+        sprite.gotoAndPlay('Track' + (unit.tier < 0 ? 'M' : '') + Math.abs(unit.tier) + 'normalwest');
+        sprite.shadow = new createjs.Shadow('#999', 3, 3, 5);
+      } else {
+        sprite.gotoAndPlay(unit.type + 'normal' + (unit.facing || 'east'));
+      }
       sprite.x = monkeymusic.constants.UNIT_WIDTH * unit.x;
       sprite.y = monkeymusic.constants.UNIT_HEIGHT * unit.y;
       stage.addChild(sprite);
@@ -46,15 +51,16 @@ monkeymusic.level = (function (createjs, tween, window) {
       if (newUnit) {
         // Move unit
         if (newUnit.x !== unit.x || newUnit.y !== unit.y) {
-          console.log('moving unit!');
-          unit.sprite.gotoAndPlay('run' + newUnit.facing || 'west');
+          var animation = unit.type + 'running' + newUnit.facing || 'west';
+          console.log('moving unit! ' + animation);
+          unit.sprite.gotoAndPlay(animation);
           tween.get(unit.sprite)
             .to({
               x: newUnit.x * monkeymusic.constants.UNIT_WIDTH,
               y: newUnit.y * monkeymusic.constants.UNIT_HEIGHT
-            }, 800)
+            }, 480)
             .call(function () {
-              unit.sprite.gotoAndPlay('normal' + newUnit.facing || 'west');
+              unit.sprite.gotoAndPlay(unit.type + 'normal' + newUnit.facing || 'west');
             });
           unit.x = newUnit.x;
           unit.y = newUnit.y;

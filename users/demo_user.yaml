@@ -141,7 +141,7 @@
   album: Songs Of Faith And Devotion
   year: 1993
   uri: spotify:track:5H85hOp2oMlhMh9JlkdJP2
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Enola Gay - 2003 - Remaster
@@ -149,7 +149,7 @@
   album: Organisation
   year: 2003
   uri: spotify:track:3NYCaxkggl0Hh8vQptSUvV
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Fog Rose High
@@ -157,7 +157,7 @@
   album: Idle Labor
   year: 2011
   uri: spotify:track:3NwaVr6RJg2LPBcJ1Ysl1O
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Cars
@@ -165,7 +165,7 @@
   album: Premier Hits
   year: 1981
   uri: spotify:track:3CKLPDN1AIOYa7QPpy6oDH
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Tainted Love
@@ -173,7 +173,7 @@
   album: Tainted Love / Where Did Our Love Go
   year: 2009
   uri: spotify:track:5Du6gEDduLCB9FIm9xIE4w
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: You Surround Me
@@ -181,7 +181,7 @@
   album: Wild!
   year: 1989
   uri: spotify:track:1s6ZF9JIrfwmJhqjJAvJRc
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Something New
@@ -189,7 +189,7 @@
   album: Something New
   year: 2012
   uri: spotify:track:0GqRSiO3OF89bNwe9V8HYi
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Guilty Partner
@@ -197,7 +197,7 @@
   album: Technique [Collector's Edition]
   year: 2008
   uri: spotify:track:0gksEnBiPqADMHtLdwgvue
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The New Stone Age - 2003 Digital Remaster
@@ -205,7 +205,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:4P9BeQkwwcWIuioP8YzeQD
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Don't Go
@@ -213,7 +213,7 @@
   album: Upstairs At Eric’s
   year: 1982
   uri: spotify:track:7Lzj8nFU3U9WOnFLAjFQ8n
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Welcome To My World
@@ -221,7 +221,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:4CARtDIJS87fOmWb1RxLKK
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Angel
@@ -229,7 +229,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:24nDMmzJlHcDfF8iSXWFnA
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Heaven
@@ -237,7 +237,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:1bgVQ6LgCqGR3FhsOcM5Jx
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Secret To The End
@@ -245,7 +245,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:62nmAEHbcpxxwnwAlb1Z7a
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: My Little Universe
@@ -253,7 +253,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:1ciLBf4Gzrbgj66sqfMegO
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Slow
@@ -261,7 +261,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:7p2KrJyMLprzUiYsIAPQFG
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Broken
@@ -269,7 +269,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:1Hm9pX5iwwS7jJLLPad9yJ
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Child Inside
@@ -277,7 +277,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:64ZErTt9RyifRACEGNyFDn
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Soft Touch/Raw Nerve
@@ -285,7 +285,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:4FiOSWit6wdaYY6dDGHexv
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Should Be Higher
@@ -293,7 +293,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:3sqQ4ocD4M9fsvbHrr1Z2M
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The New Stone Age - 2003 Digital Remaster
@@ -301,7 +301,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:4P9BeQkwwcWIuioP8YzeQD
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: She's Leaving - 2003 Digital Remaster
@@ -309,7 +309,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:3qAEEfC57OI4SCuj7Zk5va
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Souvenir - 2003 Digital Remaster
@@ -317,7 +317,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:4i4QN9Zs5s7OZRRLIYHMmP
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sealand - 2003 Digital Remaster
@@ -325,7 +325,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:0F0mS09ruZO2zWaEbl6hGQ
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Joan Of Arc - 2003 Digital Remaster
@@ -333,7 +333,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:15RDSwmEEcG0LKhDnzLj7x
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Joan Of Arc (Maid Of Orleans) - 2003 Digital Remaster
@@ -341,7 +341,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:5WeMMlylGCVGc0ChHSysJA
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Architecture And Morality - 2003 Digital Remaster
@@ -349,7 +349,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:2wt2ncc9cEsJqKwLo4eTDm
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Georgia - 2003 Digital Remaster
@@ -357,7 +357,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:5VtqYOQrtrBoaZKMaY0HcK
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Beginning And The End - 2003 Digital Remaster
@@ -365,7 +365,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:6LK02wa4H5KqXKjA3kBlsZ
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Extended Souvenir - 2003 Digital Remaster
@@ -373,7 +373,7 @@
   album: Architecture And Morality
   year: 2003
   uri: spotify:track:3R14PSng7wtMo81cNG67Q6
-  multiplier: 3
+  tier: 3
   value: 64
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Me! I Disconnect From You
@@ -381,7 +381,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:1ARZpuJ5KjxvmsFU4NryQH
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Are 'friends' Electric?
@@ -389,7 +389,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:5vdSjaab1avSxtblX02Wyz
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Machman
@@ -397,7 +397,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:1YhCHQWOukLp29rbUq8cCX
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Praying To The Aliens
@@ -405,7 +405,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:4QC0ag32gByv3x2pIrDEwL
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Down In The Park
@@ -413,7 +413,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:7x5HBwqCGrQj3dkwD6Fbj5
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: You Are In My Vision
@@ -421,7 +421,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:3tjvNb8ZfH1Mmbr9ys3pdq
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Replicas
@@ -429,7 +429,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:3qVB1E1CVJYh3J0dL1AT6e
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: It Must Have Been Years
@@ -437,7 +437,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:4r1dZ3HFwircgyXB6VKtgS
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: When The Machines Rock
@@ -445,7 +445,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:2Vsy7ExI2mxIz4cNQKsxRa
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: I Nearly Married A Human
@@ -453,7 +453,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:1ngS1pVIUQcMImN5KInl1U
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Astradyne - 2008 - Remaster
@@ -461,7 +461,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:5gg7Zn2UCPmQkHrwKohD0x
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: New Europeans - 2008 - Remaster
@@ -469,7 +469,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:6nIZfBuPEJQSWcNjaSJh7J
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Private Lives - 2008 - Remaster
@@ -477,7 +477,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:2vvD3cG7Uvnf4PtMHye0Al
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Passing Strangers - 2008 - Remaster
@@ -485,7 +485,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:0fykckmlgKC6T7tmF1AWuk
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sleepwalk - 2008 - Remaster
@@ -493,7 +493,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:55RRgdCP1JsKdUudocGQaf
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Mr X - 2008 - Remaster
@@ -501,7 +501,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:0BpHWoxBO4vqehtdWMthQa
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Western Promise - 2008 - Remaster
@@ -509,7 +509,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:0fgby4p4e0ht7E4Z62MhFm
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Vienna - 2008 - Remaster
@@ -517,7 +517,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:7AmdLtDBBMHWTvneMLm8Nj
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: All Stood Still - 2008 - Remaster
@@ -525,7 +525,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:08zNmGwhoEvJVgGwGTPIKP
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sleepwalk (Early Version) [2008 - Remaster]
@@ -533,7 +533,7 @@
   album: Vienna
   year: 2008
   uri: spotify:track:617yqenyZRz1VuDCUju1Gx
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Oh L'Amour
@@ -541,7 +541,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:1TuJc293ljt05YUIWnnZoF
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sometimes
@@ -549,7 +549,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:0f4FdMaOUjxGBZ4djEAgE3
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Victim Of Love - Remix
@@ -557,7 +557,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:1Fp0IYahAYrCREZtpyWTB0
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Ship Of Fools
@@ -565,7 +565,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:0W0KFn4c38Riz2noi2CbxC
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Chains Of Love - Remix
@@ -573,7 +573,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:0DRTeS4GPjd99T9Vd16zUf
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: A Little Respect
@@ -581,7 +581,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:2WmC4RGB4bDAkN81j4RIwP
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Stop!
@@ -589,7 +589,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:7sYM7MIlJJQZH0IiQcJ122
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Blue Savannah
@@ -597,7 +597,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:1poXIbjCh9xYMYii8IWVbN
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Chorus
@@ -605,7 +605,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:7lWTki9QAISM5IwroQRBRj
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Love To Hate You
@@ -613,7 +613,7 @@
   album: Hits The Very Best Of Erasure
   year: 2003
   uri: spotify:track:5qjiNJemV61fFwz7FKznjn
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Tainted Love
@@ -621,7 +621,7 @@
   album: Tainted Love / Where Did Our Love Go
   year: 2009
   uri: spotify:track:5Du6gEDduLCB9FIm9xIE4w
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Where Did Our Love Go? - Original / 7" Single Version
@@ -629,7 +629,7 @@
   album: Tainted Love / Where Did Our Love Go
   year: 2009
   uri: spotify:track:5hAjR6JYJSS0dy9LRwjICn
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: True Faith - '94
@@ -637,7 +637,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:01jBLs7IZQzPt3dVdn5rDa
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Bizarre Love Triangle '94
@@ -645,7 +645,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:0NvJy5gPR591Qh2z22EAak
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: '1963'
@@ -653,7 +653,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:5w0ZPQd35HxLKq4l6iCCnB
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Regret
@@ -661,7 +661,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:0r3GwbbvVfYB7kCpbXm8Ba
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Fine Time
@@ -669,7 +669,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:3sT8Ed2Dw1JRG9PbqEF1Jw
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Perfect Kiss
@@ -677,7 +677,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:60xGwhjbRfQjDVuFXeemB1
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Shellshock
@@ -685,7 +685,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:3HI1yqFW7yhSkNXhtBTwly
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Thieves Like Us
@@ -693,7 +693,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:0kQTkXqjtWSPCM2D14cGq3
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Vanishing Point
@@ -701,7 +701,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:5PO9hh3767mKoLBIPOYUhw
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Run 2
@@ -709,7 +709,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:7L8z4moYTHAHLXkmPTWHZJ
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: High Rise
@@ -717,7 +717,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:6EGkX8CIdNokNiNAmJGlw1
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Destroy Everything You Touch
@@ -725,7 +725,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:4ljUx357rAJxqKnO5x209j
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: International Dateline
@@ -733,7 +733,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:0qSuM39nSWwqPYrRPKA021
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Soft Power
@@ -741,7 +741,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:5jobT5lR4qFwNPcggJEjdG
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: CMYK
@@ -749,7 +749,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:4ZaRxeMcMSWV3nzWCh0ISO
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: AMTV
@@ -757,7 +757,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:1kXYypFMce54qZVd0wG7le
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sugar
@@ -765,7 +765,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:3bMQHtzstPZL36O0DfiHk1
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Fighting In Build Up Areas
@@ -773,7 +773,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:0xhUa9FMztr7tdcRVJXzIK
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Last One Standing
@@ -781,7 +781,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:6l8RcxJAMFzflVODplcJcf
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Weekend
@@ -789,7 +789,7 @@
   album: Witching Hour
   year: 2007
   uri: spotify:track:1XhaSJEkSPzXgUOWYKBoTV
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Nightdrive With You
@@ -797,7 +797,7 @@
   album: Nightdrive With You
   year: 2008
   uri: spotify:track:2We1WL1oyXJtTmrAfjDe58
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Never Ending Romance Disaster
@@ -805,7 +805,7 @@
   album: Nightdrive With You
   year: 2008
   uri: spotify:track:0PXV9ltUX7up14k37oPuAN
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Endless Summer
@@ -813,7 +813,7 @@
   album: Nightdrive With You
   year: 2008
   uri: spotify:track:41xRt6L4fs3CgGu31GA7KT
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sunday Night Fever
@@ -821,7 +821,7 @@
   album: Nightdrive With You
   year: 2008
   uri: spotify:track:38l6ec2A0IQxdQp0tMtJie
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Midnight Stars
@@ -829,7 +829,7 @@
   album: Nightdrive With You
   year: 2008
   uri: spotify:track:3mUdiU1CEoaAQoQIBkHJtc
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Waiting for Your Phone Call
@@ -837,7 +837,7 @@
   album: Nightdrive With You
   year: 2008
   uri: spotify:track:2id516aQDb0Be1bAbJ8AU6
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Teenage Color (Anoraak Remix)
@@ -845,7 +845,7 @@
   album: Nightdrive With You
   year: 2008
   uri: spotify:track:3DjBDQs8ebkxMBo2V8V3SH
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Nightdrive With You (Adeyhawke Remix)
@@ -853,7 +853,7 @@
   album: Nightdrive With You
   year: 2008
   uri: spotify:track:5LCTP8QawTk2Olk2UM8Yqn
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: English Summer
@@ -861,7 +861,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:5yhpFZ600lXbpAZsA02xS5
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Belinda
@@ -869,7 +869,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:16dUcrSbvd4U2V7xkr3ATH
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Take Me To Your Heart
@@ -877,7 +877,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:6zckRwDvLYvaS2qco5vntx
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: She's Invisible Now
@@ -885,7 +885,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:04rIfULxhv2Lt95glPmCFQ
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Your Time Will Come
@@ -893,7 +893,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:621LJKNkHButyYxEYX0Kvv
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Caveman Head
@@ -901,7 +901,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:5eZJsNeFgS4jXo452275o3
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Never Gonna Cry Again
@@ -909,7 +909,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:5qNsQPcPN8VBi38QwWb5Hh
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: All The Young (People Of Today)
@@ -917,7 +917,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:2SlC2rhaTE5Ny14fwY1069
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sing-Sing
@@ -925,7 +925,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:2j3enTujhVsIOV1oiJbMMP
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Revenge
@@ -933,7 +933,7 @@
   album: Boxed
   year: 2005
   uri: spotify:track:5wkwIaPT49HsI4fhOiPT8u
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Enjoy the Silence - Single Version;2006 - Remaster
@@ -941,7 +941,7 @@
   album: The Best Of Depeche Mode - Volume One
   year: 2006
   uri: spotify:track:2oZGpVkUrvh7uDOgXwBliN
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Heaven
@@ -949,7 +949,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:1bgVQ6LgCqGR3FhsOcM5Jx
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Welcome To My World
@@ -957,7 +957,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:4CARtDIJS87fOmWb1RxLKK
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Soothe My Soul
@@ -965,7 +965,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:2AxI7waLrZSY9KkL3D2huk
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Angel
@@ -973,7 +973,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:24nDMmzJlHcDfF8iSXWFnA
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Personal Jesus - Single Version;2006 Digital Remaster
@@ -981,7 +981,7 @@
   album: The Best Of Depeche Mode - Volume One
   year: 2006
   uri: spotify:track:601h6t4AYzjENLTGjHDbhw
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Secret To The End
@@ -989,7 +989,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:62nmAEHbcpxxwnwAlb1Z7a
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Just Can't Get Enough - Single Version;2006 Digital Remaster
@@ -997,7 +997,7 @@
   album: The Best Of Depeche Mode - Volume One
   year: 2006
   uri: spotify:track:2FpyKkCFIfqmp6eQx4Rn1V
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Broken
@@ -1005,7 +1005,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:1Hm9pX5iwwS7jJLLPad9yJ
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: My Little Universe
@@ -1013,7 +1013,7 @@
   album: Delta Machine
   year: 2013
   uri: spotify:track:1ciLBf4Gzrbgj66sqfMegO
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: If You Leave
@@ -1021,7 +1021,7 @@
   album: The OMD Singles
   year: 2003
   uri: spotify:track:6VzfdkKU7J6ideJPwVJnAN
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Enola Gay - 2003 - Remaster
@@ -1029,7 +1029,7 @@
   album: ! 'Messages: Greatest Hits'
   year: 2008
   uri: spotify:track:7tEDqanTZ8NWxV7zzqth3m
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Electricity
@@ -1037,7 +1037,7 @@
   album: The OMD Singles
   year: 1998
   uri: spotify:track:3vy2QK19RCnS4Egaq9fGhy
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Enola Gay
@@ -1045,7 +1045,7 @@
   album: The OMD Singles
   year: 1998
   uri: spotify:track:3WIg3fd3W8I5HU8g3Y6P0k
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sailing On The Seven Seas
@@ -1053,7 +1053,7 @@
   album: The OMD Singles
   year: 1998
   uri: spotify:track:7bljdWZ5t9VqfBbGFjwZ98
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Maid Of Orleans
@@ -1061,7 +1061,7 @@
   album: The OMD Singles
   year: 1998
   uri: spotify:track:1nnxUoTcEaWd6mHfD0Ukdw
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Souvenir
@@ -1069,7 +1069,7 @@
   album: The OMD Singles
   year: 1998
   uri: spotify:track:1H6dcVdpMiMIydKdykY6W0
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Walking On The Milky Way
@@ -1077,7 +1077,7 @@
   album: The OMD Singles
   year: 1998
   uri: spotify:track:5rN6eummWzwLTQxXZcyeCY
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Pandora's Box
@@ -1085,7 +1085,7 @@
   album: The OMD Singles
   year: 1998
   uri: spotify:track:0HKZ3bXq9IU33QS2vMNJ4V
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: So In Love
@@ -1093,7 +1093,7 @@
   album: The OMD Singles
   year: 1998
   uri: spotify:track:0NX9bRl4d6SHR0hWIIie5N
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Don't You Want Me - 2002 - Remaster
@@ -1101,7 +1101,7 @@
   album: The Very Best Of The Human League
   year: 2003
   uri: spotify:track:5lmYpa6EaVAKAlwxMf7q5c
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Human
@@ -1109,7 +1109,7 @@
   album: The Best Of
   year: 1998
   uri: spotify:track:7DsEbqp3kiDuTBwgmtdRpz
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Together In Electric Dreams - 2003 - Remaster
@@ -1117,7 +1117,7 @@
   album: The Very Best Of The Human League
   year: 2003
   uri: spotify:track:1hVAlfoZDcfCV0SjNPWfLQ
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Don't You Want Me
@@ -1125,7 +1125,7 @@
   album: Celebrate Gay Pride
   year: 2010
   uri: spotify:track:7h4fe4teWz7mc4EZVLE0bl
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: (Keep Feeling) Fascination
@@ -1133,7 +1133,7 @@
   album: Countdown To The New Year
   year: 2010
   uri: spotify:track:5gHZapv1Sb4AV3JHYyM3a0
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Don't You Want Me - Special Extended Dance Mix
@@ -1141,7 +1141,7 @@
   album: so80s (So Eighties) - Pres. By Blank & Jones
   year: 2010
   uri: spotify:track:3KRSol6uUsTTV1eMrps9MI
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: (Keep Feeling) Fascination - 2003 - Remaster
@@ -1149,7 +1149,7 @@
   album: The Very Best Of The Human League
   year: 2003
   uri: spotify:track:26VPSrPYX6Ks5OL3sHQEJY
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Love Action (I Believe in Love) - 2002 - Remaster
@@ -1157,7 +1157,7 @@
   album: The Very Best Of The Human League
   year: 2003
   uri: spotify:track:7t2DtwDaxiuZDulbXsWrnO
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Mirror Man - 2003 - Remaster
@@ -1165,7 +1165,7 @@
   album: The Very Best Of The Human League
   year: 2003
   uri: spotify:track:3pI8laGp6QKWVfPfuQIhy3
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Love Action (I Believe in Love)
@@ -1173,7 +1173,7 @@
   album: The Best Of
   year: 1998
   uri: spotify:track:7ttwrfe807K63aXv3VSKU1
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Bizarre Love Triangle
@@ -1181,7 +1181,7 @@
   album: Brotherhood [Collector's Edition]
   year: 2008
   uri: spotify:track:6wVViUl2xSRoDK2T7dMZbR
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Blue Monday
@@ -1189,7 +1189,7 @@
   album: Substance
   year: 1987
   uri: spotify:track:6tzeMSH4TRGBTzdNvbF5hr
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Blue Monday [88]
@@ -1197,7 +1197,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:31MOjWj3CT3dCQsMV2b8Wu
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Age Of Consent
@@ -1205,7 +1205,7 @@
   album: Power Corruption & Lies [Collector's Edition]
   year: 2008
   uri: spotify:track:1iKCbLGTa0uNJ3AZhfoFOL
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: True Faith - '94
@@ -1213,7 +1213,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:01jBLs7IZQzPt3dVdn5rDa
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: I'll Stay With You
@@ -1221,7 +1221,7 @@
   album: Lost Sirens
   year: 2013
   uri: spotify:track:6MpyaUgutthEieLdLtMmVr
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Bizarre Love Triangle '94
@@ -1229,7 +1229,7 @@
   album: The Best Of New Order
   year: 1994
   uri: spotify:track:0NvJy5gPR591Qh2z22EAak
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Ceremony
@@ -1237,7 +1237,7 @@
   album: Substance
   year: 1987
   uri: spotify:track:3SBFG67CSynjdeyETVAsRF
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Temptation
@@ -1245,7 +1245,7 @@
   album: Substance
   year: 1987
   uri: spotify:track:58IihaOsYb2riCPEVabDol
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Temptation [7" Version]
@@ -1253,7 +1253,7 @@
   album: Movement [Collector's Edition]
   year: 2008
   uri: spotify:track:6aydUK6llaiRoKQyQTDNPY
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Such Great Heights
@@ -1261,7 +1261,7 @@
   album: Give Up
   year: 2003
   uri: spotify:track:3iDK8BAaBUatPR84gdfa9g
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The District Sleeps Alone Tonight
@@ -1269,7 +1269,7 @@
   album: Give Up
   year: 2003
   uri: spotify:track:5Bf5C7RkyXTqE1h3Q8KZJ7
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Nothing Better
@@ -1277,7 +1277,7 @@
   album: Give Up
   year: 2003
   uri: spotify:track:6ZHc4hKjDdUdzk2DgFyvMQ
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sleepin In
@@ -1285,7 +1285,7 @@
   album: Give Up
   year: 2003
   uri: spotify:track:0LEsGGRUrZZhLPFoxeioHr
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: A Tattered Line of String
@@ -1293,7 +1293,7 @@
   album: Give Up (Deluxe 10th Anniversary Edition)
   year: 2013
   uri: spotify:track:64ZutGB9OXDUDho6bcttqb
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Brand New Colony
@@ -1301,7 +1301,7 @@
   album: Give Up
   year: 2003
   uri: spotify:track:4PxCWMPfDLqFMl1i9IX04W
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Clark Gable
@@ -1309,7 +1309,7 @@
   album: Give Up
   year: 2003
   uri: spotify:track:3kGBuxGlnQrSozuO1Z9dps
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: We Will Become Silhouettes
@@ -1317,7 +1317,7 @@
   album: Give Up
   year: 2003
   uri: spotify:track:53hXLQsByJC4B3UCNcmh0E
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Recycled Air
@@ -1325,7 +1325,7 @@
   album: Give Up
   year: 2003
   uri: spotify:track:2iAP4oTt3NiUZCztU4Q8Gu
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The District Sleeps Alone Tonight (Remastered)
@@ -1333,7 +1333,7 @@
   album: Give Up (Deluxe 10th Anniversary Edition)
   year: 2013
   uri: spotify:track:0NktjP45rBAkuXeCRGalj3
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Model - 2004 Digital Remaster
@@ -1341,7 +1341,7 @@
   album: ! 'Playlist: Electro'
   year: 2008
   uri: spotify:track:4R8yORS2HYbviDdE2Jmkad
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Robots - 2009 Digital Remaster
@@ -1349,7 +1349,7 @@
   album: The Man Machine - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:5eqZWYQ5tbIehx00NeKXz7
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Autobahn - 2009 Digital Remaster
@@ -1357,7 +1357,7 @@
   album: Autobahn - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:31uidLEHAcF8Cw1cX1VCS8
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Radioactivity - 2009 Digital Remaster
@@ -1365,7 +1365,7 @@
   album: Radio-Activity - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:3kwql90R2gmkK12R8uGHCs
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Model - 2009 Digital Remaster
@@ -1373,7 +1373,7 @@
   album: The Man Machine - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:1FL9DHDSED6lxNMDJUJQvB
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Computer Love - 2009 - Remaster
@@ -1381,7 +1381,7 @@
   album: Computer World - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:5BXBi5pLeJhblMVH2ltjpl
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Tour De France - 2009 - Remaster
@@ -1389,7 +1389,7 @@
   album: Tour De France - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:5uNlgK7FEg6r9BGy12P9Sx
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Europe Endless - 2009 Digital Remaster
@@ -1397,7 +1397,7 @@
   album: Trans Europe Express - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:5jEfJiugp5E2E2kxQbhRcQ
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Man Machine - 2009 Digital Remaster
@@ -1405,7 +1405,7 @@
   album: The Man Machine - 2009 Digital Remaster
   year: 2009
   uri: spotify:track:4rbt9xJMIYwjTyMUYSvEL2
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Robots
@@ -1413,7 +1413,7 @@
   album: The Mix (2009 Digital Remaster)
   year: 2009
   uri: spotify:track:2Dx4OYlS0zhjSm0z43midb
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Cars
@@ -1421,7 +1421,7 @@
   album: Premier Hits
   year: 1981
   uri: spotify:track:3CKLPDN1AIOYa7QPpy6oDH
-  multiplier: -1
+  tier: -1
   value: -4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Are 'friends' Electric?
@@ -1429,7 +1429,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:5vdSjaab1avSxtblX02Wyz
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Down In The Park
@@ -1437,7 +1437,7 @@
   album: Replicas
   year: 1979
   uri: spotify:track:7x5HBwqCGrQj3dkwD6Fbj5
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Metal
@@ -1445,7 +1445,7 @@
   album: The Pleasure Principle
   year: 1979
   uri: spotify:track:2gsY0pB4cJOVX32K3qOZgB
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: M.e.
@@ -1453,7 +1453,7 @@
   album: The Pleasure Principle
   year: 1979
   uri: spotify:track:3OiBc6E43P6Y5LoqNbbMKf
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Big Noise Transmission (Tim Burgess Remix) - Tim Burgess Remix
@@ -1461,7 +1461,7 @@
   album: Dead Moon Falling
   year: 2013
   uri: spotify:track:4BZME9a6m2q3amBBxYpdcW
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Cars (Remastered 2009)
@@ -1469,7 +1469,7 @@
   album: The Pleasure Principle (Expanded Edition)
   year: 2009
   uri: spotify:track:0FHs04UuTgcj1bAWfxbrFw
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Music For Chameleons
@@ -1477,7 +1477,7 @@
   album: I Assassin
   year: 1982
   uri: spotify:track:4fqRCykZ9uVe4PNSjWIR2f
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Dead Sun Rising (Sonoio Remix) - Sonoio Remix
@@ -1485,7 +1485,7 @@
   album: Dead Moon Falling
   year: 2013
   uri: spotify:track:5t8sVFvTOpR8rl8u4dcFcW
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: We Are The Lost (Gazelle Twin Remix) - Gazelle Twin Remix
@@ -1493,7 +1493,7 @@
   album: Dead Moon Falling
   year: 2013
   uri: spotify:track:66p5HEkdMgsObsBv5Ddq3j
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Kids
@@ -1501,7 +1501,7 @@
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:1jJci4qxiYcOHhQR247rEU
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Electric Feel
@@ -1509,7 +1509,7 @@
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:3FtYbEfBqAlGO46NUDQSAt
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Time To Pretend
@@ -1517,7 +1517,7 @@
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:4iG2gAwKXsOcijVaVXzRPW
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Weekend Wars
@@ -1525,7 +1525,7 @@
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:19K3lUMJmOdeuOBTrbLm19
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Electric Feel - Justice Remix
@@ -1533,7 +1533,7 @@
   album: Electric Feel
   year: 2008
   uri: spotify:track:2eGHyarZyRvUgFI4d3G8GN
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Pieces of What
@@ -1541,7 +1541,7 @@
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:6wxDu7ISgm5nppPMea4W7D
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Youth
@@ -1549,7 +1549,7 @@
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:5nv854ey1k43KaZ0kHmE4Z
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Congratulations
@@ -1557,7 +1557,7 @@
   album: Congratulations
   year: 2010
   uri: spotify:track:6kblAEj0T0312fv5QWsXzo
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Of Moons Birds & Monsters
@@ -1565,7 +1565,7 @@
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:0w8dULoVhTuC8x8m8PKwX7
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Handshake
@@ -1573,7 +1573,7 @@
   album: Oracular Spectacular
   year: 2007
   uri: spotify:track:7d4coyGabEbHZ5tRpTbQT5
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Midnight City
@@ -1581,7 +1581,7 @@
   album: Hurry Up We're Dreaming
   year: 2011
   uri: spotify:track:4kO7mrAPfqIrsKwUOK5BFx
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: We Own The Sky
@@ -1589,7 +1589,7 @@
   album: Saturdays = Youth
   year: 2008
   uri: spotify:track:1I4EczxGBcPR3J3KeyqFJP
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Oblivion (feat. Susanne Sundfør)
@@ -1597,7 +1597,7 @@
   album: Oblivion (feat. Susanne Sundfør)
   year: 2013
   uri: spotify:track:66fKIbn90iaQZ0jEuurozt
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Jack's Dream
@@ -1605,7 +1605,7 @@
   album: Oblivion - Original Motion Picture Soundtrack
   year: 2013
   uri: spotify:track:2OsVwe7SubQyge9LJFTh0Y
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Kim & Jessie
@@ -1613,7 +1613,7 @@
   album: Saturdays = Youth
   year: 2008
   uri: spotify:track:5pCTXoSYslXKP2D21e3ZJK
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Waking Up
@@ -1621,7 +1621,7 @@
   album: Oblivion - Original Motion Picture Soundtrack
   year: 2013
   uri: spotify:track:7fco9ocFesu9I09AMmpWkW
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Midnight City [Eric Prydz Private Remix] - Eric Prydz Private Remix
@@ -1629,7 +1629,7 @@
   album: Midnight City [Eric Prydz Private Remix]
   year: 2012
   uri: spotify:track:4IkgcBeRd6R8MJgdYWg4te
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: StarWaves
@@ -1637,7 +1637,7 @@
   album: Oblivion - Original Motion Picture Soundtrack
   year: 2013
   uri: spotify:track:6qO6qwKZ5v2X23rPdwtMVv
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Tech 49
@@ -1645,7 +1645,7 @@
   album: Oblivion - Original Motion Picture Soundtrack
   year: 2013
   uri: spotify:track:67TjQxwD1073on0kKeDXGN
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Reunion
@@ -1653,7 +1653,7 @@
   album: Hurry Up We're Dreaming
   year: 2011
   uri: spotify:track:4dNCg774LzE2kmtbMOLdP7
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Hungry Like the Wolf
@@ -1661,7 +1661,7 @@
   album: Decade
   year: 1989
   uri: spotify:track:5pIaAkHJ928V2LGCz79FgQ
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Rio - 2009 - Remaster
@@ -1669,7 +1669,7 @@
   album: Rio - Collector's Edition
   year: 2009
   uri: spotify:track:43eBgYRTmu5BJnCJDBU5Hb
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: A View to a Kill
@@ -1677,7 +1677,7 @@
   album: Greatest
   year: 1998
   uri: spotify:track:3O9zeBmAi5JRBMSpIQGx2v
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Come Undone
@@ -1685,7 +1685,7 @@
   album: Duran Duran
   year: 1993
   uri: spotify:track:0yfNXxlyXdmP0ue1iJijx1
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Ordinary World
@@ -1693,7 +1693,7 @@
   album: Duran Duran
   year: 1993
   uri: spotify:track:0wokCRaKD0zPNhMRXAgVsr
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Wild Boys
@@ -1701,7 +1701,7 @@
   album: Greatest
   year: 1998
   uri: spotify:track:23M7cQkNJLiddeubvVgaQl
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Girls on Film
@@ -1709,7 +1709,7 @@
   album: Duran Duran
   year: 1993
   uri: spotify:track:5KE4iIOeucoLMnkF6NEwKM
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Notorious
@@ -1717,7 +1717,7 @@
   album: Notorious
   year: 1986
   uri: spotify:track:1stJclD9IGUbxtUnl8CzG3
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Reflex
@@ -1725,7 +1725,7 @@
   album: Greatest
   year: 1998
   uri: spotify:track:0OsWMTxDjtpmJjX43113oq
-  multiplier: 1
+  tier: 1
   value: 4
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Save A Prayer - 2009 Digital Remaster
@@ -1733,7 +1733,7 @@
   album: Rio - Collector's Edition
   year: 2009
   uri: spotify:track:1ff8lsrJ2kuZuofMw81EQo
-  multiplier: 2
+  tier: 2
   value: 16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Last Caress
@@ -1741,7 +1741,7 @@
   album: Collection 2
   year: 1995
   uri: spotify:track:0S8LgLoseDB6W2HWd1ym6P
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Where Eagles Dare
@@ -1749,7 +1749,7 @@
   album: Collection
   year: 1986
   uri: spotify:track:5LgiqEgpK54OfXC6947wbU
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Hybrid Moments
@@ -1757,7 +1757,7 @@
   album: Static Age
   year: 1997
   uri: spotify:track:3gN4UFoOnRHlMl3K4kU5zG
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Die Die My Darling - Fox Studio 1983
@@ -1765,7 +1765,7 @@
   album: Collection
   year: 1986
   uri: spotify:track:4Rme8TxEaNV09wp64AWd2y
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Attitude - 1995 Digital Remaster
@@ -1773,7 +1773,7 @@
   album: Collection 2
   year: 1995
   uri: spotify:track:0PTP53h7PvqEMeGyGClkOk
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Saturday Night
@@ -1781,7 +1781,7 @@
   album: Famous Monsters
   year: 1999
   uri: spotify:track:3jXptpf8Z3aU9O1Bj6YCl0
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Scream
@@ -1789,7 +1789,7 @@
   album: Famous Monsters
   year: 1999
   uri: spotify:track:2uqQXl3CWniLE0Uhfb7izu
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: She
@@ -1797,7 +1797,7 @@
   album: Collection
   year: 1986
   uri: spotify:track:38T3oJ4ykhLtoHFjhpjOoL
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Dig Up Her Bones
@@ -1805,7 +1805,7 @@
   album: American Psycho
   year: 1997
   uri: spotify:track:16MPZDpM5JTtIBs3pOMSWx
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: We Are 138 - 1995 Digital Remaster
@@ -1813,7 +1813,7 @@
   album: Collection 2
   year: 1995
   uri: spotify:track:3TQ4GxL3oghmLVpUD1oKmb
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Pet Semetary
@@ -1821,7 +1821,7 @@
   album: Brain Drain
   year: 1989
   uri: spotify:track:07b5vArZtW08PuEqCw61Ei
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Poison Heart
@@ -1829,7 +1829,7 @@
   album: Mondo Bizarro
   year: 1992
   uri: spotify:track:6yXm3xUj0fcN4dGwBAl9qM
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: I Don't Want To Grow Up
@@ -1837,7 +1837,7 @@
   album: Adios Amigos
   year: 1995
   uri: spotify:track:1mJ7yK70zjY1VCaRP04ot4
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: I Believe In Miracles
@@ -1845,7 +1845,7 @@
   album: Brain Drain
   year: 1989
   uri: spotify:track:6YYGoARcDRYdJu9ezMPzUx
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Spiderman
@@ -1853,7 +1853,7 @@
   album: The Chrysalis Years Anthology
   year: 2002
   uri: spotify:track:2JcUB7LyS4MDI5fvSWU6se
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: She Talks to Rainbows
@@ -1861,7 +1861,7 @@
   album: Adios Amigos
   year: 1995
   uri: spotify:track:0GVcm9IeiuWWOQk3yXI7yx
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Have You Ever Seen The Rain
@@ -1869,7 +1869,7 @@
   album: Acid Eaters
   year: 1993
   uri: spotify:track:4Ri7GhJiAHy9dCYnxxWuzM
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Merry Christmas (I Don't Want to Fight Tonight)
@@ -1877,7 +1877,7 @@
   album: Brain Drain
   year: 1989
   uri: spotify:track:6HA6r647BX7lOIDzQ3PBb9
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Rock And Roll High School - Live
@@ -1885,7 +1885,7 @@
   album: All the Best
   year: 2012
   uri: spotify:track:5KAII1Bt2SgySRfPByKgcJ
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Kkk Took My Baby Away - Live
@@ -1893,7 +1893,7 @@
   album: Loco Live
   year: 1991
   uri: spotify:track:29KP3ieVXuw7rahzuK422u
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: 21st Century
@@ -1901,7 +1901,7 @@
   album: Against The Grain
   year: 2005
   uri: spotify:track:2Qno5n2LmLePUp2NihXQ1q
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Fuck You
@@ -1909,7 +1909,7 @@
   album: True North
   year: 2013
   uri: spotify:track:5VQg5YHgCAjJTIBtEZHacQ
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Los Angeles Is Burning
@@ -1917,7 +1917,7 @@
   album: The Empire Strikes First
   year: 2004
   uri: spotify:track:27KrzUfX8fHDEYyvmZdrqa
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: True North
@@ -1925,7 +1925,7 @@
   album: True North
   year: 2013
   uri: spotify:track:4hU0WnRH1e3jx2kd2OnwSH
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: American Jesus
@@ -1933,7 +1933,7 @@
   album: Recipe For Hate
   year: 1990
   uri: spotify:track:3qriuhIxVQXmdHRIIzP4Fe
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Punk Rock Song
@@ -1941,7 +1941,7 @@
   album: The Gray Race
   year: 1996
   uri: spotify:track:3cAeRRvExh8FwzWPQqMhsS
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: You
@@ -1949,7 +1949,7 @@
   album: Punk-O-Rama 3
   year: 1998
   uri: spotify:track:2taLSL36n5j5BxOqBAILMN
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: I Want to Conquer the World
@@ -1957,7 +1957,7 @@
   album: No Control
   year: 2004
   uri: spotify:track:5E4MtBoFdkuNTEqYC23TSH
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Past is Dead
@@ -1965,7 +1965,7 @@
   album: True North
   year: 2013
   uri: spotify:track:0yC8t1Rd1RbscJAZI4n8aD
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Sorrow
@@ -1973,7 +1973,7 @@
   album: The Process Of Belief
   year: 2002
   uri: spotify:track:2ccdGN0u41iaveyQeae9Iy
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: London Calling
@@ -1981,7 +1981,7 @@
   album: Clash On Broadway
   year: 1997
   uri: spotify:track:4LzsPH7Z8GqxeiAIUYKswd
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Should I Stay or Should I Go
@@ -1989,7 +1989,7 @@
   album: Combat Rock
   year: 1982
   uri: spotify:track:5oVd20ddRqp5yenSA0E6u1
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Rock the Casbah
@@ -1997,7 +1997,7 @@
   album: The Essential Clash
   year: 2010
   uri: spotify:track:5vzW6FDzBtnGGnf4uLwLe5
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: I Fought the Law
@@ -2005,7 +2005,7 @@
   album: The Essential Clash
   year: 2010
   uri: spotify:track:19Ze27TdtFYssgeGCStFIC
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Should I Stay Or Should I Go
@@ -2013,7 +2013,7 @@
   album: The Essential Clash
   year: 2001
   uri: spotify:track:7EwcNyYIMehlWfjk0yprbj
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Rock The Casbah
@@ -2021,7 +2021,7 @@
   album: The Essential Clash
   year: 2001
   uri: spotify:track:6w1YiN1EjTVTZfjHJ8iFfw
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Bankrobber
@@ -2029,7 +2029,7 @@
   album: The Story Of The Clash Volume 1
   year: 1988
   uri: spotify:track:326OKIhvo9ZJBcjGah2e1E
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: The Guns of Brixton
@@ -2037,7 +2037,7 @@
   album: The Essential Clash
   year: 2010
   uri: spotify:track:7CaiFy9kev8lXNanEa0kO1
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Train in Vain
@@ -2045,7 +2045,7 @@
   album: The Essential Clash
   year: 2010
   uri: spotify:track:3fwTbn0TzYE57fXjIcvvGT
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: White Riot
@@ -2053,7 +2053,7 @@
   album: The Clash (UK Version)
   year: 1977
   uri: spotify:track:7CIPRuchST3qQ1K1QIKZuC
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: God Save The Queen
@@ -2061,7 +2061,7 @@
   album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:2mHchPRtQWet3iIS3jANr1
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Anarchy In the UK
@@ -2069,7 +2069,7 @@
   album: The Sex Pistols
   year: 2009
   uri: spotify:track:6jx7pKjpXKuQdXXPI3H8qY
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Anarchy In The UK
@@ -2077,7 +2077,7 @@
   album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:5moTxUGPZXgGmosl4rIELm
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Pretty Vacant
@@ -2085,7 +2085,7 @@
   album: Personal Effects
   year: 1999
   uri: spotify:track:2jfy5umLwAO22PIaXjJWPu
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: My Way
@@ -2093,7 +2093,7 @@
   album: ! 'Agents Of Anarchy - File 2: Submission'
   year: 2009
   uri: spotify:track:3Lx7TcHWXlXdwxkxxZMETj
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Holidays In The Sun
@@ -2101,7 +2101,7 @@
   album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:4e3TIXJcX3oQJnLup57I0r
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Bodies
@@ -2109,7 +2109,7 @@
   album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:4kU7cIlf4FDrWrs99AcaWS
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: God Save the Queen - Live
@@ -2117,7 +2117,7 @@
   album: Filthy Lucre - Live
   year: 1996
   uri: spotify:track:2H3jDABHGWblEaR5rtY5tH
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: No Feelings
@@ -2125,7 +2125,7 @@
   album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:5Pl46yccvPXXcIiXps3qHl
-  multiplier: -2
+  tier: -2
   value: -16
 - !ruby/object:MonkeyMusic::Metadata::Track
   name: Problems
@@ -2133,5 +2133,5 @@
   album: Never Mind The Bollocks Here’s The Sex Pistols
   year: 2012
   uri: spotify:track:5dI4YIBXUmat0Kp6N1SjuV
-  multiplier: -2
+  tier: -2
   value: -16

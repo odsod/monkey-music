@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "monkeymusic"
-  s.version     = "0.0.11"
+  s.version     = "0.0.14"
   s.license     = "MIT"
   s.author      = "Oscar Soderlund"
   s.email       = "poscar@spotify.com"

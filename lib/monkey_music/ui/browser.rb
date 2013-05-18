@@ -30,7 +30,7 @@ module MonkeyMusic::UI
 
     def update(level, turn = 0, turn_time = 0)
       @ws.send(level.as_json) if @ws
-      sleep 1
+      sleep 0.50
     end
 
   end
