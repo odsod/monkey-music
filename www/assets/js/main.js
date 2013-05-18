@@ -15,11 +15,11 @@ var monkeymusic = (function (document) {
     if (!isPlaying) {
       monkeymusic.level.init(canvas, level);
       $('body').addClass('playing');
-      $('#scores').scoreboard(level.players);
+      $('#scores').scoreboard(level);
       isPlaying = true;
     } else {
       monkeymusic.level.update(level);
-      $('#scores').scoreboard(level.players);
+      $('#scores').scoreboard(level);
     }
   }
 

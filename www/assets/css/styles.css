@@ -168,12 +168,16 @@ table#scores tr.scores td:nth-child(3n) {
   background-image: url('../img/sprites3/sprites16.png?1368896964');
 }
 /* line 54, ../sass/styles.sass */
+table#scores tr.scores td.turn {
+  background-image: none;
+}
+/* line 56, ../sass/styles.sass */
 table#scores tr.teams {
   font-size: 25px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 58, ../sass/styles.sass */
+/* line 60, ../sass/styles.sass */
 #splash {
   position: absolute;
   top: 30%;
@@ -182,11 +186,11 @@ table#scores tr.teams {
   font-size: 200px;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }
-/* line 59, ../sass/styles.sass */
+/* line 61, ../sass/styles.sass */
 body.playing #splash {
   display: none;
 }
-/* line 67, ../sass/styles.sass */
+/* line 69, ../sass/styles.sass */
 #splash .brand {
   text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -197,7 +201,7 @@ body.playing #splash {
   left: 0;
   padding-right: 200px;
 }
-/* line 76, ../sass/styles.sass */
+/* line 78, ../sass/styles.sass */
 #splash .addon {
   font-size: 100px;
   position: absolute;
@@ -207,18 +211,18 @@ body.playing #splash {
   -webkit-animation: wagging 2s infinite alternate;
 }
 
-/* line 85, ../sass/styles.sass */
+/* line 87, ../sass/styles.sass */
 #scores-container {
   height: 10%;
 }
 
-/* line 88, ../sass/styles.sass */
+/* line 90, ../sass/styles.sass */
 table#scores {
   height: 100%;
   width: 100%;
 }
 
-/* line 92, ../sass/styles.sass */
+/* line 94, ../sass/styles.sass */
 #canvas-container {
   height: 90%;
 }

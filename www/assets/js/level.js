@@ -6,9 +6,8 @@ monkeymusic.level = (function (createjs, tween, window) {
   createjs.Ticker.setFPS(60);
   createjs.useRAF = true;
 
-  var
-    stage,
-    units;
+  var stage,
+      units;
 
   function init(canvas, level) {
     if (!stage) {

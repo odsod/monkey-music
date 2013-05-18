@@ -1,10 +1,12 @@
 <tr class="scores">
-  {{#each this}}
+  {{#each players}}
   <td data-id="{{id}}">{{score}}</td>
   {{/each}}
+  <td class="turn">{{turn}}</td>
 </tr>
 <tr class="teams">
-  {{#each this}}
+  {{#each players}}
   <td>{{name}}</td>
   {{/each}}
+  <td class="info">/ {{turn_limit}} turns</td>
 </tr>

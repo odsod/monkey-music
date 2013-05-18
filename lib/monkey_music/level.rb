@@ -82,13 +82,5 @@ module MonkeyMusic
       rows.join("\n")
     end
 
-    def as_json
-      {
-        :width => @width,
-        :height => @height,
-        :units => @units,
-      }.to_json
-    end
-
   end
 end

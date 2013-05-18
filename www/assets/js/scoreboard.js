@@ -2,11 +2,11 @@
 
   var NAMESPACE = 'scoreboard';
 
-  function initialize(players) {
+  function initialize(state) {
     var self = this,
         scores = [];
-    this.html(Handlebars.templates.scores(players));
-    $.each(players, function (i, player) {
+    this.html(Handlebars.templates.scores(state));
+    $.each(state.players, function (i, player) {
       var $el = self.find('[data-id=\'' + player.id + '\']');
       scores[player.id] = {
         $el: $el
@@ -15,18 +15,19 @@
     this.data(NAMESPACE, scores);
   }
 
-  function update(players) {
+  function update(state) {
     var data = this.data(NAMESPACE);
     _(data).each(function (score, id) {
-      var player = _(players).find(function (player) {
+      var player = _(state.players).find(function (player) {
         return player.id === id;
       });
       score.$el.tickTo(player.score);
     });
+    this.find('.turn').tickTo(state.turn);
   }
 
   var methods = {
-    init: function (players) {
+    init: function (state) {
       return this.each(function () {
         var
           $this = $(this),
@@ -34,10 +35,10 @@
         if (!data) { // Has not been initialized
           console.log('initializing ' + NAMESPACE);
           $this.data(NAMESPACE, {});
-          initialize.call($this, players);
+          initialize.call($this, state);
         } else {
           console.log('updating ' + NAMESPACE);
-          update.call($this, players);
+          update.call($this, state);
         }
       });
     },
