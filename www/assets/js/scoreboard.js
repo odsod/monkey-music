@@ -2,45 +2,31 @@
 
   var NAMESPACE = 'scoreboard';
 
-  function grepMonkeys(units) {
-    return $.grep(units, function (unit) {
-      return unit.type && unit.type === 'Monkey';
-    });
-  }
-
-  function initialize(level) {
-    var
-      self = this,
-      monkeys = grepMonkeys(level.units),
-      scores = [];
-    this.html(Handlebars.templates.scores(monkeys));
-    $.each(monkeys, function (i, monkey) {
-      console.log('HEHEH');
-      var $el = self.find('[data-id=\'' + monkey.id + '\']');
-      console.log($el);
-      scores[monkey.id] = {
+  function initialize(players) {
+    var self = this,
+        scores = [];
+    this.html(Handlebars.templates.scores(players));
+    $.each(players, function (i, player) {
+      var $el = self.find('[data-id=\'' + player.id + '\']');
+      scores[player.id] = {
         $el: $el
       };
     });
     this.data(NAMESPACE, scores);
   }
 
-  function update(level) {
-    var
-      monkeys = grepMonkeys(level.units),
-      data = this.data(NAMESPACE);
+  function update(players) {
+    var data = this.data(NAMESPACE);
     _(data).each(function (score, id) {
-      var monkey = _(monkeys).find(function (monkey) {
-        return monkey.id === id;
+      var player = _(players).find(function (player) {
+        return player.id === id;
       });
-      console.log('MONKEY:');
-      console.log(monkey);
-      score.$el.tickTo(monkey.score);
+      score.$el.tickTo(player.score);
     });
   }
 
   var methods = {
-    init: function (level) {
+    init: function (players) {
       return this.each(function () {
         var
           $this = $(this),
@@ -48,10 +34,10 @@
         if (!data) { // Has not been initialized
           console.log('initializing ' + NAMESPACE);
           $this.data(NAMESPACE, {});
-          initialize.call($this, level);
+          initialize.call($this, players);
         } else {
           console.log('updating ' + NAMESPACE);
-          update.call($this, level);
+          update.call($this, players);
         }
       });
     },
