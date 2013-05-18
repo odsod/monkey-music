@@ -1,0 +1,12 @@
+ruby 1.9
+gems
+bundle install
+em-websocket
+# id varje turn
+# parametersträng till sin egen apa
+jättedum apa
+# parametrar till command line
+seedning där de bästa kommer på varsin sida i turneringen
+
+folk som är med:
+dan, eftermiddagen, kvällen
