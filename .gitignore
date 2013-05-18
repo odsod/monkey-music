@@ -111,3 +111,13 @@ assets/css/
 *.sass-cache
 
 
+### /home/poscar/.gitignore-boilerplates/Java.gitignore
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+
