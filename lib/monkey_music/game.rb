@@ -11,7 +11,6 @@ module MonkeyMusic
     end
 
     def start
-      @ui.update(@level)
       # Send initial state to players
       init_threads = []
       @players.each do |p|
@@ -33,7 +32,7 @@ module MonkeyMusic
         # Move players in random order
         @players.shuffle.each { |p| p.move! }
         ## Update ui
-        @ui.update(@level, turn, turn_time)
+        @ui.update(turn, turn_time)
       end
     end
 

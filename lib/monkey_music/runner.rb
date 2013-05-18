@@ -70,7 +70,7 @@ module MonkeyMusic
       level = Level.new(@players, user)
       level.load_from_file(@level_file)
       # Initialize UI
-      ui = ui_class.new(@delay, level)
+      ui = ui_class.new(level, @players, @delay)
       # Start game
       @game = Game.new(level, @players, ui)
       @game.start
