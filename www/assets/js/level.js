@@ -24,7 +24,7 @@ monkeymusic.level = (function (createjs, tween, window) {
       var sprite = monkeymusic.sprites.Sheet();
       if (unit.type === 'Track') {
         sprite.gotoAndPlay('Track' + (unit.tier < 0 ? 'M' : '') + Math.abs(unit.tier) + 'normalwest');
-        sprite.shadow = new createjs.Shadow('#999', 3, 3, 5);
+        sprite.shadow = new createjs.Shadow('#111', 4, 4, 8);
       } else if (unit.type === 'Monkey') {
         sprite = monkeymusic.sprites.Monkey();
         sprite.gotoAndPlay(unit.type + 'normal' + (unit.facing || 'east'));
