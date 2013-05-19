@@ -37,6 +37,8 @@ module MonkeyMusic::Generate
         decades[decade] ||= 0
         decades[decade] += 1
       end
+      puts "Decade tally:"
+      puts @decades.to_s
       (decades.max_by {|k,v| v }).first
     end
 
