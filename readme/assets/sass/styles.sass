@@ -56,11 +56,14 @@ h3
   +rhythm(1, 0, 0, 0.5)
   font-weight: 500
   background-repeat: no-repeat
-  padding-left: 42px
-  background-position: 0px -10px
+  padding-left: 28px
+  background-position: 0px -4px
   background-image: image-url("sprites/sprites00.png")
-  background-size: 32px 32px
+  background-size: 22px
   page-break-after: avoid
+
+p
+  +rhythm(.5, 0, 0, .5)
 
 img.logo
   width: 100%
@@ -69,9 +72,12 @@ strong
   font-weight: 700
 
 pre
+  +adjust-font-size-to($base-font-size*0.7, 0.5)
   +rhythm(1, 0, 0, 1)
   padding: 0 rhythm(1)
   page-break-inside: avoid
+  white-space: pre-wrap
+  word-wrap: break-word
 
 code
   font-family: "Source Code Pro", Monaco, "DejaVu Sans Mono", monospace
