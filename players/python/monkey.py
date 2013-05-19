@@ -47,7 +47,7 @@ class Monkey(object):
         return monkey
             
     def initialize(self, stream):
-        self._id = util.get_int(stream)
+        self._id = stream.readline().strip()
         self._w = util.get_int(stream)
         self._h = util.get_int(stream)
         self._turn_limit = util.get_int(stream)
@@ -57,15 +57,18 @@ class Monkey(object):
         self._bad_artists = util.get_set(stream)
         
     def update(self, stream):
+        self._id = stream.readline().strip()
         self._turn = util.get_int(stream)
         self._capacity = util.get_int(stream)
         self._time_left = util.get_int(stream)
         self._track_pos = {}
+        self.browse_result(sys.stdin)
         for y in xrange(self._h):
             line = stream.readline().strip()
             for x, square in enumerate(line.split(',')):
+
                 self._map[x, y] = square
-                if square == str(self._id):
+                if square == self._id:
                     self._pos = (x, y)
                 elif square == 'U':
                     self._user = (x, y)
@@ -90,8 +93,8 @@ class Monkey(object):
             logging.debug('Tracks close to %s: %s', self._pos, close_tracks)
             cmd = ['B'] + [self._track_pos[track] for track in close_tracks]
             print ','.join(cmd)
-            sys.stdout.flush()
-            self.browse_result(sys.stdin)
+            #sys.stdout.flush()
+            #self.browse_result(sys.stdin)
         elif self._turn > 1:
             pf = PathFinder(self._map)
             path_to_user = pf.find_path(self._pos, self._user)
@@ -126,8 +129,8 @@ class Monkey(object):
                         except KeyError:
                             logging.debug('[%d] Browse track (%s) at: %s', self._turn, uri, track)
                             print uri
-                            sys.stdout.flush()
-                            self.browse_result(sys.stdin)
+                            #sys.stdout.flush()
+                            #self.browse_result(sys.stdin)
                 else:
                     # Move to user.
                     logging.debug('[%d] New objective, move to user.', self._turn)

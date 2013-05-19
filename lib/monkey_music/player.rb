@@ -38,7 +38,7 @@ module MonkeyMusic
       level = @monkey.level
       user = @monkey.level.user
       [ "INIT",
-        @monkey.id,
+        "M#{@monkey.id}",
         level.width,
         level.height,
         level.turn_limit,
@@ -55,7 +55,7 @@ module MonkeyMusic
 
     def turn_output(turn)
       [ "TURN",
-        @monkey.id,
+        "M#{@monkey.id}",
         turn,
         @monkey.remaining_capacity,
         @remaining_time,
