@@ -8,10 +8,15 @@ var monkeymusic = (function (document) {
   var
     socket,
     canvas,
-    isPlaying = false;
+    isPlaying = false,
+    doCleanup = false;
 
   function onmessage(event) {
     var level = JSON.parse(event.data);
+    if (doCleanup) {
+      cleanup();
+      doCleanup = false;
+    }
     if (!isPlaying) {
       monkeymusic.level.init(canvas, level);
       $('body').addClass('playing');
@@ -23,13 +28,17 @@ var monkeymusic = (function (document) {
     }
   }
 
+  function cleanup() {
+    monkeymusic.level.destroy();
+    monkeymusic.sprites.reset();
+    $('body').removeClass('playing');
+    $('#scores').scoreboard('destroy');
+  }
+
   function onclose() {
     if (isPlaying) {
-      monkeymusic.level.destroy();
-      monkeymusic.sprites.reset();
+      doCleanup = true;
       isPlaying = false;
-      $('body').removeClass('playing');
-      $('#scores').scoreboard('destroy');
     }
     console.log('No connection. Trying to reconnect...');
     setTimeout(connect, 10);

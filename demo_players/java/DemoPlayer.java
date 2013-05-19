@@ -134,7 +134,7 @@ class Monkey implements Serializable {
       String metadata = sc.nextLine();
       Track knownTrack = Track.fromMetadata(metadata);
       // 0:[uri],1:[[track],[album],[artist],[year]]
-      String[] parts = metadata.split(",", 1);
+      String[] parts = metadata.split(",", 2);
       knownURIs.put(parts[0], knownTrack);
     }
   }

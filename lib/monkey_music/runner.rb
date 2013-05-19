@@ -17,12 +17,19 @@ module MonkeyMusic
 
     def run(ui_class)
       if ARGV[0] == "demo"
-        puts "\tcreate ./#{@@default_level}"
-        FileUtils.cp(
+        puts "\tcreate ./levels"
+        FileUtils.cp_r(
           File.join(
             File.dirname(__FILE__), 
-            "../../levels", 
-            @@default_level
+            "../../levels"
+          ),
+          Dir.getwd
+        )
+        puts "\tcreate ./demo_players"
+        FileUtils.cp_r(
+          File.join(
+            File.dirname(__FILE__), 
+            "../../demo_players"
           ),
           Dir.getwd
         )
@@ -32,15 +39,6 @@ module MonkeyMusic
             File.dirname(__FILE__), 
             "../../users", 
             @@default_user
-          ),
-          Dir.getwd
-        )
-        puts "\tcreate ./#{@@default_player}"
-        FileUtils.cp(
-          File.join(
-            File.dirname(__FILE__), 
-            "../../", 
-            @@default_player
           ),
           Dir.getwd
         )

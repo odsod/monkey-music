@@ -28,7 +28,7 @@ module MonkeyMusic::UI
         :height => @level.height,
         :units => @level.units,
         :players => @level.players.map {|p| {
-          :has_boost => p.has_boost,
+          :boost_cooldown => p.boost_cooldown,
           :remaining_time => p.remaining_time,
           :score => p.monkey.score,
           :capacity => p.monkey.capacity,
