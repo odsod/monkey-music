@@ -1,6 +1,7 @@
 carrying_capacity 4
 turn_limit 40
 time_limit 1500
+boost_cooldown 5
 
 legend "1" => Monkey.player(1),
        "2" => Monkey.player(2), 

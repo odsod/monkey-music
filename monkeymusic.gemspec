@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   s.name        = "monkeymusic"
-  s.version     = "0.0.15"
+  s.version     = "0.1.0"
   s.license     = "MIT"
   s.author      = "Oscar Soderlund"
   s.email       = "poscar@spotify.com"
   s.homepage    = "https://github.com/odsod/monkey-music"
   s.summary     = "A runtime for an AI programming competition."
   s.description = "n/a"
-  s.files        = Dir["{lib,levels,bin,users}/**/*", "[A-Z]*", "init.rb", "demo_player"]
+  s.files        = Dir["{demo_players,lib,levels,bin,users}/**/*", "[A-Z]*", "init.rb"]
   s.require_path = "lib"
   s.executables  = ["monkeymusic"]
   s.add_dependency "json"

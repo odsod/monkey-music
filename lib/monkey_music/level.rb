@@ -2,7 +2,7 @@ require 'json'
 
 module MonkeyMusic
   class Level
-    attr_accessor :width, :height, :turn_limit, :time_limit
+    attr_accessor :width, :height, :turn_limit, :time_limit, :boost_cooldown
     attr_reader :players, :user, :units
     
     def initialize(players, user)
@@ -10,6 +10,7 @@ module MonkeyMusic
       @user = user
       @width = 0
       @height = 0
+      @boost_cooldown = 0
       @units = []
     end
     

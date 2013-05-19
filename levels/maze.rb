@@ -1,6 +1,7 @@
 carrying_capacity 3
 turn_limit 40
 time_limit 1500
+boost_cooldown 10
 
 legend "M" => Monkey.player(1),
        "l" => Track.tier(1),

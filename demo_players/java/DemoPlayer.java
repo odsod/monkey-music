@@ -80,10 +80,8 @@ class Monkey implements Serializable {
     // Top tracks
     int numTracks = sc.nextInt();
     sc.nextLine();
-    System.err.println(numTracks);
     for (int i = 0; i < numTracks; i++) {
       String entry = sc.nextLine();
-      System.err.println(entry);
       // 0:[track],1:[album],2:[artist],3:[year]
       String[] parts = entry.split(",");
       topTracks.add(parts[0]);

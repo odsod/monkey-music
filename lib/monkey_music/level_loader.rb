@@ -21,6 +21,10 @@ module MonkeyMusic
       @level.players.each { |p| p.monkey.capacity = capacity }
     end
 
+    def boost_cooldown(cooldown)
+      @level.boost_cooldown = cooldown
+    end
+
     def legend(legend)
       @legend = legend
     end
