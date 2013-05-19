@@ -5,7 +5,7 @@ Monkey Music Challenge
 Introduction
 ------------
 
-The Spotify backend is consists of a multitude of individual services.  One such service is the music recommendation service, which is responsible for finding and recommending new tracks to Spotify users, according to their music taste.
+The Spotify backend consists of a multitude of individual services.  One such service is the music recommendation service, which is responsible for finding and recommending new tracks to Spotify users, according to their music taste.
 
 The music recommendation service has lately been getting some pretty negative feedback from users. The word out on Twitter is that even monkeys could find better music recommendations!
 
@@ -234,12 +234,33 @@ The information that can be read from `stdin` during a turn is:
     M[ID]\n // id of your monkey
     [TURN NUMBER]\n
     [REMAINING CAPACITY]\n
-    [REMAINING TIME]\n
+    [REMAINING TIME]\n // milliseconds
     [BOOST COOLDOWN]\n // number of turns until boost ready
     [n]\n // amount of metadata lookup results
-    [URI],[TRACK],[ALBUM],[ARTIST],[YEAR]\n // n rows of metadata lookup
-    results
+    [URI],[TRACK],[ALBUM],[ARTIST],[YEAR]\n // n rows of metadata lookup results
     [CELL],[CELL],..,[CELL]\n // [height] rows of comma separated level cells
+
+An example turn could look like:
+
+    TURN\n
+    M2\n
+    1\n
+    3\n
+    4503\n
+    0\n
+    1\n
+    spotify:track:5H85hOp2oMlhMh9JlkdJP2,Condemnation,Depeche Mode,Songs Of Faith And Devotion,1993\n
+    _,_,_,_,_,_\n
+    _,#,#,_,_,_\n
+    _,#,spotify:track:5H85hOp2oMlhMh9JlkdJP2,_,_,_\n
+    _,_,_,_,_,U\n
+    M2,_,_,_,_,_\n
+    _,_,_,spotify:track:4CARtDIJS87fOmWb1RxLKK,_,_\n
+    #,_,_,_,_,_\n
+    _,_,_,_,_,_\n
+    _,#,spotify:track:0S8LgLoseDB6W2HWd1ym6P,_,_,_\n
+    _,#,#,#,#,_\n
+    _,_,_,_,_,_\n
 
 Monkey commands
 ---------------
@@ -309,8 +330,9 @@ could look like:
     1
     4529
     2
-    spotify:track:5H85hOp2oMlhMh9JlkdJP2,TODO,TODO,TODO,TODO
-    spotify:track:5H85hOp2oMlhMh9JlkdJP2,TODO,TODO,TODO,TODO
+    spotify:track:5H85hOp2oMlhMh9JlkdJP2,Condemnation,Depeche Mode,Songs Of Faith And Devotion,1993
+    spotify:track:spotify:track:3NYCaxkggl0Hh8vQptSUvV,Enola Gay - 2003 - Remaster,Orchestral Manoeuvres In The Dark
+    ,Organisation,2003
 
 ### Picking up tracks
 
@@ -347,6 +369,10 @@ To get some demo code to start from:
 To see something on the screen:
 
     > monkeymusic -p demo_players/ruby/runme
+
+For more info:
+
+    > monkeymusic --help
 
 You can probably reuse some of the code from the demo players.
 Specifically if you do not want to spend too much time on parsing and
