@@ -3,7 +3,7 @@ require 'em-websocket'
 module MonkeyMusic::UI
   class Browser
 
-    def initialize(level, players, delay)
+    def initialize(level, players, delay, clear)
       @delay = delay
       @players = players
       @level = level
@@ -16,7 +16,7 @@ module MonkeyMusic::UI
           end
         }
       }
-      print "Using browser UI. Press the enter key to start game. "
+      print "Using browser UI. Press the enter key to start game."
       gets
       puts "Starting game..."
       puts "Game started!"

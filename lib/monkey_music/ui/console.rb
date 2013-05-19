@@ -1,27 +1,25 @@
 module MonkeyMusic::UI
   class Console
 
-    def initialize(delay)
-      @delay = delay || 1
+    def initialize(level, players, delay = 1, clear = true)
+      @clear = clear
+      @delay = delay
+      @players = players
+      @level = level
+      print "Using console UI. Press the enter key to start game."
+      gets
     end
 
-    def msg(msg)
-      puts "\e[H\e[2J"
-      puts "\n"*5
-      puts " "*10 + msg
-      puts "\n"*5
-    end
-    
-    def update(level, turn = 0, query_time = 0)
+    def update(turn = 0, turn_time = 0)
       # Clear screen
-      #puts "\e[H\e[2J"
+      puts "\e[H\e[2J" if @clear
       # Level
-      puts level.to_s
+      puts @level.to_s
       # Score
       puts "\n"
-      level.players.each do |player|
+      @players.each do |player|
         monkey = player.monkey
-        puts "--- Turn: #{turn}/#{level.turn_limit} ---"
+        puts "--- Turn: #{turn}/#{@level.turn_limit} ---"
         print "#{monkey.name} | "
         print "Score: #{monkey.score} | "
         print "Time: #{player.remaining_time} | "
@@ -30,7 +28,7 @@ module MonkeyMusic::UI
         print("\n"*monkey.remaining_capacity)
       end
       puts "---"
-      sleep [@delay - query_time, 0].max
+      sleep [@delay - turn_time, 0].max
     end
   end
 end

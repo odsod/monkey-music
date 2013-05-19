@@ -70,7 +70,7 @@ module MonkeyMusic
       level = Level.new(@players, user)
       level.load_from_file(@level_file)
       # Initialize UI
-      ui = ui_class.new(level, @players, @delay)
+      ui = ui_class.new(level, @players, @delay, @clear)
       # Start game
       @game = Game.new(level, @players, ui)
       @game.start
@@ -121,6 +121,11 @@ module MonkeyMusic
       opts.on('-d', '--delay DELAY', OptionParser::DecimalNumeric,
               'The delay (in seconds) between each round.') do |delay|
         @delay = delay
+      end
+
+      opts.on('-c', '--clear',
+              'Clear the console after each turn.') do
+        @clear = true
       end
 
       opts.on('-v', '--version', 
