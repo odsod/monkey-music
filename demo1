@@ -1,0 +1,1 @@
+./bin/monkeymusic-browser -p demo_players/ruby/demo_player.rb -n poscar -l levels/easy.rb
