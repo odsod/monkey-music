@@ -235,6 +235,7 @@ The information that can be read from `stdin` during a turn is:
     [TURN NUMBER]\n
     [REMAINING CAPACITY]\n
     [REMAINING TIME]\n
+    [BOOST COOLDOWN]\n // number of turns until boost ready
     [n]\n // amount of metadata lookup results
     [URI],[TRACK],[ALBUM],[ARTIST],[YEAR]\n // n rows of metadata lookup
     results
@@ -288,9 +289,12 @@ metadata of a track.
 
     B,[COMMAND],[COMMAND],[COMMAND]
 
-Once every game, the monkey can issue a boost command and then issue three other comma separated commands during the same turn.
+Boosting is almost as effective as barrel rolling. You can issue a boost command and then issue three other comma separated commands during the same turn.
 
-You can only issue the boost command once every game. Choose wisely!
+After using boost, the command will be on cooldown before being available
+for use again.
+
+Keep a close watch on the boost cooldown, use your boost wisely!
 {: .tip}
 
 The turn input after having issued this command:

@@ -61,12 +61,13 @@ class DemoPlayer
     @turn = Integer($stdin.gets.chomp)
     @remaining_capacity = Integer($stdin.gets.chomp)
     @remaining_time = Integer($stdin.gets.chomp)
+    @boost_cooldown = Integer($stdin.gets.chomp)
     # Read metadata query responses
     num_responses = Integer($stdin.gets.chomp)
     num_responses.times do
       response = $stdin.gets.chomp.split(",")
       uri = response.unshift
-      @known_tracks[uri][response]
+      @known_tracks[uri] = response
     end
   end
 

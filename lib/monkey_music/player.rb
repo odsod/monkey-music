@@ -2,12 +2,12 @@ require 'benchmark'
 
 module MonkeyMusic
   class Player
-    attr_accessor :monkey, :level, :has_boost, :remaining_time, :command_line_argument
+    attr_accessor :monkey, :level, :boost_cooldown, :remaining_time, :command_line_argument
     
     def initialize(file)
       @file = file
       @monkey = Monkey.new
-      @has_boost = true
+      @boost_cooldown = 0
       @penalty = 0
       @moves = []
       @queries = []
@@ -31,6 +31,7 @@ module MonkeyMusic
           parse!(@input) if @input
         end
         @penalty = 5 if @remaining_time < 0
+        @boost_cooldown -= 1 if @boost_cooldown > 0
       end
     end
 
@@ -59,6 +60,7 @@ module MonkeyMusic
         turn,
         @monkey.remaining_capacity,
         @remaining_time,
+        @boost_cooldown,
         response_to(@queries),
         @monkey.level.serialize,
       ].join("\n")
@@ -79,8 +81,8 @@ module MonkeyMusic
     end
 
     def boost!
-      return unless @has_boost
-      @has_boost = false
+      return unless @boost_cooldown == 0
+      @boost_cooldown = @monkey.level.boost_cooldown
       [3, @tokens.length].min.times { parse_next_token! }
     end
 

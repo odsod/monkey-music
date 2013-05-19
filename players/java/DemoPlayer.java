@@ -50,7 +50,7 @@ class Monkey implements Serializable {
   List<Track> knownTracks;
   int turn, turnLimit;
   int width, height;
-  int remainingCapacity, remainingExecutionTime;
+  int remainingCapacity, remainingExecutionTime, boostCooldown;
   String[][] level;
 
   Monkey(String id) {
@@ -126,6 +126,7 @@ class Monkey implements Serializable {
     turn = sc.nextInt();
     remainingCapacity = sc.nextInt();
     remainingExecutionTime = sc.nextInt();
+    boostCooldown = sc.nextInt();
   }
 
   void parseMetadata(Scanner sc) {
