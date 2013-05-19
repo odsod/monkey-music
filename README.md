@@ -13,37 +13,43 @@ Therefore, upper management has made an informed decision that the next version 
 
 You have therefore decided to write a computer program that helps monkeys find good track recommendations for Spotify users.
 
-This is all entirely fictional of course.
+This is all entirely fictional of course. :)
 {: .tip}
 
 Task summary
 ------------
 
-The task consists of implementing a program to play the Monkey Music game. The goal of the game is to score points by gathering track recommendations and giving them to a Spotify user.
+The task consists of implementing a program to play the Monkey Music game.
+The goal of the game is to score points by gathering track recommendations
+for a Spotify user.
 
 The game
 --------
 
-Every game of Monkey Music is broken up into a number of turns. 
+The game takes place in a two dimensional level. The level is a rectangular
+grid of cells.
 
-Every turn, your program will be executed and fed information about the current state of the level by reading from `stdin`. Your program responds by printing one command to `stdout`. The command decides what your monkey does during the current turn.
+Your program will move your monkey around the level by printing commands
+to `stdout`. Before every command, your program will be fed information about the current state
+of the game and level through `stdin`.
 
-Fate decides the order in which monkeys execute their commands in a turn.
-{: .tip}
+The game is divided into turns. Upon each turn, every monkey on the level gets
+to execute one command. 
 
 Before every turn, execution of your program starts. After every turn, execution of your program stops.
+{: .tip}
 
 Rules
 -----
 
 ### Scoring
 
-Your monkey will pick up tracks and deliver them to a user. 
+Your mission is to move around the level, pick up tracks, and deliver them
+to a Spotify user.
 
-When a track is delivered, you will recieve a score according to how well the track fits the music taste of the user.  The player with the highest score at the end of the game will be the winner.
-
-You should try to get as high a score as possible.
-{. tip}
+Each track is worth a certain amount of points. Every time you deliver a
+track, these points are added to your score. The player with the highest score 
+at the end of the game is the winner.
 
 ### Turn limit
 
@@ -53,138 +59,113 @@ The game ends when the turn limit is reached.
 
 ### Time limit
 
-Every time your program is executed, the execution time will be measured. Every level has a total time limit, that your program should not exceed.
+Every time your program is executed, the execution time will be measured. Every level has a total time limit that your program should not exceed.
 
-If your execution time reaches the time limit, your monkey will run out of energy and fall asleep for `5` turns. Afte sleeping for `5` turns, the remaining execution time of your program will be replenished.
+If your execution time reaches the time limit, your monkey will run out of
+energy and fall asleep for `5` turns, after which your execution time will
+be replenished.
 
 ### Carrying capacity
 
-The number of tracks your monkey can pick up and hold at any given time is called carrying capacity.
+Your monkey must pick up tracks and carry them to a user. The number of
+tracks your monkey can carry at any given time is called the carrying capacity.
+
+When you have picked up enough tracks, you must deliver them to a user
+before picking up more.
 
 The carrying capacity of your monkey is different for every level.
+{: .tip}
 
 Level layout
 ------------
 
-The level is a `n x m` grid of cells. It is sent to the standard input of your program. 
+The level is a `n x m` grid of cells. 
 
-Each cell contains one of the following things:
+It is sent to the standard input of your program as `m` lines, with `n`
+comma-separated cells each. 
+
+Each cell contains an ASCII string, which can be one of the following
+things:
+
 
 ### Monkeys
 
-* ASCII: `M[id]`
+**ASCII:** `M[id]`
 
 You, and your competitors each have your own monkey to control. 
 Every monkey is identified by a unique numerical id.
 
 ### Walls
 
-* ASCII: `#`
+**ASCII:** `#`
 
 Walls are inanimate objects that monkeys cannot pass through.
 
 ### Tracks
 
-* ASCII: `[URI]`
+**ASCII:** `spotify:track:[hash]`
 
-Tracks are identified by their unique Spotify URI. Every track URI starts with `spotify:track:`, followed by `22` alphanumerical characters. 
+Tracks are identified by their unique Spotify URI. 
 
-Example: `spotify:track:5H85hOp2oMlhMh9JlkdJP2`. 
+Every track URI starts with `spotify:track:`, followed by `22`
+alphanumerical characters:
+
+    spotify:track:5H85hOp2oMlhMh9JlkdJP2
 
 Tracks can be picked up and carried around by monkeys.
 
-Tracks will remain stationary until picked up. They will neither move nor
-suddenly appear out of nowhere.
-{: .tip}
+### User
 
-### The User
+**ASCII:** `U`
 
-* ASCII: `U`
-
-The user is where monkeys deliver their track recommendations. Monkeys are
-scored for every track delivered to the user, according to how well the track fits the user's music taste.
+The Spotify user is where monkeys deliver their track recommendations. Monkeys are
+scored for every track delivered to the user, according to how well the track fits 
+the user's music taste.
 
 ### Empty
 
-* ASCII: `[SPACE]`
+**ASCII:** `_`
 
-Nothing to do here.
+Empty cells are represented by an underscore.
 
 A cell can only contain one thing at any time.
-{: .tip}
-
-User toplists
--------------
-
-How well tracks match the music taste of a user is decided by the user's toplists.
-
-Every Spotify user has a track toplist, an album toplist and an artist toplist. Every entry in a toplist is a comma-separated string of metadata.
-
-The toplists are sent to the standard input of your program on the following formats:
-
-### Track toplist
-
-First an integer `n`, followed by `n` lines of track metadata entries.
-
-    n
-    track,album,artist,year
-    track,album,artist,year
-    ...
-
-### Album toplist
-
-First an integer `n`, followed by `n` lines of album metadata entries.
-
-    [n]
-    album,artist,year
-    album,artist,year
-    ...
-
-### Artist toplist
-
-First an integer `n`, followed by `n` lines of artist metadata entries.
-
-    n
-    artist
-    artist
-    ...
-
-### Disliked artist toplist
-
-You will also receive a list of artists that the user does not like.
-
-First an integer `n`, followed by `n` lines of artist entries.
-
-    n
-    artist
-    artist
-    ...
-
-Spotify does not actually keep toplists of disliked artists. ;)
 {: .tip}
 
 Score system
 ------------
 
-Each track is scored according to the user toplists by placing it into 1 out of 5 score tiers.
+Every Spotify user has a number of toplists:
 
-There are three positive tiers: `1`, `2` and `3`. There are two negative tiers, `-1` and `-2`
+* Top tracks
+* Top albums
+* Top artists
+
+In the Monkey Music game, every user also has another toplist:
+
+* Top disliked artists
+
+How well tracks match the music taste of a user is decided by the user's toplists.
+
+Each track belongs to one of 5 score tiers. There are three positive
+tiers: `1`, `2` and `3`. There are two negative tiers, `-1` and `-2`.
+
+If a track fulfills a negative criteria, it is immediately
+placed into the corresponding tier. This differs from the positive tiers.
+For every positive criteria that matches, the track climbs one tier.
 
 The following criteria decide which tier a track belongs to:
 
 ### Tier -2: Disliked artist
 
-The track artist is in the user's disliked artist toplist. To recommend one of
-these tracks is an epic fail.
+The track artist is among the users's top disliked artists.
 
 ### Tier -1: Played to death
 
-The track is already in the user's track toplist. There is not much point
-in recommending it.
+The track is already among the user's top tracks.
 
 ### Tier += 1: Favorite artist
 
-The track artist is in the user's artist toplist.
+The track artist is among the user's top artists.
 
 ### Tier += 1: Favorite album
 
@@ -194,98 +175,70 @@ If track album in the user's album toplist.
 
 The year of the track belongs to the user's top decade.
 
-This is an interesting one. Every user has a top decade, which is the decade that is most prominent in the user's track toplist and album toplist.
+Every user has a top decade, which is the decade that is most prominent in the user's track toplist and album toplist.
 
 ### Tally
 
 Your track will be scored according to it's tier:
 
-**Tier -2:** -16 points
+* **Tier -2:** -16 points
+* **Tier -1:** -4 points
+* **Tier 1:** 4 points
+* **Tier 2:** 16 points
+* **Tier 3:** 64 points
 
-**Tier -1:** -4 points
-
-**Tier 1:** 4 points
-
-**Tier 2:** 16 points
-
-**Tier 3:** 64 points
-
-Tier 3 tracks are obviously very valuable, so be on the lookout for these.
+Tier 3 tracks are obviously very valuable. Be on the lookout for these.
 {: .tip}
 
 Game progression
 ----------------
 
-### Initialization phase
+### Init phase
 
-The game consists of two different phases.
+The first phase of the game is the init phase, which occurs once every game.
 
-The first phase is the initialization phase, it occurs once every game.
-
-During the initialization phase, your program will be given information about the level that will be useful during the entire course of the game.
+During the init phase, your program will be given information about the level that will be useful during the entire course of the game.
 
 The information that can be read from `stdin` during the `init` phase is:
 
     INIT\n
-    M[id]\n
-    [WIDTH]\n
-    [HEIGHT]\n
-    [TURN LIMIT]\n
-    [n]\n
-    [TRACK],[ALBUM],[ARTIST],[YEAR]\n
-    [n]\n
-    [ALBUM],[ARTIST],[YEAR]\n
-    [n]\n
-    [ARTIST]\n
-    [n]\n
-    [ARTIST]\n
+    M[id]\n // id of your monkey
+    [WIDTH]\n // width of the level
+    [HEIGHT]\n // height of the level
+    [TURN LIMIT]\n // turn limit of the game
+    [n]\n // the number of entries in the track toplist
+    [TRACK],[ALBUM],[ARTIST],[YEAR]\n // n rows of track metadata
+    [n]\n // the number of entries in the album toplist
+    [ALBUM],[ARTIST],[YEAR]\n // n rows of album metadata
+    [n]\n // the number of entries in the artist toplist
+    [ARTIST]\n // n rows of artist metadata
+    [n]\n // the number of entries in the disliked artist toplist
+    [ARTIST]\n // n rows of disliked artist metadata
 
-* The string `"INIT"`
-* The id of your monkey
-* The `width` of the map
-* The `height` of the map
-* The `turn limit` of the game
-* The number of entries in the user's track toplist
-* The track toplist entries
-* The number of entries in the user's album toplist
-* The album toplist
-* The number of entries in the user's artist toplist
-* The artist toplist
-* The number of entries in the user's disliked artist toplist
-* The disliked artist toplist
-
-After the initialization phase, execution of your program will stop until the next phase.
-
-Make sure to keep the data from the initialization phase in a persistent cache!
+After the init phase, execution of your program will stop. Make sure 
+to keep the data from the init phase in a persistent cache!
 {: .tip}
 
-### Turn phases
+### Turns
 
-After the initialization phase, a number of turn phases will follow. 
+After the init phase, a number of turns will follow. 
 
-The total number of turn phases is decided by the turn limit of the level.
+The total number of turns is decided by the turn limit of the level.
 
-The information that can be read from `stdin` during a turn phase is:
+Every turn, your program will issue one command, but first it will read
+the current state of the game.
+
+The information that can be read from `stdin` during a turn is:
   
     TURN\n
-    M[ID]\n
+    M[ID]\n // id of your monkey
     [TURN NUMBER]\n
     [REMAINING CAPACITY]\n
     [REMAINING TIME]\n
-    [n]\n
-    [URI],[TRACK],[ALBUM],[ARTIST],[YEAR]\n
-    [LEVEL]\n
-
-* The string `"TURN"`
-* The id of your monkey
-* The turn number
-* The remaining carrying capacity of your monkey
-* The remaining execution time of your program
-* The number of available metadata lookup results
-* Your metadata lookup results from the previous turn
-* The current state of the level
-
-After reading the turn information from `stdin`, your program will print a command for your monkey to `stdout`.
+    [n]\n // amount of metadata lookup results
+    [URI],[TRACK],[ALBUM],[ARTIST],[YEAR]\n // n rows of metadata lookup
+    results
+    [CELL],[CELL],..,[CELL]\n // [height] rows of comma separated level cells
 
 Monkey commands
 ---------------
@@ -295,43 +248,40 @@ In each turn of the game, every monkey executes one command.
 
 Commands which the monkeys can execute are:
 
-    [MOVE] | [METADATA LOOKUP] | B,[COMMAND],[COMMAND],[COMMAND]
+    [MOVE] | [URI LOOKUP] | B,[COMMAND],[COMMAND],[COMMAND]
 
-### Move
+Fate decides the order in which monkeys execute their commands during a
+turn.
+{: .tip}
+
+### Movement
 
 You can command the monkey to move in the four cardinal directions using
 the commands:
 
-    W
+* **North:** `N`
+* **West:** `W`
+* **East:** `E`
+* **South:** `S`
 
-Moves the monkey one cell to the left.
-
-    E
-
-Moves the monkey one cell to the right.
-
-    N
-
-Moves the monkey one cell up.
-
-    S
-
-Moves the monkey one cell down.
+Each of the above command causes the monkey to attempt to move one cell in
+the specified direction.
 
 Trying to move to an already occupied cell will casue the monkey to stand
 still for the duration of the round.
 {: .tip}
 
-### Metadata lookup
+### URI lookup
 
-You can lookup the metadata of a track on the level by issuing a metadata
+You can lookup the metadata of a track on the level by issuing a URI
 lookup command:
 
-    spotify:track:......................
+    spotify:track:[hash]
 
-You will recieve the result of the metadata lookup the following turn.
+You will recieve the result of the URI lookup in the next turn input.
 
-Your monkey must every turn choose between moving and looking up the metadata of a track!
+Your monkey must every turn choose between moving and looking up the
+metadata of a track.
 {: .tip}
 
 ### Boost
@@ -386,15 +336,17 @@ To install the challenge runtime:
 
     > gem install monkeymusic
 
-To get started quickly:
+To get some demo code to start from:
 
     > monkeymusic demo
 
 To see something on the screen:
 
-    > monkeymusic -p demo_player
+    > monkeymusic -p demo_players/ruby/runme
 
-You can probably learn a lot about the game from reading the `demo_player`.
+You can probably reuse some of the code from the demo players.
+Specifically if you do not want to spend too much time on parsing and
+persisting data between rounds.
 
 Handing in
 ----------
@@ -402,4 +354,7 @@ Handing in
 Your competition entry is to be handed in as a zip archive containing
 everything needed to run your program.
 
-When unpacked, your program should be runned through an executable file called `runme`.
+When unpacked, your program should be runned through an runnable file called `runme`.
+
+If your program requires some sort of installation, such as compilation,
+this should be encoded in another runnable file called `install`.
