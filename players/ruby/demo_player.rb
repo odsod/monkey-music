@@ -77,7 +77,7 @@ class DemoPlayer
       row = $stdin.gets.chomp.split(',')
       @width.times do |x|
         case row[x]
-        when "M#{@id}" then @x, @y = x, y
+        when @id then @x, @y = x, y
         when /spotify:track/ then @track_positions << [x, y]
         when "U" then @user_position = [x, y]
         end
