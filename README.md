@@ -320,19 +320,18 @@ Keep a close watch on the boost cooldown, use your boost wisely!
 
 The turn input after having issued this command:
 
-    B,W,spotify:track:5H85hOp2oMlhMh9JlkdJP2,spotify:track:5H85hOp2oMlhMh9JlkdJP2
+    B,W,spotify:track:5H85hOp2oMlhMh9JlkdJP2,spotify:track:5H85hOp2oMlhMh9JlkdJP2\n
 
 could look like:
 
-    TURN
-    10
-    M1
-    1
-    4529
-    2
-    spotify:track:5H85hOp2oMlhMh9JlkdJP2,Condemnation,Depeche Mode,Songs Of Faith And Devotion,1993
-    spotify:track:spotify:track:3NYCaxkggl0Hh8vQptSUvV,Enola Gay - 2003 - Remaster,Orchestral Manoeuvres In The Dark
-    ,Organisation,2003
+    TURN\n
+    10\n
+    M1\n
+    1\n
+    4529\n
+    2\n
+    spotify:track:5H85hOp2oMlhMh9JlkdJP2,Condemnation,Depeche Mode,Songs Of Faith And Devotion,1993\n
+    spotify:track:spotify:track:3NYCaxkggl0Hh8vQptSUvV,Enola Gay - 2003 - Remaster,Orchestral Manoeuvres In The Dark,Organisation,2003\n
 
 ### Picking up tracks
 
