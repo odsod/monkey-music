@@ -29,7 +29,7 @@ The game
 The game takes place in a two dimensional level. The level is a rectangular
 grid of cells.
 
-Your program will move your monkey around the level by printing commands
+Your program will move a monkey around the level by printing commands
 to `stdout`. Before every command, your program will be fed information about the current state
 of the game and level through `stdin`.
 
@@ -289,7 +289,7 @@ metadata of a track.
 
     B,[COMMAND],[COMMAND],[COMMAND]
 
-Boosting is almost as effective as barrel rolling. You can issue a boost command and then issue three other comma separated commands during the same turn.
+You can issue a boost command and then issue three other comma separated commands during the same turn.
 
 After using boost, the command will be on cooldown before being available
 for use again.
