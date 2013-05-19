@@ -28,6 +28,7 @@ class Monkey(object):
         self._map = {}
         self._pos = None
         self._user = None
+        self._boost_cooldown = 0
         self._track_pos = {} # pos -> uri
         self._metadata = {} # uri -> metadata
         self._objective = None
@@ -61,6 +62,7 @@ class Monkey(object):
         self._turn = util.get_int(stream)
         self._capacity = util.get_int(stream)
         self._time_left = util.get_int(stream)
+        self._boost_cooldown = util.get_int(stream)
         self._track_pos = {}
         self.browse_result(sys.stdin)
         for y in xrange(self._h):
