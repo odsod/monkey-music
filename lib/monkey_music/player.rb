@@ -89,7 +89,8 @@ module MonkeyMusic
     def response_to(queries)
       tracks = []
       queries.each do |uri|
-        tracks << @monkey.level.tracks.find {|t| t.uri == uri }
+        browse_result = @monkey.level.tracks.find {|t| t.uri == uri }
+        tracks << browse_result if browse_result
       end
       lines = []
       lines << tracks.length
