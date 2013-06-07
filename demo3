@@ -1,1 +1,0 @@
-./bin/monkeymusic-browser -p demo_players/ruby/demo_player.rb -n poscar -p pathfind/monkey.py -l levels/maze.rb
