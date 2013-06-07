@@ -45,7 +45,7 @@ var monkeymusic = (function (document) {
   }
 
   function connect() {
-    socket = new WebSocket('ws://localhost:3000');
+    socket = new WebSocket('ws://10.211.55.4:3000');
     socket.onmessage = onmessage;
     socket.onclose = onclose;
     socket.onopen = function () {
