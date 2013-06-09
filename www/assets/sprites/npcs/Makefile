@@ -8,14 +8,6 @@ scaled: export
 	cp export/*.png tmp/scaled/
 	mogrify -resize 200% -filter box tmp/scaled/*.png
 
-flipped: scaled
-	mkdir -p tmp/flipped
-	cp tmp/scaled/*.png tmp/flipped/
-	mogrify -flop tmp/flipped/*.png
-	cd tmp/flipped && rename 's/^/flipped_/' *.png
-
-sheet: scaled flipped
-	mkdir -p tmp/sheet
-	cp tmp/scaled/*.png tmp/flipped/*.png tmp/sheet/
+sheet: scaled
 	mkdir -p out
-	convert tmp/sheet/*.png +append out/sheet.png
+	convert tmp/scaled/*.png +append out/sheet.png
