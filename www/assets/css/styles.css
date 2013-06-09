@@ -3,17 +3,17 @@
   background: url('../img/Monkey-running-s63573ff88f.png') no-repeat;
 }
 
-/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-running-run1 {
   background-position: 0 0;
 }
 
-/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-running-run2 {
   background-position: -70px 0;
 }
 
-/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-running-run3 {
   background-position: -140px 0;
 }
@@ -23,12 +23,12 @@
   background: url('../img/Monkey-standing-sb4da98c4d0.png') no-repeat;
 }
 
-/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-standing-stand1 {
   background-position: 0 0;
 }
 
-/* line 60, ../../../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .Monkey-standing-stand2 {
   background-position: -70px 0;
 }
@@ -40,7 +40,7 @@
 
 /* line 24, ../sass/sprites.sass */
 .basket-sprite {
-  background-image: url('../img/pipe.png?1368877200');
+  background-image: url('../img/pipe.png?1370008944');
 }
 
 /* line 27, ../sass/sprites.sass */
@@ -131,66 +131,63 @@ html, body {
   box-sizing: border-box;
 }
 
-/* line 29, ../sass/styles.sass */
-body {
-  border: 15px solid #222222;
-}
-
 /* line 32, ../sass/styles.sass */
 #scores-container {
-  background: #222222;
-  padding-bottom: 15px;
+  margin: 20px;
+  bottom: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* line 36, ../sass/styles.sass */
+/* line 40, ../sass/styles.sass */
 table#scores {
   color: #eeeeee;
   display: none;
   table-layout: fixed;
   z-index: 5;
 }
-/* line 39, ../sass/styles.sass */
+/* line 43, ../sass/styles.sass */
 body.playing table#scores {
   display: table;
 }
-/* line 43, ../sass/styles.sass */
+/* line 47, ../sass/styles.sass */
 table#scores td {
   text-align: center;
 }
-/* line 45, ../sass/styles.sass */
+/* line 49, ../sass/styles.sass */
 table#scores tr.scores {
-  font-size: 80px;
+  font-size: 70px;
   text-shadow: 5px 5px black;
 }
-/* line 48, ../sass/styles.sass */
+/* line 52, ../sass/styles.sass */
 table#scores tr.scores td {
   background-repeat: no-repeat;
   background-position: 35% top;
   background-size: 50px;
 }
-/* line 52, ../sass/styles.sass */
-table#scores tr.scores td:nth-child(3n+1) {
-  background-image: url('../img/sprites/sprites16.png?1368881095');
-}
-/* line 54, ../sass/styles.sass */
-table#scores tr.scores td:nth-child(3n+2) {
-  background-image: url('../img/sprites2/sprites16.png?1368896709');
-}
 /* line 56, ../sass/styles.sass */
-table#scores tr.scores td:nth-child(3n) {
-  background-image: url('../img/sprites3/sprites16.png?1368896964');
+table#scores tr.scores td:nth-child(3n+1) {
+  background-image: url('../img/sprites/sprites16.png?1370008944');
 }
 /* line 58, ../sass/styles.sass */
+table#scores tr.scores td:nth-child(3n+2) {
+  background-image: url('../img/sprites2/sprites16.png?1370008944');
+}
+/* line 60, ../sass/styles.sass */
+table#scores tr.scores td:nth-child(3n) {
+  background-image: url('../img/sprites3/sprites16.png?1370008944');
+}
+/* line 62, ../sass/styles.sass */
 table#scores tr.scores td.turn {
   background-image: none;
 }
-/* line 60, ../sass/styles.sass */
+/* line 64, ../sass/styles.sass */
 table#scores tr.teams {
   font-size: 25px;
   text-shadow: 2px 2px black;
 }
 
-/* line 64, ../sass/styles.sass */
+/* line 68, ../sass/styles.sass */
 #splash {
   position: absolute;
   top: 30%;
@@ -199,11 +196,11 @@ table#scores tr.teams {
   font-size: 200px;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }
-/* line 65, ../sass/styles.sass */
+/* line 69, ../sass/styles.sass */
 body.playing #splash {
   display: none;
 }
-/* line 73, ../sass/styles.sass */
+/* line 77, ../sass/styles.sass */
 #splash .brand {
   text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -214,7 +211,7 @@ body.playing #splash {
   left: 0;
   padding-right: 200px;
 }
-/* line 82, ../sass/styles.sass */
+/* line 86, ../sass/styles.sass */
 #splash .addon {
   font-size: 100px;
   position: absolute;
@@ -224,19 +221,18 @@ body.playing #splash {
   -webkit-animation: wagging 2s infinite alternate;
 }
 
-/* line 91, ../sass/styles.sass */
+/* line 95, ../sass/styles.sass */
 #scores-container {
   height: 10%;
 }
 
-/* line 94, ../sass/styles.sass */
+/* line 98, ../sass/styles.sass */
 table#scores {
   height: 100%;
   width: 100%;
 }
 
-/* line 98, ../sass/styles.sass */
+/* line 102, ../sass/styles.sass */
 #canvas-container {
-  box-shadow: inset 0 0px 15px 15px rgba(0, 0, 0, 0.25);
   height: 90%;
 }
