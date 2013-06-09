@@ -1,7 +1,7 @@
 all: clean sheets
 
 clean:
-	rm -rf tmp/ sheets/
+	rm -rf tmp/ out/
 
 scaled: export
 	mkdir -p tmp/scaled
@@ -20,6 +20,6 @@ sheet: scaled flipped
 	convert tmp/sheet/*.png +append tmp/sheet.png
 
 sheets: sheet
-	mkdir -p sheets
-	cp tmp/sheet.png sheets
-	@$(foreach i,$(shell seq 10 10 200),convert -modulate 100,100,$(i) sheets/sheet.png sheets/sheet_$(i).png;)
+	mkdir -p out
+	cp tmp/sheet.png out
+	@$(foreach i,$(shell seq 10 10 200),convert -modulate 100,100,$(i) out/sheet.png out/sheet_$(i).png;)
