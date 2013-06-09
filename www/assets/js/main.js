@@ -1,8 +1,8 @@
-var monkeymusic = (function (document) {
+var monkeymusic = (function(document) {
 
   var constants = {
-    UNIT_WIDTH: 64,
-    UNIT_HEIGHT: 64
+    UNIT_WIDTH: 68,
+    UNIT_HEIGHT: 68
   };
 
   var
@@ -48,7 +48,7 @@ var monkeymusic = (function (document) {
     socket = new WebSocket('ws://10.211.55.4:3000');
     socket.onmessage = onmessage;
     socket.onclose = onclose;
-    socket.onopen = function () {
+    socket.onopen = function() {
       console.log('Connection established.');
     };
   }

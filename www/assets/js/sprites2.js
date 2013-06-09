@@ -8,40 +8,43 @@ monkeymusic.sprites2 = (function(createjs, _) {
   };
 
   var animationWithDirection = function(animationName, direction) {
-    return animationName + direction;
+    return animationName + (direction || 'west');
   };
 
   var addDirectionAndOffset = function(frameData, direction, offset) {
     if (typeof frameData === 'number') {
       return frameData + offset;
     } else {
-      frameData.frames = _(frameData.frames).map(function(frame) {
+      var newFrameData = {};
+      newFrameData.frequency = frameData.frequency;
+      newFrameData.frames = _(frameData.frames).map(function(frame) {
         return frame + offset;
       });
       if (frameData.next) {
-        frameData.next = animationWithDirection(frameData.next, direction);
+        newFrameData.next = animationWithDirection(frameData.next, direction);
       }
-      return frameData;
+      return newFrameData;
     }
   };
 
   var NpcSprite = (function() {
     var spriteSheet = new createjs.SpriteSheet({
-      images: ['assets/sprites/npcs/sheet.png'],
+      images: ['assets/sprites/npcs/out/sheet.png'],
       frames: SPRITE_SIZE,
       animations: {
-        'Track1': 0,
-        'Track2': 0,
-        'Track3': 0,
-        'Track-1': 0,
-        'Track-2': 0,
         'Wall': 0,
-        'User': 0
+        'User': 1,
+        'Track3': 2,
+        'Track2': 3,
+        'Track1': 4,
+        'Track-2': 5,
+        'Track-1': 6
       }
     });
     return function() {
       this._spriteSheet = spriteSheet;
       this.initialize(spriteSheet);
+      return this;
     };
   }());
 
@@ -50,18 +53,20 @@ monkeymusic.sprites2 = (function(createjs, _) {
   NpcSprite.prototype.forUnit = function(unit) {
     if (unit.type === 'Track') {
       this.shadow = new createjs.Shadow('#111', 4, 4, 8);
-      this.gotoAndPlay('track' + unit.tier);
-    } else if (this._spriteSheet[unit.type]) {
+      this.gotoAndPlay('Track' + unit.tier);
+    } else {
       this.gotoAndPlay(unit.type);
     }
+    return this;
   };
 
   var MonkeySprite = (function() {
-    var animations = _({
+    var animations = _.chain({
       'normal': 0,
       'run': {
         frames: [1, 2, 0],
-        next: 'run'
+        next: 'run',
+        frequency: 6
       }
     }).pairs()
       .map(function(pair) {
@@ -70,12 +75,15 @@ monkeymusic.sprites2 = (function(createjs, _) {
           [pair[0] + 'west', addDirectionAndOffset(pair[1], 'west', 3)]
         ];
       })
-      .flatten(1);
+      .flatten(true)
+      .object()
+      .value();
+    console.log(animations);
     var spriteSheets = _([
-      'assets/sprites/monkeys/sheets/sheet.png',
-      'assets/sprites/monkeys/sheets/sheet_30.png',
-      'assets/sprites/monkeys/sheets/sheet_150.png',
-      'assets/sprites/monkeys/sheets/sheet_70.png'
+      'assets/sprites/monkeys/out/sheet.png',
+      'assets/sprites/monkeys/out/sheet_30.png',
+      'assets/sprites/monkeys/out/sheet_150.png',
+      'assets/sprites/monkeys/out/sheet_70.png'
     ]).map(function(sheetImage) {
         return new createjs.SpriteSheet({
           images: [sheetImage],
@@ -86,22 +94,15 @@ monkeymusic.sprites2 = (function(createjs, _) {
     var currSheet = 0;
     return function() {
       this.initialize(spriteSheets[currSheet]);
+      this.gotoAndPlayFacing('normal', 'east');
       currSheet = (currSheet + 1) % spriteSheets.length;
     };
   }());
 
   MonkeySprite.prototype = new createjs.BitmapAnimation();
 
-  MonkeySprite.prototype.face = function(direction) {
-    this._direction = direction;
-    this.gotoAndPlay(this._animation);
-    return this;
-  };
-
-  MonkeySprite.prototype.gotoAndPlay = function(animation) {
-    this._animation = animation;
-    this.prototype.gotoAndPlay(animationWithDirection(animation, this._direction));
-    return this;
+  MonkeySprite.prototype.gotoAndPlayFacing = function(animation, direction) {
+    this.gotoAndPlay(animationWithDirection(animation, direction));
   };
 
   return {

@@ -23,9 +23,9 @@ monkeymusic.level = (function(createjs, window) {
     _(level.units).each(function(unit) {
       var sprite;
       if (unit.type === 'Monkey') {
-        sprite = new monkeymusic.sprites.MonkeySprite();
+        sprite = new monkeymusic.sprites2.MonkeySprite();
       } else {
-        sprite = monkeymusic.sprites.NpcSprite().fromUnit(unit);
+        sprite = new monkeymusic.sprites2.NpcSprite().forUnit(unit);
       }
       sprite.x = monkeymusic.constants.UNIT_WIDTH * unit.x;
       sprite.y = monkeymusic.constants.UNIT_HEIGHT * unit.y;
@@ -42,26 +42,26 @@ monkeymusic.level = (function(createjs, window) {
   }
 
   function update(newLevel) {
-    console.log(newLevel);
     _(units).each(function(unit) {
       var newUnit = _(newLevel.units).find(function(u) {
         return unit.id === u.id;
       });
-      if (newUnit && newUnit.type === 'Monkey') {
-        unit.sprite.face(newUnit.facing);
-        // Move unit
-        if (newUnit.x !== unit.x || newUnit.y !== unit.y) {
-          unit.sprite.gotoAndPlay('run');
-          createjs.tween.get(unit.sprite)
-            .to({
-              x: newUnit.x * monkeymusic.constants.UNIT_WIDTH,
-              y: newUnit.y * monkeymusic.constants.UNIT_HEIGHT
-            }, 480)
-            .call(function() {
-              unit.sprite.gotoAndPlay('normal');
-            });
-          unit.x = newUnit.x;
-          unit.y = newUnit.y;
+      if (newUnit) {
+        if (newUnit.type === 'Monkey') {
+          // Move monkey
+          if (newUnit.x !== unit.x || newUnit.y !== unit.y) {
+            unit.sprite.gotoAndPlayFacing('run', unit.facing);
+            createjs.tween.get(unit.sprite)
+              .to({
+                x: newUnit.x * monkeymusic.constants.UNIT_WIDTH,
+                y: newUnit.y * monkeymusic.constants.UNIT_HEIGHT
+              }, 480)
+              .call(function() {
+                unit.sprite.gotoAndPlayFacing('normal', unit.direction);
+              });
+            unit.x = newUnit.x;
+            unit.y = newUnit.y;
+          }
         }
       } else {
         // Unit no longer exists on level, remove
